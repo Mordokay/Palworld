@@ -123,6 +123,7 @@ struct QuizView: View {
 
             ScrollView {
                 QuestionCardView(question: question, picked: picked, select: select)
+                    .equatable()
                     .padding(.horizontal)
             }
 
@@ -153,6 +154,7 @@ struct QuizView: View {
 
     private func select(_ i: Int) {
         guard picked == nil, index < questions.count else { return }
+        // paint + haptic first: only cheap state here, bookkeeping follows
         picked = i
         let question = questions[index]
         let correct = i == question.correctIndex
@@ -161,15 +163,19 @@ struct QuizView: View {
         let paysXP = replayOf.map { session in
             index < session.everCorrect.count && !session.everCorrect[index]
         } ?? true
-        let earned = ProgressionStore.recordAnswer(
-            modelContext, data: data, question: question, correct: correct,
-            difficulty: difficulty, streak: correct ? streak - 1 : 0)
-        if paysXP {
-            xpEarned += earned
+        Task {
+            // SwiftData writes + save-state JSON after the answer is on screen
+            try? await Task.sleep(for: .milliseconds(50))
+            let earned = ProgressionStore.recordAnswer(
+                modelContext, data: data, question: question, correct: correct,
+                difficulty: difficulty, streak: correct ? streak - 1 : 0)
+            if paysXP {
+                xpEarned += earned
+            }
+            // create/refresh the save-state on the very first pick so the
+            // "Continue quiz" card exists immediately, not only after Next
+            persistProgress()
         }
-        // create/refresh the save-state on the very first pick so the
-        // "Continue quiz" card exists immediately, not only after Next
-        persistProgress()
     }
 
     private func advance(_ question: Question) {
@@ -213,10 +219,17 @@ extension String: @retroactive Identifiable {
 
 /// The prompt + answer options for one question — shared by the untimed
 /// QuizView and the arcade modes (Time Attack, Survival).
-struct QuestionCardView: View {
+/// Equatable so `.equatable()` call sites skip body re-runs from unrelated
+/// parent state (the arcade clock, @Query updates): every body pass reloads
+/// the option images from disk, which is what made taps feel laggy.
+struct QuestionCardView: View, Equatable {
     let question: Question
     let picked: Int?
     let select: (Int) -> Void
+
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.question.id == rhs.question.id && lhs.picked == rhs.picked
+    }
 
     /// Subtle per-position tints (Kahoot-style) so the four cards read apart at a glance.
     private static let positionTints: [Color] = [.blue, .red, .orange, .purple]

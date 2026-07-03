@@ -46,11 +46,19 @@ struct ArcadeQuizView: View {
     @State private var finished = false
     @State private var saved = false
 
-    // Time Attack clock
+    // Time Attack clock. The countdown display lives in a TimelineView and
+    // the tick bookkeeping in a reference box: neither touches @State, so the
+    // 10 Hz clock never re-renders the question card (which reloads its
+    // option images from disk on every body pass — instant-tap killer).
     @State private var endDate = Date.distantFuture
-    @State private var remaining: TimeInterval = 0
-    @State private var lastTickSecond = Int.max
+    /// Non-nil while the clock is frozen for the answer-feedback window.
+    @State private var pausedRemaining: TimeInterval?
+    private final class TickBox { var lastSecond = Int.max }
+    private let tickBox = TickBox()
     private let clock = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+
+    /// Fixed feedback window between answer and next question.
+    private static let feedbackSeconds = 1.0
 
     private var score: Int { answered.filter(\.wasCorrect).count }
 
@@ -71,6 +79,7 @@ struct ArcadeQuizView: View {
                     hud
                     ScrollView {
                         QuestionCardView(question: question, picked: picked, select: select)
+                            .equatable()
                             .padding(.horizontal)
                     }
                 }
@@ -93,49 +102,66 @@ struct ArcadeQuizView: View {
     // MARK: - HUD
 
     private var hud: some View {
-        HStack(spacing: 14) {
-            switch mode {
-            case .timeAttack:
-                timerLabel
-            case .survival:
-                livesLabel
-                difficultyBadge
+        VStack(spacing: 8) {
+            HStack(spacing: 14) {
+                switch mode {
+                case .timeAttack:
+                    timerLabel
+                case .survival:
+                    livesLabel
+                    difficultyBadge
+                }
+                Spacer()
+                if streak >= 3 {
+                    Label("\(streak)", systemImage: "flame.fill")
+                        .font(.subheadline.weight(.bold))
+                        .foregroundStyle(.orange)
+                }
+                Button {
+                    finish()
+                } label: {
+                    Image(systemName: "flag.checkered")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                }
+                .buttonStyle(.bordered)
+                .clipShape(Circle())
             }
-            Spacer()
-            if streak >= 3 {
-                Label("\(streak)", systemImage: "flame.fill")
-                    .font(.subheadline.weight(.bold))
-                    .foregroundStyle(.orange)
+            if !answered.isEmpty {
+                shotRow
             }
-            Label("\(score)", systemImage: "checkmark.circle.fill")
-                .font(.headline)
-                .monospacedDigit()
-                .foregroundStyle(.green)
-            Button {
-                finish()
-            } label: {
-                Image(systemName: "flag.checkered")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(.secondary)
-            }
-            .buttonStyle(.bordered)
-            .clipShape(Circle())
         }
         .padding(.horizontal)
     }
 
-    private var timerLabel: some View {
-        let urgent = remaining <= 10
-        return Label(timeString, systemImage: "timer")
-            .font(.title3.weight(.bold))
-            .monospacedDigit()
-            .foregroundStyle(urgent ? .red : .primary)
-            .scaleEffect(urgent ? 1.08 : 1)
-            .animation(.snappy(duration: 0.2), value: urgent)
+    /// Penalty-shootout strip: one green/red dot per answered question
+    /// (the most recent 15 — the full sheet is in the results review).
+    private var shotRow: some View {
+        HStack(spacing: 5) {
+            ForEach(Array(answered.suffix(15).enumerated()), id: \.offset) { _, entry in
+                Circle()
+                    .fill(entry.wasCorrect ? Color.green : Color.red)
+                    .frame(width: 10, height: 10)
+            }
+            Spacer()
+        }
+        .animation(.snappy(duration: 0.25), value: answered.count)
     }
 
-    private var timeString: String {
-        let total = max(0, Int(remaining.rounded(.up)))
+    private var timerLabel: some View {
+        TimelineView(.periodic(from: .now, by: 0.1)) { _ in
+            let left = pausedRemaining ?? max(0, endDate.timeIntervalSinceNow)
+            let urgent = left <= 10
+            Label(timeString(left),
+                  systemImage: pausedRemaining == nil ? "timer" : "pause.circle.fill")
+                .font(.title3.weight(.bold))
+                .monospacedDigit()
+                .foregroundStyle(urgent ? .red : .primary)
+        }
+    }
+
+    private func timeString(_ left: TimeInterval) -> String {
+        let total = max(0, Int(left.rounded(.up)))
         return String(format: "%d:%02d", total / 60, total % 60)
     }
 
@@ -172,45 +198,46 @@ struct ArcadeQuizView: View {
         guard current == nil, !finished else { return }
         if case .timeAttack(let seconds) = mode {
             endDate = Date().addingTimeInterval(TimeInterval(seconds))
-            remaining = TimeInterval(seconds)
         }
         loadNext()
     }
 
     private func tick() {
-        guard case .timeAttack = mode, !finished else { return }
-        remaining = endDate.timeIntervalSinceNow
+        guard case .timeAttack = mode, !finished, pausedRemaining == nil else { return }
+        let left = endDate.timeIntervalSinceNow
         // clock "tick" haptic once per second over the final 10 (DESIGN.md §5)
-        let second = Int(remaining.rounded(.up))
-        if second != lastTickSecond, second <= 10, second > 0 {
-            lastTickSecond = second
+        let second = Int(left.rounded(.up))
+        if second != tickBox.lastSecond, second <= 10, second > 0 {
+            tickBox.lastSecond = second
             Haptics.countdownTick()
         }
-        if remaining <= 0 {
+        if left <= 0 {
             finish()
         }
     }
 
     private func select(_ i: Int) {
         guard picked == nil, let question = current, !finished else { return }
+        // paint + haptic first: only cheap state here, everything else waits
         picked = i
         let correct = i == question.correctIndex
         streak = correct ? streak + 1 : 0
-        let earned = ProgressionStore.recordAnswer(
-            modelContext, data: data, question: question, correct: correct,
-            difficulty: currentDifficulty, streak: correct ? streak - 1 : 0)
-        xpEarned += earned
         answered.append(AnsweredQuestion(question: question, pickedIndex: i))
-        if !correct {
-            switch mode {
-            case .timeAttack: endDate.addTimeInterval(-3)   // wrong = −3s
-            case .survival: misses += 1
-            }
+        switch mode {
+        case .timeAttack:
+            // freeze the clock for the feedback window; a wrong answer takes
+            // its −3s bite visibly, right when the red border shows
+            pausedRemaining = max(0, endDate.timeIntervalSinceNow - (correct ? 0 : 3))
+        case .survival:
+            if !correct { misses += 1 }
         }
-        // brief flash so the border colors register, longer on a miss so the
-        // correct answer can be read before the next question slides in
         Task {
-            try? await Task.sleep(for: .seconds(correct ? 0.6 : 1.2))
+            // SwiftData bookkeeping after the answer state is on screen
+            try? await Task.sleep(for: .milliseconds(50))
+            xpEarned += ProgressionStore.recordAnswer(
+                modelContext, data: data, question: question, correct: correct,
+                difficulty: currentDifficulty, streak: correct ? streak - 1 : 0)
+            try? await Task.sleep(for: .seconds(Self.feedbackSeconds - 0.05))
             advance()
         }
     }
@@ -220,6 +247,15 @@ struct ArcadeQuizView: View {
         if case .survival = mode, misses >= 3 {
             finish()
             return
+        }
+        if let frozen = pausedRemaining {
+            if frozen <= 0 {
+                finish()
+                return
+            }
+            // resume the clock exactly where the feedback window froze it
+            endDate = Date().addingTimeInterval(frozen)
+            pausedRemaining = nil
         }
         picked = nil
         loadNext()
