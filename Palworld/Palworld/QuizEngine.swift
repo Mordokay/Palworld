@@ -270,7 +270,9 @@ struct SilhouetteTemplate: QuestionTemplate {
 
     func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
                   subject: Pal?) -> Question? {
-        let pool = data.quizPalsWithImage
+        // silhouettes need cutout artwork — opaque wiki screenshots black out
+        // into a useless square
+        let pool = data.silhouettePals
         guard let pal = subject ?? pool.randomElement(seeded: rng),
               GameData.imageURL(pal.image, kind: .pals) != nil else { return nil }
         let wrong = palDistractors(for: pal, data: data, difficulty: difficulty, rng: rng)

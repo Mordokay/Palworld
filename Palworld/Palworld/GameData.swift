@@ -176,6 +176,9 @@ struct GameData {
     let skillByID: [String: Skill]
     /// lowercased entity/article title -> article id, for cross-linking
     let idByName: [String: String]
+    /// pal image files that are opaque squares (wiki screenshots, no alpha) —
+    /// unusable as silhouettes; produced by pipeline/analyze_images.py
+    let opaquePalImages: Set<String>
 
     /// Pals eligible for quiz questions. The wiki carries placeholder pages for
     /// teased-but-unreleased pals (no paldeck number, no lore, teaser images);
@@ -188,6 +191,15 @@ struct GameData {
     /// questions must only use these.
     var quizPalsWithImage: [Pal] {
         quizPals.filter { Self.imageURL($0.image, kind: .pals) != nil }
+    }
+
+    /// Pals whose artwork has real transparency — "Who's that Pal?" blacks
+    /// the image out, which only reads as a silhouette on a cutout.
+    var silhouettePals: [Pal] {
+        quizPalsWithImage.filter { pal in
+            guard let url = Self.imageURL(pal.image, kind: .pals) else { return false }
+            return !opaquePalImages.contains(url.lastPathComponent)
+        }
     }
 
     /// Resolve a decorated reference like "1-3 Wool (100%)", "40 Refined Ingot"
@@ -272,6 +284,11 @@ struct GameData {
             return try JSONDecoder().decode([T].self, from: Data(contentsOf: url))
         }
 
+        struct ImageMeta: Decodable { var opaquePalImages: [String] }
+        let meta = Bundle.main.url(forResource: "image_meta", withExtension: "json",
+                                   subdirectory: "data")
+            .flatMap { try? JSONDecoder().decode(ImageMeta.self, from: Data(contentsOf: $0)) }
+
         let pals: [Pal] = try decode("pals")
         let items: [Item] = try decode("items")
         let weapons: [Item] = try decode("weapons")
@@ -295,7 +312,8 @@ struct GameData {
             itemByID: Dictionary((items + weapons).map { ($0.id, $0) },
                                  uniquingKeysWith: { a, _ in a }),
             skillByID: Dictionary(uniqueKeysWithValues: skills.map { ($0.id, $0) }),
-            idByName: idByName
+            idByName: idByName,
+            opaquePalImages: Set(meta?.opaquePalImages ?? [])
         )
     }
 }
