@@ -1,0 +1,2243 @@
+[
+ {
+  "id": "advanced-fishing-rod-pengullet",
+  "name": "Advanced Fishing Rod (Pengullet)",
+  "image": "Advanced Fishing Rod (Pengullet) icon.png",
+  "type": "Weapon",
+  "description": "A fishing rod designed for catching Pals.\nUse it with bait near water where shadows are visible to start fishing.\nIt boasts improved performance, making catches vastly easier.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "70 Paldium Fragment",
+   "20 High Quality Pal Oil",
+   "15 Pal Metal Ingot",
+   "30 Carbon Fiber"
+  ],
+  "weight": null,
+  "techTier": 45,
+  "techPointsCost": 3,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 25,
+  "durability": null,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "assault-rifle",
+  "name": "Assault Rifle",
+  "image": "Assault Rifle icon.png",
+  "type": "Weapon",
+  "description": "An Assault Rifle suited to long range combat.\nIt excels at rapid-fire and is well suited to taking down powerful foes.",
+  "rarity": "Common",
+  "source": [
+   "craft"
+  ],
+  "craftMaterials": [
+   "40 Refined Ingot",
+   "10 Polymer",
+   "30 Carbon Fiber"
+  ],
+  "weight": 15,
+  "techTier": 45,
+  "techPointsCost": 4,
+  "workload": 1000,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 20,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "bat",
+  "name": "Bat",
+  "image": "Bat.png",
+  "type": "Weapon",
+  "description": "Baseball bat for close-range combat.\nMight be tough to get a home run with a Pal.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Wood",
+   "10 Stone"
+  ],
+  "weight": 3,
+  "techTier": 7,
+  "techPointsCost": 1,
+  "workload": 20,
+  "goldBuy": 80,
+  "goldSell": 8,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 50,
+  "durability": 150,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "beegarde-s-spear",
+  "name": "Beegarde's Spear",
+  "image": "Beegarde's Spear.png",
+  "type": "Weapon",
+  "description": "A spear made from the Beegarde's spear, altered for human use. Can feel a sincere loyalty.",
+  "rarity": "Uncommon",
+  "source": [],
+  "craftMaterials": [],
+  "weight": 15,
+  "techTier": null,
+  "techPointsCost": null,
+  "workload": null,
+  "goldBuy": 20000,
+  "goldSell": 2000,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 150,
+  "durability": 400,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Unreleased Content"
+  ]
+ },
+ {
+  "id": "beginner-fishing-set",
+  "name": "Beginner Fishing Set",
+  "image": "Beginner Fishing Set icon.png",
+  "type": "Weapon",
+  "description": "Beginner-friendly fishing rod and bait set.\nOnce you craft both, you'll be able to fish for Pals near bodies of water.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Paldium Fragment",
+   "3 Pal Fluids",
+   "8 Ingot",
+   "8 Fiber"
+  ],
+  "weight": null,
+  "techTier": 15,
+  "techPointsCost": 2,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 25,
+  "durability": null,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "boost-gun",
+  "name": "Boost Gun",
+  "image": "Boost Gun.png",
+  "type": "Weapon",
+  "description": "Firing this at a Pal in your team temporarily boosts that Pal's attack and defense.\nFiring it at an enemy deals damage instead.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "45 Ingot",
+   "10 High Quality Pal Oil",
+   "30 Fiber"
+  ],
+  "weight": null,
+  "techTier": 25,
+  "techPointsCost": 2,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 250,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "charge-rifle",
+  "name": "Charge Rifle",
+  "image": "Charge_Rifle.webp",
+  "type": "Weapon",
+  "description": "A beam rifle crafted with advanced technology. Charges energy to deliver one powerful shot.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "200 Coralum Ingot",
+   "150 Hexolite",
+   "300 Carbon Fiber",
+   "150 Circuit Board"
+  ],
+  "weight": 18,
+  "techTier": 65,
+  "techPointsCost": 5,
+  "workload": 500,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 12500,
+  "durability": null,
+  "magazineSize": 6,
+  "capturePower": null,
+  "categories": [
+   "Stubs",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "compound-bow",
+  "name": "Compound Bow",
+  "image": "Compound Bow icon.png",
+  "type": "Weapon",
+  "description": "A modernized bow.\nCapable of firing more powerful arrows.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Ingot",
+   "40 Fiber",
+   "20 Nail"
+  ],
+  "weight": null,
+  "techTier": 32,
+  "techPointsCost": 2,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 1100,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "crossbow",
+  "name": "Crossbow",
+  "image": "Crossbow icon.png",
+  "type": "Weapon",
+  "description": "This can be used to fire Arrows effortlessly.\nIts power more than makes up for its slow reload time.",
+  "rarity": "Common",
+  "source": [
+   "craft"
+  ],
+  "craftMaterials": [
+   "50 Wood",
+   "40 Stone",
+   "10 Ingot",
+   "5 Nail"
+  ],
+  "weight": 13,
+  "techTier": 13,
+  "techPointsCost": 2,
+  "workload": 150,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "dark-grenade",
+  "name": "Dark Grenade",
+  "image": "Dark Grenade icon.png",
+  "type": "Weapon",
+  "description": "A Dark Grenade useful for mid-range combat.\nIt detonates a few seconds after being thrown, dealing Dark damage to enemies.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "1 Venom Gland"
+  ],
+  "weight": 0.1,
+  "techTier": 40,
+  "techPointsCost": 2,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "decal-ink",
+  "name": "Decal Ink",
+  "image": "Decal Ink.png",
+  "type": "Weapon",
+  "description": "Decal gun set.\nAllows crafting of a strange gun that paints a Pal decal where it is fired.\nRequired ammo also becomes craftable.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Ingot",
+   "10 Polymer",
+   "15 Paldium Fragment",
+   "3 Ancient Civilization Parts"
+  ],
+  "weight": 8,
+  "techTier": 42,
+  "techPointsCost": 1,
+  "workload": 400,
+  "goldBuy": 33000,
+  "goldSell": 3300,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Ammo",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "double-barreled-shotgun",
+  "name": "Double-barreled Shotgun",
+  "image": "Double-barreled Shotgun.png",
+  "type": "Weapon",
+  "description": "A shotgun ideal for close range combat. \nDespite the limited load capacity, it still packs a punch.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Refined Ingot",
+   "7 Polymer"
+  ],
+  "weight": 24,
+  "techTier": 39,
+  "techPointsCost": 3,
+  "workload": 800,
+  "goldBuy": 55200,
+  "goldSell": 5520,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 190,
+  "durability": 200,
+  "magazineSize": 2,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "dragon-grenade",
+  "name": "Dragon Grenade",
+  "image": "Dragon Grenade icon.png",
+  "type": "Weapon",
+  "description": "A Dragon Grenade useful for mid-range combat.\nIt detonates a few seconds after being thrown, dealing Dragon damage to enemies.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "1 Horn"
+  ],
+  "weight": 0.1,
+  "techTier": 42,
+  "techPointsCost": 2,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "elizabee-s-staff",
+  "name": "Elizabee's Staff",
+  "image": "Elizabee's Staff icon.png",
+  "type": "Weapon",
+  "description": "Spear made from Elizabee's staff, altered for human use.\nIt is imbued with Elizabee's indomitable spirit.",
+  "rarity": "Uncommon",
+  "source": [
+   "Elizabee",
+   "Loot"
+  ],
+  "craftMaterials": [],
+  "weight": 20,
+  "techTier": null,
+  "techPointsCost": null,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": 2000,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 150,
+  "durability": 300,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "fire-arrow-crossbow",
+  "name": "Fire Arrow Crossbow",
+  "image": "Fire Arrow Crossbow icon.png",
+  "type": "Weapon",
+  "description": "A Crossbow that deals Fire damage.\nIt is loaded with Fire Arrows.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Wood",
+   "50 Stone",
+   "15 Ingot",
+   "5 Nail",
+   "5 Flame Organ"
+  ],
+  "weight": 13,
+  "techTier": 15,
+  "techPointsCost": 2,
+  "workload": 250,
+  "goldBuy": 25200,
+  "goldSell": 2520,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 280,
+  "durability": 300,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "fire-bow",
+  "name": "Fire Bow",
+  "image": "Fire_Bow.png",
+  "type": "Weapon",
+  "description": "A bow that deals Fire damage.\nUsed with Fire Arrow.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "40 Wood",
+   "8 Stone",
+   "20 Fiber",
+   "2 Flame Organ"
+  ],
+  "weight": 6,
+  "techTier": 5,
+  "techPointsCost": 2,
+  "workload": 50,
+  "goldBuy": 480,
+  "goldSell": 48,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 65,
+  "durability": 150,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "flamethrower",
+  "name": "Flamethrower",
+  "image": "Flamethrower.png",
+  "type": "Weapon",
+  "description": "Flamethrower that fires long-range flame.\nCan set the enemy on fire.\nCrafted at Weapon Assembly Line II.",
+  "rarity": "Common",
+  "source": [
+   "craft"
+  ],
+  "craftMaterials": [
+   "40 Pal Metal Ingot",
+   "30 Plasteel",
+   "35 Carbon Fiber",
+   "30 Flame Organ"
+  ],
+  "weight": null,
+  "techTier": 52,
+  "techPointsCost": 5,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Stubs",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "frag-grenade",
+  "name": "Frag Grenade",
+  "image": "Frag Grenade.png",
+  "type": "Weapon",
+  "description": "A Frag Grenade useful for mid-range combat.\nIt detonates on impact when thrown, dealing damage to enemies.",
+  "rarity": "Common",
+  "source": [
+   "Craft",
+   "Loot"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "1 Gunpowder"
+  ],
+  "weight": 0.1,
+  "techTier": 31,
+  "techPointsCost": 2,
+  "workload": 100,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "giga-grappling-gun",
+  "name": "Giga Grappling Gun",
+  "image": "Grappling Gun icon.png",
+  "type": "Weapon",
+  "description": "It fires a hook that latches on to distant targets, pulling the user's body towards the target.\nUsing data from prototype versions, its capabilities have been further increased.",
+  "rarity": "Rare",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Paldium Fragment",
+   "30 Ingot",
+   "80 Fiber",
+   "8 Ancient Civilization Parts"
+  ],
+  "weight": 1,
+  "techTier": 32,
+  "techPointsCost": 3,
+  "workload": 1000,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": 350,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Utility",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "grappling-gun",
+  "name": "Grappling Gun",
+  "image": "Grappling Gun icon.png",
+  "type": "Weapon",
+  "description": "It fires a hook and latches on to distant targets, pulling the user's body towards the target\nIt allows for easy movement between places with varying elevation.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Paldium Fragment",
+   "10 Ingot",
+   "30 Fiber",
+   "1 Ancient Civilization Parts"
+  ],
+  "weight": 1,
+  "techTier": 12,
+  "techPointsCost": 1,
+  "workload": 200,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": 150,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Utility",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "grass-grenade",
+  "name": "Grass Grenade",
+  "image": "Grass Grenade icon.png",
+  "type": "Weapon",
+  "description": "A Grass Grenade useful for mid-range combat.\nIt detonates a few seconds after being thrown, dealing Grass damage to enemies.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "10 Wood"
+  ],
+  "weight": 0.1,
+  "techTier": 35,
+  "techPointsCost": 2,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "ground-grenade",
+  "name": "Ground Grenade",
+  "image": "Ground Grenade icon.png",
+  "type": "Weapon",
+  "description": "A Ground Grenade useful for mid-range combat.\nIt detonates a few seconds after being thrown, dealing Ground damage to enemies.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "1 Ore"
+  ],
+  "weight": 0.1,
+  "techTier": 38,
+  "techPointsCost": 2,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "guided-missile-launcher",
+  "name": "Guided Missile Launcher",
+  "image": "Guided Missile Launcher.png",
+  "type": "Weapon",
+  "description": "Fires missiles that automatically track and pursue enimes.\nRequires Missile Ammo to fire.\nCrafted at Weapon Assembly Line II",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [],
+  "weight": null,
+  "techTier": null,
+  "techPointsCost": 5,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Stubs"
+  ]
+ },
+ {
+  "id": "hand-held-torch",
+  "name": "Hand-held Torch",
+  "image": "Hand-held Torch.png",
+  "type": "Weapon",
+  "description": "Hold a Hand-held Torch in hand to brighten the area around you.\nCan also be used for close range combat in a pinch.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "2 Wood",
+   "2 Stone"
+  ],
+  "weight": 5,
+  "techTier": 1,
+  "techPointsCost": 0,
+  "workload": 10,
+  "goldBuy": 80,
+  "goldSell": 8,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 10,
+  "durability": 100,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "handgun",
+  "name": "Handgun",
+  "image": "Handgun.png",
+  "type": "Weapon",
+  "description": "Pistol with improved capacity and rapid-fire capabilities. Has more immediate fire power than a Makeshift Handgun.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Ingot",
+   "15 High Quality Pal Oil"
+  ],
+  "weight": 8,
+  "techTier": 29,
+  "techPointsCost": 3,
+  "workload": 500,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 8,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "homing-sphere-launcher",
+  "name": "Homing Sphere Launcher",
+  "image": "Sphere Launcher.png",
+  "type": "Weapon",
+  "description": "A launcher for firing spheres.\nFired spheres home in on Pals.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "100 Pal Metal Ingot",
+   "50 Polymer",
+   "200 Paldium Fragment",
+   "50 Carbon Fiber",
+   "20 Ancient Civilization Parts"
+  ],
+  "weight": 30,
+  "techTier": 50,
+  "techPointsCost": 5,
+  "workload": 2400,
+  "goldBuy": 460000,
+  "goldSell": 46000,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "hyper-grappling-gun",
+  "name": "Hyper Grappling Gun",
+  "image": "Grappling Gun icon.png",
+  "type": "Weapon",
+  "description": "It fires a hook that latches on to distant targets, pulling the user's body towards the target.\nAs a result of research, it has achieved overwhelming mobility.",
+  "rarity": "Epic",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "40 Paldium Fragment",
+   "30 Refined Ingot",
+   "20 Carbon Fiber",
+   "20 Polymer",
+   "15 Ancient Civilization Parts"
+  ],
+  "weight": 1,
+  "techTier": 47,
+  "techPointsCost": 4,
+  "workload": 5000,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": 450,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Utility",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "ice-grenade",
+  "name": "Ice Grenade",
+  "image": "Ice Grenade.png",
+  "type": "Weapon",
+  "description": "Useful for mid-range combat.\nIt detonates on impact when thrown, dealing damage and freezing the surrounding environment.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "1 Ice Organ"
+  ],
+  "weight": 0.1,
+  "techTier": 29,
+  "techPointsCost": 2,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "incendiary-grenade",
+  "name": "Incendiary Grenade",
+  "image": "Incendiary Grenade.png",
+  "type": "Weapon",
+  "description": "Useful for mid-range combat.\nIt detonates on impact when thrown, dealing damage and setting the surrounding environment on fire.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "1 Flame Organ"
+  ],
+  "weight": 0.1,
+  "techTier": 41,
+  "techPointsCost": 2,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "intermediate-fishing-rod-cattiva",
+  "name": "Intermediate Fishing Rod (Cattiva)",
+  "image": "Intermediate Fishing Rod (Cattiva) icon.png",
+  "type": "Weapon",
+  "description": "A fishing rod designed for catching Pals.\nUse it with bait near water where shadows are visible to start fishing.\nIt boasts improved performance, making catches a bit easier.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Paldium Fragment",
+   "10 High Quality Pal Oil",
+   "10 Cement",
+   "30 Fiber"
+  ],
+  "weight": null,
+  "techTier": 29,
+  "techPointsCost": 2,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 25,
+  "durability": null,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "katana",
+  "name": "Katana",
+  "image": "Katana icon.png",
+  "type": "Weapon",
+  "description": "Katana for close-range combat.\nSlices through with razor-sharp precision, cutting cleanly in one strike.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "20 Pal Metal Ingot",
+   "20 Wood"
+  ],
+  "weight": 10,
+  "techTier": 44,
+  "techPointsCost": 2,
+  "workload": 1000,
+  "goldBuy": 10440,
+  "goldSell": 1044,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 780,
+  "durability": 500,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "laser-rifle",
+  "name": "Laser Rifle",
+  "image": "Laser Rifle.png",
+  "type": "Weapon",
+  "description": "A weapon that fire high-energy lasers. It has impressive firepower and is easy to handle.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Pal Metal Ingot",
+   "60 Plasteel",
+   "40 Carbon Fiber"
+  ],
+  "weight": 18,
+  "techTier": 51,
+  "techPointsCost": 5,
+  "workload": 500,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 30,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "lily-s-spear",
+  "name": "Lily's Spear",
+  "image": "Lily's Spear.png",
+  "type": "Weapon",
+  "description": "The spear cherished by Lily. Punishes those who neglect their Pals.",
+  "rarity": "Rare",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "20 Paldium Fragment",
+   "30 Refined Ingot",
+   "20 High Quality Cloth",
+   "50 Wood",
+   "20 Ancient Civilization Parts"
+  ],
+  "weight": 10,
+  "techTier": 40,
+  "techPointsCost": 3,
+  "workload": 3000,
+  "goldBuy": 10000,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 450,
+  "durability": 500,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "makeshift-assault-rifle",
+  "name": "Makeshift Assault Rifle",
+  "image": "Makeshift Assault Rifle icon.png",
+  "type": "Weapon",
+  "description": "A, assault rifle handmade from scraps.\nIt excels in rate of fire and long range, but its single-shot power is low.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "70 Ingot",
+   "20 High Quality Pal Oil",
+   "60 Fiber"
+  ],
+  "weight": null,
+  "techTier": 31,
+  "techPointsCost": 2,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 170,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "makeshift-handgun",
+  "name": "Makeshift Handgun",
+  "image": "Makeshift_Handgun.png",
+  "type": "Weapon",
+  "description": "A handgun created from spare parts. Relatively suited for close quarters combat, but can only fire one shot before needing to reload.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "35 Ingot",
+   "10 High Quality Pal Oil",
+   "30 Fiber"
+  ],
+  "weight": 10,
+  "techTier": 25,
+  "techPointsCost": 3,
+  "workload": 400,
+  "goldBuy": 16600,
+  "goldSell": 1660,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 320,
+  "durability": 300,
+  "magazineSize": 6,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "makeshift-smg",
+  "name": "Makeshift SMG",
+  "image": "Makeshift SMG icon.png",
+  "type": "Weapon",
+  "description": "A submachine gun handmade from scraps.\nIt excels in rate of fire, but its single-shot power is low.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "40 Ingot",
+   "10 High Quality Pal Oil",
+   "30 Fiber"
+  ],
+  "weight": null,
+  "techTier": 26,
+  "techPointsCost": 3,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 100,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "makeshift-shotgun",
+  "name": "Makeshift Shotgun",
+  "image": "Makeshift Shotgun icon.png",
+  "type": "Weapon",
+  "description": "A shotgun handmade from scraps.\nIt has a short range but excels in close-range combat.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "60 Ingot",
+   "15 High Quality Pal Oil",
+   "50 Fiber"
+  ],
+  "weight": null,
+  "techTier": 30,
+  "techPointsCost": 2,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 215,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "meat-cleaver",
+  "name": "Meat Cleaver",
+  "image": "Meat Cleaver.png",
+  "type": "Weapon",
+  "description": "Knife for butchering Pals.\nWhen equipped, the Pet command becomes Butcher.\nButchered Pals will not return.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "5 Ingot",
+   "20 Wood",
+   "5 Stone"
+  ],
+  "weight": 10,
+  "techTier": 12,
+  "techPointsCost": 2,
+  "workload": 50,
+  "goldBuy": 100,
+  "goldSell": 10,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 25,
+  "durability": 300,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "mega-grappling-gun",
+  "name": "Mega Grappling Gun",
+  "image": "Grappling Gun icon.png",
+  "type": "Weapon",
+  "description": "It fires a hook that latches on to distant targets, pulling the user's body towards the target.\nSince it's upgraded, it now has greater range.",
+  "rarity": "Uncommon",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "20 Paldium Fragment",
+   "20 Ingot",
+   "50 Fiber",
+   "4 Ancient Civilization Parts"
+  ],
+  "weight": 1,
+  "techTier": 17,
+  "techPointsCost": 2,
+  "workload": 400,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": 250,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Utility",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "meowmere",
+  "name": "Meowmere",
+  "image": "Meowmere icon.png",
+  "type": "Weapon",
+  "description": "[tides of terraria]\nAccording to legend, this sword was brought back from a distant land by Croajiro. Why? We have no idea… Fires a bouncing cat projectile with each swing to attack enemies",
+  "rarity": "Legendary",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "22 ingot",
+   "22Paldium Fragment",
+   "22coal",
+   "3predator Core"
+  ],
+  "weight": 22,
+  "techTier": 30,
+  "techPointsCost": 2,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": 200,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 200,
+  "durability": 2222,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": []
+ },
+ {
+  "id": "metal-axe",
+  "name": "Metal Axe",
+  "image": "Stone Axe.png",
+  "type": "Weapon",
+  "description": "An axe for cutting wood. Made from metal, its sharpness has improved.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "15 Stone",
+   "20 Wood",
+   "5 Ingot"
+  ],
+  "weight": 15,
+  "techTier": 11,
+  "techPointsCost": 2,
+  "workload": 50,
+  "goldBuy": 2800,
+  "goldSell": 280,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 30,
+  "durability": 250,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "metal-pickaxe",
+  "name": "Metal Pickaxe",
+  "image": "Stone Pickaxe.png",
+  "type": "Weapon",
+  "description": "A pickaxe used for mining. Made from metal, the durability and efficiency have improved.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "15 Stone",
+   "20 Wood",
+   "5 Ingot"
+  ],
+  "weight": 15,
+  "techTier": 11,
+  "techPointsCost": 2,
+  "workload": 50,
+  "goldBuy": 2800,
+  "goldSell": 280,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 30,
+  "durability": 250,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "metal-spear",
+  "name": "Metal Spear",
+  "image": "Stone Spear.png",
+  "type": "Weapon",
+  "description": "Useful for close-range combat. The metal tip give it an increased attack power. Its length allows you to stand further away when attacking.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "27 Wood",
+   "12 Stone",
+   "10 Ingot"
+  ],
+  "weight": 15,
+  "techTier": 13,
+  "techPointsCost": 2,
+  "workload": 100,
+  "goldBuy": 8780,
+  "goldSell": 878,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 80,
+  "durability": 250,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "meteor-launcher",
+  "name": "Meteor Launcher",
+  "image": "Meteor Launcher.png",
+  "type": "Weapon",
+  "description": "A phenomenal weapon that fires a meteor.\nUpon striking its target, it creates an explosion similar to a meteorite impact.\nCrafted at Weapon Assembly Line.",
+  "rarity": "Common",
+  "source": [
+   "craft"
+  ],
+  "craftMaterials": [
+   "100 Meteorite Fragment",
+   "30 Refined Ingot",
+   "20 Paldium Fragment"
+  ],
+  "weight": null,
+  "techTier": 38,
+  "techPointsCost": 3,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 2000,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Stubs",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "musket",
+  "name": "Musket",
+  "image": "Musket.png",
+  "type": "Weapon",
+  "description": "An old-fashioned, simple gun.\nFires a single, powerful shot at the expense of a long reload time.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "25 Ingot",
+   "5 High Quality Pal Oil",
+   "30 Wood"
+  ],
+  "weight": 20,
+  "techTier": 21,
+  "techPointsCost": 3,
+  "workload": 350,
+  "goldBuy": 37600,
+  "goldSell": 3760,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 1000,
+  "durability": 200,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "old-bow",
+  "name": "Old Bow",
+  "image": "Old Bow.png",
+  "type": "Weapon",
+  "description": "A bow capable of long range attacks. Hastily put together, it isn't very powerful.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Wood",
+   "5 Stone",
+   "15 Fiber"
+  ],
+  "weight": 6,
+  "techTier": 3,
+  "techPointsCost": 1,
+  "workload": 20,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "old-revolver",
+  "name": "Old Revolver",
+  "image": "Old Revolver icon.png",
+  "type": "Weapon",
+  "description": "A slightly outdated revolving handgun. Compared to Handgun, it excels in single-shot power.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "60 Ingot",
+   "20 High Quality Pal Oil"
+  ],
+  "weight": 8,
+  "techTier": 33,
+  "techPointsCost": 3,
+  "workload": 600,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 6,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "pal-metal-axe",
+  "name": "Pal Metal Axe",
+  "image": "Pal Metal Axe icon.png",
+  "type": "Weapon",
+  "description": "An axe for cutting wood.\nIt has achieved extraordinary sharpness thanks to Pal Metal.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Stone",
+   "100 Wood",
+   "10 Pal Metal Ingot"
+  ],
+  "weight": null,
+  "techTier": 44,
+  "techPointsCost": 2,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 120,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Stubs",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "pal-metal-pickaxe",
+  "name": "Pal Metal Pickaxe",
+  "image": "Pal Metal Pickaxe icon.png",
+  "type": "Weapon",
+  "description": "A pickaxe used for mining.\nIt has achieved extraordinary efficiency thanks to Pal Metal.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Stone",
+   "100 Wood",
+   "10 Pal Metal Ingot"
+  ],
+  "weight": null,
+  "techTier": 44,
+  "techPointsCost": null,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 120,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Stubs",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "pal-recovery-grenade",
+  "name": "Pal Recovery Grenade",
+  "image": "Pal Recovery Grenade icon.png",
+  "type": "Weapon",
+  "description": "A Frag Grenade with healing effects.\nIt bursts on impact, restoring HP to allied Pals.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "5 Cavern Mushroom"
+  ],
+  "weight": 0.1,
+  "techTier": 32,
+  "techPointsCost": 3,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "poison-arrow-crossbow",
+  "name": "Poison Arrow Crossbow",
+  "image": "Poison Arrow Crossbow icon.png",
+  "type": "Weapon",
+  "description": "A Crossbow that inflicts poison on its target.\nIt is loaded with Poison Arrows.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Wood",
+   "50 Stone",
+   "15 Ingot",
+   "5 Nail",
+   "5 Venom Gland"
+  ],
+  "weight": 13,
+  "techTier": 17,
+  "techPointsCost": 2,
+  "workload": 250,
+  "goldBuy": 25200,
+  "goldSell": 2520,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 280,
+  "durability": 300,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "poison-bow",
+  "name": "Poison Bow",
+  "image": "Poison_Bow.png",
+  "type": "Weapon",
+  "description": "A bow that poisons its target.\nUsed with Poison Arrow.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "40 Wood",
+   "8 Stone",
+   "20 Fiber",
+   "2 Venom Gland"
+  ],
+  "weight": 6,
+  "techTier": 8,
+  "techPointsCost": 2,
+  "workload": 50,
+  "goldBuy": 480,
+  "goldSell": 48,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 65,
+  "durability": 150,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "pump-action-shotgun",
+  "name": "Pump-Action Shotgun",
+  "image": "Pump-action Shotgun.png",
+  "type": "Weapon",
+  "description": "A high capacity, powerful shotgun. It has outstanding close range DPS.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Refined Ingot",
+   "20 Polymer",
+   "40 Carbon Fiber"
+  ],
+  "weight": 20,
+  "techTier": 42,
+  "techPointsCost": 4,
+  "workload": 1200,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 8,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "refined-metal-axe",
+  "name": "Refined Metal Axe",
+  "image": "Stone Axe.png",
+  "type": "Weapon",
+  "description": "An axe for cutting wood.\nMade from high quality metal, its sharpness has improved even further.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Stone",
+   "40 Wood",
+   "10 Refined Ingot"
+  ],
+  "weight": 20,
+  "techTier": 34,
+  "techPointsCost": 2,
+  "workload": 500,
+  "goldBuy": 7000,
+  "goldSell": 700,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 60,
+  "durability": 300,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "refined-metal-pickaxe",
+  "name": "Refined Metal Pickaxe",
+  "image": "Stone Pickaxe.png",
+  "type": "Weapon",
+  "description": "A pickaxe used for mining.\nIts durability and sharpness have increased even more.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Stone",
+   "40 Wood",
+   "10 Refined Ingot"
+  ],
+  "weight": 20,
+  "techTier": 34,
+  "techPointsCost": 2,
+  "workload": 500,
+  "goldBuy": 7000,
+  "goldSell": 700,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 60,
+  "durability": 300,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "refined-metal-spear",
+  "name": "Refined Metal Spear",
+  "image": "Stone Spear.png",
+  "type": "Weapon",
+  "description": "Useful for close-range combat. The high-quality metal tip give it an increased attack power. Its length allows you to stand further away when attacking.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "36 Wood",
+   "18 Stone",
+   "10 Refined Ingot"
+  ],
+  "weight": 20,
+  "techTier": 34,
+  "techPointsCost": 3,
+  "workload": 1000,
+  "goldBuy": 13880,
+  "goldSell": 1388,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 310,
+  "durability": 300,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "rocket-launcher",
+  "name": "Rocket Launcher",
+  "image": "Rocket Launcher.png",
+  "type": "Weapon",
+  "description": "A Rocket Launcher. It can fire powerful rounds from long distances.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "75 Pal Metal Ingot",
+   "30 Polymer",
+   "50 Carbon Fiber"
+  ],
+  "weight": 30,
+  "techTier": 49,
+  "techPointsCost": 5,
+  "workload": 3000,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "smg",
+  "name": "SMG",
+  "image": "SMG icon.png",
+  "type": "Weapon",
+  "description": "A submachine gun with exceptional rate of fire.\nIt's easy to handle and effective in close-range combat.",
+  "rarity": "Common",
+  "source": [
+   "craft"
+  ],
+  "craftMaterials": [
+   "25 Refined Ingot",
+   "6 Polymer"
+  ],
+  "weight": null,
+  "techTier": 37,
+  "techPointsCost": 3,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 130,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Stubs",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "scatter-sphere-launcher",
+  "name": "Scatter Sphere Launcher",
+  "image": "Sphere Launcher.png",
+  "type": "Weapon",
+  "description": "A new type of launcher that fires a large number of spheres.\nIt can easily capture a herd of Pals.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Refined Ingot",
+   "15 Polymer",
+   "50 Paldium Fragment",
+   "30 Carbon Fiber",
+   "10 Ancient Civilization Parts"
+  ],
+  "weight": 30,
+  "techTier": 38,
+  "techPointsCost": 5,
+  "workload": 3000,
+  "goldBuy": 44000,
+  "goldSell": 4400,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "semi-auto-rifle",
+  "name": "Semi-Auto Rifle",
+  "image": "",
+  "type": "Weapon",
+  "description": "",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "35 Refined Metal",
+   "10 Polymer"
+  ],
+  "weight": null,
+  "techTier": null,
+  "techPointsCost": null,
+  "workload": 900,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Stubs"
+  ]
+ },
+ {
+  "id": "semi-auto-shotgun",
+  "name": "Semi-Auto Shotgun",
+  "image": "Semi-Auto Shotgun icon.png",
+  "type": "Weapon",
+  "description": "A rapid-fire shotgun with immense power.\nIts close-range damage output is top-notch.",
+  "rarity": "Common",
+  "source": [
+   "craft"
+  ],
+  "craftMaterials": [
+   "50 Refined Ingot",
+   "20 Polymer",
+   "40 Carbon Fiber"
+  ],
+  "weight": null,
+  "techTier": 47,
+  "techPointsCost": 4,
+  "workload": null,
+  "goldBuy": null,
+  "goldSell": null,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Stubs",
+   "Weapons"
+  ]
+ },
+ {
+  "id": "shock-grenade",
+  "name": "Shock Grenade",
+  "image": "Shock Grenade.png",
+  "type": "Weapon",
+  "description": "Useful for mid-range combat.\nIt detonates on impact when thrown, dealing damage and electrifying the surrounding environment.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "1 Electric Organ"
+  ],
+  "weight": 0.1,
+  "techTier": 32,
+  "techPointsCost": 2,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "single-shot-rifle",
+  "name": "Single-Shot Rifle",
+  "image": "Single-Shot_Rifle.png",
+  "type": "Weapon",
+  "description": "A single-shot rifle. What it lacks in capacity, it makes up for with sheer power.",
+  "rarity": "Common",
+  "source": [
+   "craft"
+  ],
+  "craftMaterials": [
+   "20 Refined Ingot",
+   "5 Polymer"
+  ],
+  "weight": 20,
+  "techTier": 36,
+  "techPointsCost": 3,
+  "workload": 700,
+  "goldBuy": 37600,
+  "goldSell": 3760,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 1100,
+  "durability": 1000,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "single-shot-sphere-launcher",
+  "name": "Single-Shot Sphere Launcher",
+  "image": "Sphere Launcher.png",
+  "type": "Weapon",
+  "description": "A launcher that fires spheres.\nIt can capture Pals that are a distance away.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Ingot",
+   "100 Stone",
+   "50 Paldium Fragment",
+   "5 Ancient Civilization Parts"
+  ],
+  "weight": 30,
+  "techTier": 29,
+  "techPointsCost": 4,
+  "workload": 1000,
+  "goldBuy": 109200,
+  "goldSell": 10920,
+  "nutrition": null,
+  "sanity": null,
+  "damage": null,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "stone-axe",
+  "name": "Stone Axe",
+  "image": "Stone Axe.png",
+  "type": "Weapon",
+  "description": "An axe for cutting wood.\nMade from stone, it's not very sharp.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "5 Stone",
+   "5 Wood"
+  ],
+  "weight": 10,
+  "techTier": 1,
+  "techPointsCost": 0,
+  "workload": 5,
+  "goldBuy": 200,
+  "goldSell": 20,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 20,
+  "durability": 150,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "stone-pickaxe",
+  "name": "Stone Pickaxe",
+  "image": "Stone Pickaxe.png",
+  "type": "Weapon",
+  "description": "A pickaxe used for mining.\nMade from stone, the efficiency is questionable.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "5 Stone",
+   "5 Wood"
+  ],
+  "weight": 10,
+  "techTier": 1,
+  "techPointsCost": 0,
+  "workload": 5,
+  "goldBuy": 200,
+  "goldSell": 20,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 20,
+  "durability": 150,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "stone-spear",
+  "name": "Stone Spear",
+  "image": "Stone Spear.png",
+  "type": "Weapon",
+  "description": "Useful for close-range combat.\nIts length allows you to stand further away when attacking.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "18 Wood",
+   "6 Stone"
+  ],
+  "weight": 10,
+  "techTier": 4,
+  "techPointsCost": 2,
+  "workload": 10,
+  "goldBuy": 480,
+  "goldSell": 48,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 35,
+  "durability": 200,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "stun-baton",
+  "name": "Stun Baton",
+  "image": "Stun Baton.png",
+  "type": "Weapon",
+  "description": "A baton with electricity running through it. It can shock a Pal, stopping it in its tracks. Electrocuted Pals are easier to capture.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "20 Ingot",
+   "20 Electric Organ"
+  ],
+  "weight": 10,
+  "techTier": 22,
+  "techPointsCost": 2,
+  "workload": 300,
+  "goldBuy": 19000,
+  "goldSell": 1900,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 10,
+  "durability": 300,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "sword",
+  "name": "Sword",
+  "image": "Sword.png",
+  "type": "Weapon",
+  "description": "Sword for close-range combat.\nThe blade is extremely sharp!",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "30 Refined Ingot",
+   "20 Wood",
+   "20 Stone"
+  ],
+  "weight": 10,
+  "techTier": 29,
+  "techPointsCost": 3,
+  "workload": 1000,
+  "goldBuy": 10440,
+  "goldSell": 1044,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 360,
+  "durability": 500,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "three-shot-bow",
+  "name": "Three Shot Bow",
+  "image": "Three Shot Bow.png",
+  "type": "Weapon",
+  "description": "An enhanced bow that allows three arrows to be fired simultaneously.\nBy some strange mechanism, it only consumes a single Arrow when fired.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "50 Wood",
+   "12 Stone",
+   "30 Fiber"
+  ],
+  "weight": 8,
+  "techTier": 10,
+  "techPointsCost": 2,
+  "workload": 80,
+  "goldBuy": 1000,
+  "goldSell": 100,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 40,
+  "durability": 250,
+  "magazineSize": 1,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "water-grenade",
+  "name": "Water Grenade",
+  "image": "Water Grenade icon.png",
+  "type": "Weapon",
+  "description": "A Water Grenade useful for mid-range combat.\nIt detonates a few seconds after being thrown, dealing Water damage to enemies.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "10 Fiber",
+   "10 Stone",
+   "1 Pal Fluids"
+  ],
+  "weight": 0.1,
+  "techTier": 33,
+  "techPointsCost": 2,
+  "workload": 130,
+  "goldBuy": 10,
+  "goldSell": 1,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 750,
+  "durability": null,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ },
+ {
+  "id": "wooden-club",
+  "name": "Wooden Club",
+  "image": "Wooden Club.png",
+  "type": "Weapon",
+  "description": "A Wooden Club for close range combat.\nFighting a Pal with it might be tough.",
+  "rarity": "Common",
+  "source": [
+   "Craft"
+  ],
+  "craftMaterials": [
+   "5 Wood"
+  ],
+  "weight": 5,
+  "techTier": 1,
+  "techPointsCost": 0,
+  "workload": 7.5,
+  "goldBuy": 80,
+  "goldSell": 8,
+  "nutrition": null,
+  "sanity": null,
+  "damage": 25,
+  "durability": 150,
+  "magazineSize": null,
+  "capturePower": null,
+  "categories": [
+   "Weapons"
+  ]
+ }
+]

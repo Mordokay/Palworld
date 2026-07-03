@@ -1,0 +1,270 @@
+[
+ {
+  "id": "astral-mountains",
+  "name": "Astral Mountains",
+  "image": "Palpagos Islands Astral Mountains.png",
+  "type": "Region",
+  "region": "North",
+  "inhabitants": [],
+  "level": "35 - 60",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "desiccated-mineshaft",
+  "name": "Desiccated Mineshaft",
+  "image": "",
+  "type": "Mineshaft",
+  "region": "Southern region of Dessicated Desert",
+  "inhabitants": [
+   "Menasting"
+  ],
+  "level": "",
+  "categories": [
+   "Locations"
+  ]
+ },
+ {
+  "id": "dessicated-desert",
+  "name": "Dessicated Desert",
+  "image": "",
+  "type": "Region",
+  "region": "",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "feybreak",
+  "name": "Feybreak",
+  "image": "Feybreak Island.jpg",
+  "type": "Region",
+  "region": "-811, -828\nsouthwest, under Mount Obsidian",
+  "inhabitants": [
+   "Feybreak Warriors"
+  ],
+  "level": "50+",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "fisherman-s-point",
+  "name": "Fisherman's Point",
+  "image": "Fisherman's Village Spawn.jpg",
+  "type": "Settlement",
+  "region": "(-456, -759) South of the volcano and on the southwest side of the map",
+  "inhabitants": [
+   "Villagers",
+   "Wandering Merchants",
+   "PDIF Guards"
+  ],
+  "level": "",
+  "categories": [
+   "Locations"
+  ]
+ },
+ {
+  "id": "forgotten-island",
+  "name": "Forgotten Island",
+  "image": "",
+  "type": "Region",
+  "region": "",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "mount-obsidian",
+  "name": "Mount Obsidian",
+  "image": "",
+  "type": "Region",
+  "region": "",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "no-1-wildlife-sanctuary",
+  "name": "No. 1 Wildlife Sanctuary",
+  "image": "01. Wildlife Sanctuary icon.png",
+  "type": "Island\nWildlife Sanctuary",
+  "region": "90, -735",
+  "inhabitants": [
+   "Penking",
+   "Eikthyrdeer Terra",
+   "Vaelet",
+   "Elphidran",
+   "Azurobe",
+   "Petallia",
+   "Grizzbolt"
+  ],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "no-2-wildlife-sanctuary",
+  "name": "No. 2 Wildlife Sanctuary",
+  "image": "02. Wildlife Sanctuary icon.png",
+  "type": "Island\nWildlife Sanctuary",
+  "region": "-675, -113",
+  "inhabitants": [
+   "Jormuntide Ignis",
+   "Verdash",
+   "Incineram Noct",
+   "Wumpo Botan",
+   "Kingpaca",
+   "Quivern",
+   "Warsect",
+   "Menasting"
+  ],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "no-3-wildlife-sanctuary",
+  "name": "No. 3 Wildlife Sanctuary",
+  "image": "03. Wildlife Sanctuary icon.png",
+  "type": "Island\nWildlife Sanctuary",
+  "region": "669, 640",
+  "inhabitants": [
+   "Incineram Noct",
+   "Fenglope",
+   "Bushi",
+   "Lyleen",
+   "Blazamut"
+  ],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "oil-rig",
+  "name": "Oil Rig Stronghold",
+  "image": "Rayne Syndicate Oil Rig Stronghold.jpg",
+  "type": "Island\nStronghold",
+  "region": "538, -421\nSoutheast of Marsh Island",
+  "inhabitants": [
+   "Rayne Syndicate"
+  ],
+  "level": "50+",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "pal-arena",
+  "name": "Arena",
+  "image": "Pal Arena.jpg",
+  "type": "",
+  "region": "(626, 36) South East of the Desert, North East of Eastern Wild Island",
+  "inhabitants": [
+   "Arena Merchant"
+  ],
+  "level": "",
+  "categories": [
+   "Gameplay",
+   "Locations",
+   "Pages with broken file links",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "sakurajima",
+  "name": "Sakurajima",
+  "image": "",
+  "type": "Region",
+  "region": "",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations"
+  ]
+ },
+ {
+  "id": "sea-breeze-archipelago",
+  "name": "Sea Breeze Archipelago",
+  "image": "",
+  "type": "Region",
+  "region": "",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "small-settlement",
+  "name": "Small Settlement",
+  "image": "Small settlement.png",
+  "type": "Settlement",
+  "region": "(75, -479)",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "twilight-dunes",
+  "name": "Twilight Dunes",
+  "image": "Twilight Dunes.jpg",
+  "type": "",
+  "region": "(-134, -95) North East of the Bambo Grove.",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "wildlife-sanctuary",
+  "name": "Wildlife Sanctuary",
+  "image": "Wildlife sanctuaries.png",
+  "type": "Region",
+  "region": "",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "windswept-hills",
+  "name": "Windswept Hills",
+  "image": "Windswept Hills.png",
+  "type": "Region",
+  "region": "",
+  "inhabitants": [],
+  "level": "",
+  "categories": [
+   "Locations",
+   "Stubs"
+  ]
+ }
+]

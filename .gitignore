@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Xcode user state
+xcuserdata/
+DerivedData/
+
+# raw wiki mirror (regenerate with pipeline/fetch_pages.py)
+pipeline/cache/

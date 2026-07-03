@@ -1,0 +1,2914 @@
+[
+ {
+  "level": 1,
+  "name": "Primitive Workbench",
+  "image": "Primitive Workbench.png",
+  "structure": true,
+  "points": 0,
+  "ancient": false
+ },
+ {
+  "level": 1,
+  "name": "Stone Axe",
+  "image": "Stone Axe.png",
+  "structure": false,
+  "points": 0,
+  "ancient": false
+ },
+ {
+  "level": 1,
+  "name": "Stone Pickaxe",
+  "image": "Stone Pickaxe.png",
+  "structure": false,
+  "points": 0,
+  "ancient": false
+ },
+ {
+  "level": 1,
+  "name": "Hand-held Torch",
+  "image": "Hand-held Torch.png",
+  "structure": false,
+  "points": 0,
+  "ancient": false
+ },
+ {
+  "level": 1,
+  "name": "Wooden Club",
+  "image": "Wooden Club.png",
+  "structure": false,
+  "points": 0,
+  "ancient": false
+ },
+ {
+  "level": 1,
+  "name": "Pal Dressing Facility",
+  "image": "Pal Dressing Facility.png",
+  "structure": false,
+  "points": 0,
+  "ancient": false
+ },
+ {
+  "level": 1,
+  "name": "Global Palbox",
+  "image": "Global Palbox.png",
+  "structure": false,
+  "points": 0,
+  "ancient": false
+ },
+ {
+  "level": 2,
+  "name": "Palbox",
+  "image": "Palbox.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 2,
+  "name": "Pal Sphere",
+  "image": "Pal Sphere icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 2,
+  "name": "Campfire",
+  "image": "Campfire.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 2,
+  "name": "Wooden Chest",
+  "image": "Wooden Chest.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 2,
+  "name": "Repair Bench",
+  "image": "Repair Bench.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 2,
+  "name": "Wooden Structure Set",
+  "image": "Wooden Structure Set.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 3,
+  "name": "Old Bow",
+  "image": "Old Bow.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 3,
+  "name": "Arrow",
+  "image": "Arrow icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 3,
+  "name": "Shoddy Bed",
+  "image": "Shoddy Bed.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 3,
+  "name": "Straw Pal Bed",
+  "image": "Straw Pal Bed.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 3,
+  "name": "Repair Kit",
+  "image": "Repair Kit.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 3,
+  "name": "Cloth",
+  "image": "Cloth icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 4,
+  "name": "Common Shield",
+  "image": "Common Shield icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 4,
+  "name": "Stone Spear",
+  "image": "Stone Spear.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 4,
+  "name": "Cloth Outfit",
+  "image": "Cloth Outfit icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 4,
+  "name": "Feed Box",
+  "image": "Feed Box.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 4,
+  "name": "Alarm Bell",
+  "image": "Alarm Bell.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 4,
+  "name": "Hanging Trap",
+  "image": "Hanging Trap.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 5,
+  "name": "Berry Plantation",
+  "image": "Crop Plantation.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 5,
+  "name": "Ranch",
+  "image": "Ranch icon.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 5,
+  "name": "Normal Parachute",
+  "image": "Normal Parachute icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 5,
+  "name": "Fire Bow",
+  "image": "Fire Bow.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 5,
+  "name": "Fire Arrow",
+  "image": "Fire Arrow icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 5,
+  "name": "Wooden Living Room Furniture Set",
+  "image": "Wooden Living Room Furniture Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 5,
+  "name": "Wooden Tavern Furniture Set",
+  "image": "Wooden Tavern Furniture Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 6,
+  "name": "Pal Gear Workbench",
+  "image": "Pal Gear Workbench.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 6,
+  "name": "Statue of Power",
+  "image": "Statue of Power.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 6,
+  "name": "Mounted Torch",
+  "image": "Mounted Torch.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 6,
+  "name": "Rushoar Saddle",
+  "image": "Rushoar menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 6,
+  "name": "Foxparks's Harness",
+  "image": "Foxparks menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 6,
+  "name": "Wooden Tavern Cabinet Furniture Set",
+  "image": "Wooden Tavern Cabinet Furniture Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 6,
+  "name": "Houseplant Set",
+  "image": "Houseplant Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 7,
+  "name": "Logging Site",
+  "image": "Logging Site.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 7,
+  "name": "Stone Pit",
+  "image": "Stone Pit.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 7,
+  "name": "Sign",
+  "image": "Signboard.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 7,
+  "name": "Bat",
+  "image": "Bat.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 7,
+  "name": "Melpaca Saddle",
+  "image": "Melpaca menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 7,
+  "name": "Celaray's Gloves",
+  "image": "Celaray menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 7,
+  "name": "Wall-Mounted Houseplant Set",
+  "image": "Wall-Mounted Houseplant Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 7,
+  "name": "Egg Incubator",
+  "image": "Egg Incubator.png",
+  "structure": true,
+  "points": 1,
+  "ancient": true
+ },
+ {
+  "level": 8,
+  "name": "Crusher",
+  "image": "Crusher.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 8,
+  "name": "Poison Bow",
+  "image": "Poison Bow.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 8,
+  "name": "Poison Arrow",
+  "image": "Poison Arrow icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 8,
+  "name": "Jolthog's Gloves",
+  "image": "Jolthog menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 8,
+  "name": "Daedream's Necklace",
+  "image": "Daedream menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 8,
+  "name": "Antique Storage Set",
+  "image": "Antique Storage Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 8,
+  "name": "Fireplace Set",
+  "image": "Fireplace Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 9,
+  "name": "Tropical Outfit",
+  "image": "Tropical Outfit.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 9,
+  "name": "Tundra Outfit",
+  "image": "Tundra Outfit.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 9,
+  "name": "Hot Spring",
+  "image": "Hot Spring.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 9,
+  "name": "Sand Bag",
+  "image": "Sand Bag.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 9,
+  "name": "Direhowl's Saddled Harness",
+  "image": "Direhowl menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 9,
+  "name": "Killamari's Gloves",
+  "image": "Killamari menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 9,
+  "name": "Carpet Set",
+  "image": "Carpet Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 10,
+  "name": "Three Shot Bow",
+  "image": "Three Shot Bow.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 10,
+  "name": "Primitive Furnace",
+  "image": "Primitive Furnace.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 10,
+  "name": "Feathered Hair Band",
+  "image": "Feathered Hair Band.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 10,
+  "name": "Ladder",
+  "image": "Ladder.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 10,
+  "name": "Bear Trap (Small)",
+  "image": "Bear Trap(Small).png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 10,
+  "name": "Nail",
+  "image": "Nail icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 10,
+  "name": "Surfent Saddle",
+  "image": "Surfent menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 10,
+  "name": "Small Feed Bag",
+  "image": "Small Feed Bag icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": true
+ },
+ {
+  "level": 11,
+  "name": "Metal Axe",
+  "image": "Stone Axe.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 11,
+  "name": "Metal Pickaxe",
+  "image": "stone Pickaxe.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 11,
+  "name": "High Quality Workbench",
+  "image": "High Quality Workbench.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 11,
+  "name": "Heavy Weight Module",
+  "image": "Heavy Weight Module icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 11,
+  "name": "Wooden Gate",
+  "image": "Wooden Gate.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 11,
+  "name": "Lifmunk's Submachine Gun",
+  "image": "Lifmunk menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 11,
+  "name": "Jolthog Cryst's Gloves",
+  "image": "Jolthog Cryst menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 12,
+  "name": "Pelt Armor",
+  "image": "Pelt Armor.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 12,
+  "name": "Meat Cleaver",
+  "image": "Meat Cleaver.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 12,
+  "name": "Medieval Medicine Workbench",
+  "image": "Medieval Medicine Workbench.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 12,
+  "name": "Tanzee's Assault Rifle",
+  "image": "Tanzee menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 12,
+  "name": "Eikthyrdeer Saddle",
+  "image": "Eikthyrdeer menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 12,
+  "name": "Grintale Saddle",
+  "image": "Grintale menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 12,
+  "name": "Antique Chair Set",
+  "image": "Antique Chair Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 12,
+  "name": "Grappling Gun",
+  "image": "Grappling Gun icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": true
+ },
+ {
+  "level": 13,
+  "name": "Crossbow",
+  "image": "Crossbow.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 13,
+  "name": "Metal Spear",
+  "image": "Stone Spear.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 13,
+  "name": "Human-Powered Generator",
+  "image": "Human-Powered Generator.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 13,
+  "name": "Training Dummy",
+  "image": "Training Dummy.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 13,
+  "name": "Cooler Box",
+  "image": "Cooler Box.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 13,
+  "name": "Chillet Saddle",
+  "image": "Chillet menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 13,
+  "name": "Antique Storage Cabinet Set",
+  "image": "Antique Storage Cabinet Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 14,
+  "name": "Mega Sphere",
+  "image": "Mega Sphere icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 14,
+  "name": "Sphere Workbench",
+  "image": "Sphere Workbench.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 14,
+  "name": "Monitoring Stand",
+  "image": "Monitoring Stand.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 14,
+  "name": "Wall Torch",
+  "image": "Wall Torch.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 14,
+  "name": "Sweepa Saddle",
+  "image": "Sweepa menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 14,
+  "name": "Univolt Saddle",
+  "image": "Univolt menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 14,
+  "name": "Antique Desk Set",
+  "image": "Antique Desk Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 14,
+  "name": "Pal Essence Condenser",
+  "image": "Pal Essence Condenser.png",
+  "structure": true,
+  "points": 2,
+  "ancient": true
+ },
+ {
+  "level": 15,
+  "name": "Beginner Fishing Set",
+  "image": "Beginner Fishing Set.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 15,
+  "name": "Fire Arrow Crossbow",
+  "image": "Fire Arrow Crossbow.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 15,
+  "name": "Pal Expedition Station",
+  "image": "Pal Expedition Station.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 15,
+  "name": "Wheat Plantation",
+  "image": "Wheat Plantation.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 15,
+  "name": "Mill",
+  "image": "Mill.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 15,
+  "name": "Viewing Cage",
+  "image": "Viewing Cage.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 15,
+  "name": "Nitewing Saddle",
+  "image": "Nitewing menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 16,
+  "name": "Mega Shield",
+  "image": "Mega Shield icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 16,
+  "name": "Heat Resistant Pelt Armor",
+  "image": "Heat Resistant Pelt Armor.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 16,
+  "name": "Metal Chest",
+  "image": "Metal Chest.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 16,
+  "name": "Wooden Defensive Wall",
+  "image": "Wood Defensive Wall.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 16,
+  "name": "Arsox Saddle",
+  "image": "Arsox menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 16,
+  "name": "Antique Bath Set",
+  "image": "Antique Bath Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 16,
+  "name": "Antique Mirror Set",
+  "image": "Antique Mirror Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 17,
+  "name": "Poison Arrow Crossbow",
+  "image": "Poison Arrow Crossbow.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 17,
+  "name": "Cooking Pot",
+  "image": "Cooking Pot.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 17,
+  "name": "Heater",
+  "image": "Heater.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 17,
+  "name": "Tombstone",
+  "image": "Tombstone.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 17,
+  "name": "Pengullet's Rocket Launcher",
+  "image": "Pengullet menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 17,
+  "name": "Flopie's Necklace",
+  "image": "Flopie menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 17,
+  "name": "Piano Furniture Set",
+  "image": "Piano Furniture Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 17,
+  "name": "Mega Grappling Gun",
+  "image": "Grappling Gun icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": true
+ },
+ {
+  "level": 18,
+  "name": "Mega Glider",
+  "image": "Mega Glider icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 18,
+  "name": "Cold Resistant Pelt Armor",
+  "image": "Cold Resistant Pelt Armor.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 18,
+  "name": "Stone Structure Set",
+  "image": "Stone Structure Set.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 18,
+  "name": "Cooler",
+  "image": "Cooler.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 18,
+  "name": "Tocotoco's Gloves",
+  "image": "Tocotoco menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 18,
+  "name": "Metal Shelf Set",
+  "image": "Metal Shelf Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 18,
+  "name": "Bathroom Set",
+  "image": "Bathroom Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 19,
+  "name": "Breeding Farm",
+  "image": "Breeding Farm.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 19,
+  "name": "Cement",
+  "image": "Cement icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 19,
+  "name": "Wall-Mounted Sign",
+  "image": "Wall-Mounted Sign.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 19,
+  "name": "Dinossom Saddle",
+  "image": "Dinossom menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 19,
+  "name": "Broncherry Saddle",
+  "image": "Broncherry menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 19,
+  "name": "Digtoise's Headband",
+  "image": "Digtoise menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 19,
+  "name": "Antique High Quality Furniture Set",
+  "image": "Antique High Quality Furniture Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 20,
+  "name": "Giga Sphere",
+  "image": "Giga Sphere icon.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 20,
+  "name": "Weapon Workbench",
+  "image": "Weapon Workbench.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 20,
+  "name": "Pal Labor Research Laboratory",
+  "image": "Pal Labor Research Laboratory.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 20,
+  "name": "Large Toolbox",
+  "image": "Large Toolbox.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 20,
+  "name": "Hangyu's Gloves",
+  "image": "Hangyu menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 20,
+  "name": "Antique Couch Set",
+  "image": "Antique Couch Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 20,
+  "name": "Dimensional Pal Storage",
+  "image": "Dimensional Pal Storage.png",
+  "structure": false,
+  "points": 2,
+  "ancient": true
+ },
+ {
+  "level": 21,
+  "name": "Musket",
+  "image": "Musket.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 21,
+  "name": "Gunpowder",
+  "image": "Gunpowder icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 21,
+  "name": "Coarse Ammo",
+  "image": "Coarse Ammo icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 21,
+  "name": "Flame Cauldron",
+  "image": "Flame Cauldron.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 21,
+  "name": "Vanwyrm Saddle",
+  "image": "Vanwyrm menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 21,
+  "name": "Kingpaca Saddle",
+  "image": "Kingpaca menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 21,
+  "name": "Antique Dresser",
+  "image": "Antique Dresser.png",
+  "structure": true,
+  "points": 1,
+  "ancient": true
+ },
+ {
+  "level": 22,
+  "name": "Stun Baton",
+  "image": "Stun Baton.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 22,
+  "name": "High Quality Bait",
+  "image": "High Quality Bait.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 22,
+  "name": "Bear Trap (Large)",
+  "image": "Bear Trap(Large).png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 22,
+  "name": "Dazzi's Necklace",
+  "image": "Dazzi menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 22,
+  "name": "Dazemu Saddle",
+  "image": "Dazemu menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 23,
+  "name": "Metal Armor",
+  "image": "Metal Armor.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 23,
+  "name": "Metal Helm",
+  "image": "Metal Helm.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 23,
+  "name": "Water Fountain",
+  "image": "Water Fountain.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 23,
+  "name": "Maraith Saddle",
+  "image": "Maraith menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 23,
+  "name": "Galeclaw's Gloves",
+  "image": "Galeclaw menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 23,
+  "name": "Killamari Primo's Gloves",
+  "image": "Killamari Primo menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 24,
+  "name": "Fluffy Pal Bed",
+  "image": "Fluffy Pal Bed icon.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 24,
+  "name": "Medicine Rack",
+  "image": "Medicine Rack.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 24,
+  "name": "Flower Bed",
+  "image": "Flower Bed.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 24,
+  "name": "Foxparks Cryst's Harness",
+  "image": "Foxparks Cryst menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 24,
+  "name": "Mossanda's Grenade Launcher",
+  "image": "Mossanda menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 24,
+  "name": "Azurobe Saddle",
+  "image": "Azurobe menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 25,
+  "name": "Boost Gun",
+  "image": "Boost Gun.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 25,
+  "name": "Boost Gun Ammo",
+  "image": "Boost Gun Ammo.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 25,
+  "name": "Frag Grenade",
+  "image": "Frag Grenade.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 25,
+  "name": "Heat Resistant Metal Armor",
+  "image": "Heat Resistant Metal Armor.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 25,
+  "name": "Silo",
+  "image": "Silo.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 25,
+  "name": "Surfent Terra Saddle",
+  "image": "Surfent Terra menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 25,
+  "name": "Eikthyrdeer Terra Saddle",
+  "image": "Eikthyrdeer Terra menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 25,
+  "name": "Lockpicking Tool v2",
+  "image": "Lockpicking Tool v2 icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": true
+ },
+ {
+  "level": 26,
+  "name": "Power Generator",
+  "image": "Power Generator.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 26,
+  "name": "Lamp",
+  "image": "Lamp.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 26,
+  "name": "Mounted Crossbow",
+  "image": "Mounted Crossbow.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 26,
+  "name": "Fenglope Saddle",
+  "image": "Fenglope menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 26,
+  "name": "Mossanda Lux's Grenade Launcher",
+  "image": "Mossanda Lux menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 26,
+  "name": "Celaray Lux's Gloves",
+  "image": "Celaray Lux menu.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 27,
+  "name": "Hyper Sphere",
+  "image": "Hyper Sphere icon.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 27,
+  "name": "Sphere Assembly Line",
+  "image": "Sphere Assembly Line.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 27,
+  "name": "Cold Resistant Metal Armor",
+  "image": "Cold Resistant Metal Armor.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 27,
+  "name": "Ceiling Lamp",
+  "image": "Ceiling Lamp.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 27,
+  "name": "Water Broncherry Saddle",
+  "image": "Broncherry Aqua menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 27,
+  "name": "Rayhound Saddle",
+  "image": "Rayhound menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 27,
+  "name": "Herbil's Harness",
+  "image": "Herbil menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 28,
+  "name": "Giga Shield",
+  "image": "Giga Shield icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 28,
+  "name": "Production Assembly Line",
+  "image": "Production Assembly Line.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 28,
+  "name": "Stump and Axe",
+  "image": "Stump and Axe.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 28,
+  "name": "Defensive Wall",
+  "image": "Defensive Wall.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 28,
+  "name": "Water Elphidran Saddle",
+  "image": "Elphidran Aqua menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 28,
+  "name": "Tarantriss Saddle",
+  "image": "Tarantriss menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 28,
+  "name": "Anti-Gravity Belt",
+  "image": "Anti-Gravity Belt icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": true
+ },
+ {
+  "level": 29,
+  "name": "Intermediate Fishing Rod (Cattiva)",
+  "image": "Intermediate Fishing Rod (Cattiva).png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 29,
+  "name": "Sword",
+  "image": "Sword.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 29,
+  "name": "Ice Grenade",
+  "image": "Ice Grenade.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 29,
+  "name": "Mammorest Saddle",
+  "image": "Mammorest menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 29,
+  "name": "Reindrix Saddle",
+  "image": "Reindrix menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 29,
+  "name": "Azurobe Cryst Saddle",
+  "image": "Azurobe Cryst menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 29,
+  "name": "Enhanced Hip Lantern",
+  "image": "Enhanced Hip Lantern icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": true
+ },
+ {
+  "level": 30,
+  "name": "Mine",
+  "image": "Mine.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 30,
+  "name": "Metal Structure Set",
+  "image": "Metal Structure Set.png",
+  "structure": true,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 30,
+  "name": "Pickaxe and Helmet",
+  "image": "Pickaxe and Helmet.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 30,
+  "name": "Kitsun Saddle",
+  "image": "Kitsun menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 30,
+  "name": "Vanwyrm Cryst Saddle",
+  "image": "Vanwyrm Cryst menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 31,
+  "name": "Fishing Pond",
+  "image": "Fishing Pond.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 31,
+  "name": "High Quality Hot Spring",
+  "image": "High Quality Hot Spring.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 31,
+  "name": "Stone Gate",
+  "image": "Stone Gate.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 31,
+  "name": "Pyrin Saddle",
+  "image": "Pyrin menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 31,
+  "name": "Hangyu Cryst's Glove",
+  "image": "Hangyu Cryst menu.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 32,
+  "name": "Pal Recovery Grenade",
+  "image": "Pal Recovery Grenade.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 32,
+  "name": "Weapon Assembly Line",
+  "image": "Weapon Assembly Line.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 32,
+  "name": "Carrot Plantation",
+  "image": "Carrot Plantation.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 32,
+  "name": "Witch Cauldron",
+  "image": "Witch Cauldron.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 32,
+  "name": "Palbox Control Device",
+  "image": "Palbox Control Device.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 32,
+  "name": "Reptyro Saddle",
+  "image": "Reptyro menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 33,
+  "name": "Polymer",
+  "image": "Polymer icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 33,
+  "name": "Electric Mine",
+  "image": "Electric Mine.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 33,
+  "name": "Snowman",
+  "image": "Snowman.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 33,
+  "name": "Helzephyr Saddle",
+  "image": "Helzephyr menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 33,
+  "name": "Blazehowl Saddle",
+  "image": "Blazehowl menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 33,
+  "name": "Clock Set",
+  "image": "Clock Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 33,
+  "name": "Summoning Altar",
+  "image": "Summoning Altar.png",
+  "structure": false,
+  "points": 3,
+  "ancient": true
+ },
+ {
+  "level": 34,
+  "name": "Improved Furnace",
+  "image": "Improved Furnace.png",
+  "structure": true,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 34,
+  "name": "Refined Metal Axe",
+  "image": "Stone Axe.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 34,
+  "name": "Refined Metal Pickaxe",
+  "image": "Stone Pickaxe.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 34,
+  "name": "Refined Metal Spear",
+  "image": "Stone Spear.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 34,
+  "name": "Beakon Saddle",
+  "image": "Beakon menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 34,
+  "name": "Polapup's Harness",
+  "image": "Polapup menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 34,
+  "name": "Storage Container Set",
+  "image": "Storage Container Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 35,
+  "name": "Ultra Sphere",
+  "image": "Ultra Sphere icon.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 35,
+  "name": "Sphere Assembly Line II",
+  "image": "Sphere Assembly Line II.png",
+  "structure": true,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 35,
+  "name": "Circuit Board",
+  "image": "Circuit Board icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 35,
+  "name": "Carbon Fiber",
+  "image": "Carbon Fiber icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 35,
+  "name": "Whalaska Saddle",
+  "image": "Whalaska menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 35,
+  "name": "Blazehowl Noct Saddle",
+  "image": "Blazehowl Noct menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 35,
+  "name": "Metal Chair and Desk Set",
+  "image": "Metal Chair and Desk Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 36,
+  "name": "Single-Shot Rifle",
+  "image": "Single-Shot Rifle.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 36,
+  "name": "Rifle Ammo",
+  "image": "Rifle Ammo icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 36,
+  "name": "Pal Surgery Table",
+  "image": "Pal Surgery Table.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 36,
+  "name": "High Quality Cloth",
+  "image": "High Quality Cloth icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 36,
+  "name": "Large Pal Bed",
+  "image": "Large Pal Bed.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 36,
+  "name": "Quivern Saddle",
+  "image": "Quivern menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 36,
+  "name": "Antique Lamp Set",
+  "image": "Antique Lamp Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 36,
+  "name": "Huge Feed Bag",
+  "image": "Large Feed Bag.png",
+  "structure": false,
+  "points": 4,
+  "ancient": true
+ },
+ {
+  "level": 37,
+  "name": "Refined Metal Armor",
+  "image": "Refined Metal Armor.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 37,
+  "name": "Refined Metal Helm",
+  "image": "Refined Metal Helm.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 37,
+  "name": "Accumulator",
+  "image": "Accumulator.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 37,
+  "name": "Ragnahawk Saddle",
+  "image": "Ragnahawk menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 37,
+  "name": "Ghangler Saddle",
+  "image": "Ghangler menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 37,
+  "name": "Ironwood Table Set",
+  "image": "Ironwood Table Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 37,
+  "name": "Electric Egg Incubator",
+  "image": "Electric Egg Incubator.png",
+  "structure": false,
+  "points": 5,
+  "ancient": true
+ },
+ {
+  "level": 38,
+  "name": "Deluxe Bait",
+  "image": "Deluxe Bait.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 38,
+  "name": "Refrigerator",
+  "image": "Refrigerator.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 38,
+  "name": "Ice Mine",
+  "image": "Ice Mine.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 38,
+  "name": "Reptyro Cryst Saddle",
+  "image": "Reptyro Cryst menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 38,
+  "name": "Faleris Saddle",
+  "image": "Faleris menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 38,
+  "name": "Scattered Sphere Launcher",
+  "image": "Sphere Launcher.png",
+  "structure": false,
+  "points": 5,
+  "ancient": true
+ },
+ {
+  "level": 39,
+  "name": "Double-barreled Shotgun",
+  "image": "Double-barreled Shotgun.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 39,
+  "name": "Shotgun Shells",
+  "image": "Shotgun Shells.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 39,
+  "name": "Glass Structure Set",
+  "image": "Glass Foundation.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 39,
+  "name": "Refined Metal Chest",
+  "image": "Refined Metal Chest.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 39,
+  "name": "Pengullet Lux's Rocket Launcher",
+  "image": "Pengullet Lux menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 39,
+  "name": "Jormuntide Saddle",
+  "image": "Jormuntide menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 39,
+  "name": "Metal Barrel Set",
+  "image": "Metal Barrel Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 39,
+  "name": "Ore Mining Site II",
+  "image": "Ore Mining Site II.png",
+  "structure": false,
+  "points": 3,
+  "ancient": true
+ },
+ {
+  "level": 40,
+  "name": "Heat Resistant Refined Metal Armor",
+  "image": "Heat Resistant Refined Metal Armor.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 40,
+  "name": "Giga Glider",
+  "image": "Giga Glider icon.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 40,
+  "name": "Mounted Machine Gun",
+  "image": "Mounted Machine Gun.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 40,
+  "name": "Blazamut Saddle",
+  "image": "Blazamut menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 40,
+  "name": "Grizzbolt's Minigun",
+  "image": "Grizzbolt menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 40,
+  "name": "Leather Chair Set",
+  "image": "Leather Chair Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 41,
+  "name": "Semi-Auto Rifle",
+  "image": "Semi-Auto Rifle icon.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 41,
+  "name": "Cold Resistant Refined Metal Armor",
+  "image": "Cold Resistant Refined Metal Armor.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 41,
+  "name": "Electric Kitchen",
+  "image": "Electric Kitchen.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 41,
+  "name": "Electric Heater",
+  "image": "Electric Heater.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 41,
+  "name": "Suzaku Saddle",
+  "image": "Suzaku menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 41,
+  "name": "Street Lamp Set",
+  "image": "Street Lamp Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 41,
+  "name": "Guild Chest",
+  "image": "Guild Chest.png",
+  "structure": false,
+  "points": 4,
+  "ancient": true
+ },
+ {
+  "level": 42,
+  "name": "Dragon Grenade",
+  "image": "Dragon Grenade icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 42,
+  "name": "Production Assembly Line II",
+  "image": "Production Assembly Line II.png",
+  "structure": true,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 42,
+  "name": "Electric Cooler",
+  "image": "Electric Cooler.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 42,
+  "name": "Iron Gate",
+  "image": "Iron Gate.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 42,
+  "name": "Ice Kingpaca Saddle",
+  "image": "Kingpaca Cryst menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 42,
+  "name": "Palumba Saddle",
+  "image": "Palumba menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 42,
+  "name": "Emergency Exit Sign Set",
+  "image": "Emergency Exit Sign Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 43,
+  "name": "Hyper Shield",
+  "image": "Hyper Shield icon.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 43,
+  "name": "Electric Medicine Workbench",
+  "image": "Electric Medicine Workbench.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 43,
+  "name": "Metal Defensive Wall",
+  "image": "Metal Defensive Wall.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 43,
+  "name": "Water Suzaku Saddle",
+  "image": "Suzaku Aqua menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 43,
+  "name": "Jormuntide Ignis Saddle",
+  "image": "Jormuntide Ignis menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 43,
+  "name": "Yakumo Saddle",
+  "image": "Yakumo menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 43,
+  "name": "Medium Pouch",
+  "image": "Medium Pouch icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": true
+ },
+ {
+  "level": 44,
+  "name": "Legendary Sphere",
+  "image": "Legendary Sphere icon.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 44,
+  "name": "Electric Furnace",
+  "image": "Electric Furnace.png",
+  "structure": true,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 44,
+  "name": "Katana",
+  "image": "Katana icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 44,
+  "name": "Relaxaurus's Missile Launcher",
+  "image": "Relaxaurus menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 44,
+  "name": "Wumpo Saddle",
+  "image": "Wumpo menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 45,
+  "name": "Assault Rifle",
+  "image": "Assault Rifle icon.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 45,
+  "name": "Assault Rifle Ammo",
+  "image": "Assault Rifle Ammo icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 45,
+  "name": "Advanced Fishing Rod (Pengullet)",
+  "image": "Advanced Fishing Rod (Pengullet) icon.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 45,
+  "name": "Drafting Table",
+  "image": "Drafting Table.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 45,
+  "name": "Wumpo Botan Saddle",
+  "image": "Wumpo Botan menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 45,
+  "name": "Mammorest Cryst Saddle",
+  "image": "Mammorest Cryst menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 45,
+  "name": "Chillet Ignis Saddle",
+  "image": "Chillet Ignis menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 45,
+  "name": "Traffic Control Set",
+  "image": "Traffic Control Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 46,
+  "name": "Pal Metal Armor",
+  "image": "Pal Metal Armor.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 46,
+  "name": "Pal Metal Helm",
+  "image": "Pal Metal Helm.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 46,
+  "name": "Large Mounted Lamp",
+  "image": "Large Mounted Lamp.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 46,
+  "name": "Relaxaurus Lux's Missile Launcher",
+  "image": "Relaxaurus Lux menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 46,
+  "name": "Shroomer Saddle",
+  "image": "Shroomer menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 46,
+  "name": "Braloha Saddle",
+  "image": "Braloha menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 46,
+  "name": "Road Sign Set",
+  "image": "Road Sign Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 46,
+  "name": "Sulfur Mine",
+  "image": "Sulfur Mine.png",
+  "structure": false,
+  "points": 5,
+  "ancient": true
+ },
+ {
+  "level": 47,
+  "name": "Weapon Assembly Line II",
+  "image": "Weapon Assembly Line II.png",
+  "structure": true,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 47,
+  "name": "Large Ceiling Lamp",
+  "image": "Large Ceiling Lamp.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 47,
+  "name": "Astegon Saddle",
+  "image": "Astegon menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 47,
+  "name": "Shadowbeak Saddle",
+  "image": "Shadowbeak menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 47,
+  "name": "Shroomer Noct Saddle",
+  "image": "Shroomer Noct menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 48,
+  "name": "Heat Resistant Pal Metal Armor",
+  "image": "Heat Resistant Pal Metal Armor.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 48,
+  "name": "Electric Pylon",
+  "image": "Electric Pylon.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 48,
+  "name": "Frostallion Saddle",
+  "image": "Frostallion menu.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 48,
+  "name": "Frostallion Noct Saddle",
+  "image": "Frostallion Noct menu.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 48,
+  "name": "Barricade Set",
+  "image": "Barricade Set.png",
+  "structure": true,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 49,
+  "name": "Rocket Launcher",
+  "image": "Rocket Launcher.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 49,
+  "name": "Rocket Ammo",
+  "image": "Rocket Ammo icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 49,
+  "name": "Paladius Saddle",
+  "image": "Paladius menu.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 49,
+  "name": "Necromus Saddle",
+  "image": "Necromus menu.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 49,
+  "name": "Quivern Botan Saddle",
+  "image": "Quivern Botan menu.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 50,
+  "name": "Cold Resistant Pal Metal Armor",
+  "image": "Cold Resistant Pal Metal Armor.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 50,
+  "name": "Mounted Missile Launcher",
+  "image": "Mounted Missile Launcher.png",
+  "structure": true,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 50,
+  "name": "Plasteel",
+  "image": "Plasteel icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 50,
+  "name": "Crude Oil Extractor",
+  "image": "Crude Oil Extractor.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 50,
+  "name": "Jetragon's Missile Launcher",
+  "image": "Jetragon menu.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 50,
+  "name": "Xenogard Saddle",
+  "image": "Xenogard menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 50,
+  "name": "Large Power Generator",
+  "image": "Large Power Generator.png",
+  "structure": true,
+  "points": 4,
+  "ancient": true
+ },
+ {
+  "level": 51,
+  "name": "Ultimate Sphere",
+  "image": "Ultimate Sphere icon.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 51,
+  "name": "Plasteel Armor",
+  "image": "Plasteel Armor icon.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 51,
+  "name": "Plasteel Helmet",
+  "image": "Plasteel Helmet icon.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 51,
+  "name": "Laser Rifle",
+  "image": "Laser Rifle.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 51,
+  "name": "Energy Cartridge",
+  "image": "Energy Cartridge icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 51,
+  "name": "Cold Food Box",
+  "image": "Cold Food Box.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 51,
+  "name": "Pure Quartz Mine",
+  "image": "Pure Quartz Mine.png",
+  "structure": false,
+  "points": 5,
+  "ancient": true
+ },
+ {
+  "level": 52,
+  "name": "Hyper Glider",
+  "image": "Hyper Glider icon.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 52,
+  "name": "Flamethrower",
+  "image": "Flamethrower.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 52,
+  "name": "Flamethrower Fuel",
+  "image": "Flamethrower Fuel icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 52,
+  "name": "Alluring Bait",
+  "image": "Alluring Bait icon.png",
+  "structure": false,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 52,
+  "name": "Refrigerated Crusher",
+  "image": "Refrigerated Crusher.png",
+  "structure": true,
+  "points": 2,
+  "ancient": false
+ },
+ {
+  "level": 52,
+  "name": "Helzephyr Lux Saddle",
+  "image": "Helzephyr Lux menu.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 53,
+  "name": "Heat Resistant Plasteel Armor",
+  "image": "Heat Resistant Plasteel Armor icon.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 53,
+  "name": "Grenade Launcher",
+  "image": "Grenade Launcher.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 53,
+  "name": "Grenade Ammo",
+  "image": "Grenade Ammo icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 53,
+  "name": "Frag Grenade Mk2",
+  "image": "Frag Grenade Mk2 icon.png",
+  "structure": false,
+  "points": 3,
+  "ancient": false
+ },
+ {
+  "level": 53,
+  "name": "Selyne Saddle",
+  "image": "Selyne menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 54,
+  "name": "Cold Resistant Plasteel Armor",
+  "image": "Cold Resistant Plasteel Armor icon.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 54,
+  "name": "Gatling Gun",
+  "image": "Gatling Gun.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 54,
+  "name": "Gatling Gun Bullet",
+  "image": "Gatling Gun Bullet icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 54,
+  "name": "Pal Disassembly Conveyor",
+  "image": "Pal Disassembly Conveyor.png",
+  "structure": true,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 55,
+  "name": "Ultra Shield",
+  "image": "Ultra Shield icon.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ },
+ {
+  "level": 55,
+  "name": "Lightweight Plasteel Armor",
+  "image": "Lightweight Plasteel Armor icon.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 55,
+  "name": "Guided Missile Launcher",
+  "image": "Guided Missile Launcher.png",
+  "structure": false,
+  "points": 5,
+  "ancient": false
+ },
+ {
+  "level": 55,
+  "name": "Missile Ammo",
+  "image": "Missile Ammo icon.png",
+  "structure": false,
+  "points": 1,
+  "ancient": false
+ },
+ {
+  "level": 55,
+  "name": "Blazamut Ryu Saddle",
+  "image": "Blazamut Ryu menu.png",
+  "structure": false,
+  "points": 4,
+  "ancient": false
+ }
+]

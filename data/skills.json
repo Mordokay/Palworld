@@ -1,0 +1,6683 @@
+[
+ {
+  "id": "absolute-frost",
+  "name": "Absolute Frost",
+  "skillType": "active",
+  "element": "Ice",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Skill Fruit: Absolute Frost",
+   "icon": "Ice Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Ice Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "acid-rain",
+  "name": "Acid Rain",
+  "skillType": "Active",
+  "element": "Water",
+  "description": "Creates acidic clouds that pour down acid rain on enemies.",
+  "power": 80,
+  "cooldown": 18,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Water Skill Fruit: Acid Rain",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Dazzi",
+    "level": 15
+   },
+   {
+    "pal": "Quivern",
+    "level": 15
+   },
+   {
+    "pal": "Fenglope",
+    "level": 22
+   },
+   {
+    "pal": "Lovander",
+    "level": 22
+   },
+   {
+    "pal": "Beegarde",
+    "level": 30
+   },
+   {
+    "pal": "Elphidran Aqua",
+    "level": 30
+   },
+   {
+    "pal": "Killamari",
+    "level": 30
+   },
+   {
+    "pal": "Teafant",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "air-cannon",
+  "name": "Air Cannon",
+  "skillType": "Active",
+  "element": "Neutral",
+  "description": "Quickly fires a burst of highly pressurized air.",
+  "power": 25,
+  "cooldown": 2,
+  "range": null,
+  "image": "Air-Cannon.gif",
+  "skillFruit": null,
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Beakon",
+    "level": 1
+   },
+   {
+    "pal": "Beegarde",
+    "level": 1
+   },
+   {
+    "pal": "Cawgnito",
+    "level": 1
+   },
+   {
+    "pal": "Cinnamoth",
+    "level": 1
+   },
+   {
+    "pal": "Cremis",
+    "level": 1
+   },
+   {
+    "pal": "Dazzi",
+    "level": 1
+   },
+   {
+    "pal": "Elizabee",
+    "level": 1
+   },
+   {
+    "pal": "Fenglope",
+    "level": 1
+   },
+   {
+    "pal": "Foxcicle",
+    "level": 1
+   },
+   {
+    "pal": "Frostallion",
+    "level": 1
+   },
+   {
+    "pal": "Frostallion Noct",
+    "level": 1
+   },
+   {
+    "pal": "Hangyu Cryst",
+    "level": 1
+   },
+   {
+    "pal": "Hoocrates",
+    "level": 1
+   },
+   {
+    "pal": "Lunaris",
+    "level": 1
+   },
+   {
+    "pal": "Melpaca",
+    "level": 1
+   },
+   {
+    "pal": "Nitewing",
+    "level": 1
+   },
+   {
+    "pal": "Nox",
+    "level": 1
+   },
+   {
+    "pal": "Ragnahawk",
+    "level": 1
+   },
+   {
+    "pal": "Reindrix",
+    "level": 1
+   },
+   {
+    "pal": "Ribbuny",
+    "level": 1
+   },
+   {
+    "pal": "Shadowbeak",
+    "level": 1
+   },
+   {
+    "pal": "Suzaku",
+    "level": 1
+   },
+   {
+    "pal": "Swee",
+    "level": 1
+   },
+   {
+    "pal": "Tombat",
+    "level": 1
+   },
+   {
+    "pal": "Vanwyrm",
+    "level": 1
+   },
+   {
+    "pal": "Vanwyrm Cryst",
+    "level": 1
+   },
+   {
+    "pal": "Vixy",
+    "level": 1
+   },
+   {
+    "pal": "Woolipop",
+    "level": 1
+   },
+   {
+    "pal": "Caprity",
+    "level": 7
+   },
+   {
+    "pal": "Cattiva",
+    "level": 7
+   },
+   {
+    "pal": "Chikipi",
+    "level": 7
+   },
+   {
+    "pal": "Flopie",
+    "level": 7
+   },
+   {
+    "pal": "Galeclaw",
+    "level": 7
+   },
+   {
+    "pal": "Hangyu",
+    "level": 7
+   },
+   {
+    "pal": "Lamball",
+    "level": 7
+   },
+   {
+    "pal": "Lifmunk",
+    "level": 7
+   },
+   {
+    "pal": "Mau Cryst",
+    "level": 7
+   },
+   {
+    "pal": "Tocotoco",
+    "level": 7
+   },
+   {
+    "pal": "Direhowl",
+    "level": 15
+   },
+   {
+    "pal": "Mozzarina",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "all-range-thunder",
+  "name": "All Range Thunder",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: All Range Thunder",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Azurmane",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "antler-uppercut",
+  "name": "Antler Uppercut",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Eikthyrdeer's exclusive skill.\nCharges at foes and uses antlers to launch them into the air.\nIf using while riding, the direction of the charge can be controlled.",
+  "power": 50,
+  "cooldown": 5,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Eikthyrdeer",
+   "Eikthyrdeer Terra"
+  ],
+  "learnset": [
+   {
+    "pal": "Eikthyrdeer",
+    "level": 7
+   },
+   {
+    "pal": "Eikthyrdeer Terra",
+    "level": 7
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "apocalypse",
+  "name": "Apocalypse",
+  "skillType": "Active",
+  "element": "Dark",
+  "description": "Generates several dark vortexes in the surrounding area.",
+  "power": 110,
+  "cooldown": 55,
+  "range": "long",
+  "image": null,
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Apocalypse",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Bellanoir Libero",
+    "level": 30
+   },
+   {
+    "pal": "Bellanoir",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "aqua-burst",
+  "name": "Aqua Burst",
+  "skillType": "Active",
+  "element": "Water",
+  "description": "Creates a giant ball of water and hurls it at an enemy.",
+  "power": 100,
+  "cooldown": 30,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Water Skill Fruit: Aqua Burst",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Jormuntide",
+    "level": 22
+   },
+   {
+    "pal": "Lyleen",
+    "level": 22
+   },
+   {
+    "pal": "Dumud",
+    "level": 30
+   },
+   {
+    "pal": "Fenglope",
+    "level": 30
+   },
+   {
+    "pal": "Penking",
+    "level": 30
+   },
+   {
+    "pal": "Suzaku Aqua",
+    "level": 30
+   },
+   {
+    "pal": "Broncherry Aqua",
+    "level": 40
+   },
+   {
+    "pal": "Celaray",
+    "level": 40
+   },
+   {
+    "pal": "Digtoise",
+    "level": 40
+   },
+   {
+    "pal": "Fuack",
+    "level": 40
+   },
+   {
+    "pal": "Gobfin",
+    "level": 40
+   },
+   {
+    "pal": "Kelpsea",
+    "level": 40
+   },
+   {
+    "pal": "Kingpaca Cryst",
+    "level": 40
+   },
+   {
+    "pal": "Quivern",
+    "level": 40
+   },
+   {
+    "pal": "Relaxaurus",
+    "level": 40
+   },
+   {
+    "pal": "Sibelyx",
+    "level": 40
+   },
+   {
+    "pal": "Teafant",
+    "level": 40
+   },
+   {
+    "pal": "Wumpo Botan",
+    "level": 40
+   },
+   {
+    "pal": "Turtacle",
+    "level": null
+   }
+  ],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "aqua-gun",
+  "name": "Aqua Gun",
+  "skillType": "Active",
+  "element": "Water",
+  "description": "Hurls a ball of water straight at an enemy.",
+  "power": 40,
+  "cooldown": 4,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Water Skill Fruit: Bubble Blast",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Azurobe",
+    "level": 1
+   },
+   {
+    "pal": "Broncherry Aqua",
+    "level": 1
+   },
+   {
+    "pal": "Digtoise",
+    "level": 1
+   },
+   {
+    "pal": "Elphidran Aqua",
+    "level": 1
+   },
+   {
+    "pal": "Fuack",
+    "level": 1
+   },
+   {
+    "pal": "Jormuntide",
+    "level": 1
+   },
+   {
+    "pal": "Penking",
+    "level": 1
+   },
+   {
+    "pal": "Teafant",
+    "level": 1
+   },
+   {
+    "pal": "Celaray",
+    "level": 7
+   },
+   {
+    "pal": "Dumud",
+    "level": 7
+   },
+   {
+    "pal": "Fenglope",
+    "level": 7
+   },
+   {
+    "pal": "Petallia",
+    "level": 7
+   },
+   {
+    "pal": "Relaxaurus",
+    "level": 7
+   },
+   {
+    "pal": "Wumpo Botan",
+    "level": 7
+   },
+   {
+    "pal": "Gobfin",
+    "level": 15
+   },
+   {
+    "pal": "Kelpsea",
+    "level": 15
+   },
+   {
+    "pal": "Pengullet",
+    "level": 15
+   },
+   {
+    "pal": "Surfent",
+    "level": 15
+   },
+   {
+    "pal": "Suzaku Aqua",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "aqua-surge",
+  "name": "Aqua Surge",
+  "skillType": "active",
+  "element": "Water",
+  "description": "",
+  "power": 160,
+  "cooldown": 56,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Water Skill Fruit: Aqua Surge",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "beam-comet",
+  "name": "Beam Comet",
+  "skillType": "ex_active",
+  "element": "Dragon",
+  "description": "Jetragon's exclusive skill.\nFlies at enemies on illuminated wings while firing innumerable beams. The Beams explode on impact.",
+  "power": 140,
+  "cooldown": 50,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Jetragon"
+  ],
+  "learnset": [
+   {
+    "pal": "Jetragon",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Dragon Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "beam-slicer",
+  "name": "Beam Slicer",
+  "skillType": "active",
+  "element": "Dragon",
+  "description": "",
+  "power": 130,
+  "cooldown": 45,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dragon Skill Fruit: Beam Slicer",
+   "icon": "Dragon Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Dragon Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "bee-quiet",
+  "name": "Bee Quiet",
+  "skillType": "ex_active",
+  "element": "Grass",
+  "description": "Beegarde's exclusive skill.\nRisks its life to cause a violent explosion, but receives the honor of falling in battle.",
+  "power": 250,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Beegarde"
+  ],
+  "learnset": [
+   {
+    "pal": "Beegarde",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "blast-punch",
+  "name": "Blast Punch",
+  "skillType": "ex_active",
+  "element": "Electric",
+  "description": "Mossanda Lux's exclusive skill.\nWinds up its fist before pummeling an enemy with a flurry of electrically charged punches.",
+  "power": 85,
+  "cooldown": 14,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Mossanda Lux"
+  ],
+  "learnset": [
+   {
+    "pal": "Mossanda Lux",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "blazing-horn",
+  "name": "Blazing Horn",
+  "skillType": "ex_active",
+  "element": "Fire",
+  "description": "Arsox's exclusive skill.\nTakes aim and rushes at an enemy with a mad dash.",
+  "power": 50,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Arsox"
+  ],
+  "learnset": [
+   {
+    "pal": "Arsox",
+    "level": 7
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "blizzard-spike",
+  "name": "Blizzard Spike",
+  "skillType": "Active",
+  "element": "Ice",
+  "description": "Creates a giant lump of ice and hurls it at an enemy. It deals damage to those in the surrounding area upon impact.",
+  "power": 130,
+  "cooldown": 45,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Ice Skill Fruit: Blizzard Spike",
+   "icon": "Ice Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Ribbuny",
+    "level": 22
+   },
+   {
+    "pal": "Paladius",
+    "level": 30
+   },
+   {
+    "pal": "Fenglope",
+    "level": 40
+   },
+   {
+    "pal": "Lunaris",
+    "level": 40
+   },
+   {
+    "pal": "Lyleen Noct",
+    "level": 40
+   },
+   {
+    "pal": "Pengullet",
+    "level": 40
+   },
+   {
+    "pal": "Penking",
+    "level": 40
+   },
+   {
+    "pal": "Reptyro Cryst",
+    "level": 40
+   },
+   {
+    "pal": "Suzaku Aqua",
+    "level": 40
+   },
+   {
+    "pal": "Vanwyrm Cryst",
+    "level": 40
+   },
+   {
+    "pal": "Wumpo",
+    "level": 40
+   },
+   {
+    "pal": "Cryolinx",
+    "level": 50
+   },
+   {
+    "pal": "Foxcicle",
+    "level": 50
+   },
+   {
+    "pal": "Frostallion",
+    "level": 50
+   },
+   {
+    "pal": "Hangyu Cryst",
+    "level": 50
+   },
+   {
+    "pal": "Jolthog Cryst",
+    "level": 50
+   },
+   {
+    "pal": "Kingpaca Cryst",
+    "level": 50
+   },
+   {
+    "pal": "Mammorest Cryst",
+    "level": 50
+   },
+   {
+    "pal": "Mau Cryst",
+    "level": 50
+   },
+   {
+    "pal": "Reindrix",
+    "level": 50
+   },
+   {
+    "pal": "Sibelyx",
+    "level": 50
+   },
+   {
+    "pal": "Swee",
+    "level": 50
+   },
+   {
+    "pal": "Sweepa",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Ice Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "botanical-smash",
+  "name": "Botanical Smash",
+  "skillType": "ex_active",
+  "element": "Grass",
+  "description": "Dinossom's exclusive skill.\nUses large tail to smash the ground in front of it, damaging enemies over a wide area.",
+  "power": 60,
+  "cooldown": 8,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Dinossom",
+   "Dinossom Lux"
+  ],
+  "learnset": [
+   {
+    "pal": "Dinossom",
+    "level": 7
+   },
+   {
+    "pal": "Dinossom Lux",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "bountiful-protection",
+  "name": "Bountiful Protection",
+  "skillType": "ex_active",
+  "element": "Grass",
+  "description": "Lyleen`s exclusive skill.\nRestores health to all allies within range using the power of healing.",
+  "power": 0,
+  "cooldown": 240,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Lyleen"
+  ],
+  "learnset": [
+   {
+    "pal": "Lyleen",
+    "level": 55
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "brawn-impact",
+  "name": "Brawn Impact",
+  "skillType": "ex_active",
+  "element": "Fire",
+  "description": "Blazamut's exclusive skill.\n Raises and inflates its arms, then slams them together, causing a massive explosion in the surrounding area.",
+  "power": 150,
+  "cooldown": 38,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Blazamut"
+  ],
+  "learnset": [
+   {
+    "pal": "Blazamut",
+    "level": 35
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "bubble-blast",
+  "name": "Bubble Blast",
+  "skillType": "active",
+  "element": "Water",
+  "description": "",
+  "power": 65,
+  "cooldown": 13,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Water Skill Fruit: Bubble Blast",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Broncherry Aqua",
+    "level": 7
+   },
+   {
+    "pal": "Azurobe",
+    "level": 15
+   },
+   {
+    "pal": "Celaray",
+    "level": 22
+   },
+   {
+    "pal": "Dumud",
+    "level": 22
+   },
+   {
+    "pal": "Gobfin",
+    "level": 22
+   },
+   {
+    "pal": "Kelpsea",
+    "level": 22
+   },
+   {
+    "pal": "Petallia",
+    "level": 22
+   },
+   {
+    "pal": "Relaxaurus",
+    "level": 22
+   },
+   {
+    "pal": "Surfent",
+    "level": 22
+   },
+   {
+    "pal": "Teafant",
+    "level": 22
+   },
+   {
+    "pal": "Flopie",
+    "level": 30
+   },
+   {
+    "pal": "Fuack",
+    "level": 30
+   },
+   {
+    "pal": "Woolipop",
+    "level": 30
+   },
+   {
+    "pal": "Turtacle",
+    "level": null
+   }
+  ],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "cat-press",
+  "name": "Cat Press",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Grintale's exclusive skill.\nGrins menacingly before leaping into the air and smashing foes with its body.",
+  "power": 60,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Grintale"
+  ],
+  "learnset": [
+   {
+    "pal": "Grintale",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "charge-cannon",
+  "name": "Charge Cannon",
+  "skillType": "active",
+  "element": "Dragon",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Skill Fruit: Charge Cannon",
+   "icon": "Dragon Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Dragon Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "chicken-rush",
+  "name": "Chicken Rush",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Chikipi's exclusive skill.\nFlies at enemies in its sights, attacking them with its sharp beak.",
+  "power": 30,
+  "cooldown": 1,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Chikipi"
+  ],
+  "learnset": [
+   {
+    "pal": "Chikipi",
+    "level": 1
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "cloud-tempest",
+  "name": "Cloud Tempest",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Fenglope's exclusive skill.\nCharges forward while manipulating the atmosphere to create a pressurized wind tunnel around itself.",
+  "power": 90,
+  "cooldown": 15,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Fenglope"
+  ],
+  "learnset": [
+   {
+    "pal": "Fenglope",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "crosswind",
+  "name": "Crosswind",
+  "skillType": "active",
+  "element": "Grass",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Grass Skill Fruit: Crosswind",
+   "icon": "Grass Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "crushing-punch",
+  "name": "Crushing Punch",
+  "skillType": "ex_active",
+  "element": "Grass",
+  "description": "Mossanda's exclusive skill.\nWinds up its fist before striking an enemy with a devastating punch.",
+  "power": 85,
+  "cooldown": 18,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Mossanda"
+  ],
+  "learnset": [
+   {
+    "pal": "Mossanda",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "cryst-breath",
+  "name": "Cryst Breath",
+  "skillType": "active",
+  "element": "Ice",
+  "description": "Enshrouds an enemy in a frigid blast of air, dealing continuous damage.",
+  "power": 90,
+  "cooldown": 22,
+  "range": "mid",
+  "image": "CrystBreath.gif",
+  "skillFruit": {
+   "name": "Ice Skill Fruit: Cryst Breath",
+   "icon": "Ice Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Daedream",
+    "level": 22
+   },
+   {
+    "pal": "Lyleen Noct",
+    "level": 22
+   },
+   {
+    "pal": "Penking",
+    "level": 22
+   },
+   {
+    "pal": "Reptyro Cryst",
+    "level": 22
+   },
+   {
+    "pal": "Sibelyx",
+    "level": 22
+   },
+   {
+    "pal": "Suzaku Aqua",
+    "level": 22
+   },
+   {
+    "pal": "Vanwyrm Cryst",
+    "level": 22
+   },
+   {
+    "pal": "Kingpaca Cryst",
+    "level": 30
+   },
+   {
+    "pal": "Sweepa",
+    "level": 30
+   },
+   {
+    "pal": "Wumpo",
+    "level": 30
+   },
+   {
+    "pal": "Chillet",
+    "level": 40
+   },
+   {
+    "pal": "Cryolinx",
+    "level": 40
+   },
+   {
+    "pal": "Foxcicle",
+    "level": 40
+   },
+   {
+    "pal": "Frostallion",
+    "level": 40
+   },
+   {
+    "pal": "Hangyu Cryst",
+    "level": 40
+   },
+   {
+    "pal": "Jolthog Cryst",
+    "level": 40
+   },
+   {
+    "pal": "Mammorest Cryst",
+    "level": 40
+   },
+   {
+    "pal": "Mau Cryst",
+    "level": 40
+   },
+   {
+    "pal": "Reindrix",
+    "level": 40
+   },
+   {
+    "pal": "Swee",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Ice Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "crystal-wing",
+  "name": "Crystal Wing",
+  "skillType": "ex_active",
+  "element": "Ice",
+  "description": "Frostallion's exclusive skill.\nDashes forward while creating frigid air around its wings, using them to slash enemies.",
+  "power": 110,
+  "cooldown": 24,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Frostallion"
+  ],
+  "learnset": [
+   {
+    "pal": "Frostallion",
+    "level": 30
+   },
+   {
+    "pal": "Frostallion Noct",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Ice Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "daring-flames",
+  "name": "Daring Flames",
+  "skillType": "ex_active",
+  "element": "Fire",
+  "description": "Kitsun's exclusive skill.\nCharges forward with great speed while clad in intense blue flames.",
+  "power": 75,
+  "cooldown": 10,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Kitsun"
+  ],
+  "learnset": [
+   {
+    "pal": "Kitsun",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "dark-ball",
+  "name": "Dark Ball",
+  "skillType": "Active",
+  "element": "Dark",
+  "description": "Unleashes a sphere of darkness that slowly tracks down the enemy.",
+  "power": 40,
+  "cooldown": 4,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Dark Ball",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Daedream",
+    "level": 1
+   },
+   {
+    "pal": "Loupmoon",
+    "level": 1
+   },
+   {
+    "pal": "Lyleen Noct",
+    "level": 1
+   },
+   {
+    "pal": "Nitemary",
+    "level": 1
+   },
+   {
+    "pal": "Splatterina",
+    "level": 1
+   },
+   {
+    "pal": "Cawgnito",
+    "level": 7
+   },
+   {
+    "pal": "Felbat",
+    "level": 7
+   },
+   {
+    "pal": "Frostallion Noct",
+    "level": 7
+   },
+   {
+    "pal": "Helzephyr",
+    "level": 7
+   },
+   {
+    "pal": "Hoocrates",
+    "level": 7
+   },
+   {
+    "pal": "Katress",
+    "level": 7
+   },
+   {
+    "pal": "Leezpunk",
+    "level": 7
+   },
+   {
+    "pal": "Maraith",
+    "level": 7
+   },
+   {
+    "pal": "Mau",
+    "level": 7
+   },
+   {
+    "pal": "Nox",
+    "level": 7
+   },
+   {
+    "pal": "Shadowbeak",
+    "level": 7
+   },
+   {
+    "pal": "Depresso",
+    "level": 15
+   },
+   {
+    "pal": "Killamari",
+    "level": 15
+   },
+   {
+    "pal": "Tombat",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "dark-charge",
+  "name": "Dark Charge",
+  "skillType": "ex_active",
+  "element": "Dark",
+  "description": "Pyrin Noct's exclusive skill.\nCharges forward while clad in a veil of dark flames.\nFlames continue to burn in its trajectory.",
+  "power": 85,
+  "cooldown": 14,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Pyrin Noct"
+  ],
+  "learnset": [
+   {
+    "pal": "Pyrin Noct",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "dark-laser",
+  "name": "Dark Laser",
+  "skillType": "active",
+  "element": "Dark",
+  "description": "",
+  "power": 150,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Dark Laser",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Astegon",
+    "level": 40
+   },
+   {
+    "pal": "Blazehowl Noct",
+    "level": 50
+   },
+   {
+    "pal": "Cawgnito",
+    "level": 50
+   },
+   {
+    "pal": "Daedream",
+    "level": 50
+   },
+   {
+    "pal": "Depresso",
+    "level": 50
+   },
+   {
+    "pal": "Felbat",
+    "level": 50
+   },
+   {
+    "pal": "Frostallion Noct",
+    "level": 50
+   },
+   {
+    "pal": "Helzephyr",
+    "level": 50
+   },
+   {
+    "pal": "Hoocrates",
+    "level": 50
+   },
+   {
+    "pal": "Katress",
+    "level": 50
+   },
+   {
+    "pal": "Killamari",
+    "level": 50
+   },
+   {
+    "pal": "Leezpunk",
+    "level": 50
+   },
+   {
+    "pal": "Loupmoon",
+    "level": 50
+   },
+   {
+    "pal": "Lyleen Noct",
+    "level": 50
+   },
+   {
+    "pal": "Maraith",
+    "level": 50
+   },
+   {
+    "pal": "Mau",
+    "level": 50
+   },
+   {
+    "pal": "Menasting",
+    "level": 50
+   },
+   {
+    "pal": "Necromus",
+    "level": 50
+   },
+   {
+    "pal": "Nox",
+    "level": 50
+   },
+   {
+    "pal": "Pyrin Noct",
+    "level": 50
+   },
+   {
+    "pal": "Shadowbeak",
+    "level": 50
+   },
+   {
+    "pal": "Tombat",
+    "level": 50
+   },
+   {
+    "pal": "Vanwyrm",
+    "level": 50
+   },
+   {
+    "pal": "Vanwyrm Cryst",
+    "level": 50
+   },
+   {
+    "pal": "Xenovader",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "dark-whisp",
+  "name": "Dark Whisp",
+  "skillType": "active",
+  "element": "Dark",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Dark Whisp",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Splatterina",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "divine-disaster",
+  "name": "Divine Disaster",
+  "skillType": "ex_active",
+  "element": "Dark",
+  "description": "Shadowbeak's exclusive skill.\nCharges forward while generating orbs of light that automatically capture enemies. The orbs automatically capture enemies, before releasing a barrage of lasers.",
+  "power": 160,
+  "cooldown": 45,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Shadowbeak"
+  ],
+  "learnset": [
+   {
+    "pal": "Shadowbeak",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "draconic-breath",
+  "name": "Draconic Breath",
+  "skillType": "Active",
+  "element": "Dragon",
+  "description": "Exhales breath imbued with draconic energy, dealing continuous damage to those in front of it.",
+  "power": 70,
+  "cooldown": 15,
+  "range": "short",
+  "image": "Draconic Breath Screenshot.png",
+  "skillFruit": {
+   "name": "Dragon Skill Fruit: Draconic Breath",
+   "icon": "Dragon Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Jormuntide",
+    "level": 15
+   },
+   {
+    "pal": "Xenogard",
+    "level": 15
+   },
+   {
+    "pal": "Dinossom Lux",
+    "level": 22
+   },
+   {
+    "pal": "Jetragon",
+    "level": 22
+   },
+   {
+    "pal": "Orserk",
+    "level": 22
+   },
+   {
+    "pal": "Quivern",
+    "level": 22
+   },
+   {
+    "pal": "Astegon",
+    "level": 30
+   },
+   {
+    "pal": "Azurobe",
+    "level": 30
+   },
+   {
+    "pal": "Chillet",
+    "level": 30
+   },
+   {
+    "pal": "Dinossom",
+    "level": 30
+   },
+   {
+    "pal": "Elphidran",
+    "level": 30
+   },
+   {
+    "pal": "Relaxaurus",
+    "level": 30
+   },
+   {
+    "pal": "Relaxaurus Lux",
+    "level": 30
+   },
+   {
+    "pal": "Surfent",
+    "level": 40
+   },
+   {
+    "pal": "Surfent Terra",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Dragon Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "dragon-burst",
+  "name": "Dragon Burst",
+  "skillType": "active",
+  "element": "Dragon",
+  "description": "",
+  "power": 55,
+  "cooldown": 10,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dragon Skill Fruit: Dragon Burst",
+   "icon": "Dragon Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Chillet Ignis",
+    "level": 7
+   },
+   {
+    "pal": "Elphidran",
+    "level": 7
+   },
+   {
+    "pal": "Jetragon",
+    "level": 7
+   },
+   {
+    "pal": "Xenogard",
+    "level": 7
+   },
+   {
+    "pal": "Astegon",
+    "level": 15
+   },
+   {
+    "pal": "Chillet",
+    "level": 15
+   },
+   {
+    "pal": "Dinossom",
+    "level": 15
+   },
+   {
+    "pal": "Elphidran Aqua",
+    "level": 15
+   },
+   {
+    "pal": "Relaxaurus",
+    "level": 15
+   },
+   {
+    "pal": "Azurobe",
+    "level": 22
+   },
+   {
+    "pal": "Kelpsea Ignis",
+    "level": 30
+   },
+   {
+    "pal": "Surfent",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Dragon Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "dragon-cannon",
+  "name": "Dragon Cannon",
+  "skillType": "active",
+  "element": "Dragon",
+  "description": "",
+  "power": 30,
+  "cooldown": 2,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dragon Skill Fruit: Dragon Cannon",
+   "icon": "Dragon Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Astegon",
+    "level": 1
+   },
+   {
+    "pal": "Elphidran",
+    "level": 1
+   },
+   {
+    "pal": "Quivern",
+    "level": 1
+   },
+   {
+    "pal": "Relaxaurus",
+    "level": 1
+   },
+   {
+    "pal": "Xenogard",
+    "level": 1
+   },
+   {
+    "pal": "Azurobe",
+    "level": 7
+   },
+   {
+    "pal": "Chillet",
+    "level": 7
+   },
+   {
+    "pal": "Elphidran Aqua",
+    "level": 7
+   },
+   {
+    "pal": "Jormuntide",
+    "level": 7
+   },
+   {
+    "pal": "Jormuntide Ignis",
+    "level": 7
+   },
+   {
+    "pal": "Kelpsea",
+    "level": 7
+   },
+   {
+    "pal": "Kelpsea Ignis",
+    "level": 7
+   },
+   {
+    "pal": "Relaxaurus Lux",
+    "level": 7
+   },
+   {
+    "pal": "Surfent",
+    "level": 7
+   },
+   {
+    "pal": "Surfent Terra",
+    "level": 7
+   }
+  ],
+  "categories": [
+   "Dragon Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "dragon-meteor",
+  "name": "Dragon Meteor",
+  "skillType": "active",
+  "element": "Dragon",
+  "description": "",
+  "power": 150,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dragon Skill Fruit: Dragon Meteor",
+   "icon": "Dragon Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Astegon",
+    "level": 50
+   },
+   {
+    "pal": "Azurobe",
+    "level": 50
+   },
+   {
+    "pal": "Chillet",
+    "level": 50
+   },
+   {
+    "pal": "Elphidran",
+    "level": 50
+   },
+   {
+    "pal": "Elphidran Aqua",
+    "level": 50
+   },
+   {
+    "pal": "Jetragon",
+    "level": 50
+   },
+   {
+    "pal": "Jormuntide",
+    "level": 50
+   },
+   {
+    "pal": "Jormuntide Ignis",
+    "level": 50
+   },
+   {
+    "pal": "Quivern",
+    "level": 50
+   },
+   {
+    "pal": "Relaxaurus",
+    "level": 50
+   },
+   {
+    "pal": "Wixen",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Dragon Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "earth-impact",
+  "name": "Earth Impact",
+  "skillType": "ex_active",
+  "element": "Ground",
+  "description": "Mammorest's exclusive skill.\nUses massive body to shake the earth, dealing damage over a wide area.",
+  "power": 100,
+  "cooldown": 30,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Mammorest",
+   "Mammorest Cryst"
+  ],
+  "learnset": [
+   {
+    "pal": "Mammorest",
+    "level": 30
+   },
+   {
+    "pal": "Mammorest Cryst",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "electric-ball",
+  "name": "Electric Ball",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "",
+  "power": 50,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Electric Ball",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Jolthog",
+    "level": 15
+   },
+   {
+    "pal": "Sparkit",
+    "level": 22
+   },
+   {
+    "pal": "Lamball",
+    "level": 30
+   },
+   {
+    "pal": "Rayhound",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "emperor-slide",
+  "name": "Emperor Slide",
+  "skillType": "ex_active",
+  "element": "Ice",
+  "description": "Penking's exclusive skill.\nLies on its belly while generating frozen air all around it before sliding at enemies at high speed.",
+  "power": 70,
+  "cooldown": 10,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Penking"
+  ],
+  "learnset": [
+   {
+    "pal": "Penking",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Ice Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "fierce-fang",
+  "name": "Fierce Fang",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Direhowl's special skill. Swiftly leaps at an enemy and bites into them.",
+  "power": 45,
+  "cooldown": 2,
+  "range": "Short",
+  "image": "FierceFang.png",
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Direhowl"
+  ],
+  "learnset": [
+   {
+    "pal": "Direhowl",
+    "level": 1
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "fire-ball",
+  "name": "Fire Ball",
+  "skillType": "Active",
+  "element": "Fire",
+  "description": "The ball explodes over a wide area upon impact.",
+  "power": 150,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Fire Skill Fruit: Fire Ball",
+   "icon": "Fire Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Blazamut",
+    "level": 40
+   },
+   {
+    "pal": "Blazehowl",
+    "level": 40
+   },
+   {
+    "pal": "Blazehowl Noct",
+    "level": 40
+   },
+   {
+    "pal": "Gobfin Ignis",
+    "level": 40
+   },
+   {
+    "pal": "Incineram",
+    "level": 40
+   },
+   {
+    "pal": "Incineram Noct",
+    "level": 40
+   },
+   {
+    "pal": "Jetragon",
+    "level": 40
+   },
+   {
+    "pal": "Jormuntide Ignis",
+    "level": 40
+   },
+   {
+    "pal": "Vanwyrm",
+    "level": 40
+   },
+   {
+    "pal": "Wixen",
+    "level": 40
+   },
+   {
+    "pal": "Arsox",
+    "level": 50
+   },
+   {
+    "pal": "Chillet Ignis",
+    "level": 50
+   },
+   {
+    "pal": "Faleris",
+    "level": 50
+   },
+   {
+    "pal": "Flambelle",
+    "level": 50
+   },
+   {
+    "pal": "Foxparks",
+    "level": 50
+   },
+   {
+    "pal": "Kelpsea Ignis",
+    "level": 50
+   },
+   {
+    "pal": "Kitsun",
+    "level": 50
+   },
+   {
+    "pal": "Leezpunk Ignis",
+    "level": 50
+   },
+   {
+    "pal": "Pyrin",
+    "level": 50
+   },
+   {
+    "pal": "Ragnahawk",
+    "level": 50
+   },
+   {
+    "pal": "Rooby",
+    "level": 50
+   },
+   {
+    "pal": "Suzaku",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "flame-funnel",
+  "name": "Flame Funnel",
+  "skillType": "active",
+  "element": "Fire",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Skill Fruit: Flame Funnel",
+   "icon": "Fire Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "flare-arrow",
+  "name": "Flare Arrow",
+  "skillType": "active",
+  "element": "Fire",
+  "description": "Fires three flaming arrows in succession that home in on an enemy.",
+  "power": 55,
+  "cooldown": 10,
+  "range": "long",
+  "image": null,
+  "skillFruit": {
+   "name": "Fire Skill Fruit: Flare Arrow",
+   "icon": "Fire Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Blazehowl Noct",
+    "level": 7
+   },
+   {
+    "pal": "Faleris",
+    "level": 7
+   },
+   {
+    "pal": "Blazehowl",
+    "level": 15
+   },
+   {
+    "pal": "Chillet Ignis",
+    "level": 15
+   },
+   {
+    "pal": "Elphidran",
+    "level": 15
+   },
+   {
+    "pal": "Flambelle",
+    "level": 15
+   },
+   {
+    "pal": "Incineram",
+    "level": 15
+   },
+   {
+    "pal": "Incineram Noct",
+    "level": 15
+   },
+   {
+    "pal": "Katress",
+    "level": 15
+   },
+   {
+    "pal": "Maraith",
+    "level": 15
+   },
+   {
+    "pal": "Ragnahawk",
+    "level": 15
+   },
+   {
+    "pal": "Wixen",
+    "level": 15
+   },
+   {
+    "pal": "Arsox",
+    "level": 22
+   },
+   {
+    "pal": "Foxparks",
+    "level": 22
+   },
+   {
+    "pal": "Gobfin Ignis",
+    "level": 22
+   },
+   {
+    "pal": "Kelpsea Ignis",
+    "level": 22
+   },
+   {
+    "pal": "Pyrin",
+    "level": 22
+   },
+   {
+    "pal": "Rooby",
+    "level": 22
+   },
+   {
+    "pal": "Suzaku",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "flare-storm",
+  "name": "Flare Storm",
+  "skillType": "active",
+  "element": "Fire",
+  "description": "Generates two flaming tornadoes on either side before launching them at an enemy",
+  "power": 80,
+  "cooldown": 18,
+  "range": "long",
+  "image": "Flare Storm.gif",
+  "skillFruit": {
+   "name": "Fire Skill Fruit: Flare Storm",
+   "icon": "Fire Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Jetragon",
+    "level": 15
+   },
+   {
+    "pal": "Jormuntide Ignis",
+    "level": 15
+   },
+   {
+    "pal": "Helzephyr",
+    "level": 22
+   },
+   {
+    "pal": "Flambelle",
+    "level": 30
+   },
+   {
+    "pal": "Kitsun",
+    "level": 30
+   },
+   {
+    "pal": "Leezpunk Ignis",
+    "level": 30
+   },
+   {
+    "pal": "Ragnahawk",
+    "level": 30
+   },
+   {
+    "pal": "Rooby",
+    "level": 30
+   },
+   {
+    "pal": "Wixen",
+    "level": 30
+   },
+   {
+    "pal": "Suzaku",
+    "level": 40
+   },
+   {
+    "pal": "Chikipi",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "fluffy-tackle",
+  "name": "Fluffy Tackle",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Melpaca's exclusive skill.\nCharges forward while clad in an aura of sublime adorableness.",
+  "power": 40,
+  "cooldown": 4,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Melpaca"
+  ],
+  "learnset": [
+   {
+    "pal": "Melpaca",
+    "level": 7
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "focus-shot",
+  "name": "Focus Shot",
+  "skillType": "ex_active",
+  "element": "Grass",
+  "description": "Robinquill's exclusive skill.\nTakes aim while drawing its bow before loosing a powerful shot at an enemy.",
+  "power": 65,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Robinquill",
+   "Robinquill Terra"
+  ],
+  "learnset": [
+   {
+    "pal": "Robinquill",
+    "level": 15
+   },
+   {
+    "pal": "Robinquill Terra",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "forceful-charge",
+  "name": "Forceful Charge",
+  "skillType": "ex_active",
+  "element": "Ground",
+  "description": "Anubis's exclusive skill.\nPursues its foe with a high speed dash while releasing energy and unleashes a powerful punch.",
+  "power": 120,
+  "cooldown": 28,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Anubis"
+  ],
+  "learnset": [
+   {
+    "pal": "Anubis",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "freezing-charge",
+  "name": "Freezing Charge",
+  "skillType": "ex_active",
+  "element": "Ice",
+  "description": "Reindrix's exclusive skill.\nCharges at an enemy with antlers adorned in ice.",
+  "power": 65,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Reindrix"
+  ],
+  "learnset": [
+   {
+    "pal": "Reindrix",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Ice Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "gale-claw",
+  "name": "Gale Claw",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Galeclaw's exclusive skill.\nSoars through the air with its talons outstretched forward.",
+  "power": 60,
+  "cooldown": 8,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Galeclaw"
+  ],
+  "learnset": [
+   {
+    "pal": "Galeclaw",
+    "level": 1
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "giga-horn",
+  "name": "Giga Horn",
+  "skillType": "ex_active",
+  "element": "Ground",
+  "description": "Warsect's exclusive skill.\nSkewers enemies with its four sturdy horns.",
+  "power": 75,
+  "cooldown": 11,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Warsect"
+  ],
+  "learnset": [
+   {
+    "pal": "Warsect",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "grass-tornado",
+  "name": "Grass Tornado",
+  "skillType": "active",
+  "element": "Grass",
+  "description": "",
+  "power": 80,
+  "cooldown": 18,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Grass Skill Fruit: Grass Tornado",
+   "icon": "Grass Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Bristla",
+    "level": 22
+   },
+   {
+    "pal": "Lullu",
+    "level": 22
+   },
+   {
+    "pal": "Mammorest",
+    "level": 22
+   },
+   {
+    "pal": "Wumpo Botan",
+    "level": 22
+   },
+   {
+    "pal": "Broncherry",
+    "level": 30
+   },
+   {
+    "pal": "Caprity",
+    "level": 30
+   },
+   {
+    "pal": "Chikipi",
+    "level": 30
+   },
+   {
+    "pal": "Elizabee",
+    "level": 30
+   },
+   {
+    "pal": "Lyleen",
+    "level": 30
+   },
+   {
+    "pal": "Petallia",
+    "level": 30
+   },
+   {
+    "pal": "Quivern",
+    "level": 30
+   },
+   {
+    "pal": "Robinquill",
+    "level": 30
+   },
+   {
+    "pal": "Vaelet",
+    "level": 30
+   },
+   {
+    "pal": "Verdash",
+    "level": 30
+   },
+   {
+    "pal": "Beegarde",
+    "level": 40
+   },
+   {
+    "pal": "Cinnamoth",
+    "level": 40
+   },
+   {
+    "pal": "Flopie",
+    "level": 40
+   },
+   {
+    "pal": "Galeclaw",
+    "level": 40
+   },
+   {
+    "pal": "Nitewing",
+    "level": 40
+   },
+   {
+    "pal": "Tanzee",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "ground-pound",
+  "name": "Ground Pound",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Gorirat's exclusive skill.\nPounds the ground twice before leaping into the air and unleashing a powerful punch.",
+  "power": 85,
+  "cooldown": 14,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Gorirat"
+  ],
+  "learnset": [
+   {
+    "pal": "Gorirat",
+    "level": 15
+   },
+   {
+    "pal": "Gorirat Terra",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "ground-smash",
+  "name": "Ground Smash",
+  "skillType": "ex_active",
+  "element": "Ground",
+  "description": "Anubis's exclusive skill.\nLeaps high into the air before diving to the ground with a punch. The force of the impact deals damage over a wide area.",
+  "power": 140,
+  "cooldown": 35,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Anubis"
+  ],
+  "learnset": [
+   {
+    "pal": "Anubis",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "hellfire-claw",
+  "name": "Hellfire Claw",
+  "skillType": "ex_active",
+  "element": "Fire",
+  "description": "Incineram's exclusive skill.\nDraws near enemies using its left claw to slash them into the air before cutting them down with its right claw.",
+  "power": 70,
+  "cooldown": 10,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Incineram",
+   "Incineram Noct"
+  ],
+  "learnset": [
+   {
+    "pal": "Incineram",
+    "level": 22
+   },
+   {
+    "pal": "Incineram Noct",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "holy-burst",
+  "name": "Holy Burst",
+  "skillType": "active",
+  "element": "Neutral",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Skill Fruit: Holy Burst",
+   "icon": "Neutral Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Selyne",
+    "level": 22
+   },
+   {
+    "pal": "Lullu",
+    "level": 30
+   },
+   {
+    "pal": "Mimog",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "hydro-jet",
+  "name": "Hydro Jet",
+  "skillType": "active",
+  "element": "Water",
+  "description": "",
+  "power": 30,
+  "cooldown": 2,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Water Skill Fruit: Hydro Jet",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Celaray",
+    "level": 1
+   },
+   {
+    "pal": "Gobfin",
+    "level": 1
+   },
+   {
+    "pal": "Kelpsea",
+    "level": 1
+   },
+   {
+    "pal": "Killamari",
+    "level": 1
+   },
+   {
+    "pal": "Surfent",
+    "level": 1
+   },
+   {
+    "pal": "Suzaku Aqua",
+    "level": 1
+   },
+   {
+    "pal": "Turtacle",
+    "level": 1
+   },
+   {
+    "pal": "Pengullet",
+    "level": 7
+   },
+   {
+    "pal": "Teafant",
+    "level": 7
+   },
+   {
+    "pal": "Flopie",
+    "level": 15
+   },
+   {
+    "pal": "Fuack",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "hydro-laser",
+  "name": "Hydro Laser",
+  "skillType": "active",
+  "element": "Water",
+  "description": "",
+  "power": 150,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Water Skill Fruit: Hydro Laser",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Azurobe",
+    "level": 40
+   },
+   {
+    "pal": "Elphidran Aqua",
+    "level": 40
+   },
+   {
+    "pal": "Jormuntide",
+    "level": 40
+   },
+   {
+    "pal": "Broncherry Aqua",
+    "level": 50
+   },
+   {
+    "pal": "Celaray",
+    "level": 50
+   },
+   {
+    "pal": "Dumud",
+    "level": 50
+   },
+   {
+    "pal": "Fuack",
+    "level": 50
+   },
+   {
+    "pal": "Gobfin",
+    "level": 50
+   },
+   {
+    "pal": "Kelpsea",
+    "level": 50
+   },
+   {
+    "pal": "Pengullet",
+    "level": 50
+   },
+   {
+    "pal": "Penking",
+    "level": 50
+   },
+   {
+    "pal": "Surfent",
+    "level": 50
+   },
+   {
+    "pal": "Suzaku Aqua",
+    "level": 50
+   },
+   {
+    "pal": "Teafant",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "hydro-slicer",
+  "name": "Hydro Slicer",
+  "skillType": "active",
+  "element": "Water",
+  "description": "",
+  "power": 130,
+  "cooldown": 45,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Skill Fruit: Hydro Slicer",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "hydro-spin",
+  "name": "Hydro Spin",
+  "skillType": "active",
+  "element": "Water",
+  "description": "",
+  "power": 95,
+  "cooldown": 15,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Turtacle",
+    "level": null
+   }
+  ],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "iaigiri",
+  "name": "Iaigiri",
+  "skillType": "ex_active",
+  "element": "Fire",
+  "description": "Bushi's exclusive skill.\nAfter Holding the sword, he appears in front of the enemy in an instant and unleashes a Ultra-fast sword draw attack.",
+  "power": 65,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Bushi"
+  ],
+  "learnset": [
+   {
+    "pal": "Bushi",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "ice-missile",
+  "name": "Ice Missile",
+  "skillType": "active",
+  "element": "Ice",
+  "description": "Creates ice lances in the air that fly towards enemies",
+  "power": 30,
+  "cooldown": 3,
+  "range": null,
+  "image": "Ice Missile 2.gif",
+  "skillFruit": {
+   "name": "Ice Skill Fruit: Ice Missile",
+   "icon": "Ice Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Chillet",
+    "level": 1
+   },
+   {
+    "pal": "Jolthog Cryst",
+    "level": 1
+   },
+   {
+    "pal": "Kingpaca Cryst",
+    "level": 1
+   },
+   {
+    "pal": "Mau Cryst",
+    "level": 1
+   },
+   {
+    "pal": "Pengullet",
+    "level": 1
+   },
+   {
+    "pal": "Reptyro Cryst",
+    "level": 1
+   },
+   {
+    "pal": "Sibelyx",
+    "level": 1
+   },
+   {
+    "pal": "Wumpo",
+    "level": 1
+   },
+   {
+    "pal": "Cryolinx",
+    "level": 7
+   },
+   {
+    "pal": "Foxcicle",
+    "level": 7
+   },
+   {
+    "pal": "Frostallion",
+    "level": 7
+   },
+   {
+    "pal": "Hangyu Cryst",
+    "level": 7
+   },
+   {
+    "pal": "Paladius",
+    "level": 7
+   },
+   {
+    "pal": "Reindrix",
+    "level": 7
+   },
+   {
+    "pal": "Suzaku Aqua",
+    "level": 7
+   },
+   {
+    "pal": "Swee",
+    "level": 7
+   },
+   {
+    "pal": "Sweepa",
+    "level": 7
+   },
+   {
+    "pal": "Vanwyrm Cryst",
+    "level": 7
+   },
+   {
+    "pal": "Bristla",
+    "level": 15
+   },
+   {
+    "pal": "Ribbuny",
+    "level": 15
+   },
+   {
+    "pal": "Depresso",
+    "level": 22
+   },
+   {
+    "pal": "Fuack",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Ice Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "iceberg",
+  "name": "Iceberg",
+  "skillType": "active",
+  "element": "Ice",
+  "description": "",
+  "power": 70,
+  "cooldown": 15,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Ice Skill Fruit: Iceberg",
+   "icon": "Ice Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Bastigor",
+    "level": 7
+   },
+   {
+    "pal": "Penking",
+    "level": 7
+   },
+   {
+    "pal": "Jolthog Cryst",
+    "level": 15
+   },
+   {
+    "pal": "Kingpaca Cryst",
+    "level": 15
+   },
+   {
+    "pal": "Paladius",
+    "level": 15
+   },
+   {
+    "pal": "Reptyro Cryst",
+    "level": 15
+   },
+   {
+    "pal": "Sibelyx",
+    "level": 15
+   },
+   {
+    "pal": "Frostallion",
+    "level": 22
+   },
+   {
+    "pal": "Mammorest Cryst",
+    "level": 22
+   },
+   {
+    "pal": "Sweepa",
+    "level": 22
+   },
+   {
+    "pal": "Wumpo",
+    "level": 22
+   },
+   {
+    "pal": "Bristla",
+    "level": 30
+   },
+   {
+    "pal": "Cryolinx",
+    "level": 30
+   },
+   {
+    "pal": "Foxcicle",
+    "level": 30
+   },
+   {
+    "pal": "Hangyu Cryst",
+    "level": 30
+   },
+   {
+    "pal": "Mau Cryst",
+    "level": 30
+   },
+   {
+    "pal": "Pengullet",
+    "level": 30
+   },
+   {
+    "pal": "Reindrix",
+    "level": 30
+   },
+   {
+    "pal": "Swee",
+    "level": 30
+   },
+   {
+    "pal": "Ribbuny",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Ice Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "icicle-bullet",
+  "name": "Icicle Bullet",
+  "skillType": "active",
+  "element": "Ice",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Ice Skill Fruit: Icicle Bullet",
+   "icon": "Ice Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Ice Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "icicle-cutter",
+  "name": "Icicle Cutter",
+  "skillType": "active",
+  "element": "Ice",
+  "description": "",
+  "power": 55,
+  "cooldown": 10,
+  "range": null,
+  "image": "Icicle_cutter.gif",
+  "skillFruit": {
+   "name": "Ice Skill Fruit: Icicle Cutter",
+   "icon": "Ice Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Kingpaca Cryst",
+    "level": 7
+   },
+   {
+    "pal": "Lyleen Noct",
+    "level": 7
+   },
+   {
+    "pal": "Mammorest Cryst",
+    "level": 7
+   },
+   {
+    "pal": "Sibelyx",
+    "level": 7
+   },
+   {
+    "pal": "Bushi",
+    "level": 15
+   },
+   {
+    "pal": "Foxcicle",
+    "level": 15
+   },
+   {
+    "pal": "Frostallion",
+    "level": 15
+   },
+   {
+    "pal": "Lunaris",
+    "level": 15
+   },
+   {
+    "pal": "Reindrix",
+    "level": 15
+   },
+   {
+    "pal": "Swee",
+    "level": 15
+   },
+   {
+    "pal": "Sweepa",
+    "level": 15
+   },
+   {
+    "pal": "Vanwyrm Cryst",
+    "level": 15
+   },
+   {
+    "pal": "Wumpo",
+    "level": 15
+   },
+   {
+    "pal": "Chillet",
+    "level": 22
+   },
+   {
+    "pal": "Cryolinx",
+    "level": 22
+   },
+   {
+    "pal": "Hangyu Cryst",
+    "level": 22
+   },
+   {
+    "pal": "Loupmoon",
+    "level": 22
+   },
+   {
+    "pal": "Mau Cryst",
+    "level": 22
+   },
+   {
+    "pal": "Pengullet",
+    "level": 22
+   },
+   {
+    "pal": "Gobfin",
+    "level": 30
+   },
+   {
+    "pal": "Jolthog Cryst",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Ice Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "ignis-blast",
+  "name": "Ignis Blast",
+  "skillType": "active",
+  "element": "Fire",
+  "description": "",
+  "power": 30,
+  "cooldown": 2,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Fire Skill Fruit: Ignis Blast",
+   "icon": "Fire Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Arsox",
+    "level": 1
+   },
+   {
+    "pal": "Blazehowl",
+    "level": 1
+   },
+   {
+    "pal": "Bushi",
+    "level": 1
+   },
+   {
+    "pal": "Chillet Ignis",
+    "level": 1
+   },
+   {
+    "pal": "Faleris",
+    "level": 1
+   },
+   {
+    "pal": "Flambelle",
+    "level": 1
+   },
+   {
+    "pal": "Foxparks",
+    "level": 1
+   },
+   {
+    "pal": "Gobfin Ignis",
+    "level": 1
+   },
+   {
+    "pal": "Incineram",
+    "level": 1
+   },
+   {
+    "pal": "Incineram Noct",
+    "level": 1
+   },
+   {
+    "pal": "Jormuntide Ignis",
+    "level": 1
+   },
+   {
+    "pal": "Katress",
+    "level": 1
+   },
+   {
+    "pal": "Kelpsea Ignis",
+    "level": 1
+   },
+   {
+    "pal": "Kitsun",
+    "level": 1
+   },
+   {
+    "pal": "Leezpunk Ignis",
+    "level": 1
+   },
+   {
+    "pal": "Maraith",
+    "level": 1
+   },
+   {
+    "pal": "Pyrin Noct",
+    "level": 1
+   },
+   {
+    "pal": "Reptyro",
+    "level": 1
+   },
+   {
+    "pal": "Rooby",
+    "level": 1
+   },
+   {
+    "pal": "Wixen",
+    "level": 1
+   },
+   {
+    "pal": "Blazamut",
+    "level": 7
+   },
+   {
+    "pal": "Pyrin",
+    "level": 7
+   },
+   {
+    "pal": "Suzaku",
+    "level": 7
+   },
+   {
+    "pal": "Vanwyrm",
+    "level": 7
+   },
+   {
+    "pal": "Direhowl",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "ignis-breath",
+  "name": "Ignis Breath",
+  "skillType": "active",
+  "element": "Fire",
+  "description": "",
+  "power": 70,
+  "cooldown": 15,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Fire Skill Fruit: Ignis Breath",
+   "icon": "Fire Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Blazehowl Noct",
+    "level": 15
+   },
+   {
+    "pal": "Pyrin Noct",
+    "level": 15
+   },
+   {
+    "pal": "Blazamut",
+    "level": 22
+   },
+   {
+    "pal": "Blazehowl",
+    "level": 22
+   },
+   {
+    "pal": "Chillet Ignis",
+    "level": 22
+   },
+   {
+    "pal": "Faleris",
+    "level": 22
+   },
+   {
+    "pal": "Jormuntide Ignis",
+    "level": 22
+   },
+   {
+    "pal": "Leezpunk Ignis",
+    "level": 22
+   },
+   {
+    "pal": "Reptyro",
+    "level": 22
+   },
+   {
+    "pal": "Vanwyrm",
+    "level": 22
+   },
+   {
+    "pal": "Arsox",
+    "level": 30
+   },
+   {
+    "pal": "Bushi",
+    "level": 30
+   },
+   {
+    "pal": "Foxparks",
+    "level": 30
+   },
+   {
+    "pal": "Suzaku",
+    "level": 30
+   },
+   {
+    "pal": "Kelpsea Ignis",
+    "level": 40
+   },
+   {
+    "pal": "Leezpunk",
+    "level": 40
+   },
+   {
+    "pal": "Ragnahawk",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "ignis-rage",
+  "name": "Ignis Rage",
+  "skillType": "active",
+  "element": "Fire",
+  "description": "",
+  "power": 120,
+  "cooldown": 40,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Fire Skill Fruit: Ignis Rage",
+   "icon": "Fire Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Blazamut",
+    "level": 30
+   },
+   {
+    "pal": "Blazehowl",
+    "level": 30
+   },
+   {
+    "pal": "Blazehowl Noct",
+    "level": 30
+   },
+   {
+    "pal": "Arsox",
+    "level": 40
+   },
+   {
+    "pal": "Faleris",
+    "level": 40
+   },
+   {
+    "pal": "Felbat",
+    "level": 40
+   },
+   {
+    "pal": "Flambelle",
+    "level": 40
+   },
+   {
+    "pal": "Kitsun",
+    "level": 40
+   },
+   {
+    "pal": "Leezpunk Ignis",
+    "level": 40
+   },
+   {
+    "pal": "Pyrin",
+    "level": 40
+   },
+   {
+    "pal": "Pyrin Noct",
+    "level": 40
+   },
+   {
+    "pal": "Reptyro",
+    "level": 40
+   },
+   {
+    "pal": "Rooby",
+    "level": 40
+   },
+   {
+    "pal": "Bushi",
+    "level": 50
+   },
+   {
+    "pal": "Gobfin Ignis",
+    "level": 50
+   },
+   {
+    "pal": "Incineram",
+    "level": 50
+   },
+   {
+    "pal": "Incineram Noct",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "ignis-slam",
+  "name": "Ignis Slam",
+  "skillType": "ex_active",
+  "element": "Fire",
+  "description": "Pyrin's exclusive skill.\nCharges forward while clad in a veil of flames.\nFlames continue to burn in its wake.",
+  "power": 85,
+  "cooldown": 14,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Pyrin"
+  ],
+  "learnset": [
+   {
+    "pal": "Pyrin",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "implode",
+  "name": "Implode",
+  "skillType": "active",
+  "element": "Neutral",
+  "description": "",
+  "power": 230,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Skill Fruit: Implode",
+   "icon": "Neutral Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Tocotoco",
+    "level": 1
+   },
+   {
+    "pal": "Chikipi",
+    "level": 22
+   },
+   {
+    "pal": "Lamball",
+    "level": 22
+   },
+   {
+    "pal": "Lovander",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "jumping-claw",
+  "name": "Jumping Claw",
+  "skillType": "ex_active",
+  "element": "Dark",
+  "description": "Loupmoon's exclusive skill.\nLeaps forward and attacks twice with vicious claws imbued with dark energy.",
+  "power": 55,
+  "cooldown": 7,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Loupmoon"
+  ],
+  "learnset": [
+   {
+    "pal": "Loupmoon",
+    "level": 7
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "kerauno",
+  "name": "Kerauno",
+  "skillType": "ex_active",
+  "element": "Electric",
+  "description": "Orserk's exclusive skill.\nSummons a blade of lightning while leaping into the air before throwing it at an enemy.",
+  "power": 100,
+  "cooldown": 30,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Orserk"
+  ],
+  "learnset": [
+   {
+    "pal": "Orserk",
+    "level": 1
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "kingly-slam",
+  "name": "Kingly Slam",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Kingpaca's exclusive skill.\nKingpaca exclusive skill. Leaps high into the air before smashing into an enemy with its massive body.",
+  "power": 100,
+  "cooldown": 21,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Kingpaca"
+  ],
+  "learnset": [
+   {
+    "pal": "Kingpaca",
+    "level": 22
+   },
+   {
+    "pal": "Kingpaca Cryst",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "lightning-bolt",
+  "name": "Lightning Bolt",
+  "skillType": "Active",
+  "element": "Electric",
+  "description": "Charges electric energy before blasting enemies with a powerful shock.",
+  "power": 150,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Lightning Bolt",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Beakon",
+    "level": 50
+   },
+   {
+    "pal": "Cremis",
+    "level": 50
+   },
+   {
+    "pal": "Dazzi",
+    "level": 50
+   },
+   {
+    "pal": "Dinossom Lux",
+    "level": 50
+   },
+   {
+    "pal": "Grizzbolt",
+    "level": 50
+   },
+   {
+    "pal": "Jolthog",
+    "level": 50
+   },
+   {
+    "pal": "Mossanda Lux",
+    "level": 50
+   },
+   {
+    "pal": "Orserk",
+    "level": 50
+   },
+   {
+    "pal": "Rayhound",
+    "level": 50
+   },
+   {
+    "pal": "Relaxaurus Lux",
+    "level": 50
+   },
+   {
+    "pal": "Sparkit",
+    "level": 50
+   },
+   {
+    "pal": "Univolt",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "lightning-claw",
+  "name": "Lightning Claw",
+  "skillType": "ex_active",
+  "element": "Electric",
+  "description": "Grizzbolt's exclusive skill.\nAfter leaping at an enemy and tearing at it twice with its electrically charged claws, it attacks the ground, sending an electric shock throughout the area.",
+  "power": 90,
+  "cooldown": 22,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Grizzbolt"
+  ],
+  "learnset": [
+   {
+    "pal": "Grizzbolt",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "lightning-streak",
+  "name": "Lightning Streak",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "Generates a lightning bolt that moves forward in a line",
+  "power": 75,
+  "cooldown": 16,
+  "range": "mid",
+  "image": "Lightning Streak.gif",
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Lightning Streak",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Azurmane",
+    "level": 15
+   },
+   {
+    "pal": "Mossanda Lux",
+    "level": 15
+   },
+   {
+    "pal": "Beakon",
+    "level": 22
+   },
+   {
+    "pal": "Dazzi",
+    "level": 22
+   },
+   {
+    "pal": "Grizzbolt",
+    "level": 22
+   },
+   {
+    "pal": "Relaxaurus Lux",
+    "level": 22
+   },
+   {
+    "pal": "Univolt",
+    "level": 22
+   },
+   {
+    "pal": "Gobfin Ignis",
+    "level": 30
+   },
+   {
+    "pal": "Orserk",
+    "level": 30
+   },
+   {
+    "pal": "Jolthog",
+    "level": 40
+   },
+   {
+    "pal": "Rayhound",
+    "level": 40
+   },
+   {
+    "pal": "Sparkit",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "lightning-strike",
+  "name": "Lightning Strike",
+  "skillType": "Active",
+  "element": "Electric",
+  "description": "Acts as a lightning rod, calling down thunderbolts that electrocute the surrounding area.",
+  "power": 120,
+  "cooldown": 40,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Lightning Strike",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Orserk",
+    "level": 7
+   },
+   {
+    "pal": "Bushi",
+    "level": 40
+   },
+   {
+    "pal": "Dazzi",
+    "level": 40
+   },
+   {
+    "pal": "Dinossom Lux",
+    "level": 40
+   },
+   {
+    "pal": "Grizzbolt",
+    "level": 40
+   },
+   {
+    "pal": "Mossanda Lux",
+    "level": 40
+   },
+   {
+    "pal": "Relaxaurus Lux",
+    "level": 40
+   },
+   {
+    "pal": "Univolt",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "lock-on-laser",
+  "name": "Lock-on Laser",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "",
+  "power": 70,
+  "cooldown": 15,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Lock-on Laser",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Univolt",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "megaton-implode",
+  "name": "Megaton Implode",
+  "skillType": "active",
+  "element": "Neutral",
+  "description": "Tocotoco's exclusive skill.\nRisks life to cause a massive explosion. Those who perish for their duty become glistening stars in the night sky.",
+  "power": 500,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Tocotoco"
+  ],
+  "learnset": [
+   {
+    "pal": "Tocotoco",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "moonlight-beam",
+  "name": "Moonlight Beam",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Selyne's exclusive skill. Stores energy in the moon on its back, then fires a crescent-shaped beam forward.",
+  "power": 170,
+  "cooldown": 40,
+  "range": "long",
+  "image": "Moonlight Beam.png",
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Selyne"
+  ],
+  "learnset": [
+   {
+    "pal": "Selyne",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "muscle-slam",
+  "name": "Muscle Slam",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Broncherry's exclusive skill.\nTurns sideways before tackling enemies in front of it, sending them flying into the air.",
+  "power": 80,
+  "cooldown": 12,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Broncherry",
+   "Broncherry Aqua"
+  ],
+  "learnset": [
+   {
+    "pal": "Broncherry",
+    "level": 15
+   },
+   {
+    "pal": "Broncherry Aqua",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "mystic-whirlwind",
+  "name": "Mystic Whirlwind",
+  "skillType": "ex_active",
+  "element": "Dragon",
+  "description": "Elphidran's exclusive skill.\nGenerates twin whirlwinds imbued with a mysterious power that pursues enemies.",
+  "power": 70,
+  "cooldown": 10,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Elphidran",
+   "Elphidran Aqua"
+  ],
+  "learnset": [
+   {
+    "pal": "Elphidran",
+    "level": 22
+   },
+   {
+    "pal": "Elphidran Aqua",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Dragon Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "nightmare-ball",
+  "name": "Nightmare Ball",
+  "skillType": "active",
+  "element": "Dark",
+  "description": "",
+  "power": 100,
+  "cooldown": 30,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Nightmare Ball",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Astegon",
+    "level": 22
+   },
+   {
+    "pal": "Bellanoir Libero",
+    "level": 22
+   },
+   {
+    "pal": "Necromus",
+    "level": 22
+   },
+   {
+    "pal": "Bellanoir",
+    "level": 30
+   },
+   {
+    "pal": "Felbat",
+    "level": 30
+   },
+   {
+    "pal": "Leezpunk",
+    "level": 30
+   },
+   {
+    "pal": "Lyleen Noct",
+    "level": 30
+   },
+   {
+    "pal": "Menasting",
+    "level": 30
+   },
+   {
+    "pal": "Shadowbeak",
+    "level": 30
+   },
+   {
+    "pal": "Splatterina",
+    "level": 30
+   },
+   {
+    "pal": "Vanwyrm",
+    "level": 30
+   },
+   {
+    "pal": "Vanwyrm Cryst",
+    "level": 30
+   },
+   {
+    "pal": "Xenovader",
+    "level": 30
+   },
+   {
+    "pal": "Cawgnito",
+    "level": 40
+   },
+   {
+    "pal": "Daedream",
+    "level": 40
+   },
+   {
+    "pal": "Depresso",
+    "level": 40
+   },
+   {
+    "pal": "Frostallion Noct",
+    "level": 40
+   },
+   {
+    "pal": "Helzephyr",
+    "level": 40
+   },
+   {
+    "pal": "Hoocrates",
+    "level": 40
+   },
+   {
+    "pal": "Katress",
+    "level": 40
+   },
+   {
+    "pal": "Killamari",
+    "level": 40
+   },
+   {
+    "pal": "Loupmoon",
+    "level": 40
+   },
+   {
+    "pal": "Maraith",
+    "level": 40
+   },
+   {
+    "pal": "Mau",
+    "level": 40
+   },
+   {
+    "pal": "Nox",
+    "level": 40
+   },
+   {
+    "pal": "Tombat",
+    "level": 40
+   },
+   {
+    "pal": "Vaelet",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "pal-blast",
+  "name": "Pal Blast",
+  "skillType": "active",
+  "element": "Neutral",
+  "description": "",
+  "power": 150,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Skill Fruit: Pal Blast",
+   "icon": "Neutral Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Elphidran",
+    "level": 40
+   },
+   {
+    "pal": "Sweepa",
+    "level": 40
+   },
+   {
+    "pal": "Blazehowl",
+    "level": 50
+   },
+   {
+    "pal": "Cattiva",
+    "level": 50
+   },
+   {
+    "pal": "Direhowl",
+    "level": 50
+   },
+   {
+    "pal": "Eikthyrdeer",
+    "level": 50
+   },
+   {
+    "pal": "Fenglope",
+    "level": 50
+   },
+   {
+    "pal": "Galeclaw",
+    "level": 50
+   },
+   {
+    "pal": "Gorirat",
+    "level": 50
+   },
+   {
+    "pal": "Grintale",
+    "level": 50
+   },
+   {
+    "pal": "Kingpaca",
+    "level": 50
+   },
+   {
+    "pal": "Lamball",
+    "level": 50
+   },
+   {
+    "pal": "Lovander",
+    "level": 50
+   },
+   {
+    "pal": "Lunaris",
+    "level": 50
+   },
+   {
+    "pal": "Melpaca",
+    "level": 50
+   },
+   {
+    "pal": "Mimog",
+    "level": 50
+   },
+   {
+    "pal": "Mozzarina",
+    "level": 50
+   },
+   {
+    "pal": "Nitewing",
+    "level": 50
+   },
+   {
+    "pal": "Paladius",
+    "level": 50
+   },
+   {
+    "pal": "Ribbuny",
+    "level": 50
+   },
+   {
+    "pal": "Rushoar",
+    "level": 50
+   },
+   {
+    "pal": "Tocotoco",
+    "level": 50
+   },
+   {
+    "pal": "Vixy",
+    "level": 50
+   },
+   {
+    "pal": "Woolipop",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "phantom-peck",
+  "name": "Phantom Peck",
+  "skillType": "ex_active",
+  "element": "Dark",
+  "description": "Cawgnito's exclusive skill.\nTeleports next to an enemy before attacking with its beak.",
+  "power": 55,
+  "cooldown": 7,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Cawgnito"
+  ],
+  "learnset": [
+   {
+    "pal": "Cawgnito",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "phoenix-flare",
+  "name": "Phoenix Flare",
+  "skillType": "ex_active",
+  "element": "Fire",
+  "description": "Faleris's special skill.\nCovers its body in a tornado of flames before charging forward.",
+  "power": 135,
+  "cooldown": 28,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Faleris"
+  ],
+  "learnset": [
+   {
+    "pal": "Faleris",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "plasma-tornado",
+  "name": "Plasma Funnel",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "",
+  "power": 65,
+  "cooldown": 13,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Plasma Funnel",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "poison-blast",
+  "name": "Poison Blast",
+  "skillType": "active",
+  "element": "Dark",
+  "description": "Hurls poison sludge at an enemy",
+  "power": 30,
+  "cooldown": 2,
+  "range": null,
+  "image": "Poison Blast 2.gif",
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Poison Blast",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Depresso",
+    "level": 1
+   },
+   {
+    "pal": "Felbat",
+    "level": 1
+   },
+   {
+    "pal": "Leezpunk",
+    "level": 1
+   },
+   {
+    "pal": "Daedream",
+    "level": 7
+   },
+   {
+    "pal": "Killamari",
+    "level": 7
+   },
+   {
+    "pal": "Leezpunk Ignis",
+    "level": 7
+   },
+   {
+    "pal": "Lovander",
+    "level": 7
+   },
+   {
+    "pal": "Menasting",
+    "level": 7
+   },
+   {
+    "pal": "Tombat",
+    "level": 7
+   },
+   {
+    "pal": "Xenovader",
+    "level": 7
+   },
+   {
+    "pal": "Elizabee",
+    "level": 15
+   },
+   {
+    "pal": "Vaelet",
+    "level": 15
+   },
+   {
+    "pal": "Beegarde",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "poison-fog",
+  "name": "Poison Fog",
+  "skillType": "Active",
+  "element": "Dark",
+  "description": "Generates a fog of poison in front, causing the opponent to become poisoned.",
+  "power": 0,
+  "cooldown": 30,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Poison Fog",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Vaelet",
+    "level": 1
+   },
+   {
+    "pal": "Cinnamoth",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "power-bomb",
+  "name": "Power Bomb",
+  "skillType": "active",
+  "element": "Neutral",
+  "description": "Charges a massive amount of energy before firing a large destructive ball.",
+  "power": 70,
+  "cooldown": 15,
+  "range": null,
+  "image": "PowerBomb.gif",
+  "skillFruit": {
+   "name": "Skill Fruit: Power Bomb",
+   "icon": "Neutral Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Anubis",
+    "level": 7
+   },
+   {
+    "pal": "Kingpaca",
+    "level": 15
+   },
+   {
+    "pal": "Mammorest",
+    "level": 15
+   },
+   {
+    "pal": "Mammorest Cryst",
+    "level": 15
+   },
+   {
+    "pal": "Jolthog",
+    "level": 22
+   },
+   {
+    "pal": "Jolthog Cryst",
+    "level": 22
+   },
+   {
+    "pal": "Mimog",
+    "level": 22
+   },
+   {
+    "pal": "Nitewing",
+    "level": 22
+   },
+   {
+    "pal": "Nox",
+    "level": 22
+   },
+   {
+    "pal": "Paladius",
+    "level": 22
+   },
+   {
+    "pal": "Swee",
+    "level": 22
+   },
+   {
+    "pal": "Eikthyrdeer",
+    "level": 30
+   },
+   {
+    "pal": "Eikthyrdeer Terra",
+    "level": 30
+   },
+   {
+    "pal": "Fuddler",
+    "level": 30
+   },
+   {
+    "pal": "Hangyu",
+    "level": 30
+   },
+   {
+    "pal": "Kelpsea",
+    "level": 30
+   },
+   {
+    "pal": "Lifmunk",
+    "level": 30
+   },
+   {
+    "pal": "Lovander",
+    "level": 30
+   },
+   {
+    "pal": "Lunaris",
+    "level": 30
+   },
+   {
+    "pal": "Ribbuny",
+    "level": 30
+   },
+   {
+    "pal": "Rushoar",
+    "level": 30
+   },
+   {
+    "pal": "Cremis",
+    "level": 40
+   },
+   {
+    "pal": "Direhowl",
+    "level": 40
+   },
+   {
+    "pal": "Gorirat",
+    "level": 40
+   },
+   {
+    "pal": "Grintale",
+    "level": 40
+   },
+   {
+    "pal": "Lamball",
+    "level": 40
+   },
+   {
+    "pal": "Melpaca",
+    "level": 40
+   },
+   {
+    "pal": "Mozzarina",
+    "level": 40
+   },
+   {
+    "pal": "Tocotoco",
+    "level": 40
+   },
+   {
+    "pal": "Vixy",
+    "level": 40
+   },
+   {
+    "pal": "Woolipop",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "power-shot",
+  "name": "Power Shot",
+  "skillType": "active",
+  "element": "Neutral",
+  "description": "",
+  "power": 35,
+  "cooldown": 4,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Skill Fruit: Power Shot",
+   "icon": "Neutral Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Blazamut",
+    "level": 1
+   },
+   {
+    "pal": "Cryolinx",
+    "level": 1
+   },
+   {
+    "pal": "Eikthyrdeer",
+    "level": 1
+   },
+   {
+    "pal": "Eikthyrdeer Terra",
+    "level": 1
+   },
+   {
+    "pal": "Gorirat Terra",
+    "level": 1
+   },
+   {
+    "pal": "Knocklem",
+    "level": 1
+   },
+   {
+    "pal": "Lovander",
+    "level": 1
+   },
+   {
+    "pal": "Mimog",
+    "level": 1
+   },
+   {
+    "pal": "Mossanda",
+    "level": 1
+   },
+   {
+    "pal": "Mozzarina",
+    "level": 1
+   },
+   {
+    "pal": "Paladius",
+    "level": 1
+   },
+   {
+    "pal": "Sweepa",
+    "level": 1
+   },
+   {
+    "pal": "Xenovader",
+    "level": 1
+   },
+   {
+    "pal": "Blazehowl",
+    "level": 7
+   },
+   {
+    "pal": "Fuack",
+    "level": 7
+   },
+   {
+    "pal": "Fuddler",
+    "level": 7
+   },
+   {
+    "pal": "Gobfin",
+    "level": 7
+   },
+   {
+    "pal": "Gobfin Ignis",
+    "level": 7
+   },
+   {
+    "pal": "Gorirat",
+    "level": 7
+   },
+   {
+    "pal": "Grintale",
+    "level": 7
+   },
+   {
+    "pal": "Jolthog",
+    "level": 7
+   },
+   {
+    "pal": "Jolthog Cryst",
+    "level": 7
+   },
+   {
+    "pal": "Kingpaca",
+    "level": 7
+   },
+   {
+    "pal": "Lunaris",
+    "level": 7
+   },
+   {
+    "pal": "Ribbuny",
+    "level": 7
+   },
+   {
+    "pal": "Robinquill",
+    "level": 7
+   },
+   {
+    "pal": "Rooby",
+    "level": 7
+   },
+   {
+    "pal": "Celaray",
+    "level": 15
+   },
+   {
+    "pal": "Chikipi",
+    "level": 15
+   },
+   {
+    "pal": "Hangyu Cryst",
+    "level": 15
+   },
+   {
+    "pal": "Lamball",
+    "level": 15
+   },
+   {
+    "pal": "Lifmunk",
+    "level": 15
+   },
+   {
+    "pal": "Rushoar",
+    "level": 15
+   },
+   {
+    "pal": "Tocotoco",
+    "level": 15
+   },
+   {
+    "pal": "Vixy",
+    "level": 15
+   },
+   {
+    "pal": "Woolipop",
+    "level": 15
+   },
+   {
+    "pal": "Caprity",
+    "level": 22
+   },
+   {
+    "pal": "Cattiva",
+    "level": 22
+   },
+   {
+    "pal": "Cremis",
+    "level": 22
+   },
+   {
+    "pal": "Direhowl",
+    "level": 22
+   },
+   {
+    "pal": "Hangyu",
+    "level": 22
+   },
+   {
+    "pal": "Melpaca",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "punch-flurry",
+  "name": "Punch Flurry",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Cattiva's special skill.\nPursues enemies, repeatedly punching them with both its fists.",
+  "power": 40,
+  "cooldown": 1,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Cattiva"
+  ],
+  "learnset": [
+   {
+    "pal": "Cattiva",
+    "level": 1
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "reckless-charge",
+  "name": "Reckless Charge",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Rushoar's special skill.\nTakes aim at a foe and rushes at them with a made charge.",
+  "power": 55,
+  "cooldown": 2,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Rushoar"
+  ],
+  "learnset": [
+   {
+    "pal": "Rushoar",
+    "level": 1
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "reflect-leaf",
+  "name": "Reflect Leaf",
+  "skillType": "active",
+  "element": "Grass",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Grass Skill Fruit: Reflect Leaf",
+   "icon": "Grass Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "rock-lance",
+  "name": "Rock Lance",
+  "skillType": "active",
+  "element": "Ground",
+  "description": "",
+  "power": 150,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Earth Skill Fruit: Rock Lance",
+   "icon": "Ground Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Knocklem",
+    "level": 30
+   },
+   {
+    "pal": "Necromus",
+    "level": 30
+   },
+   {
+    "pal": "Dumud",
+    "level": 40
+   },
+   {
+    "pal": "Eikthyrdeer",
+    "level": 40
+   },
+   {
+    "pal": "Kingpaca",
+    "level": 40
+   },
+   {
+    "pal": "Menasting",
+    "level": 40
+   },
+   {
+    "pal": "Rushoar",
+    "level": 40
+   },
+   {
+    "pal": "Warsect",
+    "level": 40
+   },
+   {
+    "pal": "Anubis",
+    "level": 50
+   },
+   {
+    "pal": "Blazamut",
+    "level": 50
+   },
+   {
+    "pal": "Digtoise",
+    "level": 50
+   },
+   {
+    "pal": "Eikthyrdeer Terra",
+    "level": 50
+   },
+   {
+    "pal": "Fuddler",
+    "level": 50
+   },
+   {
+    "pal": "Gorirat Terra",
+    "level": 50
+   },
+   {
+    "pal": "Hangyu",
+    "level": 50
+   },
+   {
+    "pal": "Reptyro",
+    "level": 50
+   },
+   {
+    "pal": "Reptyro Cryst",
+    "level": 50
+   },
+   {
+    "pal": "Robinquill Terra",
+    "level": 50
+   },
+   {
+    "pal": "Surfent Terra",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "roly-poly",
+  "name": "Roly Poly",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Lamball's special skill.\nCurls into a ball, rolling after any enemies in its way.\nBecomes dizzy and unable to move after the attack ends.",
+  "power": 35,
+  "cooldown": 1,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Lamball"
+  ],
+  "learnset": [
+   {
+    "pal": "Lamball",
+    "level": 1
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "sand-blast",
+  "name": "Bog Blast",
+  "skillType": "Active",
+  "element": "Ground",
+  "description": "Hurls sticky mud at an enemy.",
+  "power": 40,
+  "cooldown": 4,
+  "range": null,
+  "image": "Sand Blast.png",
+  "skillFruit": {
+   "name": "Earth Skill Fruit: Sand Blast",
+   "icon": "Ground Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Ground Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "sand-tornado",
+  "name": "Sand Tornado",
+  "skillType": "active",
+  "element": "Ground",
+  "description": "",
+  "power": 80,
+  "cooldown": 18,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Earth Skill Fruit: Sand Tornado",
+   "icon": "Ground Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Anubis",
+    "level": 15
+   },
+   {
+    "pal": "Cinnamoth",
+    "level": 22
+   },
+   {
+    "pal": "Hoocrates",
+    "level": 22
+   },
+   {
+    "pal": "Mau",
+    "level": 22
+   },
+   {
+    "pal": "Ragnahawk",
+    "level": 22
+   },
+   {
+    "pal": "Digtoise",
+    "level": 30
+   },
+   {
+    "pal": "Galeclaw",
+    "level": 30
+   },
+   {
+    "pal": "Nitewing",
+    "level": 30
+   },
+   {
+    "pal": "Robinquill Terra",
+    "level": 30
+   },
+   {
+    "pal": "Surfent Terra",
+    "level": 30
+   },
+   {
+    "pal": "Tocotoco",
+    "level": 30
+   },
+   {
+    "pal": "Beakon",
+    "level": 40
+   },
+   {
+    "pal": "Chikipi",
+    "level": 40
+   },
+   {
+    "pal": "Eikthyrdeer Terra",
+    "level": 40
+   },
+   {
+    "pal": "Fuddler",
+    "level": 40
+   },
+   {
+    "pal": "Gumoss",
+    "level": 40
+   },
+   {
+    "pal": "Hangyu",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "sand-twister",
+  "name": "Sand Twister",
+  "skillType": "active",
+  "element": "Ground",
+  "description": "",
+  "power": 160,
+  "cooldown": 60,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Earth Skill Fruit: Sand Twister",
+   "icon": "Ground Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Knocklem",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "seed-machine-gun",
+  "name": "Seed Machine Gun",
+  "skillType": "active",
+  "element": "Grass",
+  "description": "",
+  "power": 50,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Grass Skill Fruit: Seed Machine Gun",
+   "icon": "Grass Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Bristla",
+    "level": 7
+   },
+   {
+    "pal": "Lullu",
+    "level": 7
+   },
+   {
+    "pal": "Lyleen",
+    "level": 7
+   },
+   {
+    "pal": "Mammorest",
+    "level": 7
+   },
+   {
+    "pal": "Mossanda",
+    "level": 7
+   },
+   {
+    "pal": "Warsect",
+    "level": 7
+   },
+   {
+    "pal": "Petallia",
+    "level": 15
+   },
+   {
+    "pal": "Tanzee",
+    "level": 15
+   },
+   {
+    "pal": "Verdash",
+    "level": 15
+   },
+   {
+    "pal": "Flopie",
+    "level": 22
+   },
+   {
+    "pal": "Gumoss",
+    "level": 22
+   },
+   {
+    "pal": "Lifmunk",
+    "level": 22
+   },
+   {
+    "pal": "Celaray",
+    "level": 30
+   },
+   {
+    "pal": "Gorirat",
+    "level": 30
+   },
+   {
+    "pal": "Vixy",
+    "level": 30
+   },
+   {
+    "pal": "Cattiva",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "seed-mine",
+  "name": "Seed Mine",
+  "skillType": "active",
+  "element": "Grass",
+  "description": "",
+  "power": 65,
+  "cooldown": 13,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Grass Skill Fruit: Seed Mine",
+   "icon": "Grass Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Lyleen",
+    "level": 15
+   },
+   {
+    "pal": "Wumpo Botan",
+    "level": 15
+   },
+   {
+    "pal": "Broncherry",
+    "level": 22
+   },
+   {
+    "pal": "Broncherry Aqua",
+    "level": 22
+   },
+   {
+    "pal": "Dinossom",
+    "level": 22
+   },
+   {
+    "pal": "Robinquill",
+    "level": 22
+   },
+   {
+    "pal": "Tanzee",
+    "level": 22
+   },
+   {
+    "pal": "Vaelet",
+    "level": 22
+   },
+   {
+    "pal": "Cinnamoth",
+    "level": 30
+   },
+   {
+    "pal": "Gumoss",
+    "level": 30
+   },
+   {
+    "pal": "Mossanda",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "shadow-burst",
+  "name": "Shadow Burst",
+  "skillType": "active",
+  "element": "Dark",
+  "description": "",
+  "power": 55,
+  "cooldown": 10,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Shadow Burst",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Blazehowl Noct",
+    "level": 1
+   },
+   {
+    "pal": "Necromus",
+    "level": 1
+   },
+   {
+    "pal": "Pyrin Noct",
+    "level": 7
+   },
+   {
+    "pal": "Daedream",
+    "level": 15
+   },
+   {
+    "pal": "Felbat",
+    "level": 15
+   },
+   {
+    "pal": "Frostallion Noct",
+    "level": 15
+   },
+   {
+    "pal": "Helzephyr",
+    "level": 15
+   },
+   {
+    "pal": "Hoocrates",
+    "level": 15
+   },
+   {
+    "pal": "Leezpunk",
+    "level": 15
+   },
+   {
+    "pal": "Loupmoon",
+    "level": 15
+   },
+   {
+    "pal": "Lovander",
+    "level": 15
+   },
+   {
+    "pal": "Lyleen Noct",
+    "level": 15
+   },
+   {
+    "pal": "Mau",
+    "level": 15
+   },
+   {
+    "pal": "Menasting",
+    "level": 15
+   },
+   {
+    "pal": "Nox",
+    "level": 15
+   },
+   {
+    "pal": "Shadowbeak",
+    "level": 15
+   },
+   {
+    "pal": "Cawgnito",
+    "level": 22
+   },
+   {
+    "pal": "Katress",
+    "level": 22
+   },
+   {
+    "pal": "Killamari",
+    "level": 22
+   },
+   {
+    "pal": "Maraith",
+    "level": 22
+   },
+   {
+    "pal": "Splatterina",
+    "level": 22
+   },
+   {
+    "pal": "Tombat",
+    "level": 22
+   },
+   {
+    "pal": "Depresso",
+    "level": 30
+   },
+   {
+    "pal": "Incineram",
+    "level": 30
+   },
+   {
+    "pal": "Incineram Noct",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "shell-spin",
+  "name": "Shell Spin",
+  "skillType": "ex_active",
+  "element": "Ground",
+  "description": "Digtoise's exclusive skill.\nMoves while spinning its whole body at high speeds.\nDrills through enemies, dealing continuous damage.",
+  "power": 65,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Digtoise"
+  ],
+  "learnset": [
+   {
+    "pal": "Digtoise",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "shockwave",
+  "name": "Shockwave",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "",
+  "power": 40,
+  "cooldown": 4,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Shockwave",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Dinossom Lux",
+    "level": 1
+   },
+   {
+    "pal": "Jolthog",
+    "level": 1
+   },
+   {
+    "pal": "Azurmane",
+    "level": 7
+   },
+   {
+    "pal": "Dazzi",
+    "level": 7
+   },
+   {
+    "pal": "Grizzbolt",
+    "level": 7
+   },
+   {
+    "pal": "Mossanda Lux",
+    "level": 7
+   },
+   {
+    "pal": "Rayhound",
+    "level": 7
+   },
+   {
+    "pal": "Univolt",
+    "level": 7
+   },
+   {
+    "pal": "Beakon",
+    "level": 15
+   },
+   {
+    "pal": "Relaxaurus Lux",
+    "level": 15
+   },
+   {
+    "pal": "Sparkit",
+    "level": 15
+   },
+   {
+    "pal": "Cremis",
+    "level": 30
+   },
+   {
+    "pal": "Melpaca",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "solar-blast",
+  "name": "Solar Blast",
+  "skillType": "active",
+  "element": "Grass",
+  "description": "",
+  "power": 150,
+  "cooldown": 55,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Grass Skill Fruit: Solar Blast",
+   "icon": "Grass Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Robinquill Terra",
+    "level": 40
+   },
+   {
+    "pal": "Beegarde",
+    "level": 50
+   },
+   {
+    "pal": "Bristla",
+    "level": 50
+   },
+   {
+    "pal": "Broncherry",
+    "level": 50
+   },
+   {
+    "pal": "Caprity",
+    "level": 50
+   },
+   {
+    "pal": "Cinnamoth",
+    "level": 50
+   },
+   {
+    "pal": "Dinossom",
+    "level": 50
+   },
+   {
+    "pal": "Elizabee",
+    "level": 50
+   },
+   {
+    "pal": "Flopie",
+    "level": 50
+   },
+   {
+    "pal": "Gumoss",
+    "level": 50
+   },
+   {
+    "pal": "Lifmunk",
+    "level": 50
+   },
+   {
+    "pal": "Lullu",
+    "level": 50
+   },
+   {
+    "pal": "Lyleen",
+    "level": 50
+   },
+   {
+    "pal": "Mammorest",
+    "level": 50
+   },
+   {
+    "pal": "Mossanda",
+    "level": 50
+   },
+   {
+    "pal": "Petallia",
+    "level": 50
+   },
+   {
+    "pal": "Robinquill",
+    "level": 50
+   },
+   {
+    "pal": "Tanzee",
+    "level": 50
+   },
+   {
+    "pal": "Vaelet",
+    "level": 50
+   },
+   {
+    "pal": "Verdash",
+    "level": 50
+   },
+   {
+    "pal": "Warsect",
+    "level": 50
+   },
+   {
+    "pal": "Wumpo",
+    "level": 50
+   },
+   {
+    "pal": "Wumpo Botan",
+    "level": 50
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "spark-blast",
+  "name": "Spark Blast",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "",
+  "power": 30,
+  "cooldown": 2,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Spark Blast",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Azurmane",
+    "level": 1
+   },
+   {
+    "pal": "Grizzbolt",
+    "level": 1
+   },
+   {
+    "pal": "Mossanda Lux",
+    "level": 1
+   },
+   {
+    "pal": "Relaxaurus Lux",
+    "level": 1
+   },
+   {
+    "pal": "Sparkit",
+    "level": 1
+   },
+   {
+    "pal": "Univolt",
+    "level": 1
+   },
+   {
+    "pal": "Beakon",
+    "level": 7
+   },
+   {
+    "pal": "Cremis",
+    "level": 15
+   },
+   {
+    "pal": "Orserk",
+    "level": 15
+   },
+   {
+    "pal": "Rayhound",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "spear-thrust",
+  "name": "Spear Thrust",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Paladius's exclusive skill.\nClads itself in holy power before charging forward with its spear. The shield in its other hand protects from attacks during the charge.",
+  "power": 120,
+  "cooldown": 40,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Paladius"
+  ],
+  "learnset": [
+   {
+    "pal": "Paladius",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "spine-vine",
+  "name": "Spine Vine",
+  "skillType": "active",
+  "element": "Grass",
+  "description": "",
+  "power": 95,
+  "cooldown": 25,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Grass Skill Fruit: Spine Vine",
+   "icon": "Grass Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Broncherry Aqua",
+    "level": 30
+   },
+   {
+    "pal": "Wumpo Botan",
+    "level": 30
+   },
+   {
+    "pal": "Bristla",
+    "level": 40
+   },
+   {
+    "pal": "Broncherry",
+    "level": 40
+   },
+   {
+    "pal": "Caprity",
+    "level": 40
+   },
+   {
+    "pal": "Dinossom",
+    "level": 40
+   },
+   {
+    "pal": "Elizabee",
+    "level": 40
+   },
+   {
+    "pal": "Lifmunk",
+    "level": 40
+   },
+   {
+    "pal": "Lyleen",
+    "level": 40
+   },
+   {
+    "pal": "Mammorest",
+    "level": 40
+   },
+   {
+    "pal": "Mossanda",
+    "level": 40
+   },
+   {
+    "pal": "Petallia",
+    "level": 40
+   },
+   {
+    "pal": "Robinquill",
+    "level": 40
+   },
+   {
+    "pal": "Verdash",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "spinning-lance",
+  "name": "Spinning Lance",
+  "skillType": "ex_active",
+  "element": "Grass",
+  "description": "Elizabee's exclusive skill.\nChannels power into its staff, and unleashes it in a whirl.",
+  "power": 70,
+  "cooldown": 9,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Elizabee"
+  ],
+  "learnset": [
+   {
+    "pal": "Elizabee",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "spinning-roundhouse",
+  "name": "Spinning Roundhouse",
+  "skillType": "ex_active",
+  "element": "Ground",
+  "description": "Anubis's exclusive skill.\nAnubis special skill. Performs a spin kick with its strong legs, cutting down enemies over a wide area.",
+  "power": 100,
+  "cooldown": 21,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Anubis"
+  ],
+  "learnset": [
+   {
+    "pal": "Anubis",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "spirit-fire",
+  "name": "Spirit Fire",
+  "skillType": "active",
+  "element": "Fire",
+  "description": "Shoots fireballs towards an enemy. The fireballs explode after a short distance, generating smaller fireballs that spread forward.",
+  "power": 45,
+  "cooldown": 7,
+  "range": "long",
+  "image": "SpiritFire.gif",
+  "skillFruit": {
+   "name": "Fire Skill Fruit: Spirit Fire",
+   "icon": "Fire Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Helzephyr",
+    "level": 1
+   },
+   {
+    "pal": "Jetragon",
+    "level": 1
+   },
+   {
+    "pal": "Flambelle",
+    "level": 7
+   },
+   {
+    "pal": "Incineram",
+    "level": 7
+   },
+   {
+    "pal": "Incineram Noct",
+    "level": 7
+   },
+   {
+    "pal": "Kitsun",
+    "level": 7
+   },
+   {
+    "pal": "Necromus",
+    "level": 7
+   },
+   {
+    "pal": "Quivern",
+    "level": 7
+   },
+   {
+    "pal": "Ragnahawk",
+    "level": 7
+   },
+   {
+    "pal": "Wixen",
+    "level": 7
+   },
+   {
+    "pal": "Arsox",
+    "level": 15
+   },
+   {
+    "pal": "Faleris",
+    "level": 15
+   },
+   {
+    "pal": "Foxparks",
+    "level": 15
+   },
+   {
+    "pal": "Gobfin Ignis",
+    "level": 15
+   },
+   {
+    "pal": "Kelpsea Ignis",
+    "level": 15
+   },
+   {
+    "pal": "Leezpunk Ignis",
+    "level": 15
+   },
+   {
+    "pal": "Pyrin",
+    "level": 15
+   },
+   {
+    "pal": "Rooby",
+    "level": 15
+   },
+   {
+    "pal": "Suzaku",
+    "level": 15
+   },
+   {
+    "pal": "Vanwyrm",
+    "level": 15
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "spirit-flame",
+  "name": "Spirit Flame",
+  "skillType": "active",
+  "element": "Dark",
+  "description": "",
+  "power": 75,
+  "cooldown": 16,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Dark Skill Fruit: Spirit Flame",
+   "icon": "Dark Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Astegon",
+    "level": 7
+   },
+   {
+    "pal": "Kitsun",
+    "level": 15
+   },
+   {
+    "pal": "Mimog",
+    "level": 15
+   },
+   {
+    "pal": "Necromus",
+    "level": 15
+   },
+   {
+    "pal": "Bellanoir",
+    "level": 22
+   },
+   {
+    "pal": "Blazehowl Noct",
+    "level": 22
+   },
+   {
+    "pal": "Felbat",
+    "level": 22
+   },
+   {
+    "pal": "Flambelle",
+    "level": 22
+   },
+   {
+    "pal": "Foxcicle",
+    "level": 22
+   },
+   {
+    "pal": "Frostallion Noct",
+    "level": 22
+   },
+   {
+    "pal": "Leezpunk",
+    "level": 22
+   },
+   {
+    "pal": "Pyrin Noct",
+    "level": 22
+   },
+   {
+    "pal": "Shadowbeak",
+    "level": 22
+   },
+   {
+    "pal": "Wixen",
+    "level": 22
+   },
+   {
+    "pal": "Cawgnito",
+    "level": 30
+   },
+   {
+    "pal": "Daedream",
+    "level": 30
+   },
+   {
+    "pal": "Helzephyr",
+    "level": 30
+   },
+   {
+    "pal": "Hoocrates",
+    "level": 30
+   },
+   {
+    "pal": "Katress",
+    "level": 30
+   },
+   {
+    "pal": "Loupmoon",
+    "level": 30
+   },
+   {
+    "pal": "Maraith",
+    "level": 30
+   },
+   {
+    "pal": "Mau",
+    "level": 30
+   },
+   {
+    "pal": "Nox",
+    "level": 30
+   },
+   {
+    "pal": "Sibelyx",
+    "level": 30
+   },
+   {
+    "pal": "Tombat",
+    "level": 30
+   },
+   {
+    "pal": "Foxparks",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "splash",
+  "name": "Splash",
+  "skillType": "active",
+  "element": "Water",
+  "description": "",
+  "power": 90,
+  "cooldown": 22,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Water Skill Fruit: Hydro Laser",
+   "icon": "Water Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "stone-beat",
+  "name": "Stone Beat",
+  "skillType": "active",
+  "element": "Ground",
+  "description": "",
+  "power": null,
+  "cooldown": null,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Earth Skill Fruit: Stone Beat",
+   "icon": "Ground Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Bastigor",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "stone-blast",
+  "name": "Stone Blast",
+  "skillType": "active",
+  "element": "Ground",
+  "description": "",
+  "power": 55,
+  "cooldown": 10,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Earth Skill Fruit: Stone Blast",
+   "icon": "Ground Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Anubis",
+    "level": 1
+   },
+   {
+    "pal": "Digtoise",
+    "level": 7
+   },
+   {
+    "pal": "Knocklem",
+    "level": 7
+   },
+   {
+    "pal": "Reptyro",
+    "level": 7
+   },
+   {
+    "pal": "Reptyro Cryst",
+    "level": 7
+   },
+   {
+    "pal": "Blazamut",
+    "level": 15
+   },
+   {
+    "pal": "Dumud",
+    "level": 15
+   },
+   {
+    "pal": "Eikthyrdeer",
+    "level": 15
+   },
+   {
+    "pal": "Eikthyrdeer Terra",
+    "level": 15
+   },
+   {
+    "pal": "Fuddler",
+    "level": 15
+   },
+   {
+    "pal": "Gorirat Terra",
+    "level": 15
+   },
+   {
+    "pal": "Gumoss",
+    "level": 15
+   },
+   {
+    "pal": "Surfent Terra",
+    "level": 15
+   },
+   {
+    "pal": "Warsect",
+    "level": 15
+   },
+   {
+    "pal": "Gorirat",
+    "level": 22
+   },
+   {
+    "pal": "Grintale",
+    "level": 22
+   },
+   {
+    "pal": "Mozzarina",
+    "level": 22
+   },
+   {
+    "pal": "Rayhound",
+    "level": 22
+   },
+   {
+    "pal": "Robinquill Terra",
+    "level": 22
+   },
+   {
+    "pal": "Rushoar",
+    "level": 22
+   },
+   {
+    "pal": "Verdash",
+    "level": 22
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "stone-cannon",
+  "name": "Stone Cannon",
+  "skillType": "active",
+  "element": "Ground",
+  "description": "Digs up a boulder and hurls it at an enemy",
+  "power": 70,
+  "cooldown": 15,
+  "range": "long",
+  "image": "Stone Cannon.gif",
+  "skillFruit": {
+   "name": "Earth Skill Fruit: Stone Cannon",
+   "icon": "Ground Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Bastigor",
+    "level": 1
+   },
+   {
+    "pal": "Mammorest Cryst",
+    "level": 1
+   },
+   {
+    "pal": "Verdash",
+    "level": 7
+   },
+   {
+    "pal": "Cryolinx",
+    "level": 15
+   },
+   {
+    "pal": "Knocklem",
+    "level": 15
+   },
+   {
+    "pal": "Mossanda",
+    "level": 15
+   },
+   {
+    "pal": "Reptyro",
+    "level": 15
+   },
+   {
+    "pal": "Digtoise",
+    "level": 22
+   },
+   {
+    "pal": "Eikthyrdeer",
+    "level": 22
+   },
+   {
+    "pal": "Eikthyrdeer Terra",
+    "level": 22
+   },
+   {
+    "pal": "Fuddler",
+    "level": 22
+   },
+   {
+    "pal": "Gorirat Terra",
+    "level": 22
+   },
+   {
+    "pal": "Menasting",
+    "level": 22
+   },
+   {
+    "pal": "Surfent Terra",
+    "level": 22
+   },
+   {
+    "pal": "Warsect",
+    "level": 22
+   },
+   {
+    "pal": "Grintale",
+    "level": 30
+   },
+   {
+    "pal": "Mozzarina",
+    "level": 30
+   },
+   {
+    "pal": "Tanzee",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Ground Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "thunderstorm",
+  "name": "Thunderstorm",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "",
+  "power": 160,
+  "cooldown": 60,
+  "range": "long",
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Thunderstorm",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "tornado-attack",
+  "name": "Tornado Attack",
+  "skillType": "ex_active",
+  "element": "Neutral",
+  "description": "Nitewing's exclusive skill. Generates a tornado before soaring towards its target.",
+  "power": 65,
+  "cooldown": 13,
+  "range": "long",
+  "image": "TornadoAttack.gif",
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Nitewing"
+  ],
+  "learnset": [
+   {
+    "pal": "Nitewing",
+    "level": 7
+   }
+  ],
+  "categories": [
+   "Neutral Skills",
+   "Skills"
+  ]
+ },
+ {
+  "id": "torrential-blast",
+  "name": "Torrential Blast",
+  "skillType": "active",
+  "element": "Water",
+  "description": "",
+  "power": 110,
+  "cooldown": 35,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Turtacle",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Skills",
+   "Stubs",
+   "Water Skills"
+  ]
+ },
+ {
+  "id": "tri-lightning",
+  "name": "Tri-Lightning",
+  "skillType": "active",
+  "element": "Electric",
+  "description": "",
+  "power": 90,
+  "cooldown": 22,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Electric Skill Fruit: Tri-Lightning",
+   "icon": "Electric Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Beakon",
+    "level": 30
+   },
+   {
+    "pal": "Dazzi",
+    "level": 30
+   },
+   {
+    "pal": "Dinossom Lux",
+    "level": 30
+   },
+   {
+    "pal": "Grizzbolt",
+    "level": 30
+   },
+   {
+    "pal": "Jolthog",
+    "level": 30
+   },
+   {
+    "pal": "Jormuntide",
+    "level": 30
+   },
+   {
+    "pal": "Jormuntide Ignis",
+    "level": 30
+   },
+   {
+    "pal": "Kingpaca",
+    "level": 30
+   },
+   {
+    "pal": "Mossanda Lux",
+    "level": 30
+   },
+   {
+    "pal": "Sparkit",
+    "level": 30
+   },
+   {
+    "pal": "Univolt",
+    "level": 30
+   },
+   {
+    "pal": "Orserk",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Electric Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "twin-spears",
+  "name": "Twin Spears",
+  "skillType": "ex_active",
+  "element": "Dark",
+  "description": "Necromus's exclusive skill.\nClads its twin spears with vicious whirlwinds and charges forward, thrusting them one after the other.",
+  "power": 120,
+  "cooldown": 40,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Necromus"
+  ],
+  "learnset": [
+   {
+    "pal": "Necromus",
+    "level": 40
+   }
+  ],
+  "categories": [
+   "Dark Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "volcanic-burst",
+  "name": "Volcanic Burst",
+  "skillType": "ex_active",
+  "element": "Fire",
+  "description": "Reptyro's exclusive skill.\nRaises its front legs before slamming them onto the ground, causing volcanic eruptions under its enemies.\nIt simultaneously bombards them with volcanic bombs from above.",
+  "power": 100,
+  "cooldown": 45,
+  "range": null,
+  "image": null,
+  "skillFruit": null,
+  "exclusiveTo": [
+   "Reptyro"
+  ],
+  "learnset": [
+   {
+    "pal": "Reptyro",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Fire Skills",
+   "Skills",
+   "Stubs"
+  ]
+ },
+ {
+  "id": "wind-cutter",
+  "name": "Wind Cutter",
+  "skillType": "active",
+  "element": "Grass",
+  "description": "",
+  "power": 30,
+  "cooldown": 2,
+  "range": null,
+  "image": null,
+  "skillFruit": {
+   "name": "Grass Skill Fruit: Wind Cutter",
+   "icon": "Grass Skill Fruit icon.png"
+  },
+  "exclusiveTo": [],
+  "learnset": [
+   {
+    "pal": "Bristla",
+    "level": 1
+   },
+   {
+    "pal": "Broncherry",
+    "level": 1
+   },
+   {
+    "pal": "Caprity",
+    "level": 1
+   },
+   {
+    "pal": "Dinossom",
+    "level": 1
+   },
+   {
+    "pal": "Flopie",
+    "level": 1
+   },
+   {
+    "pal": "Lifmunk",
+    "level": 1
+   },
+   {
+    "pal": "Lullu",
+    "level": 1
+   },
+   {
+    "pal": "Lyleen",
+    "level": 1
+   },
+   {
+    "pal": "Petallia",
+    "level": 1
+   },
+   {
+    "pal": "Robinquill",
+    "level": 1
+   },
+   {
+    "pal": "Tanzee",
+    "level": 1
+   },
+   {
+    "pal": "Verdash",
+    "level": 1
+   },
+   {
+    "pal": "Warsect",
+    "level": 1
+   },
+   {
+    "pal": "Wumpo Botan",
+    "level": 1
+   },
+   {
+    "pal": "Beegarde",
+    "level": 7
+   },
+   {
+    "pal": "Bushi",
+    "level": 7
+   },
+   {
+    "pal": "Cinnamoth",
+    "level": 7
+   },
+   {
+    "pal": "Elizabee",
+    "level": 7
+   },
+   {
+    "pal": "Gumoss",
+    "level": 7
+   },
+   {
+    "pal": "Robinquill Terra",
+    "level": 7
+   },
+   {
+    "pal": "Vaelet",
+    "level": 7
+   },
+   {
+    "pal": "Wumpo",
+    "level": 7
+   },
+   {
+    "pal": "Hangyu",
+    "level": 15
+   },
+   {
+    "pal": "Nitewing",
+    "level": 15
+   },
+   {
+    "pal": "Galeclaw",
+    "level": 22
+   },
+   {
+    "pal": "Vixy",
+    "level": 22
+   },
+   {
+    "pal": "Woolipop",
+    "level": 22
+   },
+   {
+    "pal": "Cattiva",
+    "level": 30
+   }
+  ],
+  "categories": [
+   "Grass Skills",
+   "Skills",
+   "Stubs"
+  ]
+ }
+]
