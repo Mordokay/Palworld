@@ -180,27 +180,24 @@ struct GameData {
     /// unusable as silhouettes; produced by pipeline/analyze_images.py
     let opaquePalImages: Set<String>
 
-    /// Pals eligible for quiz questions. The wiki carries placeholder pages for
-    /// teased-but-unreleased pals (no paldeck number, no lore, teaser images);
-    /// they stay browsable in the Library but never become questions.
-    var quizPals: [Pal] {
-        pals.filter { !$0.number.isEmpty || !$0.paldeckEntry.isEmpty }
-    }
+    // The quiz pools are STORED, computed once in load(): they filter on
+    // imageURL, and templates hit them constantly (question generation runs
+    // whenever a parent's navigationDestination re-evaluates) — recomputing
+    // them meant hundreds of file stats per access, stalling the main thread
+    // right after every answered question.
+
+    /// Pals eligible for quiz questions. The wiki carries placeholder pages
+    /// for teased-but-unreleased pals; they stay browsable in the Library but
+    /// never become questions.
+    let quizPals: [Pal]
 
     /// Quiz pals whose portrait actually exists in the bundle — image-based
     /// questions must only use these.
-    var quizPalsWithImage: [Pal] {
-        quizPals.filter { Self.imageURL($0.image, kind: .pals) != nil }
-    }
+    let quizPalsWithImage: [Pal]
 
     /// Pals whose artwork has real transparency — "Who's that Pal?" blacks
     /// the image out, which only reads as a silhouette on a cutout.
-    var silhouettePals: [Pal] {
-        quizPalsWithImage.filter { pal in
-            guard let url = Self.imageURL(pal.image, kind: .pals) else { return false }
-            return !opaquePalImages.contains(url.lastPathComponent)
-        }
-    }
+    let silhouettePals: [Pal]
 
     /// Resolve a decorated reference like "1-3 Wool (100%)", "40 Refined Ingot"
     /// or "Ring of Resistance +1 - 3%" to the linked entity's article id.
@@ -267,11 +264,14 @@ struct GameData {
         var name = filename.replacingOccurrences(of: "_", with: " ")
             .trimmingCharacters(in: .whitespaces)
         if name.hasPrefix("File:") { name = String(name.dropFirst(5)) }
-        let folder = Self.imageFolderIndex[name] ?? kind.rawValue
-        guard let url = Bundle.main.resourceURL?
-            .appendingPathComponent("data/images/\(folder)/\(name)"),
-            FileManager.default.fileExists(atPath: url.path) else { return nil }
-        return url
+        guard let root = Bundle.main.resourceURL else { return nil }
+        if let folder = Self.imageFolderIndex[name] {
+            // the index was built by scanning the bundle — no need to stat
+            // the file again (fileExists per lookup stalled question generation)
+            return root.appendingPathComponent("data/images/\(folder)/\(name)")
+        }
+        let url = root.appendingPathComponent("data/images/\(kind.rawValue)/\(name)")
+        return FileManager.default.fileExists(atPath: url.path) ? url : nil
     }
 
     static func load() throws -> GameData {
@@ -299,6 +299,15 @@ struct GameData {
         for article in articles {
             idByName[article.title.lowercased()] = article.id
         }
+
+        let opaque = Set(meta?.opaquePalImages ?? [])
+        let quizPals = pals.filter { !$0.number.isEmpty || !$0.paldeckEntry.isEmpty }
+        let quizPalsWithImage = quizPals.filter { imageURL($0.image, kind: .pals) != nil }
+        let silhouettePals = quizPalsWithImage.filter { pal in
+            guard let url = imageURL(pal.image, kind: .pals) else { return false }
+            return !opaque.contains(url.lastPathComponent)
+        }
+
         return GameData(
             pals: pals,
             items: items,
@@ -313,7 +322,10 @@ struct GameData {
                                  uniquingKeysWith: { a, _ in a }),
             skillByID: Dictionary(uniqueKeysWithValues: skills.map { ($0.id, $0) }),
             idByName: idByName,
-            opaquePalImages: Set(meta?.opaquePalImages ?? [])
+            opaquePalImages: opaque,
+            quizPals: quizPals,
+            quizPalsWithImage: quizPalsWithImage,
+            silhouettePals: silhouettePals
         )
     }
 }

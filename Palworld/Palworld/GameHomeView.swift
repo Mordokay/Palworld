@@ -46,15 +46,8 @@ struct GameHomeView: View {
                         modeLink("Survival", "heart.fill", "3 lives, rising heat") {
                             SurvivalSetupView(data: data)
                         }
-                        modeLink("Who's that Pal?", "moon.stars.fill", "20 silhouettes") {
-                            QuizView(data: data,
-                                     questions: QuizEngine.makeSession(
-                                         data: data, count: 20,
-                                         difficulty: preferredDifficulty,
-                                         templates: [SilhouetteTemplate()]),
-                                     difficulty: preferredDifficulty,
-                                     categoryLabel: "Who's that Pal?",
-                                     sessionMode: "whosthatpal")
+                        modeLink("Who's that Pal?", "moon.stars.fill", "20 rounds · 2 styles") {
+                            WhosThatPalSetupView(data: data)
                         }
                         modeLink("Spin the Wheel", "dice.fill", "Random topic, 5 questions") {
                             SpinWheelView(data: data)
@@ -318,6 +311,66 @@ struct PlacementTestView: View {
         QuizView(data: data, questions: questions, difficulty: .medium,
                  categoryLabel: "Placement Test", sessionMode: "placement",
                  onFinish: { Placement.grade($0, context: modelContext) })
+    }
+}
+
+/// "Who's that Pal?" comes in two flavors: the classic pitch-black silhouette
+/// (cutout artwork only) and the full drawing (every pal with an image —
+/// opaque screenshots welcome here).
+struct WhosThatPalSetupView: View {
+    let data: GameData
+    @Query private var profiles: [PlayerProfile]
+
+    private var preferredDifficulty: Difficulty {
+        Difficulty(rawValue: profiles.first?.preferredDifficulty ?? "") ?? .medium
+    }
+
+    var body: some View {
+        Form {
+            Section {
+                NavigationLink {
+                    quiz(silhouette: true)
+                } label: {
+                    styleRow("Silhouettes", icon: "moon.stars.fill", tint: .indigo,
+                             note: "The classic — name the pitch-black shape")
+                }
+                NavigationLink {
+                    quiz(silhouette: false)
+                } label: {
+                    styleRow("Full artwork", icon: "photo.fill", tint: .blue,
+                             note: "The real drawing — every pal can appear")
+                }
+            } footer: {
+                Text("20 rounds either way.")
+            }
+        }
+        .navigationTitle("Who's that Pal?")
+    }
+
+    private func styleRow(_ title: String, icon: String, tint: Color,
+                          note: String) -> some View {
+        HStack(spacing: 12) {
+            Image(systemName: icon)
+                .font(.title3)
+                .foregroundStyle(tint)
+                .frame(width: 34)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title).font(.headline)
+                Text(note).font(.caption).foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 4)
+    }
+
+    private func quiz(silhouette: Bool) -> some View {
+        QuizView(data: data,
+                 questions: QuizEngine.makeSession(
+                     data: data, count: 20, difficulty: preferredDifficulty,
+                     templates: [silhouette ? SilhouetteTemplate()
+                                            : PictureToNameTemplate()]),
+                 difficulty: preferredDifficulty,
+                 categoryLabel: silhouette ? "Who's that Pal?" : "Who's that Pal? · Artwork",
+                 sessionMode: "whosthatpal")
     }
 }
 
