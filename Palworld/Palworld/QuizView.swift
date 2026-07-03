@@ -218,6 +218,18 @@ extension String: @retroactive Identifiable {
     public var id: String { self }
 }
 
+/// Answer-option press effect: a quick scale dip, NO opacity change. The
+/// default `.plain` style dims the pressed label and animates the dimness
+/// away — which masked the freshly-drawn red state on the very option the
+/// user tapped, making it appear ~half a second after the green one.
+struct QuizOptionButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.97 : 1)
+            .animation(.easeOut(duration: 0.08), value: configuration.isPressed)
+    }
+}
+
 /// The prompt + answer options for one question — shared by the untimed
 /// QuizView and the arcade modes (Time Attack, Survival).
 /// Equatable so `.equatable()` call sites skip body re-runs from unrelated
@@ -293,7 +305,7 @@ struct QuestionCardView: View, Equatable {
                         .overlay(RoundedRectangle(cornerRadius: 16)
                             .stroke(optionBorder(i), lineWidth: 2))
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(QuizOptionButtonStyle())
                 }
             }
         } else {
@@ -310,7 +322,7 @@ struct QuestionCardView: View, Equatable {
                             .overlay(RoundedRectangle(cornerRadius: 14)
                                 .stroke(optionBorder(i), lineWidth: 2))
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(QuizOptionButtonStyle())
                 }
             }
         }
