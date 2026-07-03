@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 /// Loads the bundled game data once, then shows the 5-tab shell (DESIGN.md §1).
 struct AppRoot: View {
@@ -16,6 +17,26 @@ struct AppRoot: View {
                                  questions: QuizEngine.makeSession(
                                      data: data, count: 5, difficulty: .medium, seed: 42),
                                  difficulty: .medium)
+                    }
+                } else if CommandLine.arguments.contains("-screenshot-silhouette") {
+                    NavigationStack {
+                        QuizView(data: data,
+                                 questions: QuizEngine.makeSession(
+                                     data: data, count: 5, difficulty: .medium, seed: 42,
+                                     templates: [SilhouetteTemplate()]),
+                                 difficulty: .medium, categoryLabel: "Who's that Pal?",
+                                 sessionMode: "whosthatpal")
+                    }
+                } else if CommandLine.arguments.contains("-screenshot-wheel") {
+                    NavigationStack { SpinWheelView(data: data) }
+                } else if CommandLine.arguments.contains("-screenshot-timeattack") {
+                    NavigationStack {
+                        ArcadeQuizView(data: data, mode: .timeAttack(seconds: 60),
+                                       difficulty: .medium)
+                    }
+                } else if CommandLine.arguments.contains("-screenshot-survival") {
+                    NavigationStack {
+                        ArcadeQuizView(data: data, mode: .survival, difficulty: .easy)
                     }
                 } else if let idx = CommandLine.arguments.firstIndex(of: "-screenshot-page"),
                           CommandLine.arguments.indices.contains(idx + 1) {
@@ -39,31 +60,79 @@ struct AppRoot: View {
         }
         .fontDesign(.rounded)
         .task {
-            do { data = try GameData.load() } catch { loadError = String(describing: error) }
+            do {
+                let loaded = try GameData.load()
+                data = loaded
+                if CommandLine.arguments.contains("-seed-progress") {
+                    seedProgress(loaded)
+                }
+            } catch { loadError = String(describing: error) }
         }
+    }
+
+    @Environment(\.modelContext) private var modelContext
+
+    /// Debug: simulate played quizzes so Progression/Profile can be verified.
+    private func seedProgress(_ data: GameData) {
+        let water = data.quizPals.filter { $0.elements.contains("Water") }.prefix(12)
+        let engine = SeededRNG(seed: 7)
+        var signatures: [String] = []
+        var outcomes: [Bool] = []
+        for (i, pal) in water.enumerated() {
+            for template in QuizEngine.palTemplates.prefix(3) {
+                guard let q = template.generate(data: data, difficulty: .medium,
+                                                rng: engine, subject: pal) else { continue }
+                let correct = (i + signatures.count) % 4 != 0
+                for _ in 0..<(correct ? 3 : 1) {
+                    ProgressionStore.recordAnswer(modelContext, data: data, question: q,
+                                                  correct: correct, difficulty: .medium,
+                                                  streak: 1)
+                }
+                if signatures.count < 10 {
+                    signatures.append(q.signature)
+                    outcomes.append(correct)
+                }
+            }
+        }
+        let session = QuizSession()
+        session.categoryLabel = "Water Pals"
+        session.signatures = signatures
+        session.lastCorrect = outcomes
+        session.everCorrect = outcomes
+        session.bestScore = outcomes.filter { $0 }.count
+        session.xpEarned = 230
+        modelContext.insert(session)
     }
 }
 
 struct MainTabView: View {
     let data: GameData
+    @State private var selection: String
+
+    init(data: GameData) {
+        self.data = data
+        let requested = CommandLine.arguments.firstIndex(of: "-tab").flatMap { i in
+            CommandLine.arguments.indices.contains(i + 1) ? CommandLine.arguments[i + 1] : nil
+        }
+        _selection = State(initialValue: requested ?? "game")
+    }
 
     var body: some View {
-        TabView {
-            Tab("Game", systemImage: "gamecontroller.fill") {
+        TabView(selection: $selection) {
+            Tab("Game", systemImage: "gamecontroller.fill", value: "game") {
                 GameHomeView(data: data)
             }
-            Tab("Progression", systemImage: "chart.bar.fill") {
-                PlaceholderTab(title: "Progression", symbol: "chart.bar.fill",
-                               note: "Knowledge bars per category and pal — lands in M4.")
+            Tab("Progression", systemImage: "chart.bar.fill", value: "progression") {
+                ProgressionView(data: data)
             }
-            Tab("Library", systemImage: "books.vertical.fill") {
+            Tab("Library", systemImage: "books.vertical.fill", value: "library") {
                 LibraryView(data: data)
             }
-            Tab("Achievements", systemImage: "trophy.fill") {
+            Tab("Achievements", systemImage: "trophy.fill", value: "awards") {
                 PlaceholderTab(title: "Achievements", symbol: "trophy.fill",
                                note: "Unlockable badges — lands in M6.")
             }
-            Tab("Profile", systemImage: "person.crop.circle") {
+            Tab("Profile", systemImage: "person.crop.circle", value: "profile") {
                 ProfileView(data: data)
             }
         }
@@ -79,30 +148,6 @@ struct PlaceholderTab: View {
         NavigationStack {
             ContentUnavailableView(title, systemImage: symbol, description: Text(note))
                 .navigationTitle(title)
-        }
-    }
-}
-
-struct ProfileView: View {
-    let data: GameData
-
-    var body: some View {
-        NavigationStack {
-            List {
-                Section("Bundled game data") {
-                    LabeledContent("Pals", value: "\(data.pals.count)")
-                    LabeledContent("Items", value: "\(data.items.count)")
-                    LabeledContent("Weapons", value: "\(data.weapons.count)")
-                    LabeledContent("Skills", value: "\(data.skills.count)")
-                    LabeledContent("Locations", value: "\(data.locations.count)")
-                    LabeledContent("Library articles", value: "\(data.articles.count)")
-                }
-                Section {
-                    Text("Profile, XP and stats arrive in M4.")
-                        .foregroundStyle(.secondary)
-                }
-            }
-            .navigationTitle("Profile")
         }
     }
 }

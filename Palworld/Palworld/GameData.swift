@@ -184,6 +184,12 @@ struct GameData {
         pals.filter { !$0.number.isEmpty || !$0.paldeckEntry.isEmpty }
     }
 
+    /// Quiz pals whose portrait actually exists in the bundle — image-based
+    /// questions must only use these.
+    var quizPalsWithImage: [Pal] {
+        quizPals.filter { Self.imageURL($0.image, kind: .pals) != nil }
+    }
+
     /// Resolve a decorated reference like "1-3 Wool (100%)", "40 Refined Ingot"
     /// or "Ring of Resistance +1 - 3%" to the linked entity's article id.
     func resolveEntityName(_ raw: String) -> String? {
@@ -222,7 +228,7 @@ struct GameData {
         return s
     }
 
-    enum ImageKind: String {
+    enum ImageKind: String, Codable {
         case pals, items, weapons, skills, locations, ui, maps, articles, misc
     }
 

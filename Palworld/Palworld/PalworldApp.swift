@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PalworldApp: App {
@@ -13,5 +14,9 @@ struct PalworldApp: App {
         WindowGroup {
             AppRoot()
         }
+        .modelContainer(for: [
+            PlayerProfile.self, FacetProgress.self, CategoryXP.self,
+            MissRecord.self, QuizSession.self, ActiveQuiz.self,
+        ])
     }
 }

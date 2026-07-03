@@ -306,8 +306,11 @@ recompute against the larger entity set). See `pipeline/README.md`.
    (2×2 image grid with labels + per-option tints), answer haptics, results screen, info sheet
 3. **M3 — Library** ✅: browse + search + detail pages + cross-link chips + prose auto-linking +
    wikitable rendering + zoomable images
-4. **M4 — Persistence & progression**: SwiftData models, XP routing, facet mastery, Progression
-   tab with targeted quizzes, levels/ranks, quiz history with replay + completion rings
-5. **M5 — Modes**: Time Attack, Survival, Daily, Spin the Wheel, Who's that Pal?, placement test
+4. **M4 — Persistence & progression** ✅: SwiftData models, XP routing (global + element
+   categories + per-pal facets, redemption 2×), Progression tab with targeted quizzes,
+   levels/ranks, profile with avatar unlocks, quiz history with replay + completion rings
+5. **M5 — Modes** ✅: Time Attack, Survival, Daily, Spin the Wheel, Who's that Pal?, placement test,
+   Weakest Pals (targets the N lowest-completeness pals in a category; mixing ≥10 subjects keeps
+   answers from being telegraphed — the reason single-pal/single-element quiz triggers were removed)
 6. **M6 — Depth**: Teacher mode, Smart Review + redemption, remaining templates,
    difficulty-aware distractors everywhere, achievements, avatar unlocks, confetti & polish
