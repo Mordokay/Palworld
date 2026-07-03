@@ -218,18 +218,6 @@ extension String: @retroactive Identifiable {
     public var id: String { self }
 }
 
-/// Answer-option press effect: a quick scale dip, NO opacity change. The
-/// default `.plain` style dims the pressed label and animates the dimness
-/// away — which masked the freshly-drawn red state on the very option the
-/// user tapped, making it appear ~half a second after the green one.
-struct QuizOptionButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? 0.97 : 1)
-            .animation(.easeOut(duration: 0.08), value: configuration.isPressed)
-    }
-}
-
 /// The prompt + answer options for one question — shared by the untimed
 /// QuizView and the arcade modes (Time Attack, Survival).
 /// Equatable so `.equatable()` call sites skip body re-runs from unrelated
@@ -284,45 +272,46 @@ struct QuestionCardView: View, Equatable {
     @ViewBuilder
     private var optionsView: some View {
         let isImageChoice = question.options.contains { $0.imageFile != nil }
+        // deliberately NOT Buttons: every button style layers a press effect
+        // over the label, and that effect masked the red answer state on the
+        // tapped option for ~half a second — a bare tap gesture draws nothing
         if isImageChoice {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                 ForEach(Array(question.options.enumerated()), id: \.offset) { i, option in
-                    Button { select(i) } label: {
-                        VStack(spacing: 6) {
-                            WikiImage(file: option.imageFile ?? "", kind: question.imageKind)
-                                .frame(height: question.showOptionLabels ? 105 : 130)
-                                .frame(maxWidth: .infinity)
-                            if question.showOptionLabels {
-                                Text(option.text)
-                                    .font(.subheadline.weight(.semibold))
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.7)
-                            }
+                    VStack(spacing: 6) {
+                        WikiImage(file: option.imageFile ?? "", kind: question.imageKind)
+                            .frame(height: question.showOptionLabels ? 105 : 130)
+                            .frame(maxWidth: .infinity)
+                        if question.showOptionLabels {
+                            Text(option.text)
+                                .font(.subheadline.weight(.semibold))
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
                         }
-                        .padding(8)
-                        .background(optionBackground(i),
-                                    in: RoundedRectangle(cornerRadius: 16))
-                        .overlay(RoundedRectangle(cornerRadius: 16)
-                            .stroke(optionBorder(i), lineWidth: 2))
                     }
-                    .buttonStyle(QuizOptionButtonStyle())
+                    .padding(8)
+                    .background(optionBackground(i),
+                                in: RoundedRectangle(cornerRadius: 16))
+                    .overlay(RoundedRectangle(cornerRadius: 16)
+                        .stroke(optionBorder(i), lineWidth: 2))
+                    .contentShape(RoundedRectangle(cornerRadius: 16))
+                    .onTapGesture { select(i) }
                 }
             }
         } else {
             VStack(spacing: 10) {
                 ForEach(Array(question.options.enumerated()), id: \.offset) { i, option in
-                    Button { select(i) } label: {
-                        Text(option.text)
-                            .font(.body.weight(.semibold))
-                            .multilineTextAlignment(.center)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 14)
-                            .background(optionBackground(i),
-                                        in: RoundedRectangle(cornerRadius: 14))
-                            .overlay(RoundedRectangle(cornerRadius: 14)
-                                .stroke(optionBorder(i), lineWidth: 2))
-                    }
-                    .buttonStyle(QuizOptionButtonStyle())
+                    Text(option.text)
+                        .font(.body.weight(.semibold))
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(optionBackground(i),
+                                    in: RoundedRectangle(cornerRadius: 14))
+                        .overlay(RoundedRectangle(cornerRadius: 14)
+                            .stroke(optionBorder(i), lineWidth: 2))
+                        .contentShape(RoundedRectangle(cornerRadius: 14))
+                        .onTapGesture { select(i) }
                 }
             }
         }
