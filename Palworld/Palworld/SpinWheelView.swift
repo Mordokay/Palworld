@@ -22,6 +22,7 @@ struct SpinWheelView: View {
     @State private var rotation = 0.0
     @State private var spinning = false
     @State private var landed: Int?
+    @State private var dealtCount = 10
 
     private static let topics: [WheelTopic] = [
         WheelTopic(label: "Spot the Pal", icon: "photo.fill", color: .blue,
@@ -50,8 +51,8 @@ struct SpinWheelView: View {
                    facet: "utility", template: FoodDuelTemplate()),
     ]
 
-    /// One question per wheel topic — the quiz length grows with the wheel.
-    static var questionCount: Int { topics.count }
+    /// Each spin deals a surprise hand: somewhere between 10 and 20 questions.
+    static let questionRange = 10...20
 
     private var step: Double { 360.0 / Double(Self.topics.count) }
     private var preferredDifficulty: Difficulty {
@@ -130,14 +131,14 @@ struct SpinWheelView: View {
                 NavigationLink {
                     QuizView(data: data,
                              questions: QuizEngine.makeSession(
-                                 data: data, count: Self.questionCount,
+                                 data: data, count: dealtCount,
                                  difficulty: preferredDifficulty,
                                  templates: [topic.template]),
                              difficulty: preferredDifficulty,
                              categoryLabel: topic.label,
                              sessionMode: "wheel")
                 } label: {
-                    Text("Start · \(Self.questionCount) questions")
+                    Text("Start · \(dealtCount) questions")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                 }
@@ -151,7 +152,8 @@ struct SpinWheelView: View {
                 .stroke(topic.color.opacity(0.35), lineWidth: 1))
         } else {
             Text(spinning ? "Round and round it goes…"
-                 : "Spin to get \(Self.questionCount) questions on a random topic")
+                 : "Spin for a random topic — and a random hand of "
+                   + "\(Self.questionRange.lowerBound)–\(Self.questionRange.upperBound) questions")
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .padding(.vertical, 30)
@@ -178,6 +180,7 @@ struct SpinWheelView: View {
         Task {
             try? await Task.sleep(for: .seconds(3.15))
             landed = target
+            dealtCount = Int.random(in: Self.questionRange)
             spinning = false
         }
     }

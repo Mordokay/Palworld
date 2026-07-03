@@ -50,7 +50,7 @@ struct GameHomeView: View {
                             WhosThatPalSetupView(data: data)
                         }
                         modeLink("Spin the Wheel", "dice.fill",
-                                 "Random topic, \(SpinWheelView.questionCount) questions") {
+                                 "Random topic, \(SpinWheelView.questionRange.lowerBound)–\(SpinWheelView.questionRange.upperBound) questions") {
                             SpinWheelView(data: data)
                         }
                         modeLink("Weakest Pals", "target", "Drill your 10 worst") {
