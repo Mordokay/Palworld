@@ -80,7 +80,7 @@ struct ProfileView: View {
         let totalQuestions = sessions.reduce(0) { $0 + $1.signatures.count }
         let totalCorrect = sessions.reduce(0) { $0 + $1.bestScore }
         let mastered = data.quizPals.filter {
-            snapshot.masteredFacetCount(entityID: $0.id) == Progression.palFacets.count
+            snapshot.masteredFacetCount(pal: $0) == Progression.facets(for: $0).count
         }.count
         return Section("Stats") {
             LabeledContent("Quizzes played", value: "\(sessions.count)")

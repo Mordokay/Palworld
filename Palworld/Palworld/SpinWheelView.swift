@@ -30,12 +30,24 @@ struct SpinWheelView: View {
                    facet: "elements", template: PalElementTemplate()),
         WheelTopic(label: "Lore", icon: "book.fill", color: .purple,
                    facet: "lore", template: LoreToPalTemplate()),
+        WheelTopic(label: "Drops", icon: "shippingbox.fill", color: .brown,
+                   facet: "drops", template: PalDropsTemplate()),
+        WheelTopic(label: "Stat Duels", icon: "chart.bar.fill", color: .green,
+                   facet: "stats", template: StatDuelTemplate()),
         WheelTopic(label: "Find the Pal", icon: "magnifyingglass", color: .teal,
                    facet: "identify", template: NameToPictureTemplate()),
+        WheelTopic(label: "Work", icon: "hammer.fill", color: .cyan,
+                   facet: "work", template: WorkSuitabilityTemplate()),
         WheelTopic(label: "Alpha Titles", icon: "crown.fill", color: .red,
                    facet: "lore", template: AlphaTitleTemplate()),
+        WheelTopic(label: "Active Skills", icon: "bolt.circle.fill", color: .mint,
+                   facet: "skills", template: ActiveSkillTemplate()),
+        WheelTopic(label: "Partner Skills", icon: "person.2.fill", color: .pink,
+                   facet: "partnerSkill", template: PartnerSkillTemplate()),
         WheelTopic(label: "Silhouettes", icon: "moon.stars.fill", color: .indigo,
                    facet: "identify", template: SilhouetteTemplate()),
+        WheelTopic(label: "Appetites", icon: "fork.knife", color: .yellow,
+                   facet: "utility", template: FoodDuelTemplate()),
     ]
 
     private var step: Double { 360.0 / Double(Self.topics.count) }
@@ -71,7 +83,7 @@ struct SpinWheelView: View {
                 }
                 ForEach(Array(Self.topics.enumerated()), id: \.offset) { i, topic in
                     Image(systemName: topic.icon)
-                        .font(.title2.weight(.bold))
+                        .font(.callout.weight(.bold))
                         .foregroundStyle(.white)
                         .shadow(radius: 2)
                         .offset(y: -104)

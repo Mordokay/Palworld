@@ -264,6 +264,220 @@ struct AlphaTitleTemplate: QuestionTemplate {
     }
 }
 
+struct PartnerSkillTemplate: QuestionTemplate {
+    let id = "pal.partnerSkill"
+    let facet = "partnerSkill"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subject: Pal?) -> Question? {
+        let pool = data.quizPals.filter { $0.partnerSkill.name.count > 2 }
+        guard let pal = subject ?? pool.randomElement(seeded: rng),
+              pal.partnerSkill.name.count > 2 else { return nil }
+        var others = pool.filter { $0.id != pal.id && $0.partnerSkill.name != pal.partnerSkill.name }
+        if difficulty == .hard {
+            let similar = others.filter { !Set($0.elements).isDisjoint(with: pal.elements) }
+            if similar.count >= 3 { others = similar }
+        }
+        let wrong = Array(others.shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        let (options, correctIndex) = mcOptions(correct: pal, distractors: wrong, rng: rng) {
+            QuizOption(text: $0.partnerSkill.name)
+        }
+        return Question(
+            templateID: id, promptText: "What is \(pal.name)'s partner skill?",
+            promptImageFile: pal.image,
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal), baseXP: 15
+        )
+    }
+}
+
+struct PalDropsTemplate: QuestionTemplate {
+    let id = "pal.drops"
+    let facet = "drops"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subject: Pal?) -> Question? {
+        let pool = data.quizPals.filter { !$0.drops.isEmpty }
+        guard let pal = subject ?? pool.randomElement(seeded: rng),
+              !pal.drops.isEmpty else { return nil }
+        let mine = Set(pal.drops.map { GameData.strippedName($0).lowercased() })
+        guard let drop = pal.drops.randomElement(seeded: rng) else { return nil }
+        let answer = GameData.strippedName(drop)
+        // distractors: things OTHER pals drop that this one doesn't
+        let others = Set(pool.flatMap { $0.drops.map(GameData.strippedName) })
+            .filter { !mine.contains($0.lowercased()) }
+        let wrong = Array(others.sorted().shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        // show item icons when every option resolves to a bundled image
+        func icon(_ name: String) -> String? {
+            data.resolveEntityName(name).flatMap { data.itemByID[$0]?.image }
+                .flatMap { GameData.imageURL($0, kind: .items) != nil ? $0 : nil }
+        }
+        let allIcons = ([answer] + wrong).allSatisfy { icon($0) != nil }
+        let (options, correctIndex) = mcOptions(correct: answer, distractors: wrong, rng: rng) {
+            QuizOption(text: $0, imageFile: allIcons ? icon($0) : nil)
+        }
+        return Question(
+            templateID: id, promptText: "What does \(pal.name) drop when defeated?",
+            promptImageFile: pal.image,
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal), baseXP: 15
+        )
+    }
+}
+
+struct StatDuelTemplate: QuestionTemplate {
+    let id = "pal.statDuel"
+    let facet = "stats"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subject: Pal?) -> Question? {
+        let stats: [(String, (Pal) -> Int?)] = [
+            ("HP", { $0.stats?.hp }),
+            ("Attack", { $0.stats?.attack }),
+            ("Defense", { $0.stats?.defense }),
+        ]
+        let (statName, value) = stats[Int(rng.next() % UInt64(stats.count))]
+        let pool = data.quizPalsWithImage.filter { value($0) != nil }
+        guard let pal = subject ?? pool.randomElement(seeded: rng),
+              let winning = value(pal) else { return nil }
+        // the subject must WIN the duel (its signature pins it as the answer):
+        // distractors are strictly lower, so the max is unambiguous
+        var lower = pool.filter { (value($0) ?? .max) < winning }
+        guard lower.count >= 3 else { return nil }
+        if difficulty == .hard {
+            // photo finish: the closest runners-up make you actually know the stat
+            lower.sort { (value($0) ?? 0) > (value($1) ?? 0) }
+            lower = Array(lower.prefix(8))
+        }
+        let wrong = Array(lower.shuffled(seeded: rng).prefix(3))
+        let (options, correctIndex) = mcOptions(correct: pal, distractors: wrong, rng: rng) {
+            QuizOption(text: $0.name, imageFile: $0.image)
+        }
+        return Question(
+            templateID: id,
+            promptText: "Which of these pals has the highest base \(statName)?",
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal), baseXP: 15
+        )
+    }
+}
+
+struct WorkSuitabilityTemplate: QuestionTemplate {
+    let id = "pal.work"
+    let facet = "work"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subject: Pal?) -> Question? {
+        let pool = data.quizPals.filter { !$0.workSuitability.isEmpty }
+        guard let pal = subject ?? pool.randomElement(seeded: rng),
+              !pal.workSuitability.isEmpty else { return nil }
+        guard let work = pal.workSuitability.keys.sorted().randomElement(seeded: rng)
+        else { return nil }
+        let allWorks = Set(pool.flatMap { $0.workSuitability.keys })
+        let wrong = Array(allWorks.subtracting(pal.workSuitability.keys)
+            .sorted().shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        let (options, correctIndex) = mcOptions(correct: work, distractors: wrong, rng: rng) {
+            QuizOption(text: Theme.workLabel($0))
+        }
+        return Question(
+            templateID: id, promptText: "Which kind of work is \(pal.name) suited for?",
+            promptImageFile: pal.image,
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal), baseXP: 10
+        )
+    }
+}
+
+struct ActiveSkillTemplate: QuestionTemplate {
+    let id = "pal.activeSkill"
+    let facet = "skills"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subject: Pal?) -> Question? {
+        let pool = data.quizPals.filter { !$0.activeSkills.isEmpty }
+        guard let pal = subject ?? pool.randomElement(seeded: rng),
+              !pal.activeSkills.isEmpty,
+              let skill = pal.activeSkills.randomElement(seeded: rng) else { return nil }
+        let mine = Set(pal.activeSkills.map(\.name))
+        // distractors from skills other pals learn — guaranteed real skills
+        let others = Set(pool.flatMap { $0.activeSkills.map(\.name) }).subtracting(mine)
+        let wrong = Array(others.sorted().shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        func element(_ name: String) -> String? {
+            data.idByName[name.lowercased()].flatMap { data.skillByID[$0]?.element }
+        }
+        let (options, correctIndex) = mcOptions(correct: skill.name, distractors: wrong,
+                                                rng: rng) {
+            QuizOption(text: $0, tintElement: element($0))
+        }
+        return Question(
+            templateID: id, promptText: "Which active skill can \(pal.name) learn?",
+            promptImageFile: pal.image,
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal), baseXP: 15
+        )
+    }
+}
+
+struct FoodDuelTemplate: QuestionTemplate {
+    let id = "pal.foodDuel"
+    let facet = "utility"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subject: Pal?) -> Question? {
+        let pool = data.quizPalsWithImage.filter { $0.foodAmount != nil }
+        guard let pal = subject ?? pool.randomElement(seeded: rng),
+              let appetite = pal.foodAmount else { return nil }
+        // subject must be the hungriest so the answer is unambiguous
+        let lower = pool.filter { ($0.foodAmount ?? .max) < appetite }
+        guard lower.count >= 3 else { return nil }
+        let wrong = Array(lower.shuffled(seeded: rng).prefix(3))
+        let (options, correctIndex) = mcOptions(correct: pal, distractors: wrong, rng: rng) {
+            QuizOption(text: $0.name, imageFile: $0.image)
+        }
+        return Question(
+            templateID: id, promptText: "Which of these pals eats the most food?",
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal), baseXP: 15
+        )
+    }
+}
+
+struct ElementToPalTemplate: QuestionTemplate {
+    let id = "pal.elementToPal"
+    let facet = "elements"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subject: Pal?) -> Question? {
+        let pool = data.quizPalsWithImage.filter { !$0.elements.isEmpty }
+        guard let pal = subject ?? pool.randomElement(seeded: rng),
+              let element = pal.elements.randomElement(seeded: rng) else { return nil }
+        // distractors must NOT have the asked element at all
+        let wrong = Array(pool.filter { !$0.elements.contains(element) }
+            .shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        let (options, correctIndex) = mcOptions(correct: pal, distractors: wrong, rng: rng) {
+            QuizOption(text: $0.name, imageFile: $0.image)
+        }
+        return Question(
+            templateID: id,
+            promptText: "Which of these pals is a \(element)-type?",
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal), baseXP: 10
+        )
+    }
+}
+
 struct SilhouetteTemplate: QuestionTemplate {
     let id = "pal.silhouette"
     let facet = "identify"
@@ -298,7 +512,9 @@ enum QuizEngine {
     /// "Who's that Pal?" gimmick keeps its own mode fresh.
     static let palTemplates: [any QuestionTemplate] = [
         PictureToNameTemplate(), NameToPictureTemplate(), PalElementTemplate(),
-        LoreToPalTemplate(), AlphaTitleTemplate(),
+        LoreToPalTemplate(), AlphaTitleTemplate(), PartnerSkillTemplate(),
+        PalDropsTemplate(), StatDuelTemplate(), WorkSuitabilityTemplate(),
+        ActiveSkillTemplate(), FoodDuelTemplate(), ElementToPalTemplate(),
     ]
 
     /// Every template that can appear in a saved signature (replay lookup).

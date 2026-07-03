@@ -28,9 +28,8 @@ struct ProgressionView: View {
                 }
 
                 Section("Pals by element") {
-                    let allIDs = data.quizPals.map(\.id)
                     overallRow(label: "All Pals", color: .purple,
-                               completeness: snapshot.completeness(entityIDs: allIDs),
+                               completeness: snapshot.completeness(pals: data.quizPals),
                                subjects: data.quizPals)
                     ForEach(Theme.allElements, id: \.self) { element in
                         let members = pals(for: element)
@@ -80,11 +79,11 @@ struct ProgressionView: View {
                     .frame(width: 20, height: 20)
                 VStack(alignment: .leading, spacing: 6) {
                     Text(element).font(.subheadline.weight(.bold))
-                    CompletenessBar(value: snapshot.completeness(entityIDs: members.map(\.id)),
+                    CompletenessBar(value: snapshot.completeness(pals: members),
                                     color: Theme.elementColor(element))
                 }
                 Spacer()
-                Text(snapshot.completeness(entityIDs: members.map(\.id)),
+                Text(snapshot.completeness(pals: members),
                      format: .percent.precision(.fractionLength(0)))
                     .font(.caption.weight(.heavy))
                     .monospacedDigit()
@@ -94,19 +93,20 @@ struct ProgressionView: View {
     }
 
     private func palRow(_ pal: Pal) -> some View {
-        HStack(spacing: 10) {
+        let applicable = Progression.facets(for: pal)
+        return HStack(alignment: .top, spacing: 10) {
             WikiImage(file: pal.image, kind: .pals)
                 .frame(width: 34, height: 34)
             VStack(alignment: .leading, spacing: 3) {
                 Text(pal.name).font(.caption.weight(.semibold))
-                HStack(spacing: 6) {
-                    ForEach(Progression.palFacets, id: \.self) { facet in
+                FlowLayout(spacing: 6) {
+                    ForEach(applicable, id: \.self) { facet in
                         facetDot(facet, net: snapshot.facets[pal.id]?[facet] ?? 0)
                     }
                 }
             }
             Spacer()
-            Text("\(snapshot.masteredFacetCount(entityID: pal.id))/\(Progression.palFacets.count)")
+            Text("\(snapshot.masteredFacetCount(pal: pal))/\(applicable.count)")
                 .font(.caption2.weight(.bold))
                 .monospacedDigit()
                 .foregroundStyle(.secondary)
@@ -120,7 +120,7 @@ struct ProgressionView: View {
                 .fill(mastered ? Color.green
                       : net > 0 ? Color.orange.opacity(0.7) : Color.gray.opacity(0.3))
                 .frame(width: 7, height: 7)
-            Text(facet)
+            Text(Progression.facetLabel(facet))
                 .font(.system(size: 8, weight: .semibold))
                 .foregroundStyle(.secondary)
         }

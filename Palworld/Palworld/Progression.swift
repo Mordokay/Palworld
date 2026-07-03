@@ -107,8 +107,33 @@ final class ActiveQuiz {
 
 enum Progression {
     static let masteryThreshold = 3
-    /// Facets current templates can exercise; grows with the template catalog.
-    static let palFacets = ["identify", "elements", "lore"]
+    /// Facets current templates can exercise, in display order.
+    static let allFacets = ["identify", "elements", "lore", "partnerSkill", "drops",
+                            "stats", "work", "skills", "utility"]
+
+    /// Short label for a facet dot ("partnerSkill" is a mouthful at 8pt).
+    static func facetLabel(_ facet: String) -> String {
+        switch facet {
+        case "partnerSkill": "partner"
+        case "utility": "food"
+        default: facet
+        }
+    }
+
+    /// The facets a pal can actually be quizzed on — mastery only demands
+    /// what the data supports (a pal without drops still reaches 100%).
+    static func facets(for pal: Pal) -> [String] {
+        var facets = ["identify"]
+        if !pal.elements.isEmpty { facets.append("elements") }
+        if pal.paldeckEntry.count > 40 || !pal.alphaTitle.isEmpty { facets.append("lore") }
+        if pal.partnerSkill.name.count > 2 { facets.append("partnerSkill") }
+        if !pal.drops.isEmpty { facets.append("drops") }
+        if pal.stats?.hp != nil || pal.stats?.attack != nil { facets.append("stats") }
+        if !pal.workSuitability.isEmpty { facets.append("work") }
+        if !pal.activeSkills.isEmpty { facets.append("skills") }
+        if pal.foodAmount != nil { facets.append("utility") }
+        return facets
+    }
 
     /// XP needed to go from level n to n+1: 100 × 1.5^(n-1).
     static func xpForLevel(_ level: Int) -> Int {
@@ -254,29 +279,30 @@ struct ProgressionSnapshot {
         rawMisses = misses
     }
 
-    func masteredFacetCount(entityID: String) -> Int {
-        Progression.palFacets.filter {
-            (facets[entityID]?[$0] ?? 0) >= Progression.masteryThreshold
+    func masteredFacetCount(pal: Pal) -> Int {
+        Progression.facets(for: pal).filter {
+            (facets[pal.id]?[$0] ?? 0) >= Progression.masteryThreshold
         }.count
     }
 
-    /// 0...1 — partial credit per facet (net/threshold, capped), averaged
-    /// across facets, so bars move from the first correct answer instead of
+    /// 0...1 — partial credit per applicable facet (net/threshold, capped),
+    /// averaged, so bars move from the first correct answer instead of
     /// staying at 0 until a facet is fully mastered.
-    func completeness(entityID: String) -> Double {
-        let perFacet = Progression.palFacets.map { facet -> Double in
-            let net = facets[entityID]?[facet] ?? 0
+    func completeness(pal: Pal) -> Double {
+        let applicable = Progression.facets(for: pal)
+        guard !applicable.isEmpty else { return 0 }
+        let perFacet = applicable.map { facet -> Double in
+            let net = facets[pal.id]?[facet] ?? 0
             return min(Double(net), Double(Progression.masteryThreshold))
                 / Double(Progression.masteryThreshold)
         }
-        return perFacet.reduce(0, +) / Double(Progression.palFacets.count)
+        return perFacet.reduce(0, +) / Double(applicable.count)
     }
 
-    /// 0...1 — mean completeness across entities.
-    func completeness(entityIDs: [String]) -> Double {
-        guard !entityIDs.isEmpty else { return 0 }
-        return entityIDs.map { completeness(entityID: $0) }.reduce(0, +)
-            / Double(entityIDs.count)
+    /// 0...1 — mean completeness across pals.
+    func completeness(pals: [Pal]) -> Double {
+        guard !pals.isEmpty else { return 0 }
+        return pals.map { completeness(pal: $0) }.reduce(0, +) / Double(pals.count)
     }
 
     func totalCorrect(entityID: String) -> Int {
@@ -288,8 +314,8 @@ struct ProgressionSnapshot {
     /// from telegraphing its answers (unlike single-pal/element quizzes).
     func weakestPals(in pool: [Pal], count: Int) -> [Pal] {
         pool.sorted {
-            let lhs = (completeness(entityID: $0.id), -Double(rawMisses[$0.id] ?? 0))
-            let rhs = (completeness(entityID: $1.id), -Double(rawMisses[$1.id] ?? 0))
+            let lhs = (completeness(pal: $0), -Double(rawMisses[$0.id] ?? 0))
+            let rhs = (completeness(pal: $1), -Double(rawMisses[$1.id] ?? 0))
             if lhs != rhs { return lhs < rhs }
             return $0.id < $1.id
         }
