@@ -46,7 +46,7 @@ struct GameHomeView: View {
                         modeLink("Survival", "heart.fill", "3 lives, rising heat") {
                             SurvivalSetupView(data: data)
                         }
-                        modeLink("Who's that Pal?", "moon.stars.fill", "20 rounds · 2 styles") {
+                        modeLink("Who's that Pal?", "moon.stars.fill", "Up to 100 rounds · 2 styles") {
                             WhosThatPalSetupView(data: data)
                         }
                         modeLink("Spin the Wheel", "dice.fill", "Random topic, 5 questions") {
@@ -320,6 +320,7 @@ struct PlacementTestView: View {
 struct WhosThatPalSetupView: View {
     let data: GameData
     @Query private var profiles: [PlayerProfile]
+    @State private var rounds = 20
 
     private var preferredDifficulty: Difficulty {
         Difficulty(rawValue: profiles.first?.preferredDifficulty ?? "") ?? .medium
@@ -327,6 +328,12 @@ struct WhosThatPalSetupView: View {
 
     var body: some View {
         Form {
+            Section("Rounds") {
+                Picker("Rounds", selection: $rounds) {
+                    ForEach([20, 40, 60, 80, 100], id: \.self) { Text("\($0)").tag($0) }
+                }
+                .pickerStyle(.segmented)
+            }
             Section {
                 NavigationLink {
                     quiz(silhouette: true)
@@ -340,8 +347,6 @@ struct WhosThatPalSetupView: View {
                     styleRow("Full artwork", icon: "photo.fill", tint: .blue,
                              note: "The real drawing — every pal can appear")
                 }
-            } footer: {
-                Text("20 rounds either way.")
             }
         }
         .navigationTitle("Who's that Pal?")
@@ -365,7 +370,7 @@ struct WhosThatPalSetupView: View {
     private func quiz(silhouette: Bool) -> some View {
         QuizView(data: data,
                  questions: QuizEngine.makeSession(
-                     data: data, count: 20, difficulty: preferredDifficulty,
+                     data: data, count: rounds, difficulty: preferredDifficulty,
                      templates: [silhouette ? SilhouetteTemplate()
                                             : PictureToNameTemplate()]),
                  difficulty: preferredDifficulty,
