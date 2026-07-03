@@ -17,6 +17,7 @@ struct PalworldApp: App {
         .modelContainer(for: [
             PlayerProfile.self, FacetProgress.self, CategoryXP.self,
             MissRecord.self, QuizSession.self, ActiveQuiz.self,
+            AchievementState.self,
         ])
     }
 }

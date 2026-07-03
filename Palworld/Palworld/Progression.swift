@@ -135,6 +135,40 @@ enum Progression {
         return facets
     }
 
+    static let dayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+
+    static var todayKey: String { dayFormatter.string(from: .now) }
+
+    /// Consecutive Daily Challenge days, counting back from today (or from
+    /// yesterday, so an unplayed today doesn't read as a broken streak).
+    static func dailyStreak(sessions: [QuizSession]) -> Int {
+        let played = Set(sessions.filter { $0.mode == "daily" }.map(\.dayKey))
+        let calendar = Calendar.current
+        var day = calendar.startOfDay(for: .now)
+        if !played.contains(dayFormatter.string(from: day)) {
+            day = calendar.date(byAdding: .day, value: -1, to: day) ?? day
+        }
+        var streak = 0
+        while played.contains(dayFormatter.string(from: day)) {
+            streak += 1
+            day = calendar.date(byAdding: .day, value: -1, to: day) ?? day
+        }
+        return streak
+    }
+
+    /// Smart Review queue: unredeemed misses at least a day old (DESIGN.md §5
+    /// spacing — a re-miss inserts a fresh record, re-spacing it naturally).
+    static func dueReviewSignatures(_ records: [MissRecord], now: Date = .now) -> [String] {
+        let due = records.filter {
+            !$0.redeemed && now.timeIntervalSince($0.missedAt) > 86_400
+        }
+        return Array(Set(due.map(\.signature))).shuffled()
+    }
+
     /// XP needed to go from level n to n+1: 100 × 1.5^(n-1).
     static func xpForLevel(_ level: Int) -> Int {
         Int((100 * pow(1.5, Double(level - 1))).rounded())

@@ -9,11 +9,10 @@ struct GameHomeView: View {
     @Query private var sessions: [QuizSession]
     @Query private var facetRecords: [FacetProgress]
     @Query private var profiles: [PlayerProfile]
+    @Query private var missRecords: [MissRecord]
 
     private static let comingSoon: [(String, String)] = [
         ("Higher / Lower", "arrow.up.arrow.down"),
-        ("Teacher", "graduationcap.fill"),
-        ("Smart Review", "brain.head.profile"),
     ]
 
     private var preferredDifficulty: Difficulty {
@@ -29,6 +28,11 @@ struct GameHomeView: View {
                     }
 
                     dailyCard
+
+                    let due = Progression.dueReviewSignatures(missRecords)
+                    if !due.isEmpty {
+                        smartReviewCard(due)
+                    }
 
                     NavigationLink {
                         QuizSetupView(data: data)
@@ -68,6 +72,9 @@ struct GameHomeView: View {
                                  "Sets difficulty: \(preferredDifficulty.label)") {
                             PlacementTestView(data: data)
                         }
+                        modeLink("Teacher", "graduationcap.fill", "Study first, then prove it") {
+                            TeacherSetupView(data: data)
+                        }
                     }
 
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
@@ -94,35 +101,47 @@ struct GameHomeView: View {
         .buttonStyle(.plain)
     }
 
-    // MARK: - Daily Challenge (DESIGN.md §5: date-seeded, one scored try/day)
+    // MARK: - Smart Review (DESIGN.md §5: missed questions come back due)
 
-    private static let dayFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
-
-    private var todayKey: String { Self.dayFormatter.string(from: .now) }
-
-    private var todaysDaily: QuizSession? {
-        sessions.first { $0.mode == "daily" && $0.dayKey == todayKey }
+    private func smartReviewCard(_ due: [String]) -> some View {
+        let batch = Array(due.prefix(20))
+        return NavigationLink {
+            QuizView(data: data,
+                     questions: QuizEngine.regenerate(data: data, signatures: batch,
+                                                      difficulty: preferredDifficulty),
+                     difficulty: preferredDifficulty,
+                     categoryLabel: "Smart Review",
+                     sessionMode: "review")
+        } label: {
+            HStack(spacing: 12) {
+                Image(systemName: "brain.head.profile")
+                    .font(.largeTitle)
+                    .foregroundStyle(.purple)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Smart Review")
+                        .font(.headline)
+                    Text("\(due.count) missed question\(due.count == 1 ? "" : "s") due — redeem for 2× XP")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.tertiary)
+            }
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(.purple.opacity(0.10), in: RoundedRectangle(cornerRadius: 16))
+            .overlay(RoundedRectangle(cornerRadius: 16)
+                .stroke(.purple.opacity(0.35), lineWidth: 1))
+        }
+        .buttonStyle(.plain)
     }
 
-    /// Consecutive days played, counting back from today (or yesterday, so an
-    /// unplayed today doesn't read as a broken streak).
-    private var dailyStreak: Int {
-        let played = Set(sessions.filter { $0.mode == "daily" }.map(\.dayKey))
-        let calendar = Calendar.current
-        var day = calendar.startOfDay(for: .now)
-        if !played.contains(Self.dayFormatter.string(from: day)) {
-            day = calendar.date(byAdding: .day, value: -1, to: day) ?? day
-        }
-        var streak = 0
-        while played.contains(Self.dayFormatter.string(from: day)) {
-            streak += 1
-            day = calendar.date(byAdding: .day, value: -1, to: day) ?? day
-        }
-        return streak
+    // MARK: - Daily Challenge (DESIGN.md §5: date-seeded, one scored try/day)
+
+    private var todaysDaily: QuizSession? {
+        sessions.first { $0.mode == "daily" && $0.dayKey == Progression.todayKey }
     }
 
     /// Stable FNV-1a hash of the day key — Swift's `hashValue` is randomized
@@ -146,11 +165,11 @@ struct GameHomeView: View {
                 QuizView(data: data,
                          questions: QuizEngine.makeSession(
                              data: data, count: 10, difficulty: .medium,
-                             seed: Self.dailySeed(for: todayKey)),
+                             seed: Self.dailySeed(for: Progression.todayKey)),
                          difficulty: .medium,
                          categoryLabel: "Daily Challenge",
                          sessionMode: "daily",
-                         dailyKey: todayKey)
+                         dailyKey: Progression.todayKey)
             }
         } label: {
             HStack(spacing: 12) {
@@ -166,8 +185,9 @@ struct GameHomeView: View {
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                if dailyStreak > 0 {
-                    Label("\(dailyStreak)", systemImage: "flame.fill")
+                let streak = Progression.dailyStreak(sessions: sessions)
+                if streak > 0 {
+                    Label("\(streak)", systemImage: "flame.fill")
                         .font(.headline.weight(.black))
                         .foregroundStyle(.orange)
                 }

@@ -342,14 +342,43 @@ struct QuizResultsView: View {
     let data: GameData
     let answered: [AnsweredQuestion]
     let xpEarned: Int
+    @Environment(\.modelContext) private var modelContext
+    @Query private var sessions: [QuizSession]
+    @Query private var missRecords: [MissRecord]
+    @Query private var facetRecords: [FacetProgress]
     @State private var infoArticleID: String?
     @State private var expanded: Set<UUID> = []
+    @State private var newUnlocks: [AchievementDef] = []
+    @State private var celebrating = false
 
     private var correctCount: Int { answered.filter(\.wasCorrect).count }
     private var xp: Int { xpEarned }
 
     var body: some View {
         List {
+            if !newUnlocks.isEmpty {
+                Section {
+                    ForEach(newUnlocks) { def in
+                        HStack(spacing: 12) {
+                            Image(systemName: def.symbol)
+                                .font(.title2)
+                                .foregroundStyle(def.tint)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Achievement unlocked!")
+                                    .font(.caption.weight(.bold))
+                                    .foregroundStyle(def.tint)
+                                Text(def.title)
+                                    .font(.headline)
+                            }
+                            Spacer()
+                            Image(systemName: "trophy.fill")
+                                .foregroundStyle(.yellow)
+                        }
+                    }
+                }
+                .listRowBackground(Color.yellow.opacity(0.08))
+            }
+
             Section {
                 VStack(spacing: 8) {
                     Text("\(correctCount)/\(answered.count)")
@@ -421,6 +450,26 @@ struct QuizResultsView: View {
         .navigationTitle("Results")
         .sheet(item: $infoArticleID) { id in
             ArticleSheetView(data: data, articleID: id)
+        }
+        .overlay {
+            if celebrating {
+                ConfettiView()
+            }
+        }
+        .task {
+            // let saveSession (parent onAppear) land first, then check trophies
+            try? await Task.sleep(for: .milliseconds(350))
+            let context = AchievementContext(
+                data: data, sessions: sessions, missRecords: missRecords,
+                snapshot: ProgressionSnapshot(records: facetRecords))
+            newUnlocks = Achievements.evaluate(context: context, modelContext: modelContext)
+            let perfect = !answered.isEmpty && correctCount == answered.count
+            if perfect || !newUnlocks.isEmpty {
+                celebrating = true
+                Haptics.answer(correct: true)
+                try? await Task.sleep(for: .seconds(3.5))
+                celebrating = false
+            }
         }
     }
 

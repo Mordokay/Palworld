@@ -94,6 +94,10 @@ struct AppRoot: View {
                 }
             }
         }
+        // backdate the misses so the Smart Review card has something due
+        for record in (try? modelContext.fetch(FetchDescriptor<MissRecord>())) ?? [] {
+            record.missedAt = Date().addingTimeInterval(-2 * 86_400)
+        }
         let session = QuizSession()
         session.categoryLabel = "Water Pals"
         session.signatures = signatures
@@ -129,8 +133,7 @@ struct MainTabView: View {
                 LibraryView(data: data)
             }
             Tab("Achievements", systemImage: "trophy.fill", value: "awards") {
-                PlaceholderTab(title: "Achievements", symbol: "trophy.fill",
-                               note: "Unlockable badges — lands in M6.")
+                AchievementsView(data: data)
             }
             Tab("Profile", systemImage: "person.crop.circle", value: "profile") {
                 ProfileView(data: data)
