@@ -113,9 +113,43 @@ struct WikiImage: View {
     let file: String
     let kind: GameData.ImageKind
 
+    /// Decoded-image cache: `UIImage(contentsOfFile:)` hits the disk on every
+    /// call (unlike `UIImage(named:)`), so an uncached re-render of a question
+    /// card re-read all its option images — the frame that should have shown
+    /// the green/red answer state arrived visibly late on device.
+    private static let cache: NSCache<NSString, UIImage> = {
+        let cache = NSCache<NSString, UIImage>()
+        cache.totalCostLimit = 128 * 1024 * 1024   // ~128 MB of decoded pixels
+        return cache
+    }()
+
+    /// Thread-safe (NSCache + file IO only); callable off-main to pre-warm.
+    static func image(file: String, kind: GameData.ImageKind) -> UIImage? {
+        guard let url = GameData.imageURL(file, kind: kind) else { return nil }
+        let key = url.path as NSString
+        if let hit = cache.object(forKey: key) { return hit }
+        guard let raw = UIImage(contentsOfFile: url.path) else { return nil }
+        let decoded = raw.preparingForDisplay() ?? raw
+        let cost = Int(decoded.size.width * decoded.size.height * decoded.scale * decoded.scale) * 4
+        cache.setObject(decoded, forKey: key, cost: cost)
+        return decoded
+    }
+
+    /// Warm a question's prompt + option images off-main so the moment they
+    /// are needed (next arcade question, quiz Next) renders without disk IO.
+    static func warm(_ question: Question) {
+        let files = ([question.promptImageFile] + question.options.map(\.imageFile))
+            .compactMap { $0 }
+        let kind = question.imageKind
+        Task.detached(priority: .utility) {
+            for file in files {
+                _ = image(file: file, kind: kind)
+            }
+        }
+    }
+
     var body: some View {
-        if let url = GameData.imageURL(file, kind: kind),
-           let ui = UIImage(contentsOfFile: url.path) {
+        if let ui = Self.image(file: file, kind: kind) {
             Image(uiImage: ui)
                 .resizable()
                 .scaledToFit()

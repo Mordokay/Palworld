@@ -91,10 +91,6 @@ struct ArcadeQuizView: View {
         .navigationTitle(mode.categoryLabel)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(!finished && !answered.isEmpty)
-        .sensoryFeedback(trigger: picked) { _, new in
-            guard let new, let question = current else { return nil }
-            return new == question.correctIndex ? .success : .error
-        }
         .onAppear(perform: start)
         .onReceive(clock) { _ in tick() }
     }
@@ -218,9 +214,10 @@ struct ArcadeQuizView: View {
 
     private func select(_ i: Int) {
         guard picked == nil, let question = current, !finished else { return }
-        // paint + haptic first: only cheap state here, everything else waits
-        picked = i
+        // haptic + paint first: only cheap state here, everything else waits
         let correct = i == question.correctIndex
+        Haptics.answer(correct: correct)
+        picked = i
         streak = correct ? streak + 1 : 0
         answered.append(AnsweredQuestion(question: question, pickedIndex: i))
         switch mode {
@@ -261,14 +258,23 @@ struct ArcadeQuizView: View {
         loadNext()
     }
 
+    @State private var prefetched: Question?
+
     private func loadNext() {
-        guard let next = QuizEngine.makeQuestion(data: data, difficulty: currentDifficulty,
-                                                 excluding: usedSignatures) else {
+        guard let next = prefetched ?? QuizEngine.makeQuestion(
+            data: data, difficulty: currentDifficulty, excluding: usedSignatures) else {
             finish()
             return
         }
         usedSignatures.insert(next.signature)
         current = next
+        // line up the following question and warm its images off-main so the
+        // next advance renders without disk IO
+        prefetched = QuizEngine.makeQuestion(data: data, difficulty: currentDifficulty,
+                                             excluding: usedSignatures)
+        if let prefetched {
+            WikiImage.warm(prefetched)
+        }
     }
 
     /// Ends the run (clock out, 3rd life lost, or the flag button) — arcade

@@ -70,10 +70,6 @@ struct QuizView: View {
             }
         }
         .navigationBarBackButtonHidden(index < questions.count && index > 0)
-        .sensoryFeedback(trigger: picked) { _, new in
-            guard let new, index < questions.count else { return nil }
-            return new == questions[index].correctIndex ? .success : .error
-        }
         .sheet(item: $infoArticleID) { id in
             ArticleSheetView(data: data, articleID: id)
         }
@@ -154,11 +150,16 @@ struct QuizView: View {
 
     private func select(_ i: Int) {
         guard picked == nil, index < questions.count else { return }
-        // paint + haptic first: only cheap state here, bookkeeping follows
-        picked = i
+        // haptic + paint first: only cheap state here, bookkeeping follows
         let question = questions[index]
         let correct = i == question.correctIndex
+        Haptics.answer(correct: correct)
+        picked = i
         streak = correct ? streak + 1 : 0
+        // warm the next question's images while the user reads the result
+        if index + 1 < questions.count {
+            WikiImage.warm(questions[index + 1])
+        }
         // replays only pay XP for questions that have never been green
         let paysXP = replayOf.map { session in
             index < session.everCorrect.count && !session.everCorrect[index]
