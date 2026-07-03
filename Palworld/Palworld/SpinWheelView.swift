@@ -50,6 +50,9 @@ struct SpinWheelView: View {
                    facet: "utility", template: FoodDuelTemplate()),
     ]
 
+    /// One question per wheel topic — the quiz length grows with the wheel.
+    static var questionCount: Int { topics.count }
+
     private var step: Double { 360.0 / Double(Self.topics.count) }
     private var preferredDifficulty: Difficulty {
         Difficulty(rawValue: profiles.first?.preferredDifficulty ?? "") ?? .medium
@@ -127,13 +130,14 @@ struct SpinWheelView: View {
                 NavigationLink {
                     QuizView(data: data,
                              questions: QuizEngine.makeSession(
-                                 data: data, count: 5, difficulty: preferredDifficulty,
+                                 data: data, count: Self.questionCount,
+                                 difficulty: preferredDifficulty,
                                  templates: [topic.template]),
                              difficulty: preferredDifficulty,
                              categoryLabel: topic.label,
                              sessionMode: "wheel")
                 } label: {
-                    Text("Start · 5 questions")
+                    Text("Start · \(Self.questionCount) questions")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                 }
@@ -147,7 +151,7 @@ struct SpinWheelView: View {
                 .stroke(topic.color.opacity(0.35), lineWidth: 1))
         } else {
             Text(spinning ? "Round and round it goes…"
-                 : "Spin to get 5 questions on a random topic")
+                 : "Spin to get \(Self.questionCount) questions on a random topic")
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .padding(.vertical, 30)
