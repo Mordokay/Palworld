@@ -418,6 +418,8 @@ TYPE_ALIASES = {
     "key items": "Key Item", "ingredients": "Ingredient", "consumables": "Consumable",
     "sphere modules": "Sphere Module", "other materials": "Material",
     "pal materials": "Pal Material", "": "Other",
+    # some armor pages fill the infobox type with the equip slot instead
+    "body": "Armor", "head": "Armor",
 }
 
 

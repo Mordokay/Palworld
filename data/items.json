@@ -14538,7 +14538,7 @@
   "id": "pelt-armor",
   "name": "Pelt Armor",
   "image": "Pelt Armor.png",
-  "type": "Body",
+  "type": "Armor",
   "description": "Armor made of Leather.\nIts warmth and defense have been improved.",
   "rarity": "Common",
   "source": [
