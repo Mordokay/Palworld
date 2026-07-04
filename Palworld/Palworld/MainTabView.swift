@@ -18,6 +18,7 @@ struct AppRoot: View {
                         "items": QuizEngine.itemTemplates,
                         "skills": QuizEngine.skillTemplates,
                         "pals": QuizEngine.palTemplates,
+                        "buildings": QuizEngine.buildingTemplates,
                     ]
                     let topic = CommandLine.arguments.firstIndex(of: "-quiz-topic")
                         .flatMap { i -> [any QuestionTemplate]? in

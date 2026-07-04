@@ -142,6 +142,7 @@ enum Progression {
         if !item.craftMaterials.isEmpty { facets.append("crafting") }
         if (item.techTier ?? 0) > 0 { facets.append("tech") }
         if !item.rarity.isEmpty { facets.append("rarity") }
+        if (item.nutrition ?? 0) > 0 { facets.append("nutrition") }
         return facets
     }
 

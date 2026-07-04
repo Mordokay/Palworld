@@ -259,6 +259,8 @@ struct ItemListView: View {
     let kind: GameData.ImageKind
     let title: String
     @State private var query = ""
+    /// 729 items is a wall of rows — types start collapsed and expand on tap.
+    @State private var expanded: Set<String> = []
 
     private var groups: [(type: String, items: [Item])] {
         let filtered = query.isEmpty ? items
@@ -271,20 +273,41 @@ struct ItemListView: View {
     var body: some View {
         List {
             ForEach(groups, id: \.type) { group in
-                Section(group.type) {
-                    ForEach(group.items) { item in
-                        NavigationLink(value: item.id) {
-                            HStack(spacing: 12) {
-                                WikiImage(file: item.image, kind: kind)
-                                    .frame(width: 36, height: 36)
-                                Text(item.name)
-                                Spacer()
-                                if !item.rarity.isEmpty && item.rarity != "Common" {
-                                    Text(item.rarity)
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
+                Section {
+                    DisclosureGroup(isExpanded: Binding(
+                        get: { expanded.contains(group.type) || !query.isEmpty },
+                        set: { open in
+                            if open { expanded.insert(group.type) }
+                            else { expanded.remove(group.type) }
+                        }
+                    )) {
+                        ForEach(group.items) { item in
+                            NavigationLink(value: item.id) {
+                                HStack(spacing: 12) {
+                                    WikiImage(file: item.image, kind: kind)
+                                        .frame(width: 36, height: 36)
+                                    Text(item.name)
+                                    Spacer()
+                                    if !item.rarity.isEmpty && item.rarity != "Common" {
+                                        Text(item.rarity)
+                                            .font(.caption)
+                                            .foregroundStyle(.secondary)
+                                    }
                                 }
                             }
+                        }
+                    } label: {
+                        HStack(spacing: 8) {
+                            Text(group.type)
+                                .font(.subheadline.weight(.bold))
+                            Spacer()
+                            Text("\(group.items.count)")
+                                .font(.caption.weight(.bold))
+                                .monospacedDigit()
+                                .foregroundStyle(.secondary)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 2)
+                                .background(.quaternary, in: Capsule())
                         }
                     }
                 }

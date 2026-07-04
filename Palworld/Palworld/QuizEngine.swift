@@ -528,13 +528,20 @@ enum QuizEngine {
     ]
 
     static let worldTemplates: [any QuestionTemplate] = [
-        ElementEffectivenessTemplate(), LocationInhabitantTemplate(),
-        TechUnlockTemplate(), TriviaTemplate(),
+        ElementEffectivenessTemplate(), LocationInhabitantTemplate(), TriviaTemplate(),
+    ]
+
+    /// The "big building template" (user's phrase): one group, each draw
+    /// picks a random building sub-template.
+    static let buildingTemplates: [any QuestionTemplate] = [
+        RanchProduceTemplate(), RanchProducerTemplate(), NutritionPickTemplate(),
+        TechUnlockTemplate(), TechPointsTemplate(), AncientTechTemplate(),
+        BuildingMaterialTemplate(),
     ]
 
     /// The full "Everything" rotation (unscoped Quick Quiz, Daily, arcade).
     static let mixedTemplates = palTemplates + itemTemplates + skillTemplates
-        + worldTemplates
+        + worldTemplates + buildingTemplates
 
     /// Every template that can appear in a saved signature (replay lookup).
     static let allTemplates: [any QuestionTemplate] = mixedTemplates + [SilhouetteTemplate()]

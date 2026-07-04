@@ -247,6 +247,224 @@ struct DescriptionToSkillTemplate: QuestionTemplate {
     }
 }
 
+// MARK: - Buildings (the "big building template" is the group:
+// QuizEngine.buildingTemplates draws one sub-template at random)
+
+/// Cleans a farmingProduce list: drops "Rank N:" headers, strips quantities.
+private func ranchProduce(_ pal: Pal) -> [String] {
+    pal.farmingProduce
+        .filter { !$0.hasSuffix(":") }
+        .map { $0.replacingOccurrences(of: #"\s*x[\d\-]+$"#, with: "",
+                                       options: .regularExpression) }
+        .reduce(into: [String]()) { if !$0.contains($1) { $0.append($1) } }
+}
+
+struct RanchProduceTemplate: QuestionTemplate {
+    let id = "building.ranchProduce"
+    let facet = "utility"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        let pool = data.quizPals.filter { !ranchProduce($0).isEmpty }
+        guard let pal = subjectID.flatMap({ data.palByID[$0] })
+            ?? pool.randomElement(seeded: rng),
+            let answer = ranchProduce(pal).randomElement(seeded: rng) else { return nil }
+        let mine = Set(ranchProduce(pal).map { $0.lowercased() })
+        let others = Set(pool.flatMap(ranchProduce)).filter { !mine.contains($0.lowercased()) }
+        let wrong = Array(others.sorted().shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        func icon(_ name: String) -> String? {
+            data.resolveEntityName(name).flatMap { data.itemByID[$0]?.image }
+                .flatMap { GameData.imageURL($0, kind: .items) != nil ? $0 : nil }
+        }
+        let allIcons = ([answer] + wrong).allSatisfy { icon($0) != nil }
+        let (options, correctIndex) = mcOptions(correct: answer, distractors: wrong, rng: rng) {
+            QuizOption(text: $0, imageFile: allIcons ? icon($0) : nil)
+        }
+        var question = Question(
+            templateID: id,
+            promptText: "What does \(pal.name) produce when assigned to the Ranch?",
+            promptImageFile: pal.image,
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal) + ["buildings"], baseXP: 15
+        )
+        question.imageKind = .items
+        return question
+    }
+}
+
+struct RanchProducerTemplate: QuestionTemplate {
+    let id = "building.ranchProducer"
+    let facet = "utility"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        let pool = data.quizPals.filter { !ranchProduce($0).isEmpty }
+        guard let pal = subjectID.flatMap({ data.palByID[$0] })
+            ?? pool.randomElement(seeded: rng),
+            let produce = ranchProduce(pal).randomElement(seeded: rng) else { return nil }
+        // distractors must NOT produce the asked item at the ranch
+        let producers = Set(pool.filter { ranchProduce($0).contains(produce) }.map(\.id))
+        let wrong = Array(data.quizPalsWithImage.filter { !producers.contains($0.id) }
+            .shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        let (options, correctIndex) = mcOptions(correct: pal, distractors: wrong, rng: rng) {
+            QuizOption(text: $0.name, imageFile: $0.image)
+        }
+        return Question(
+            templateID: id,
+            promptText: "Which of these pals produces \(produce) at the Ranch?",
+            options: options, correctIndex: correctIndex,
+            articleID: pal.id, subjectID: pal.id, facet: facet,
+            categoryIDs: palCategories(pal) + ["buildings"], baseXP: 15
+        )
+    }
+}
+
+/// Feed-box knowledge: which of four foods fills the most hunger. 88 foods
+/// carry nutrition values, so the combinations are effectively endless.
+struct NutritionPickTemplate: QuestionTemplate {
+    let id = "building.nutrition"
+    let facet = "nutrition"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        let pool = data.items.filter { ($0.nutrition ?? 0) > 0 }
+        guard let item = itemSubject(data, subjectID, pool: pool, rng: rng),
+              let winning = item.nutrition else { return nil }
+        var lower = pool.filter { ($0.nutrition ?? .max) < winning }
+        guard lower.count >= 3 else { return nil }
+        if difficulty == .hard {
+            lower.sort { ($0.nutrition ?? 0) > ($1.nutrition ?? 0) }
+            lower = Array(lower.prefix(8))
+        }
+        let wrong = Array(lower.shuffled(seeded: rng).prefix(3))
+        func icon(_ candidate: Item) -> String? {
+            GameData.imageURL(candidate.image, kind: .items) != nil ? candidate.image : nil
+        }
+        let allIcons = ([item] + wrong).allSatisfy { icon($0) != nil }
+        let (options, correctIndex) = mcOptions(correct: item, distractors: wrong, rng: rng) {
+            QuizOption(text: $0.name, imageFile: allIcons ? icon($0) : nil)
+        }
+        var question = Question(
+            templateID: id,
+            promptText: "Which of these foods is the most filling?",
+            options: options, correctIndex: correctIndex,
+            articleID: item.id, subjectID: item.id, facet: facet,
+            categoryIDs: ["items", "buildings"], baseXP: 15
+        )
+        question.imageKind = .items
+        return question
+    }
+}
+
+struct TechPointsTemplate: QuestionTemplate {
+    let id = "building.techPoints"
+    let facet = "tech"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        let pool = data.technology.filter { $0.structure && $0.points > 0 && !$0.ancient }
+        guard let tech = subjectID.flatMap({ id in pool.first { $0.subjectID == id } })
+            ?? pool.randomElement(seeded: rng) else { return nil }
+        // wrong answers drawn from point costs that actually exist in the tree
+        let values = Set(pool.map(\.points)).subtracting([tech.points]).sorted {
+            abs($0 - tech.points) < abs($1 - tech.points)
+        }
+        let candidates = difficulty == .hard ? Array(values.prefix(5)) : values
+        let wrong = Array(candidates.shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        let (options, correctIndex) = mcOptions(correct: tech.points, distractors: wrong,
+                                                rng: rng) {
+            QuizOption(text: "\($0) point\($0 == 1 ? "" : "s")")
+        }
+        var question = Question(
+            templateID: id,
+            promptText: "How many Technology Points does the \(tech.name) cost to unlock?",
+            promptImageFile: tech.image,
+            options: options, correctIndex: correctIndex,
+            articleID: data.idByName[tech.name.lowercased()],
+            subjectID: tech.subjectID, facet: facet,
+            categoryIDs: ["technology", "buildings"], baseXP: 15
+        )
+        question.imageKind = .items
+        return question
+    }
+}
+
+struct AncientTechTemplate: QuestionTemplate {
+    let id = "building.ancientTech"
+    let facet = "tech"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        let ancients = data.technology.filter { $0.ancient }
+        let normals = data.technology.filter { !$0.ancient && $0.points > 0 }
+        guard let tech = subjectID.flatMap({ id in ancients.first { $0.subjectID == id } })
+            ?? ancients.randomElement(seeded: rng) else { return nil }
+        let wrong = Array(normals.shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        let (options, correctIndex) = mcOptions(correct: tech, distractors: wrong, rng: rng) {
+            QuizOption(text: $0.name)
+        }
+        return Question(
+            templateID: id,
+            promptText: "Which of these requires Ancient Technology Points to unlock?",
+            options: options, correctIndex: correctIndex,
+            articleID: data.idByName[tech.name.lowercased()],
+            subjectID: tech.subjectID, facet: facet,
+            categoryIDs: ["technology", "buildings"], baseXP: 15
+        )
+    }
+}
+
+/// Materials question scoped to base structures (workbenches, furnaces...).
+struct BuildingMaterialTemplate: QuestionTemplate {
+    let id = "building.material"
+    let facet = "crafting"
+
+    static let buildingTypes: Set<String> = [
+        "Production", "Infrastructure", "Foundations", "Defenses",
+        "Storage", "Lighting", "Furniture",
+    ]
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        let pool = data.items.filter {
+            Self.buildingTypes.contains($0.type) && !$0.craftMaterials.isEmpty
+        }
+        guard let item = itemSubject(data, subjectID, pool: pool, rng: rng),
+              !item.craftMaterials.isEmpty,
+              let material = item.craftMaterials.randomElement(seeded: rng)
+        else { return nil }
+        let answer = GameData.strippedName(material)
+        let mine = Set(item.craftMaterials.map { GameData.strippedName($0).lowercased() })
+        let others = Set(pool.flatMap { $0.craftMaterials.map(GameData.strippedName) })
+            .filter { !mine.contains($0.lowercased()) }
+        let wrong = Array(others.sorted().shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        func icon(_ name: String) -> String? {
+            data.resolveEntityName(name).flatMap { data.itemByID[$0]?.image }
+                .flatMap { GameData.imageURL($0, kind: .items) != nil ? $0 : nil }
+        }
+        let allIcons = ([answer] + wrong).allSatisfy { icon($0) != nil }
+        let (options, correctIndex) = mcOptions(correct: answer, distractors: wrong, rng: rng) {
+            QuizOption(text: $0, imageFile: allIcons ? icon($0) : nil)
+        }
+        var question = Question(
+            templateID: id,
+            promptText: "Which material do you need to build the \(item.name)?",
+            promptImageFile: item.image,
+            options: options, correctIndex: correctIndex,
+            articleID: item.id, subjectID: item.id, facet: facet,
+            categoryIDs: ["items", "buildings"], baseXP: 15
+        )
+        question.imageKind = .items
+        return question
+    }
+}
+
 // MARK: - World & mechanics
 
 struct ElementEffectivenessTemplate: QuestionTemplate {

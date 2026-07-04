@@ -279,17 +279,19 @@ struct QuizSetupView: View {
         "Items": QuizEngine.itemTemplates,
         "Skills": QuizEngine.skillTemplates,
         "World": QuizEngine.worldTemplates,
+        "Buildings": QuizEngine.buildingTemplates,
     ]
 
     var body: some View {
         Form {
             Section("Topic") {
                 Picker("Topic", selection: $topic) {
-                    ForEach(["All", "Pals", "Items", "Skills", "World"], id: \.self) {
+                    ForEach(["All", "Pals", "Items", "Skills", "World", "Buildings"],
+                            id: \.self) {
                         Text($0).tag($0)
                     }
                 }
-                .pickerStyle(.segmented)
+                .pickerStyle(.menu)
             }
             Section("Difficulty") {
                 Picker("Difficulty", selection: $difficulty) {

@@ -58,6 +58,9 @@ struct SpinWheelView: View {
         WheelTopic(label: "World & Lore", icon: "globe.europe.africa.fill",
                    color: Color(red: 0.2, green: 0.55, blue: 0.45),
                    facet: "lore", templates: QuizEngine.worldTemplates),
+        WheelTopic(label: "Buildings", icon: "house.fill",
+                   color: Color(red: 0.6, green: 0.45, blue: 0.25),
+                   facet: "crafting", templates: QuizEngine.buildingTemplates),
     ]
 
     /// Each spin deals a surprise hand: somewhere between 10 and 20 questions.

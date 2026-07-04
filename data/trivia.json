@@ -1,70 +1,1826 @@
 [
- {"id": "syndicate-leader", "q": "Who leads the Rayne Syndicate?", "answer": "Zoe Rayne", "wrong": ["Lily Everhart", "Saya Kurosaki", "Marcus Dryden"], "articleID": "rayne-syndicate", "difficulty": "easy"},
- {"id": "zoe-pal", "q": "Which Pal fights alongside Zoe Rayne?", "answer": "Grizzbolt", "wrong": ["Lyleen", "Faleris", "Orserk"], "articleID": "zoe-rayne", "difficulty": "easy"},
- {"id": "zoe-tower", "q": "Where is Zoe Rayne's tower located?", "answer": "Windswept Hills", "wrong": ["Mount Obsidian", "Astral Mountains", "Sakurajima"], "articleID": "zoe-rayne", "difficulty": "medium"},
- {"id": "zoe-tutorial", "q": "Defeating which tower boss completes the game's tutorial?", "answer": "Zoe Rayne", "wrong": ["Victor Ashford", "Axel Travers", "Saya Kurosaki"], "articleID": "zoe-rayne", "difficulty": "hard"},
- {"id": "fpa-leader", "q": "Which faction does Lily Everhart lead?", "answer": "Free Pal Alliance", "wrong": ["PIDF", "Moonflower Clan", "Pal Genetic Research Unit"], "articleID": "lily-everhart", "difficulty": "easy"},
- {"id": "lily-pal", "q": "Which Pal is Lily Everhart's loyal companion?", "answer": "Lyleen", "wrong": ["Selyne", "Shadowbeak", "Grizzbolt"], "articleID": "lily-everhart", "difficulty": "easy"},
- {"id": "lily-spheres", "q": "What does Lily Everhart consider \"the greatest shame in human history\"?", "answer": "Using Pal Spheres to capture Pals", "wrong": ["Eating vegetables", "Building bases", "Fast travel statues"], "articleID": "lily-everhart", "difficulty": "medium"},
- {"id": "lily-lyleen-bond", "q": "Why isn't Lily's Lyleen bound to a Pal Sphere?", "answer": "Lily despises Pal Spheres — Lyleen helps her as a free equal", "wrong": ["Lyleen is too strong to capture", "Spheres don't work on grass Pals", "She lost the sphere in the mountains"], "articleID": "lily-everhart", "difficulty": "hard"},
- {"id": "pyre-leader", "q": "Who leads the Brothers of the Eternal Pyre?", "answer": "Axel Travers", "wrong": ["Marcus Dryden", "Victor Ashford", "Bjorn Seligsson"], "articleID": "axel-travers", "difficulty": "easy"},
- {"id": "axel-orserk", "q": "Axel leads a fire-worshipping faction — what element is his Pal Orserk?", "answer": "Dragon & Electric", "wrong": ["Fire", "Fire & Dark", "Ground"], "articleID": "axel-travers", "difficulty": "medium"},
- {"id": "axel-tower", "q": "Where is Axel Travers's tower located?", "answer": "Mount Obsidian", "wrong": ["Windswept Hills", "Desiccated Desert", "Feybreak"], "articleID": "axel-travers", "difficulty": "medium"},
- {"id": "pyre-belief", "q": "What do the Brothers of the Eternal Pyre believe in?", "answer": "Purification by fire", "wrong": ["The healing power of water", "Absolute silence", "Worship of the moon"], "articleID": "brothers-of-the-eternal-pyre", "difficulty": "easy"},
- {"id": "pidf-leader", "q": "Who leads the Palpagos Islands Defense Force (PIDF)?", "answer": "Marcus Dryden", "wrong": ["Axel Travers", "Zoe Rayne", "Victor Ashford"], "articleID": "pidf", "difficulty": "easy"},
- {"id": "marcus-pal", "q": "Which Pal accompanies Marcus Dryden?", "answer": "Faleris", "wrong": ["Orserk", "Shadowbeak", "Jetragon"], "articleID": "marcus-dryden", "difficulty": "easy"},
- {"id": "marcus-tower", "q": "Where is Marcus Dryden's tower located?", "answer": "Desiccated Desert", "wrong": ["Mount Obsidian", "Verdant Brook", "Sea Breeze Archipelago"], "articleID": "marcus-dryden", "difficulty": "medium"},
- {"id": "marcus-symbol", "q": "What did Marcus Dryden make the symbol of the PIDF?", "answer": "Faleris", "wrong": ["A golden badge", "Grizzbolt", "The Palpagos flag"], "articleID": "marcus-dryden", "difficulty": "hard"},
- {"id": "marcus-stims", "q": "How does Marcus Dryden exploit Duneshelter's stim problem?", "answer": "He sells stims, has the PIDF confiscate them, then resells them", "wrong": ["He burned every stim in the desert", "He taxes stim users double", "He banned the PIDF from Duneshelter"], "articleID": "marcus-dryden", "difficulty": "hard"},
- {"id": "pgru-leader", "q": "Who commands the Pal Genetic Research Unit?", "answer": "Victor Ashford", "wrong": ["Marcus Dryden", "Yakumo", "Axel Travers"], "articleID": "pal-genetic-research-unit", "difficulty": "easy"},
- {"id": "shadowbeak-origin", "q": "What is special about Victor Ashford's Shadowbeak?", "answer": "It is an artificial Pal created through genetic manipulation", "wrong": ["It is the oldest Pal alive", "It was hatched from a meteorite", "It is the only pure-Neutral Pal"], "articleID": "victor-ashford", "difficulty": "medium"},
- {"id": "victor-tower", "q": "Where is Victor Ashford's tower located?", "answer": "Astral Mountains", "wrong": ["Sakurajima", "Windswept Hills", "Forgotten Island"], "articleID": "victor-ashford", "difficulty": "medium"},
- {"id": "moonflower-leader", "q": "Who leads the Moonflower Clan?", "answer": "Saya Kurosaki", "wrong": ["Lily Everhart", "Zoe Rayne", "Selyne"], "articleID": "moonflower-clan", "difficulty": "easy"},
- {"id": "saya-tower", "q": "Where is Saya Kurosaki's tower located?", "answer": "Sakurajima", "wrong": ["Feybreak", "Astral Mountains", "Marsh Island"], "articleID": "saya-kurosaki", "difficulty": "easy"},
- {"id": "saya-pal", "q": "Which Pal does Saya Kurosaki own?", "answer": "Selyne", "wrong": ["Lyleen", "Yakumo", "Bellanoir"], "articleID": "saya-kurosaki", "difficulty": "medium"},
- {"id": "moonflower-what", "q": "What kind of group is the Moonflower Clan?", "answer": "A ninja clan defending Sakurajima from outsiders", "wrong": ["A guild of merchants", "A mining consortium", "A cooking school"], "articleID": "moonflower-clan", "difficulty": "easy"},
- {"id": "saya-sixth", "q": "Which boss was NOT one of the original five tower bosses?", "answer": "Saya Kurosaki", "wrong": ["Zoe Rayne", "Axel Travers", "Victor Ashford"], "articleID": "saya-kurosaki", "difficulty": "medium"},
- {"id": "syndicate-crimes", "q": "What is the Rayne Syndicate's main criminal operation?", "answer": "Illegal Pal poaching", "wrong": ["Counterfeiting gold coins", "Smuggling cake", "Kidnapping merchants"], "articleID": "rayne-syndicate", "difficulty": "medium"},
- {"id": "syndicate-first", "q": "Which faction's members are the first human enemies the player encounters?", "answer": "Rayne Syndicate", "wrong": ["PIDF", "Free Pal Alliance", "Moonflower Clan"], "articleID": "rayne-syndicate", "difficulty": "hard"},
- {"id": "tower-count", "q": "How many towers stand across the Palpagos Islands?", "answer": "Seven", "wrong": ["Five", "Nine", "Three"], "articleID": "tower", "difficulty": "medium"},
- {"id": "tower-timer", "q": "How long do you have to defeat a tower boss?", "answer": "10 minutes", "wrong": ["5 minutes", "15 minutes", "No time limit"], "articleID": "tower", "difficulty": "medium"},
- {"id": "tower-reward", "q": "What unlocks when you defeat a tower boss?", "answer": "A fast travel point on the tower's roof", "wrong": ["A new Paldeck page", "A legendary saddle", "Double XP for an hour"], "articleID": "tower", "difficulty": "medium"},
- {"id": "tower-rechallenge", "q": "Can tower bosses be fought again after being defeated?", "answer": "Yes — any time, by re-entering the tower", "wrong": ["No, they are gone forever", "Only once per in-game week", "Only after defeating all seven"], "articleID": "tower", "difficulty": "easy"},
- {"id": "breeding-building", "q": "Which building do you need to breed Pals?", "answer": "Breeding Farm", "wrong": ["Pal Bed", "Egg Incubator", "Ranch"], "articleID": "breeding", "difficulty": "easy"},
- {"id": "breeding-cake", "q": "What must a Breeding Farm be supplied with?", "answer": "Cake", "wrong": ["Honey", "Berries", "Milk"], "articleID": "breeding", "difficulty": "easy"},
- {"id": "breeding-power", "q": "How is a bred baby's species determined?", "answer": "The Pal whose breeding power is closest to the parents' average", "wrong": ["It is always the mother's species", "Purely random", "The rarer parent's species"], "articleID": "breeding", "difficulty": "medium"},
- {"id": "breeding-range", "q": "Breeding power values fall between…", "answer": "1 and 1500", "wrong": ["1 and 100", "0 and 9999", "100 and 5000"], "articleID": "breeding", "difficulty": "hard"},
- {"id": "breeding-rare", "q": "In breeding power terms, rarer and more powerful Pals have…", "answer": "Lower numbers", "wrong": ["Higher numbers", "Only even numbers", "Negative numbers"], "articleID": "breeding", "difficulty": "hard"},
- {"id": "breeding-same", "q": "Which of these Pals can only be bred from two parents of its own species?", "answer": "Jetragon", "wrong": ["Lamball", "Foxparks", "Cattiva"], "articleID": "breeding", "difficulty": "hard"},
- {"id": "egg-hatch", "q": "What do you use to hatch Pal Eggs?", "answer": "Egg Incubator", "wrong": ["Campfire", "Breeding Farm", "Furnace"], "articleID": "pal-eggs", "difficulty": "easy"},
- {"id": "egg-scorching", "q": "What kind of Pal hatches from a Scorching Egg?", "answer": "A Fire Pal", "wrong": ["A Water Pal", "An Electric Pal", "A Dragon Pal"], "articleID": "pal-eggs", "difficulty": "easy"},
- {"id": "egg-verdant", "q": "What kind of Pal hatches from a Verdant Egg?", "answer": "A Grass Pal", "wrong": ["A Ground Pal", "An Ice Pal", "A Neutral Pal"], "articleID": "pal-eggs", "difficulty": "easy"},
- {"id": "egg-huge", "q": "What does a \"huge\" Pal Egg hint at?", "answer": "It may hatch into an Alpha Pal", "wrong": ["Twins inside", "A Lucky Pal for sure", "It's about to spoil"], "articleID": "pal-eggs", "difficulty": "medium"},
- {"id": "san-not-cause", "q": "Which of these does NOT lower a Pal's sanity?", "answer": "Having plenty of food available", "wrong": ["Being forced to work", "Starving", "Having no place to sleep"], "articleID": "sanity", "difficulty": "medium"},
- {"id": "san-debuff", "q": "What debuff can prolonged low sanity cause?", "answer": "Depression", "wrong": ["Rust", "Frostbite", "Insomnia"], "articleID": "sanity", "difficulty": "hard"},
- {"id": "san-ranch", "q": "How can Pals with a Farming skill regain sanity?", "answer": "Grazing in the Ranch", "wrong": ["Swimming in rivers", "Fighting raids", "Sitting by campfires"], "articleID": "sanity", "difficulty": "hard"},
- {"id": "trust-effect", "q": "What does raising a Pal's Trust do?", "answer": "Increases the Pal's base growth", "wrong": ["Unlocks new dialogue", "Lowers its food consumption", "Changes its element"], "articleID": "pal-trust", "difficulty": "medium"},
- {"id": "raid-summon", "q": "How do you summon a Raid Boss?", "answer": "Use a Summoning Altar with the corresponding slab", "wrong": ["Shout at the sky at midnight", "Light three campfires", "Sell 100 gold to a merchant"], "articleID": "raid-bosses", "difficulty": "medium"},
- {"id": "raid-catch", "q": "Can Raid Bosses be captured?", "answer": "No — but they drop an Egg that hatches a normal version", "wrong": ["Yes, with any Pal Sphere", "Yes, but only asleep", "Only the first one"], "articleID": "raid-bosses", "difficulty": "medium"},
- {"id": "raid-moonlord", "q": "Which item summons the Moonlord raid?", "answer": "Celestial Sigil", "wrong": ["Bellanoir's Slab", "Xenolord Slab", "Meteorite Fragment"], "articleID": "raid-bosses", "difficulty": "hard"},
- {"id": "sealed-realms", "q": "Where do you find most Alpha Pals?", "answer": "Sealed Realms", "wrong": ["Wildlife Sanctuaries", "Supply Drops", "Fishing spots"], "articleID": "sealed-realms", "difficulty": "medium"},
- {"id": "skillfruit-source", "q": "Where do Skill Fruits come from?", "answer": "Strange-looking trees that grow across Palworld", "wrong": ["Defeated tower bosses", "Deep-sea fishing", "The Black Marketeer only"], "articleID": "skill-fruits", "difficulty": "easy"},
- {"id": "skillfruit-cross", "q": "Can a Fire Pal learn a Water skill from a Skill Fruit?", "answer": "Yes — Skill Fruits ignore the Pal's element", "wrong": ["No, elements must match", "Only if it's raining", "Only subspecies can"], "articleID": "skill-fruits", "difficulty": "medium"},
- {"id": "lucky-passive", "q": "What does the \"Lucky\" passive give a Pal?", "answer": "+15% Work Speed and +15% Attack", "wrong": ["+50% gold from selling", "Immunity to Depression", "Double drops"], "articleID": "lucky-pals", "difficulty": "hard"},
- {"id": "lucky-spot", "q": "How do you notice a Lucky Pal in the wild?", "answer": "A sparkling sound and glowing star-like particles", "wrong": ["A red aura", "It walks backwards", "A golden crown icon"], "articleID": "lucky-pals", "difficulty": "easy"},
- {"id": "lucky-reward", "q": "Catching or killing a Lucky Pal always awards…", "answer": "Ancient Civilization Parts", "wrong": ["Legendary Schematics", "Predator Cores", "Skill Fruits"], "articleID": "lucky-pals", "difficulty": "hard"},
- {"id": "legendary-which", "q": "Which of these is a Legendary Pal?", "answer": "Jetragon", "wrong": ["Grizzbolt", "Broncherry", "Chikipi"], "articleID": "legendary-pals", "difficulty": "easy"},
- {"id": "predator-catch", "q": "What's special about Predator Pals?", "answer": "They cannot be captured with Pal Spheres", "wrong": ["They only spawn at night", "They never attack first", "They drop no loot"], "articleID": "predator-pals", "difficulty": "medium"},
- {"id": "predator-aura", "q": "How can you recognize a Predator Pal?", "answer": "A red glowing aura around it", "wrong": ["Star-like particles", "A blue halo", "It is half the normal size"], "articleID": "predator-pals", "difficulty": "medium"},
- {"id": "predator-core", "q": "Defeating Predator Pals is the only way to obtain…", "answer": "Predator Cores", "wrong": ["Ancient Technology Points", "Meteorite Fragments", "Bounty Tokens"], "articleID": "predator-pals", "difficulty": "hard"},
- {"id": "meteor-start", "q": "When do Meteorite Events start occurring?", "answer": "After the first tower boss has been defeated", "wrong": ["From the very start", "After reaching level 50", "Only during winter"], "articleID": "meteorite-event", "difficulty": "hard"},
- {"id": "meteor-selyne", "q": "Which Pal always spawns during meteorites on Sakurajima?", "answer": "Selyne", "wrong": ["Xenolord", "Yakumo", "Frostallion"], "articleID": "meteorite-event", "difficulty": "hard"},
- {"id": "alpha-xp", "q": "How much more experience do Alpha Pals grant when defeated?", "answer": "10× their regular variant", "wrong": ["2×", "5×", "The same"], "articleID": "alpha-pals", "difficulty": "hard"},
- {"id": "alpha-respawn", "q": "How long until an overworld Alpha Pal respawns?", "answer": "1 hour", "wrong": ["10 minutes", "24 hours", "They never respawn"], "articleID": "alpha-pals", "difficulty": "hard"},
- {"id": "alpha-first-kill", "q": "Defeating a world-map Alpha Pal for the first time grants…", "answer": "Ancient Technology Points and its Bounty token", "wrong": ["A Legendary Schematic, always", "A Skill Fruit", "A random saddle"], "articleID": "alpha-pals", "difficulty": "hard"},
- {"id": "humans-catch", "q": "Can humans be captured with Pal Spheres?", "answer": "Yes — all except faction leaders", "wrong": ["No, never", "Only merchants", "Only with the Meteor Launcher"], "articleID": "humans", "difficulty": "medium"},
- {"id": "humans-weapons", "q": "What happens to a captured human's weapon?", "answer": "They can no longer use it in combat", "wrong": ["It upgrades one tier", "You receive a copy", "Nothing changes"], "articleID": "humans", "difficulty": "hard"},
- {"id": "humans-weakness", "q": "Most humans take extra damage from which element?", "answer": "Dark", "wrong": ["Fire", "Water", "Dragon"], "articleID": "humans", "difficulty": "hard"},
- {"id": "ranch-vixy", "q": "What does Vixy dig up when assigned to the Ranch?", "answer": "Items like gold coins and Pal Spheres", "wrong": ["Wheat seeds", "Skill Fruits", "Ancient relics"], "articleID": "pal-spheres", "difficulty": "medium"},
- {"id": "spheres-better", "q": "Where do better Pal Spheres spawn in the wild?", "answer": "Higher level areas", "wrong": ["Near water", "Inside your base", "Only at night"], "articleID": "pal-spheres", "difficulty": "easy"}
+ {
+  "id": "syndicate-leader",
+  "q": "Who leads the Rayne Syndicate?",
+  "answer": "Zoe Rayne",
+  "wrong": [
+   "Lily Everhart",
+   "Saya Kurosaki",
+   "Marcus Dryden"
+  ],
+  "articleID": "rayne-syndicate",
+  "difficulty": "easy"
+ },
+ {
+  "id": "zoe-pal",
+  "q": "Which Pal fights alongside Zoe Rayne?",
+  "answer": "Grizzbolt",
+  "wrong": [
+   "Lyleen",
+   "Faleris",
+   "Orserk"
+  ],
+  "articleID": "zoe-rayne",
+  "difficulty": "easy"
+ },
+ {
+  "id": "zoe-tower",
+  "q": "Where is Zoe Rayne's tower located?",
+  "answer": "Windswept Hills",
+  "wrong": [
+   "Mount Obsidian",
+   "Astral Mountains",
+   "Sakurajima"
+  ],
+  "articleID": "zoe-rayne",
+  "difficulty": "medium"
+ },
+ {
+  "id": "zoe-tutorial",
+  "q": "Defeating which tower boss completes the game's tutorial?",
+  "answer": "Zoe Rayne",
+  "wrong": [
+   "Victor Ashford",
+   "Axel Travers",
+   "Saya Kurosaki"
+  ],
+  "articleID": "zoe-rayne",
+  "difficulty": "hard"
+ },
+ {
+  "id": "fpa-leader",
+  "q": "Which faction does Lily Everhart lead?",
+  "answer": "Free Pal Alliance",
+  "wrong": [
+   "PIDF",
+   "Moonflower Clan",
+   "Pal Genetic Research Unit"
+  ],
+  "articleID": "lily-everhart",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lily-pal",
+  "q": "Which Pal is Lily Everhart's loyal companion?",
+  "answer": "Lyleen",
+  "wrong": [
+   "Selyne",
+   "Shadowbeak",
+   "Grizzbolt"
+  ],
+  "articleID": "lily-everhart",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lily-spheres",
+  "q": "What does Lily Everhart consider \"the greatest shame in human history\"?",
+  "answer": "Using Pal Spheres to capture Pals",
+  "wrong": [
+   "Eating vegetables",
+   "Building bases",
+   "Fast travel statues"
+  ],
+  "articleID": "lily-everhart",
+  "difficulty": "medium"
+ },
+ {
+  "id": "lily-lyleen-bond",
+  "q": "Why isn't Lily's Lyleen bound to a Pal Sphere?",
+  "answer": "Lily despises Pal Spheres — Lyleen helps her as a free equal",
+  "wrong": [
+   "Lyleen is too strong to capture",
+   "Spheres don't work on grass Pals",
+   "She lost the sphere in the mountains"
+  ],
+  "articleID": "lily-everhart",
+  "difficulty": "hard"
+ },
+ {
+  "id": "pyre-leader",
+  "q": "Who leads the Brothers of the Eternal Pyre?",
+  "answer": "Axel Travers",
+  "wrong": [
+   "Marcus Dryden",
+   "Victor Ashford",
+   "Bjorn Seligsson"
+  ],
+  "articleID": "axel-travers",
+  "difficulty": "easy"
+ },
+ {
+  "id": "axel-orserk",
+  "q": "Axel leads a fire-worshipping faction — what element is his Pal Orserk?",
+  "answer": "Dragon & Electric",
+  "wrong": [
+   "Fire",
+   "Fire & Dark",
+   "Ground"
+  ],
+  "articleID": "axel-travers",
+  "difficulty": "medium"
+ },
+ {
+  "id": "axel-tower",
+  "q": "Where is Axel Travers's tower located?",
+  "answer": "Mount Obsidian",
+  "wrong": [
+   "Windswept Hills",
+   "Desiccated Desert",
+   "Feybreak"
+  ],
+  "articleID": "axel-travers",
+  "difficulty": "medium"
+ },
+ {
+  "id": "pyre-belief",
+  "q": "What do the Brothers of the Eternal Pyre believe in?",
+  "answer": "Purification by fire",
+  "wrong": [
+   "The healing power of water",
+   "Absolute silence",
+   "Worship of the moon"
+  ],
+  "articleID": "brothers-of-the-eternal-pyre",
+  "difficulty": "easy"
+ },
+ {
+  "id": "pidf-leader",
+  "q": "Who leads the Palpagos Islands Defense Force (PIDF)?",
+  "answer": "Marcus Dryden",
+  "wrong": [
+   "Axel Travers",
+   "Zoe Rayne",
+   "Victor Ashford"
+  ],
+  "articleID": "pidf",
+  "difficulty": "easy"
+ },
+ {
+  "id": "marcus-pal",
+  "q": "Which Pal accompanies Marcus Dryden?",
+  "answer": "Faleris",
+  "wrong": [
+   "Orserk",
+   "Shadowbeak",
+   "Jetragon"
+  ],
+  "articleID": "marcus-dryden",
+  "difficulty": "easy"
+ },
+ {
+  "id": "marcus-tower",
+  "q": "Where is Marcus Dryden's tower located?",
+  "answer": "Desiccated Desert",
+  "wrong": [
+   "Mount Obsidian",
+   "Verdant Brook",
+   "Sea Breeze Archipelago"
+  ],
+  "articleID": "marcus-dryden",
+  "difficulty": "medium"
+ },
+ {
+  "id": "marcus-symbol",
+  "q": "What did Marcus Dryden make the symbol of the PIDF?",
+  "answer": "Faleris",
+  "wrong": [
+   "A golden badge",
+   "Grizzbolt",
+   "The Palpagos flag"
+  ],
+  "articleID": "marcus-dryden",
+  "difficulty": "hard"
+ },
+ {
+  "id": "marcus-stims",
+  "q": "How does Marcus Dryden exploit Duneshelter's stim problem?",
+  "answer": "He sells stims, has the PIDF confiscate them, then resells them",
+  "wrong": [
+   "He burned every stim in the desert",
+   "He taxes stim users double",
+   "He banned the PIDF from Duneshelter"
+  ],
+  "articleID": "marcus-dryden",
+  "difficulty": "hard"
+ },
+ {
+  "id": "pgru-leader",
+  "q": "Who commands the Pal Genetic Research Unit?",
+  "answer": "Victor Ashford",
+  "wrong": [
+   "Marcus Dryden",
+   "Yakumo",
+   "Axel Travers"
+  ],
+  "articleID": "pal-genetic-research-unit",
+  "difficulty": "easy"
+ },
+ {
+  "id": "shadowbeak-origin",
+  "q": "What is special about Victor Ashford's Shadowbeak?",
+  "answer": "It is an artificial Pal created through genetic manipulation",
+  "wrong": [
+   "It is the oldest Pal alive",
+   "It was hatched from a meteorite",
+   "It is the only pure-Neutral Pal"
+  ],
+  "articleID": "victor-ashford",
+  "difficulty": "medium"
+ },
+ {
+  "id": "victor-tower",
+  "q": "Where is Victor Ashford's tower located?",
+  "answer": "Astral Mountains",
+  "wrong": [
+   "Sakurajima",
+   "Windswept Hills",
+   "Forgotten Island"
+  ],
+  "articleID": "victor-ashford",
+  "difficulty": "medium"
+ },
+ {
+  "id": "moonflower-leader",
+  "q": "Who leads the Moonflower Clan?",
+  "answer": "Saya Kurosaki",
+  "wrong": [
+   "Lily Everhart",
+   "Zoe Rayne",
+   "Selyne"
+  ],
+  "articleID": "moonflower-clan",
+  "difficulty": "easy"
+ },
+ {
+  "id": "saya-tower",
+  "q": "Where is Saya Kurosaki's tower located?",
+  "answer": "Sakurajima",
+  "wrong": [
+   "Feybreak",
+   "Astral Mountains",
+   "Marsh Island"
+  ],
+  "articleID": "saya-kurosaki",
+  "difficulty": "easy"
+ },
+ {
+  "id": "saya-pal",
+  "q": "Which Pal does Saya Kurosaki own?",
+  "answer": "Selyne",
+  "wrong": [
+   "Lyleen",
+   "Yakumo",
+   "Bellanoir"
+  ],
+  "articleID": "saya-kurosaki",
+  "difficulty": "medium"
+ },
+ {
+  "id": "moonflower-what",
+  "q": "What kind of group is the Moonflower Clan?",
+  "answer": "A ninja clan defending Sakurajima from outsiders",
+  "wrong": [
+   "A guild of merchants",
+   "A mining consortium",
+   "A cooking school"
+  ],
+  "articleID": "moonflower-clan",
+  "difficulty": "easy"
+ },
+ {
+  "id": "saya-sixth",
+  "q": "Which boss was NOT one of the original five tower bosses?",
+  "answer": "Saya Kurosaki",
+  "wrong": [
+   "Zoe Rayne",
+   "Axel Travers",
+   "Victor Ashford"
+  ],
+  "articleID": "saya-kurosaki",
+  "difficulty": "medium"
+ },
+ {
+  "id": "syndicate-crimes",
+  "q": "What is the Rayne Syndicate's main criminal operation?",
+  "answer": "Illegal Pal poaching",
+  "wrong": [
+   "Counterfeiting gold coins",
+   "Smuggling cake",
+   "Kidnapping merchants"
+  ],
+  "articleID": "rayne-syndicate",
+  "difficulty": "medium"
+ },
+ {
+  "id": "syndicate-first",
+  "q": "Which faction's members are the first human enemies the player encounters?",
+  "answer": "Rayne Syndicate",
+  "wrong": [
+   "PIDF",
+   "Free Pal Alliance",
+   "Moonflower Clan"
+  ],
+  "articleID": "rayne-syndicate",
+  "difficulty": "hard"
+ },
+ {
+  "id": "tower-count",
+  "q": "How many towers stand across the Palpagos Islands?",
+  "answer": "Seven",
+  "wrong": [
+   "Five",
+   "Nine",
+   "Three"
+  ],
+  "articleID": "tower",
+  "difficulty": "medium"
+ },
+ {
+  "id": "tower-timer",
+  "q": "How long do you have to defeat a tower boss?",
+  "answer": "10 minutes",
+  "wrong": [
+   "5 minutes",
+   "15 minutes",
+   "No time limit"
+  ],
+  "articleID": "tower",
+  "difficulty": "medium"
+ },
+ {
+  "id": "tower-reward",
+  "q": "What unlocks when you defeat a tower boss?",
+  "answer": "A fast travel point on the tower's roof",
+  "wrong": [
+   "A new Paldeck page",
+   "A legendary saddle",
+   "Double XP for an hour"
+  ],
+  "articleID": "tower",
+  "difficulty": "medium"
+ },
+ {
+  "id": "tower-rechallenge",
+  "q": "Can tower bosses be fought again after being defeated?",
+  "answer": "Yes — any time, by re-entering the tower",
+  "wrong": [
+   "No, they are gone forever",
+   "Only once per in-game week",
+   "Only after defeating all seven"
+  ],
+  "articleID": "tower",
+  "difficulty": "easy"
+ },
+ {
+  "id": "breeding-building",
+  "q": "Which building do you need to breed Pals?",
+  "answer": "Breeding Farm",
+  "wrong": [
+   "Pal Bed",
+   "Egg Incubator",
+   "Ranch"
+  ],
+  "articleID": "breeding",
+  "difficulty": "easy"
+ },
+ {
+  "id": "breeding-cake",
+  "q": "What must a Breeding Farm be supplied with?",
+  "answer": "Cake",
+  "wrong": [
+   "Honey",
+   "Berries",
+   "Milk"
+  ],
+  "articleID": "breeding",
+  "difficulty": "easy"
+ },
+ {
+  "id": "breeding-power",
+  "q": "How is a bred baby's species determined?",
+  "answer": "The Pal whose breeding power is closest to the parents' average",
+  "wrong": [
+   "It is always the mother's species",
+   "Purely random",
+   "The rarer parent's species"
+  ],
+  "articleID": "breeding",
+  "difficulty": "medium"
+ },
+ {
+  "id": "breeding-range",
+  "q": "Breeding power values fall between…",
+  "answer": "1 and 1500",
+  "wrong": [
+   "1 and 100",
+   "0 and 9999",
+   "100 and 5000"
+  ],
+  "articleID": "breeding",
+  "difficulty": "hard"
+ },
+ {
+  "id": "breeding-rare",
+  "q": "In breeding power terms, rarer and more powerful Pals have…",
+  "answer": "Lower numbers",
+  "wrong": [
+   "Higher numbers",
+   "Only even numbers",
+   "Negative numbers"
+  ],
+  "articleID": "breeding",
+  "difficulty": "hard"
+ },
+ {
+  "id": "breeding-same",
+  "q": "Which of these Pals can only be bred from two parents of its own species?",
+  "answer": "Jetragon",
+  "wrong": [
+   "Lamball",
+   "Foxparks",
+   "Cattiva"
+  ],
+  "articleID": "breeding",
+  "difficulty": "hard"
+ },
+ {
+  "id": "egg-hatch",
+  "q": "What do you use to hatch Pal Eggs?",
+  "answer": "Egg Incubator",
+  "wrong": [
+   "Campfire",
+   "Breeding Farm",
+   "Furnace"
+  ],
+  "articleID": "pal-eggs",
+  "difficulty": "easy"
+ },
+ {
+  "id": "egg-scorching",
+  "q": "What kind of Pal hatches from a Scorching Egg?",
+  "answer": "A Fire Pal",
+  "wrong": [
+   "A Water Pal",
+   "An Electric Pal",
+   "A Dragon Pal"
+  ],
+  "articleID": "pal-eggs",
+  "difficulty": "easy"
+ },
+ {
+  "id": "egg-verdant",
+  "q": "What kind of Pal hatches from a Verdant Egg?",
+  "answer": "A Grass Pal",
+  "wrong": [
+   "A Ground Pal",
+   "An Ice Pal",
+   "A Neutral Pal"
+  ],
+  "articleID": "pal-eggs",
+  "difficulty": "easy"
+ },
+ {
+  "id": "egg-huge",
+  "q": "What does a \"huge\" Pal Egg hint at?",
+  "answer": "It may hatch into an Alpha Pal",
+  "wrong": [
+   "Twins inside",
+   "A Lucky Pal for sure",
+   "It's about to spoil"
+  ],
+  "articleID": "pal-eggs",
+  "difficulty": "medium"
+ },
+ {
+  "id": "san-not-cause",
+  "q": "Which of these does NOT lower a Pal's sanity?",
+  "answer": "Having plenty of food available",
+  "wrong": [
+   "Being forced to work",
+   "Starving",
+   "Having no place to sleep"
+  ],
+  "articleID": "sanity",
+  "difficulty": "medium"
+ },
+ {
+  "id": "san-debuff",
+  "q": "What debuff can prolonged low sanity cause?",
+  "answer": "Depression",
+  "wrong": [
+   "Rust",
+   "Frostbite",
+   "Insomnia"
+  ],
+  "articleID": "sanity",
+  "difficulty": "hard"
+ },
+ {
+  "id": "san-ranch",
+  "q": "How can Pals with a Farming skill regain sanity?",
+  "answer": "Grazing in the Ranch",
+  "wrong": [
+   "Swimming in rivers",
+   "Fighting raids",
+   "Sitting by campfires"
+  ],
+  "articleID": "sanity",
+  "difficulty": "hard"
+ },
+ {
+  "id": "trust-effect",
+  "q": "What does raising a Pal's Trust do?",
+  "answer": "Increases the Pal's base growth",
+  "wrong": [
+   "Unlocks new dialogue",
+   "Lowers its food consumption",
+   "Changes its element"
+  ],
+  "articleID": "pal-trust",
+  "difficulty": "medium"
+ },
+ {
+  "id": "raid-summon",
+  "q": "How do you summon a Raid Boss?",
+  "answer": "Use a Summoning Altar with the corresponding slab",
+  "wrong": [
+   "Shout at the sky at midnight",
+   "Light three campfires",
+   "Sell 100 gold to a merchant"
+  ],
+  "articleID": "raid-bosses",
+  "difficulty": "medium"
+ },
+ {
+  "id": "raid-catch",
+  "q": "Can Raid Bosses be captured?",
+  "answer": "No — but they drop an Egg that hatches a normal version",
+  "wrong": [
+   "Yes, with any Pal Sphere",
+   "Yes, but only asleep",
+   "Only the first one"
+  ],
+  "articleID": "raid-bosses",
+  "difficulty": "medium"
+ },
+ {
+  "id": "raid-moonlord",
+  "q": "Which item summons the Moonlord raid?",
+  "answer": "Celestial Sigil",
+  "wrong": [
+   "Bellanoir's Slab",
+   "Xenolord Slab",
+   "Meteorite Fragment"
+  ],
+  "articleID": "raid-bosses",
+  "difficulty": "hard"
+ },
+ {
+  "id": "sealed-realms",
+  "q": "Where do you find most Alpha Pals?",
+  "answer": "Sealed Realms",
+  "wrong": [
+   "Wildlife Sanctuaries",
+   "Supply Drops",
+   "Fishing spots"
+  ],
+  "articleID": "sealed-realms",
+  "difficulty": "medium"
+ },
+ {
+  "id": "skillfruit-source",
+  "q": "Where do Skill Fruits come from?",
+  "answer": "Strange-looking trees that grow across Palworld",
+  "wrong": [
+   "Defeated tower bosses",
+   "Deep-sea fishing",
+   "The Black Marketeer only"
+  ],
+  "articleID": "skill-fruits",
+  "difficulty": "easy"
+ },
+ {
+  "id": "skillfruit-cross",
+  "q": "Can a Fire Pal learn a Water skill from a Skill Fruit?",
+  "answer": "Yes — Skill Fruits ignore the Pal's element",
+  "wrong": [
+   "No, elements must match",
+   "Only if it's raining",
+   "Only subspecies can"
+  ],
+  "articleID": "skill-fruits",
+  "difficulty": "medium"
+ },
+ {
+  "id": "lucky-passive",
+  "q": "What does the \"Lucky\" passive give a Pal?",
+  "answer": "+15% Work Speed and +15% Attack",
+  "wrong": [
+   "+50% gold from selling",
+   "Immunity to Depression",
+   "Double drops"
+  ],
+  "articleID": "lucky-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "lucky-spot",
+  "q": "How do you notice a Lucky Pal in the wild?",
+  "answer": "A sparkling sound and glowing star-like particles",
+  "wrong": [
+   "A red aura",
+   "It walks backwards",
+   "A golden crown icon"
+  ],
+  "articleID": "lucky-pals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "lucky-reward",
+  "q": "Catching or killing a Lucky Pal always awards…",
+  "answer": "Ancient Civilization Parts",
+  "wrong": [
+   "Legendary Schematics",
+   "Predator Cores",
+   "Skill Fruits"
+  ],
+  "articleID": "lucky-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "legendary-which",
+  "q": "Which of these is a Legendary Pal?",
+  "answer": "Jetragon",
+  "wrong": [
+   "Grizzbolt",
+   "Broncherry",
+   "Chikipi"
+  ],
+  "articleID": "legendary-pals",
+  "difficulty": "easy"
+ },
+ {
+  "id": "predator-catch",
+  "q": "What's special about Predator Pals?",
+  "answer": "They cannot be captured with Pal Spheres",
+  "wrong": [
+   "They only spawn at night",
+   "They never attack first",
+   "They drop no loot"
+  ],
+  "articleID": "predator-pals",
+  "difficulty": "medium"
+ },
+ {
+  "id": "predator-aura",
+  "q": "How can you recognize a Predator Pal?",
+  "answer": "A red glowing aura around it",
+  "wrong": [
+   "Star-like particles",
+   "A blue halo",
+   "It is half the normal size"
+  ],
+  "articleID": "predator-pals",
+  "difficulty": "medium"
+ },
+ {
+  "id": "predator-core",
+  "q": "Defeating Predator Pals is the only way to obtain…",
+  "answer": "Predator Cores",
+  "wrong": [
+   "Ancient Technology Points",
+   "Meteorite Fragments",
+   "Bounty Tokens"
+  ],
+  "articleID": "predator-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "meteor-start",
+  "q": "When do Meteorite Events start occurring?",
+  "answer": "After the first tower boss has been defeated",
+  "wrong": [
+   "From the very start",
+   "After reaching level 50",
+   "Only during winter"
+  ],
+  "articleID": "meteorite-event",
+  "difficulty": "hard"
+ },
+ {
+  "id": "meteor-selyne",
+  "q": "Which Pal always spawns during meteorites on Sakurajima?",
+  "answer": "Selyne",
+  "wrong": [
+   "Xenolord",
+   "Yakumo",
+   "Frostallion"
+  ],
+  "articleID": "meteorite-event",
+  "difficulty": "hard"
+ },
+ {
+  "id": "alpha-xp",
+  "q": "How much more experience do Alpha Pals grant when defeated?",
+  "answer": "10× their regular variant",
+  "wrong": [
+   "2×",
+   "5×",
+   "The same"
+  ],
+  "articleID": "alpha-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "alpha-respawn",
+  "q": "How long until an overworld Alpha Pal respawns?",
+  "answer": "1 hour",
+  "wrong": [
+   "10 minutes",
+   "24 hours",
+   "They never respawn"
+  ],
+  "articleID": "alpha-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "alpha-first-kill",
+  "q": "Defeating a world-map Alpha Pal for the first time grants…",
+  "answer": "Ancient Technology Points and its Bounty token",
+  "wrong": [
+   "A Legendary Schematic, always",
+   "A Skill Fruit",
+   "A random saddle"
+  ],
+  "articleID": "alpha-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "humans-catch",
+  "q": "Can humans be captured with Pal Spheres?",
+  "answer": "Yes — all except faction leaders",
+  "wrong": [
+   "No, never",
+   "Only merchants",
+   "Only with the Meteor Launcher"
+  ],
+  "articleID": "humans",
+  "difficulty": "medium"
+ },
+ {
+  "id": "humans-weapons",
+  "q": "What happens to a captured human's weapon?",
+  "answer": "They can no longer use it in combat",
+  "wrong": [
+   "It upgrades one tier",
+   "You receive a copy",
+   "Nothing changes"
+  ],
+  "articleID": "humans",
+  "difficulty": "hard"
+ },
+ {
+  "id": "humans-weakness",
+  "q": "Most humans take extra damage from which element?",
+  "answer": "Dark",
+  "wrong": [
+   "Fire",
+   "Water",
+   "Dragon"
+  ],
+  "articleID": "humans",
+  "difficulty": "hard"
+ },
+ {
+  "id": "ranch-vixy",
+  "q": "What does Vixy dig up when assigned to the Ranch?",
+  "answer": "Items like gold coins and Pal Spheres",
+  "wrong": [
+   "Wheat seeds",
+   "Skill Fruits",
+   "Ancient relics"
+  ],
+  "articleID": "pal-spheres",
+  "difficulty": "medium"
+ },
+ {
+  "id": "spheres-better",
+  "q": "Where do better Pal Spheres spawn in the wild?",
+  "answer": "Higher level areas",
+  "wrong": [
+   "Near water",
+   "Inside your base",
+   "Only at night"
+  ],
+  "articleID": "pal-spheres",
+  "difficulty": "easy"
+ },
+ {
+  "id": "elements-count",
+  "q": "How many elements are there in Palworld?",
+  "answer": "Nine",
+  "wrong": [
+   "Seven",
+   "Twelve",
+   "Fifteen"
+  ],
+  "articleID": "elements",
+  "difficulty": "easy"
+ },
+ {
+  "id": "elements-npc",
+  "q": "Do human NPCs have elements?",
+  "answer": "No — humans have no element",
+  "wrong": [
+   "Yes, always Neutral",
+   "Yes, based on their faction",
+   "Only faction leaders do"
+  ],
+  "articleID": "elements",
+  "difficulty": "medium"
+ },
+ {
+  "id": "elements-max",
+  "q": "How many elements can a single Pal have?",
+  "answer": "One or two",
+  "wrong": [
+   "Exactly one",
+   "Up to three",
+   "Up to four"
+  ],
+  "articleID": "elements",
+  "difficulty": "easy"
+ },
+ {
+  "id": "elements-weak",
+  "q": "How many elements is each element weak to?",
+  "answer": "Exactly one",
+  "wrong": [
+   "Two",
+   "Zero to three",
+   "It varies wildly"
+  ],
+  "articleID": "elements",
+  "difficulty": "medium"
+ },
+ {
+  "id": "status-catch",
+  "q": "What do combat status conditions do to a Pal's catch rate?",
+  "answer": "Afflicted Pals become easier to catch",
+  "wrong": [
+   "Harder to catch",
+   "No effect",
+   "They become uncatchable"
+  ],
+  "articleID": "status-conditions",
+  "difficulty": "medium"
+ },
+ {
+  "id": "status-blind",
+  "q": "Which element's skills can inflict Blind?",
+  "answer": "Dark",
+  "wrong": [
+   "Ice",
+   "Ground",
+   "Water"
+  ],
+  "articleID": "status-conditions",
+  "difficulty": "medium"
+ },
+ {
+  "id": "status-electrify",
+  "q": "While a target is Electrified, which attacks deal double damage?",
+  "answer": "Water",
+  "wrong": [
+   "Fire",
+   "Ground",
+   "Dragon"
+  ],
+  "articleID": "status-conditions",
+  "difficulty": "hard"
+ },
+ {
+  "id": "status-ivy",
+  "q": "What does the Ivy-Covered condition prevent?",
+  "answer": "Any action that requires stamina",
+  "wrong": [
+   "Eating",
+   "Being captured",
+   "Taking fire damage"
+  ],
+  "articleID": "status-conditions",
+  "difficulty": "hard"
+ },
+ {
+  "id": "status-poison",
+  "q": "Which condition can stack independently of other conditions?",
+  "answer": "Poison",
+  "wrong": [
+   "Burn",
+   "Freeze",
+   "Blind"
+  ],
+  "articleID": "status-conditions",
+  "difficulty": "hard"
+ },
+ {
+  "id": "dungeon-end",
+  "q": "What waits at the end of every dungeon?",
+  "answer": "A guaranteed Alpha Pal and two chests",
+  "wrong": [
+   "A tower boss",
+   "A Black Marketeer",
+   "Nothing — dungeons are endless"
+  ],
+  "articleID": "dungeons",
+  "difficulty": "medium"
+ },
+ {
+  "id": "dungeon-timer",
+  "q": "Is there a time limit inside dungeons?",
+  "answer": "No",
+  "wrong": [
+   "Yes, 10 minutes",
+   "Yes, 30 minutes",
+   "Only at night"
+  ],
+  "articleID": "dungeons",
+  "difficulty": "medium"
+ },
+ {
+  "id": "dungeon-spawn",
+  "q": "How do dungeons appear in the world?",
+  "answer": "Semi-randomly — when one closes, another opens elsewhere",
+  "wrong": [
+   "They are always in the same spots",
+   "One per region, permanent",
+   "Only during raids"
+  ],
+  "articleID": "dungeons",
+  "difficulty": "hard"
+ },
+ {
+  "id": "chest-keys",
+  "q": "Which keys open locked treasure chests?",
+  "answer": "Copper, Silver and Gold Keys",
+  "wrong": [
+   "Bronze, Iron and Steel Keys",
+   "Skeleton Keys",
+   "Paldium Keys"
+  ],
+  "articleID": "treasure-chest",
+  "difficulty": "easy"
+ },
+ {
+  "id": "chest-respawn",
+  "q": "How often do treasure chests respawn?",
+  "answer": "Daily",
+  "wrong": [
+   "Hourly",
+   "Weekly",
+   "Never"
+  ],
+  "articleID": "treasure-chest",
+  "difficulty": "hard"
+ },
+ {
+  "id": "chest-mimog",
+  "q": "Which Pal's partner skill can unlock treasure chests?",
+  "answer": "Mimog",
+  "wrong": [
+   "Vixy",
+   "Lifmunk",
+   "Depresso"
+  ],
+  "articleID": "treasure-chest",
+  "difficulty": "hard"
+ },
+ {
+  "id": "fishing-need",
+  "q": "What do you need to start fishing?",
+  "answer": "A fishing rod and bait",
+  "wrong": [
+   "A net and a boat",
+   "A water Pal only",
+   "A harpoon"
+  ],
+  "articleID": "fishing",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fishing-purple",
+  "q": "Purple sparkles on a fish shadow mean…",
+  "answer": "The captured Pal will be an Alpha",
+  "wrong": [
+   "It's a Lucky Pal",
+   "It will escape",
+   "Better bait is needed"
+  ],
+  "articleID": "fishing",
+  "difficulty": "hard"
+ },
+ {
+  "id": "fishing-green",
+  "q": "Green sparkles on a fish shadow guarantee…",
+  "answer": "A Rainbow Passive",
+  "wrong": [
+   "An Alpha Pal",
+   "Double gold",
+   "A Skill Fruit"
+  ],
+  "articleID": "fishing",
+  "difficulty": "hard"
+ },
+ {
+  "id": "fishing-update",
+  "q": "Which update added fishing?",
+  "answer": "Tides of Terraria",
+  "wrong": [
+   "Sakurajima",
+   "Feybreak",
+   "The 1.0 release"
+  ],
+  "articleID": "fishing",
+  "difficulty": "medium"
+ },
+ {
+  "id": "ranch-capacity",
+  "q": "How many Pals can graze in one Ranch?",
+  "answer": "Up to 4",
+  "wrong": [
+   "Up to 2",
+   "Up to 8",
+   "Unlimited"
+  ],
+  "articleID": "ranch",
+  "difficulty": "medium"
+ },
+ {
+  "id": "ranch-sanity",
+  "q": "What happens to sanity while a Pal grazes at the Ranch?",
+  "answer": "It does not deplete",
+  "wrong": [
+   "It drops fast",
+   "It resets to zero",
+   "It halves"
+  ],
+  "articleID": "ranch",
+  "difficulty": "hard"
+ },
+ {
+  "id": "farm-chikipi",
+  "q": "How often does Chikipi lay an egg at the Ranch?",
+  "answer": "Every 50 seconds",
+  "wrong": [
+   "Every 10 seconds",
+   "Every 5 minutes",
+   "Once per day"
+  ],
+  "articleID": "farming",
+  "difficulty": "hard"
+ },
+ {
+  "id": "farm-condenser",
+  "q": "How do you increase how many items a ranch Pal drops?",
+  "answer": "Rank it up in the Pal Essence Condenser",
+  "wrong": [
+   "Feed it cake",
+   "Work Speed passives",
+   "Higher base level"
+  ],
+  "articleID": "farming",
+  "difficulty": "medium"
+ },
+ {
+  "id": "farm-rank4",
+  "q": "How many copies of a Pal does it take in total to reach Condenser rank 4?",
+  "answer": "117",
+  "wrong": [
+   "50",
+   "78",
+   "200"
+  ],
+  "articleID": "farming",
+  "difficulty": "hard"
+ },
+ {
+  "id": "cook-fastest",
+  "q": "Which cooking station is the fastest?",
+  "answer": "Electric Kitchen",
+  "wrong": [
+   "Campfire",
+   "Cooking Pot",
+   "Primitive Furnace"
+  ],
+  "articleID": "cooking",
+  "difficulty": "medium"
+ },
+ {
+  "id": "cook-work",
+  "q": "Which work suitability lets a Pal run cooking stations?",
+  "answer": "Kindling",
+  "wrong": [
+   "Watering",
+   "Handiwork",
+   "Farming"
+  ],
+  "articleID": "cooking",
+  "difficulty": "medium"
+ },
+ {
+  "id": "craft-crusher",
+  "q": "What does the Crusher produce?",
+  "answer": "Fiber and Paldium Fragments",
+  "wrong": [
+   "Ingots and charcoal",
+   "Cement",
+   "High Quality Pal Oil"
+  ],
+  "articleID": "crafting",
+  "difficulty": "medium"
+ },
+ {
+  "id": "craft-refined",
+  "q": "Which furnace unlocks Refined Ingot?",
+  "answer": "Improved Furnace",
+  "wrong": [
+   "Primitive Furnace",
+   "Electric Furnace",
+   "Campfire"
+  ],
+  "articleID": "crafting",
+  "difficulty": "hard"
+ },
+ {
+  "id": "craft-palmetal",
+  "q": "Pal Metal Ingot and Plasteel are refined in the…",
+  "answer": "Electric Furnace",
+  "wrong": [
+   "Primitive Furnace",
+   "Improved Furnace",
+   "Crusher"
+  ],
+  "articleID": "crafting",
+  "difficulty": "hard"
+ },
+ {
+  "id": "craft-gigantic",
+  "q": "How many Pals can work the Gigantic Furnace at once?",
+  "answer": "Four",
+  "wrong": [
+   "One",
+   "Two",
+   "Eight"
+  ],
+  "articleID": "crafting",
+  "difficulty": "hard"
+ },
+ {
+  "id": "stamina-swim",
+  "q": "What happens if you run out of stamina while swimming?",
+  "answer": "Your health drains in place of stamina",
+  "wrong": [
+   "You teleport to shore",
+   "Nothing",
+   "You swim slower"
+  ],
+  "articleID": "stamina",
+  "difficulty": "medium"
+ },
+ {
+  "id": "stamina-grapple",
+  "q": "Which of these consumes NO stamina?",
+  "answer": "Using a Grappling Gun",
+  "wrong": [
+   "Climbing",
+   "Gliding",
+   "Attacking"
+  ],
+  "articleID": "stamina",
+  "difficulty": "hard"
+ },
+ {
+  "id": "weight-zero",
+  "q": "Which item weighs nothing?",
+  "answer": "Gold Coins",
+  "wrong": [
+   "Wood",
+   "Stone",
+   "Pal Spheres"
+  ],
+  "articleID": "weight",
+  "difficulty": "medium"
+ },
+ {
+  "id": "weight-over",
+  "q": "Which of these still works while you're weighed down?",
+  "answer": "Mounting and dismounting Pals",
+  "wrong": [
+   "Jumping",
+   "Running",
+   "Rolling"
+  ],
+  "articleID": "weight",
+  "difficulty": "hard"
+ },
+ {
+  "id": "hazard-fire",
+  "q": "How much HP does burning cost?",
+  "answer": "1% per second for 15 seconds",
+  "wrong": [
+   "5% per second",
+   "A flat 50 HP",
+   "Nothing, it's cosmetic"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "hard"
+ },
+ {
+  "id": "hazard-wood",
+  "q": "What can put out a burning wooden structure?",
+  "answer": "Water Pals try to extinguish it",
+  "wrong": [
+   "It burns until destroyed",
+   "Sand from the desert",
+   "Shouting at it"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "medium"
+ },
+ {
+  "id": "hazard-cold",
+  "q": "How do you survive cold regions?",
+  "answer": "Cold-resistant gear",
+  "wrong": [
+   "Eating spicy food",
+   "Running constantly",
+   "You can't"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "easy"
+ },
+ {
+  "id": "guild-palbox",
+  "q": "How many Palboxes can one guild have in total?",
+  "answer": "3, shared across all members",
+  "wrong": [
+   "3 per member",
+   "10",
+   "Unlimited"
+  ],
+  "articleID": "guilds",
+  "difficulty": "medium"
+ },
+ {
+  "id": "guild-revive",
+  "q": "What can guildmates do when you drop to 0 HP?",
+  "answer": "Revive you before the crawl timer runs out",
+  "wrong": [
+   "Nothing",
+   "Inherit your items",
+   "Take over your character"
+  ],
+  "articleID": "guilds",
+  "difficulty": "medium"
+ },
+ {
+  "id": "crime-witness",
+  "q": "When does a crime actually result in charges?",
+  "answer": "Only if a non-hostile NPC witnesses it",
+  "wrong": [
+   "Always",
+   "Only at night",
+   "Only in settlements"
+  ],
+  "articleID": "crime",
+  "difficulty": "medium"
+ },
+ {
+  "id": "crime-pals",
+  "q": "Does your Pal damaging an NPC count as assault?",
+  "answer": "No — only the player's own attacks do",
+  "wrong": [
+   "Yes, always",
+   "Yes, but only in towns",
+   "Only for Dark Pals"
+  ],
+  "articleID": "crime",
+  "difficulty": "hard"
+ },
+ {
+  "id": "crime-sanctuary",
+  "q": "Entering a Wildlife Sanctuary without permission is…",
+  "answer": "Trespassing (a level 1 charge)",
+  "wrong": [
+   "Perfectly legal",
+   "Instant Wanted status",
+   "Punishable by fines only"
+  ],
+  "articleID": "crime",
+  "difficulty": "medium"
+ },
+ {
+  "id": "merchant-coats",
+  "q": "What does a green-coat Wandering Merchant sell?",
+  "answer": "Advanced equipment, schematics and rare ores",
+  "wrong": [
+   "Only food",
+   "Pals",
+   "Contraband"
+  ],
+  "articleID": "wandering-merchant",
+  "difficulty": "hard"
+ },
+ {
+  "id": "merchant-blue",
+  "q": "The blue-coated merchant is known as…",
+  "answer": "The Pal Merchant — buys and sells Pals",
+  "wrong": [
+   "The Black Marketeer",
+   "The Medal Merchant",
+   "The Innkeeper"
+  ],
+  "articleID": "wandering-merchant",
+  "difficulty": "medium"
+ },
+ {
+  "id": "blackmarket-wares",
+  "q": "What makes the Black Marketeer special?",
+  "answer": "He sells rare and prohibited Pals other merchants won't",
+  "wrong": [
+   "He only takes ancient parts",
+   "He gives everything free",
+   "He only appears at noon"
+  ],
+  "articleID": "black-marketeer",
+  "difficulty": "easy"
+ },
+ {
+  "id": "blackmarket-fight",
+  "q": "What happens if you attack a Black Marketeer?",
+  "answer": "He pulls out a minigun and fights back",
+  "wrong": [
+   "He runs away",
+   "He calls the PIDF",
+   "He surrenders his goods"
+  ],
+  "articleID": "black-marketeer",
+  "difficulty": "medium"
+ },
+ {
+  "id": "blackmarket-where",
+  "q": "Where can you reliably find a Black Marketeer?",
+  "answer": "Abandoned mineshafts",
+  "wrong": [
+   "Every settlement plaza",
+   "On top of towers",
+   "Wildlife Sanctuaries"
+  ],
+  "articleID": "black-marketeer",
+  "difficulty": "hard"
+ },
+ {
+  "id": "merchant-capture",
+  "q": "Why capture a merchant with a Pal Sphere?",
+  "answer": "Deployed at your base, they trade with you forever",
+  "wrong": [
+   "They fight in your party",
+   "They cook meals",
+   "You can't capture merchants"
+  ],
+  "articleID": "wandering-merchant",
+  "difficulty": "medium"
+ },
+ {
+  "id": "passive-max",
+  "q": "How many Passive Skills can one Pal have?",
+  "answer": "Up to four",
+  "wrong": [
+   "One",
+   "Up to two",
+   "Unlimited"
+  ],
+  "articleID": "passive-skills",
+  "difficulty": "easy"
+ },
+ {
+  "id": "passive-stack",
+  "q": "Do passive skills boosting the same stat stack?",
+  "answer": "Yes — additively",
+  "wrong": [
+   "No, the strongest wins",
+   "They multiply",
+   "They cancel out"
+  ],
+  "articleID": "passive-skills",
+  "difficulty": "hard"
+ },
+ {
+  "id": "partner-upgrade",
+  "q": "How do you upgrade a Partner Skill?",
+  "answer": "With the Pal Essence Condenser",
+  "wrong": [
+   "Skill Fruits",
+   "Feeding cake",
+   "Level 50"
+  ],
+  "articleID": "partner-skills",
+  "difficulty": "medium"
+ },
+ {
+  "id": "schematic-drop",
+  "q": "What's the drop rate of boss-specific schematics?",
+  "answer": "About 3%",
+  "wrong": [
+   "25%",
+   "50%",
+   "Guaranteed"
+  ],
+  "articleID": "schematics",
+  "difficulty": "hard"
+ },
+ {
+  "id": "schematic-use",
+  "q": "What do Schematics let you do?",
+  "answer": "Craft upgraded or entirely new items",
+  "wrong": [
+   "Skip tech levels for free",
+   "Teleport",
+   "Rename Pals"
+  ],
+  "articleID": "schematics",
+  "difficulty": "easy"
+ },
+ {
+  "id": "bounty-source",
+  "q": "How do you earn a Bounty Token?",
+  "answer": "Slay a world-map Alpha Pal for the first time",
+  "wrong": [
+   "Complete daily quests",
+   "Sell contraband",
+   "Win tower rematches"
+  ],
+  "articleID": "bounty-tokens",
+  "difficulty": "medium"
+ },
+ {
+  "id": "fasttravel-statue",
+  "q": "Fast travel points take the form of…",
+  "answer": "Great Eagle (Galeclaw) statues",
+  "wrong": [
+   "Lamball shrines",
+   "Teleporter pads",
+   "Lighthouses"
+  ],
+  "articleID": "fast-travel",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fasttravel-bonus",
+  "q": "Unlocking a fast travel statue also grants…",
+  "answer": "One Technology Point",
+  "wrong": [
+   "Gold coins",
+   "A Pal Sphere",
+   "XP only"
+  ],
+  "articleID": "fast-travel",
+  "difficulty": "hard"
+ },
+ {
+  "id": "base-decay",
+  "q": "What happens to structures built outside the Palbox boundary?",
+  "answer": "They slowly deteriorate",
+  "wrong": [
+   "Nothing",
+   "They get raided instantly",
+   "They turn to stone"
+  ],
+  "articleID": "base-building",
+  "difficulty": "medium"
+ },
+ {
+  "id": "base-max-pals",
+  "q": "How many Pals can work one base at maximum (default settings)?",
+  "answer": "15",
+  "wrong": [
+   "10",
+   "20",
+   "30"
+  ],
+  "articleID": "base-building",
+  "difficulty": "hard"
+ },
+ {
+  "id": "base-count",
+  "q": "How many bases can you eventually run?",
+  "answer": "3",
+  "wrong": [
+   "1",
+   "5",
+   "10"
+  ],
+  "articleID": "base-building",
+  "difficulty": "medium"
+ },
+ {
+  "id": "raid-end",
+  "q": "When do base raiders retreat?",
+  "answer": "When enough of them fall or the raid runs too long",
+  "wrong": [
+   "Never — they fight to the last",
+   "When it rains",
+   "When you hide indoors"
+  ],
+  "articleID": "base-raids",
+  "difficulty": "medium"
+ },
+ {
+  "id": "raid-walls",
+  "q": "Why are walls so effective against raids?",
+  "answer": "Most attacks deal only 1 damage to them",
+  "wrong": [
+   "Raiders can't see over them",
+   "They reflect damage",
+   "They heal your Pals"
+  ],
+  "articleID": "base-raids",
+  "difficulty": "hard"
+ },
+ {
+  "id": "raid-lovander",
+  "q": "Which Pal shows up in the \"Fan Girls\" raids?",
+  "answer": "Lovander",
+  "wrong": [
+   "Lamball",
+   "Tocotoco",
+   "Leezpunk"
+  ],
+  "articleID": "base-raids",
+  "difficulty": "hard"
+ },
+ {
+  "id": "raid-tocotoco",
+  "q": "The \"Implode Unit\" raids are squads of…",
+  "answer": "Tocotoco",
+  "wrong": [
+   "Leezpunk",
+   "Direhowl",
+   "Bushi"
+  ],
+  "articleID": "base-raids",
+  "difficulty": "hard"
+ },
+ {
+  "id": "cooling-effect",
+  "q": "What does the Cooling work suitability do at a Cooler Box?",
+  "answer": "Extends food expiration timers",
+  "wrong": [
+   "Freezes enemies",
+   "Makes ice cubes to sell",
+   "Lowers base temperature"
+  ],
+  "articleID": "cooling",
+  "difficulty": "medium"
+ },
+ {
+  "id": "transport-l5",
+  "q": "How many items can a level 5 Transporting Pal carry from a stockpile?",
+  "answer": "40",
+  "wrong": [
+   "10",
+   "20",
+   "100"
+  ],
+  "articleID": "transporting",
+  "difficulty": "hard"
+ },
+ {
+  "id": "electricity-need",
+  "q": "Which structures need Generating Electricity Pals?",
+  "answer": "Power-hungry ones like Assembly Lines",
+  "wrong": [
+   "Campfires",
+   "Wooden chests",
+   "Feed boxes"
+  ],
+  "articleID": "generating-electricity",
+  "difficulty": "easy"
+ },
+ {
+  "id": "windswept-start",
+  "q": "In which region do new players start?",
+  "answer": "Windswept Hills",
+  "wrong": [
+   "Sea Breeze Archipelago",
+   "Sakurajima",
+   "Mount Obsidian"
+  ],
+  "articleID": "windswept-hills",
+  "difficulty": "easy"
+ },
+ {
+  "id": "windswept-boss",
+  "q": "Which world boss roams Windswept Hills?",
+  "answer": "Grizzbolt",
+  "wrong": [
+   "Jetragon",
+   "Mammorest",
+   "Paladius"
+  ],
+  "articleID": "windswept-hills",
+  "difficulty": "hard"
+ },
+ {
+  "id": "sakurajima-name",
+  "q": "What does \"Sakurajima\" literally mean?",
+  "answer": "Cherry Blossom Island",
+  "wrong": [
+   "Moon Island",
+   "Northern Reach",
+   "Sea of Flowers"
+  ],
+  "articleID": "sakurajima",
+  "difficulty": "medium"
+ },
+ {
+  "id": "feybreak-where",
+  "q": "Where is Feybreak Island?",
+  "answer": "The far southwest, below Mount Obsidian",
+  "wrong": [
+   "The far northeast",
+   "Center of the map",
+   "North of Sakurajima"
+  ],
+  "articleID": "feybreak",
+  "difficulty": "medium"
+ },
+ {
+  "id": "feybreak-turrets",
+  "q": "What danger awaits flying mounts over Feybreak?",
+  "answer": "Anti-air missile turrets (22 of them)",
+  "wrong": [
+   "Lightning storms",
+   "Giant nets",
+   "Nothing"
+  ],
+  "articleID": "feybreak",
+  "difficulty": "hard"
+ },
+ {
+  "id": "obsidian-martyrs",
+  "q": "Mount Obsidian is the only place to find…",
+  "answer": "Brothers of the Eternal Pyre Martyrs",
+  "wrong": [
+   "Moonflower Genin",
+   "PIDF Guards",
+   "Syndicate Crushers"
+  ],
+  "articleID": "mount-obsidian",
+  "difficulty": "hard"
+ },
+ {
+  "id": "obsidian-resource",
+  "q": "Which resource is Mount Obsidian known for?",
+  "answer": "Sulfur",
+  "wrong": [
+   "Coal",
+   "Quartz",
+   "Pure Gold"
+  ],
+  "articleID": "mount-obsidian",
+  "difficulty": "medium"
+ },
+ {
+  "id": "duneshelter-what",
+  "q": "What is Duneshelter?",
+  "answer": "A desert town inside a crumbling palace",
+  "wrong": [
+   "A pirate cove",
+   "An ice fortress",
+   "A flying city"
+  ],
+  "articleID": "duneshelter",
+  "difficulty": "easy"
+ },
+ {
+  "id": "suffix-ignis",
+  "q": "A subspecies with the \"Ignis\" suffix is what element?",
+  "answer": "Fire",
+  "wrong": [
+   "Ice",
+   "Electric",
+   "Dark"
+  ],
+  "articleID": "pal-subspecies",
+  "difficulty": "easy"
+ },
+ {
+  "id": "suffix-cryst",
+  "q": "A subspecies with the \"Cryst\" suffix is what element?",
+  "answer": "Ice",
+  "wrong": [
+   "Water",
+   "Electric",
+   "Grass"
+  ],
+  "articleID": "pal-subspecies",
+  "difficulty": "easy"
+ },
+ {
+  "id": "suffix-noct",
+  "q": "A subspecies with the \"Noct\" suffix is what element?",
+  "answer": "Dark",
+  "wrong": [
+   "Neutral",
+   "Dragon",
+   "Ground"
+  ],
+  "articleID": "pal-subspecies",
+  "difficulty": "easy"
+ },
+ {
+  "id": "suffix-lux",
+  "q": "A subspecies with the \"Lux\" suffix is what element?",
+  "answer": "Electric",
+  "wrong": [
+   "Light",
+   "Fire",
+   "Ice"
+  ],
+  "articleID": "pal-subspecies",
+  "difficulty": "medium"
+ },
+ {
+  "id": "suffix-botan",
+  "q": "A subspecies with the \"Botan\" suffix is what element?",
+  "answer": "Grass",
+  "wrong": [
+   "Water",
+   "Ground",
+   "Neutral"
+  ],
+  "articleID": "pal-subspecies",
+  "difficulty": "medium"
+ },
+ {
+  "id": "suffix-gild",
+  "q": "What does the \"Gild\" suffix mean on a subspecies?",
+  "answer": "It is coated in gold",
+  "wrong": [
+   "It is a guild leader",
+   "It is extra fast",
+   "It is Ground type"
+  ],
+  "articleID": "pal-subspecies",
+  "difficulty": "hard"
+ },
+ {
+  "id": "subspecies-b",
+  "q": "How are subspecies marked in the Palpedia?",
+  "answer": "A \"B\" suffix on their number (e.g. 5B)",
+  "wrong": [
+   "A star icon",
+   "Red text",
+   "They aren't listed"
+  ],
+  "articleID": "pal-subspecies",
+  "difficulty": "hard"
+ },
+ {
+  "id": "glider-pick",
+  "q": "With several glider Pals in your party, which one is used?",
+  "answer": "The first one from the top of the party",
+  "wrong": [
+   "The strongest",
+   "A random one",
+   "The last one caught"
+  ],
+  "articleID": "gliding",
+  "difficulty": "hard"
+ },
+ {
+  "id": "sprint-speed",
+  "q": "How fast does the player sprint (in game units)?",
+  "answer": "500",
+  "wrong": [
+   "350",
+   "800",
+   "1000"
+  ],
+  "articleID": "rideable-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "incident-pools",
+  "q": "Incident spawns (rare encounters) are chosen…",
+  "answer": "From a pool specific to that region",
+  "wrong": [
+   "Fully at random",
+   "Based on your level only",
+   "By the weather"
+  ],
+  "articleID": "incidents",
+  "difficulty": "hard"
+ }
 ]
