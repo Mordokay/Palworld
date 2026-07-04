@@ -2014,5 +2014,1193 @@
   ],
   "articleID": "guilds",
   "difficulty": "hard"
+ },
+ {
+  "id": "pal-name-length",
+  "q": "How long can a Pal's nickname be?",
+  "answer": "24 characters",
+  "wrong": [
+   "12 characters",
+   "16 characters",
+   "Unlimited"
+  ],
+  "articleID": "pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "pal-capture-xp",
+  "q": "Why capture Pals instead of killing them?",
+  "answer": "Capturing grants much more XP — with a bonus for the first 12 catches of a species",
+  "wrong": [
+   "Killing gives no XP at all",
+   "Capturing is faster",
+   "There is no difference"
+  ],
+  "articleID": "pals",
+  "difficulty": "medium"
+ },
+ {
+  "id": "pal-throw",
+  "q": "What happens when you throw a carried Pal at a building?",
+  "answer": "It starts working on it",
+  "wrong": [
+   "It takes damage",
+   "It runs away",
+   "Nothing"
+  ],
+  "articleID": "pals",
+  "difficulty": "medium"
+ },
+ {
+  "id": "work-range",
+  "q": "Natural Work Suitability levels range from…",
+  "answer": "0 to 4",
+  "wrong": [
+   "1 to 10",
+   "1 to 3",
+   "0 to 100"
+  ],
+  "articleID": "work-suitability",
+  "difficulty": "medium"
+ },
+ {
+  "id": "work-condenser",
+  "q": "How can a Pal's Work Suitability level be raised?",
+  "answer": "The Pal Essence Condenser adds one level",
+  "wrong": [
+   "Feeding it cake",
+   "Sleeping in a fancy bed",
+   "It can't be raised"
+  ],
+  "articleID": "work-suitability",
+  "difficulty": "medium"
+ },
+ {
+  "id": "work-priority",
+  "q": "Which base tasks always have the highest priority?",
+  "answer": "Attack and Defense",
+  "wrong": [
+   "Cooking",
+   "Transporting",
+   "Watering"
+  ],
+  "articleID": "work-suitability",
+  "difficulty": "hard"
+ },
+ {
+  "id": "work-watering",
+  "q": "Besides crops, what does the Watering suitability power?",
+  "answer": "Water wheels",
+  "wrong": [
+   "Furnaces",
+   "Assembly lines",
+   "Beds"
+  ],
+  "articleID": "work-suitability",
+  "difficulty": "hard"
+ },
+ {
+  "id": "grapple-ancient",
+  "q": "What currency unlocks the Grappling Gun?",
+  "answer": "Ancient Technology Points only",
+  "wrong": [
+   "Regular Technology Points",
+   "Gold",
+   "Bounty Tokens"
+  ],
+  "articleID": "grappling-guns",
+  "difficulty": "medium"
+ },
+ {
+  "id": "grapple-stick",
+  "q": "What can a grappling gun NOT stick to?",
+  "answer": "Pals, minerals and underwater terrain",
+  "wrong": [
+   "Buildings",
+   "Cliffs",
+   "The ground"
+  ],
+  "articleID": "grappling-guns",
+  "difficulty": "hard"
+ },
+ {
+  "id": "food-starve-death",
+  "q": "Can you die of starvation?",
+  "answer": "No — health drains to 1 and stops",
+  "wrong": [
+   "Yes, quickly",
+   "Yes, but only Pals",
+   "Only on hard mode"
+  ],
+  "articleID": "food",
+  "difficulty": "medium"
+ },
+ {
+  "id": "food-feedbag",
+  "q": "What does the Feed Bag do?",
+  "answer": "Auto-refills hunger from a dedicated inventory slot",
+  "wrong": [
+   "Doubles nutrition",
+   "Stops food spoiling",
+   "Feeds base Pals remotely"
+  ],
+  "articleID": "food",
+  "difficulty": "medium"
+ },
+ {
+  "id": "food-cottoncandy",
+  "q": "Which food directly raises a Pal's sanity?",
+  "answer": "Cotton Candy",
+  "wrong": [
+   "Baked Berries",
+   "Fried Eggs",
+   "Pancakes"
+  ],
+  "articleID": "food",
+  "difficulty": "hard"
+ },
+ {
+  "id": "food-glutton",
+  "q": "Which nature makes a Pal's food meter drain faster?",
+  "answer": "Glutton",
+  "wrong": [
+   "Diet Lover",
+   "Brave",
+   "Workaholic"
+  ],
+  "articleID": "food",
+  "difficulty": "hard"
+ },
+ {
+  "id": "food-starving-sleep",
+  "q": "What do starving Pals tend to do?",
+  "answer": "Sleep instead of eating",
+  "wrong": [
+   "Rampage",
+   "Run to merchants",
+   "Dig for food"
+  ],
+  "articleID": "food",
+  "difficulty": "hard"
+ },
+ {
+  "id": "meta-dev",
+  "q": "Who develops Palworld?",
+  "answer": "Pocketpair",
+  "wrong": [
+   "Game Freak",
+   "FromSoftware",
+   "Mojang"
+  ],
+  "articleID": "palworld",
+  "difficulty": "easy"
+ },
+ {
+  "id": "meta-sales",
+  "q": "How fast did Palworld sell its first 5 million copies?",
+  "answer": "In the first three days of early access",
+  "wrong": [
+   "In its first year",
+   "In one month",
+   "It never did"
+  ],
+  "articleID": "palworld",
+  "difficulty": "medium"
+ },
+ {
+  "id": "meta-nickname",
+  "q": "What did fans dub Palworld when it was announced?",
+  "answer": "\"Pokemon with Guns\"",
+  "wrong": [
+   "\"Ark 2\"",
+   "\"Minecraft with Pets\"",
+   "\"Zelda at home\""
+  ],
+  "articleID": "palworld",
+  "difficulty": "easy"
+ },
+ {
+  "id": "meta-craftopia",
+  "q": "Which earlier survival-crafting game is Pocketpair known for?",
+  "answer": "Craftopia",
+  "wrong": [
+   "Valheim",
+   "Rust",
+   "Terraria"
+  ],
+  "articleID": "pocketpair",
+  "difficulty": "medium"
+ },
+ {
+  "id": "factions-count",
+  "q": "How many main factions are there?",
+  "answer": "Seven",
+  "wrong": [
+   "Five",
+   "Four",
+   "Ten"
+  ],
+  "articleID": "factions",
+  "difficulty": "medium"
+ },
+ {
+  "id": "feybreak-leader",
+  "q": "Who leads the Feybreak Warriors?",
+  "answer": "Bjorn Seligsson",
+  "wrong": [
+   "Victor Ashford",
+   "Yakumo",
+   "Dr. Brawn"
+  ],
+  "articleID": "factions",
+  "difficulty": "hard"
+ },
+ {
+  "id": "bjorn-pal",
+  "q": "Which Pal accompanies Bjorn Seligsson?",
+  "answer": "Bastigor",
+  "wrong": [
+   "Bellanoir",
+   "Blazamut",
+   "Selyne"
+  ],
+  "articleID": "factions",
+  "difficulty": "hard"
+ },
+ {
+  "id": "char-dresser",
+  "q": "How can you change your character's appearance after creation?",
+  "answer": "With the Antique Dresser",
+  "wrong": [
+   "You can't",
+   "At any mirror",
+   "By rejoining the guild"
+  ],
+  "articleID": "characters",
+  "difficulty": "hard"
+ },
+ {
+  "id": "char-survivor",
+  "q": "Who greets players starting at the Plateau of Beginnings?",
+  "answer": "The Expedition Survivor",
+  "wrong": [
+   "The Black Marketeer",
+   "Zoe Rayne",
+   "The Village Chief"
+  ],
+  "articleID": "characters",
+  "difficulty": "medium"
+ },
+ {
+  "id": "mining-lv2",
+  "q": "What do level 2 mining nodes contain?",
+  "answer": "Ore and Sulfur",
+  "wrong": [
+   "Stone only",
+   "Coal and Pure Quartz",
+   "Paldium only"
+  ],
+  "articleID": "mining",
+  "difficulty": "hard"
+ },
+ {
+  "id": "mining-lv3",
+  "q": "What do level 3 mining nodes contain?",
+  "answer": "Coal and Pure Quartz",
+  "wrong": [
+   "Ore and Sulfur",
+   "Stone and Paldium",
+   "Crude Oil"
+  ],
+  "articleID": "mining",
+  "difficulty": "hard"
+ },
+ {
+  "id": "mining-digtoise",
+  "q": "Which Pal mines ore by spinning in its shell?",
+  "answer": "Digtoise",
+  "wrong": [
+   "Rushoar",
+   "Fuddler",
+   "Anubis"
+  ],
+  "articleID": "mining",
+  "difficulty": "medium"
+ },
+ {
+  "id": "mining-fuddler",
+  "q": "What does Fuddler's partner skill do?",
+  "answer": "Detects nearby ore with vibrations",
+  "wrong": [
+   "Mines twice as fast",
+   "Carries extra ore",
+   "Melts rock"
+  ],
+  "articleID": "mining",
+  "difficulty": "hard"
+ },
+ {
+  "id": "dark-nocturnal",
+  "q": "What's special about Dark Pals at your base?",
+  "answer": "They work through the night instead of sleeping",
+  "wrong": [
+   "They refuse to work",
+   "They only cook",
+   "They scare other Pals"
+  ],
+  "articleID": "dark",
+  "difficulty": "medium"
+ },
+ {
+  "id": "dark-sanity",
+  "q": "What downside comes with Dark Pals' nocturnal work?",
+  "answer": "They're more susceptible to sanity drain",
+  "wrong": [
+   "They eat double",
+   "They break tools",
+   "They attack visitors"
+  ],
+  "articleID": "dark",
+  "difficulty": "hard"
+ },
+ {
+  "id": "noct-meaning",
+  "q": "What does the \"Noct\" suffix mean?",
+  "answer": "Night",
+  "wrong": [
+   "Dark metal",
+   "Poison",
+   "Moon"
+  ],
+  "articleID": "dark",
+  "difficulty": "medium"
+ },
+ {
+  "id": "fire-immune",
+  "q": "Which status effects are Fire Pals immune to?",
+  "answer": "Burn and Ivy-Covered",
+  "wrong": [
+   "Freeze and Soak",
+   "Blind",
+   "Electrify"
+  ],
+  "articleID": "fire",
+  "difficulty": "hard"
+ },
+ {
+  "id": "ice-cooling",
+  "q": "What base job are Ice Pals uniquely suited for?",
+  "answer": "Cooling refrigerators",
+  "wrong": [
+   "Kindling furnaces",
+   "Generating electricity",
+   "Watering crops"
+  ],
+  "articleID": "ice",
+  "difficulty": "easy"
+ },
+ {
+  "id": "electric-immune",
+  "q": "Electric Pals are immune to which condition?",
+  "answer": "Electrify",
+  "wrong": [
+   "Burn",
+   "Freeze",
+   "Blind"
+  ],
+  "articleID": "electric",
+  "difficulty": "medium"
+ },
+ {
+  "id": "ground-immune",
+  "q": "Ground Pals are immune to Electrify and…",
+  "answer": "Muddy",
+  "wrong": [
+   "Burn",
+   "Freeze",
+   "Soak"
+  ],
+  "articleID": "ground",
+  "difficulty": "hard"
+ },
+ {
+  "id": "terra-meaning",
+  "q": "What does the \"Terra\" suffix mean?",
+  "answer": "Earth",
+  "wrong": [
+   "Terror",
+   "Territory",
+   "Turtle"
+  ],
+  "articleID": "ground",
+  "difficulty": "medium"
+ },
+ {
+  "id": "water-soak",
+  "q": "Water Pals are immune to which condition?",
+  "answer": "Soak",
+  "wrong": [
+   "Freeze",
+   "Burn",
+   "Muddy"
+  ],
+  "articleID": "water",
+  "difficulty": "hard"
+ },
+ {
+  "id": "stats-base",
+  "q": "What are every Pal's base stats at level 0?",
+  "answer": "500 HP, 100 Attack, 50 Defense",
+  "wrong": [
+   "100 HP, 100 Attack, 100 Defense",
+   "1000 HP, 50 Attack, 25 Defense",
+   "They differ per species"
+  ],
+  "articleID": "pal-stats",
+  "difficulty": "hard"
+ },
+ {
+  "id": "stats-iv",
+  "q": "What do a Pal's Individual Values (IVs) affect?",
+  "answer": "Its stat gains on level-up — always as a positive bonus",
+  "wrong": [
+   "Its element",
+   "Its size",
+   "Its passive skills"
+  ],
+  "articleID": "pal-stats",
+  "difficulty": "hard"
+ },
+ {
+  "id": "stats-hp-level",
+  "q": "How much flat HP does every Pal gain per level?",
+  "answer": "5",
+  "wrong": [
+   "10",
+   "25",
+   "1"
+  ],
+  "articleID": "pal-stats",
+  "difficulty": "hard"
+ },
+ {
+  "id": "skills-equipped",
+  "q": "How many Active Skills can a Pal have enabled at once?",
+  "answer": "3",
+  "wrong": [
+   "4",
+   "5",
+   "Unlimited"
+  ],
+  "articleID": "skills",
+  "difficulty": "medium"
+ },
+ {
+  "id": "skills-learned",
+  "q": "How many Active Skills can a Pal LEARN in total?",
+  "answer": "Unlimited — but each only once",
+  "wrong": [
+   "Only 3",
+   "Ten",
+   "One per level"
+  ],
+  "articleID": "skills",
+  "difficulty": "hard"
+ },
+ {
+  "id": "skills-manual",
+  "q": "When can you trigger a Pal's skills manually?",
+  "answer": "While riding it",
+  "wrong": [
+   "Never",
+   "Only in towers",
+   "Only with skill fruits"
+  ],
+  "articleID": "skills",
+  "difficulty": "medium"
+ },
+ {
+  "id": "gear-tiers",
+  "q": "How many schematic tiers do most weapons and armor have?",
+  "answer": "4 — legendary is the highest",
+  "wrong": [
+   "2",
+   "6",
+   "10"
+  ],
+  "articleID": "gear",
+  "difficulty": "hard"
+ },
+ {
+  "id": "gear-palgear",
+  "q": "Where is Pal Gear (saddles, gloves, launchers) crafted?",
+  "answer": "The Pal Gear Workbench",
+  "wrong": [
+   "Any campfire",
+   "The Palbox",
+   "The Ranch"
+  ],
+  "articleID": "gear",
+  "difficulty": "easy"
+ },
+ {
+  "id": "weapons-melee",
+  "q": "What's true about melee weapons?",
+  "answer": "They have no upgraded schematics",
+  "wrong": [
+   "They're the strongest class",
+   "They break instantly",
+   "They need ammo"
+  ],
+  "articleID": "weapons",
+  "difficulty": "hard"
+ },
+ {
+  "id": "crouch-slide",
+  "q": "What happens when you crouch at speed or on a slope?",
+  "answer": "You slide — accelerating downhill",
+  "wrong": [
+   "You trip",
+   "You stop instantly",
+   "You turn invisible"
+  ],
+  "articleID": "crouching",
+  "difficulty": "medium"
+ },
+ {
+  "id": "slide-spheres",
+  "q": "Can you throw Pal Spheres while sliding?",
+  "answer": "Yes",
+  "wrong": [
+   "No",
+   "Only uphill",
+   "Only at night"
+  ],
+  "articleID": "crouching",
+  "difficulty": "hard"
+ },
+ {
+  "id": "fall-mitigate",
+  "q": "Which of these does NOT prevent fall damage?",
+  "answer": "Rolling on landing",
+  "wrong": [
+   "Opening the glider",
+   "Grabbing a wall mid-air",
+   "Calling a flying mount"
+  ],
+  "articleID": "falling",
+  "difficulty": "medium"
+ },
+ {
+  "id": "fall-spheres",
+  "q": "What can you still do while falling?",
+  "answer": "Throw Pal Spheres at wild Pals",
+  "wrong": [
+   "Summon your party Pal",
+   "Open your Palbox",
+   "Cook food"
+  ],
+  "articleID": "falling",
+  "difficulty": "hard"
+ },
+ {
+  "id": "sleep-night",
+  "q": "What does sleeping in a bed do besides heal?",
+  "answer": "Skips the night",
+  "wrong": [
+   "Doubles XP",
+   "Resets cooldowns",
+   "Cures all debuffs"
+  ],
+  "articleID": "sleeping",
+  "difficulty": "easy"
+ },
+ {
+  "id": "sleep-catch",
+  "q": "Why hunt Pals at night?",
+  "answer": "Sleeping Pals are easier to catch — with a back bonus",
+  "wrong": [
+   "They drop more gold",
+   "They can't fight back at all",
+   "They're always Lucky"
+  ],
+  "articleID": "sleeping",
+  "difficulty": "medium"
+ },
+ {
+  "id": "oilrig-who",
+  "q": "Who controls the Oil Rig stronghold?",
+  "answer": "The Rayne Syndicate",
+  "wrong": [
+   "The PIDF",
+   "Feybreak Warriors",
+   "The Moonflower Clan"
+  ],
+  "articleID": "oil-rig",
+  "difficulty": "medium"
+ },
+ {
+  "id": "oilrig-level",
+  "q": "What level is recommended before raiding the Oil Rig?",
+  "answer": "At least 50",
+  "wrong": [
+   "20",
+   "35",
+   "No requirement"
+  ],
+  "articleID": "oil-rig",
+  "difficulty": "hard"
+ },
+ {
+  "id": "oilrig-turrets",
+  "q": "How do you disable the Oil Rig's turrets and laser towers?",
+  "answer": "Use the console on them",
+  "wrong": [
+   "Destroy the generator",
+   "They can't be disabled",
+   "Bribe the guards"
+  ],
+  "articleID": "oil-rig",
+  "difficulty": "hard"
+ },
+ {
+  "id": "sanctuary-count",
+  "q": "How many Wildlife Sanctuaries are there?",
+  "answer": "Three",
+  "wrong": [
+   "One",
+   "Five",
+   "Nine"
+  ],
+  "articleID": "wildlife-sanctuary",
+  "difficulty": "medium"
+ },
+ {
+  "id": "sanctuary-spawns",
+  "q": "What spawns on Wildlife Sanctuaries?",
+  "answer": "Wild Alpha Pals and rare subspecies",
+  "wrong": [
+   "Only merchants",
+   "Tower bosses",
+   "Nothing special"
+  ],
+  "articleID": "wildlife-sanctuary",
+  "difficulty": "medium"
+ },
+ {
+  "id": "settings-capture",
+  "q": "Which of these is an adjustable World Setting?",
+  "answer": "Pal Capture Rate",
+  "wrong": [
+   "Pal color palette",
+   "Tower boss count",
+   "Wiki sync"
+  ],
+  "articleID": "world-settings",
+  "difficulty": "easy"
+ },
+ {
+  "id": "guide-dead-pal",
+  "q": "How do you revive a Pal that dropped in battle?",
+  "answer": "Put it in the Palbox — it recovers over time",
+  "wrong": [
+   "It's gone forever",
+   "Feed it cake",
+   "Use a Phoenix Down"
+  ],
+  "articleID": "guide-how-to-play-palworld",
+  "difficulty": "medium"
+ },
+ {
+  "id": "merchant-uniform",
+  "q": "How do you recognize a Pal Merchant?",
+  "answer": "Light blue uniform",
+  "wrong": [
+   "Red cloak",
+   "Black hood",
+   "Golden armor"
+  ],
+  "articleID": "pal-merchant",
+  "difficulty": "hard"
+ },
+ {
+  "id": "grass-matchup",
+  "q": "Grass is strong against which element?",
+  "answer": "Ground",
+  "wrong": [
+   "Water",
+   "Ice",
+   "Electric"
+  ],
+  "articleID": "grass",
+  "difficulty": "medium"
+ },
+ {
+  "id": "dragon-ryu",
+  "q": "Subspecies that gain the Dragon element get which suffix?",
+  "answer": "Ryu",
+  "wrong": [
+   "Draco",
+   "Wyrm",
+   "Fang"
+  ],
+  "articleID": "dragon",
+  "difficulty": "hard"
+ },
+ {
+  "id": "neutral-weak",
+  "q": "What is Neutral's only elemental weakness?",
+  "answer": "Dark",
+  "wrong": [
+   "Fire",
+   "Dragon",
+   "It has none"
+  ],
+  "articleID": "neutral",
+  "difficulty": "medium"
+ },
+ {
+  "id": "neutral-strength",
+  "q": "Which elements is Neutral strong against?",
+  "answer": "None at all",
+  "wrong": [
+   "Dark",
+   "Water and Fire",
+   "All equally"
+  ],
+  "articleID": "neutral",
+  "difficulty": "medium"
+ },
+ {
+  "id": "tech-points-level",
+  "q": "How many Technology Points do you gain per level-up?",
+  "answer": "6",
+  "wrong": [
+   "1",
+   "3",
+   "10"
+  ],
+  "articleID": "technology",
+  "difficulty": "hard"
+ },
+ {
+  "id": "tech-ancient-boss",
+  "q": "How many Ancient Technology Points does a tower boss award?",
+  "answer": "5",
+  "wrong": [
+   "1",
+   "10",
+   "25"
+  ],
+  "articleID": "technology",
+  "difficulty": "hard"
+ },
+ {
+  "id": "tech-manuals",
+  "q": "Which items grant extra Technology Points?",
+  "answer": "Technical Manuals",
+  "wrong": [
+   "Training Manuals",
+   "Skill Fruits",
+   "Schematics"
+  ],
+  "articleID": "technology",
+  "difficulty": "medium"
+ },
+ {
+  "id": "brawn-what",
+  "q": "What does Dr. Brawn do to your active Pal?",
+  "answer": "A daily experiment that can raise or lower its IVs",
+  "wrong": [
+   "Paints it new colors",
+   "Renames it",
+   "Steals it"
+  ],
+  "articleID": "dr-brawn",
+  "difficulty": "hard"
+ },
+ {
+  "id": "brawn-negative",
+  "q": "What's the downside of a failed Dr. Brawn experiment?",
+  "answer": "-30 IVs to all stats",
+  "wrong": [
+   "The Pal disappears",
+   "It becomes Neutral type",
+   "Nothing"
+  ],
+  "articleID": "dr-brawn",
+  "difficulty": "hard"
+ },
+ {
+  "id": "bed-need",
+  "q": "How many beds does your base need?",
+  "answer": "One per stationed Pal",
+  "wrong": [
+   "One total",
+   "One per two Pals",
+   "Beds are optional decor"
+  ],
+  "articleID": "pal-bed",
+  "difficulty": "medium"
+ },
+ {
+  "id": "bed-fluffy",
+  "q": "What's better about the Fluffy Pal Bed than the Straw one?",
+  "answer": "Pals recover more HP and SAN while sleeping",
+  "wrong": [
+   "It's fireproof",
+   "It houses two Pals",
+   "It generates power"
+  ],
+  "articleID": "pal-bed",
+  "difficulty": "medium"
+ },
+ {
+  "id": "storage-cap",
+  "q": "What's the max stack per storage slot?",
+  "answer": "9999",
+  "wrong": [
+   "99",
+   "999",
+   "64"
+  ],
+  "articleID": "storage",
+  "difficulty": "hard"
+ },
+ {
+  "id": "storage-best",
+  "q": "Which chest is the best storage container?",
+  "answer": "The Advanced Chest — stackable with 54 slots",
+  "wrong": [
+   "Wooden Chest",
+   "Metal Chest",
+   "Cooler Box"
+  ],
+  "articleID": "storage",
+  "difficulty": "hard"
+ },
+ {
+  "id": "storage-guild",
+  "q": "What's special about the Guild Chest?",
+  "answer": "All Guild Chests share the same contents",
+  "wrong": [
+   "It's indestructible",
+   "It's free to build",
+   "Only the master opens it"
+  ],
+  "articleID": "storage",
+  "difficulty": "medium"
+ },
+ {
+  "id": "lockpick-risk",
+  "q": "What happens if you turn a lock with the pick in the wrong spot?",
+  "answer": "The pick breaks",
+  "wrong": [
+   "The chest explodes",
+   "An alarm sounds",
+   "The loot downgrades"
+  ],
+  "articleID": "lockpicking",
+  "difficulty": "medium"
+ },
+ {
+  "id": "lockpick-v3",
+  "q": "Which chests does Lockpicking Tool v3 open?",
+  "answer": "Gold Key chests",
+  "wrong": [
+   "Copper Key chests",
+   "Only dungeon chests",
+   "Any chest instantly"
+  ],
+  "articleID": "lockpicking",
+  "difficulty": "hard"
+ },
+ {
+  "id": "lumber-eikthyrdeer",
+  "q": "Which rideable Pal double-jumps AND boosts tree-cutting?",
+  "answer": "Eikthyrdeer",
+  "wrong": [
+   "Mammorest",
+   "Gumoss",
+   "Direhowl"
+  ],
+  "articleID": "lumbering",
+  "difficulty": "medium"
+ },
+ {
+  "id": "climb-stamina",
+  "q": "When does climbing NOT drain stamina?",
+  "answer": "While holding still on the wall",
+  "wrong": [
+   "While moving up",
+   "Never — it always drains",
+   "At night"
+  ],
+  "articleID": "climbing",
+  "difficulty": "hard"
+ },
+ {
+  "id": "climb-inventory",
+  "q": "What CAN you do while climbing?",
+  "answer": "Open your inventory",
+  "wrong": [
+   "Throw Pal Spheres",
+   "Open the build menu",
+   "Summon your Pal"
+  ],
+  "articleID": "climbing",
+  "difficulty": "hard"
+ },
+ {
+  "id": "achieve-categories",
+  "q": "What are the two main achievement categories?",
+  "answer": "Pal Capturing and Gameplay Progression",
+  "wrong": [
+   "Combat and Cooking",
+   "Story and Side quests",
+   "Speedrun and Casual"
+  ],
+  "articleID": "achievements",
+  "difficulty": "medium"
+ },
+ {
+  "id": "armor-parts",
+  "q": "Armor comes in which three main components?",
+  "answer": "Body, Head and Shields",
+  "wrong": [
+   "Boots, Gloves and Helmets",
+   "Light, Medium, Heavy",
+   "Cloth, Metal, Pal"
+  ],
+  "articleID": "armor",
+  "difficulty": "medium"
+ },
+ {
+  "id": "production-kindling",
+  "q": "Who can operate a furnace?",
+  "answer": "Only Pals with Kindling — players can't",
+  "wrong": [
+   "Anyone",
+   "Only the player",
+   "Water Pals"
+  ],
+  "articleID": "production",
+  "difficulty": "medium"
+ },
+ {
+  "id": "furniture-purpose",
+  "q": "What do most furniture items do?",
+  "answer": "Pure decoration — a few have extra functions",
+  "wrong": [
+   "Boost XP",
+   "House extra Pals",
+   "Generate gold"
+  ],
+  "articleID": "furniture",
+  "difficulty": "easy"
+ },
+ {
+  "id": "grunt-crusher",
+  "q": "What makes Syndicate Crushers stand out?",
+  "answer": "Twice the size of normal NPCs, wielding miniguns",
+  "wrong": [
+   "They're invisible",
+   "They ride Grizzbolts",
+   "They heal allies"
+  ],
+  "articleID": "syndicate-crusher",
+  "difficulty": "medium"
+ },
+ {
+  "id": "grunt-cleaner",
+  "q": "What weapon do Syndicate Cleaners use?",
+  "answer": "Flamethrowers",
+  "wrong": [
+   "Katanas",
+   "Crossbows",
+   "Rocket launchers"
+  ],
+  "articleID": "syndicate-cleaner",
+  "difficulty": "medium"
+ },
+ {
+  "id": "grunt-grenadier",
+  "q": "What's the Syndicate Grenadier's fatal weakness?",
+  "answer": "No close-range attacks — rush him down",
+  "wrong": [
+   "Water attacks",
+   "Loud noises",
+   "Bright light"
+  ],
+  "articleID": "syndicate-grenadier",
+  "difficulty": "hard"
+ },
+ {
+  "id": "grunt-thug",
+  "q": "What's notable about Syndicate Thugs?",
+  "answer": "They can be captured and even deployed like Pals",
+  "wrong": [
+   "They can't be harmed",
+   "They only spawn at night",
+   "They drop legendaries"
+  ],
+  "articleID": "syndicate-thug",
+  "difficulty": "medium"
+ },
+ {
+  "id": "grunt-hunter",
+  "q": "What weapon do Syndicate Hunters carry?",
+  "answer": "Pump-Action Shotguns",
+  "wrong": [
+   "Miniguns",
+   "Wooden clubs",
+   "Laser rifles"
+  ],
+  "articleID": "syndicate-hunter",
+  "difficulty": "hard"
+ },
+ {
+  "id": "grunt-executioner",
+  "q": "Where do PGRU Executioners patrol?",
+  "answer": "Only the Astral Mountains",
+  "wrong": [
+   "Every dungeon",
+   "Sakurajima",
+   "The Oil Rig"
+  ],
+  "articleID": "pal-genetic-research-unit-executioner",
+  "difficulty": "hard"
+ },
+ {
+  "id": "grunt-executioner-pals",
+  "q": "Why don't PGRU Executioners attack nearby wild Pals?",
+  "answer": "Presumably to keep them alive for research",
+  "wrong": [
+   "They're afraid of them",
+   "Their lasers can't hit Pals",
+   "They're blind"
+  ],
+  "articleID": "pal-genetic-research-unit-executioner",
+  "difficulty": "hard"
+ },
+ {
+  "id": "grunt-martyr",
+  "q": "What gear is recommended against Eternal Pyre Martyrs?",
+  "answer": "Heat-resistant armor",
+  "wrong": [
+   "Cold-resistant armor",
+   "A shield only",
+   "Swimming gear"
+  ],
+  "articleID": "brothers-of-the-eternal-pyre-martyr",
+  "difficulty": "medium"
+ },
+ {
+  "id": "grunt-genin",
+  "q": "How do Moonflower Genins attack?",
+  "answer": "Katana dash attacks with a wide swipe",
+  "wrong": [
+   "Shuriken volleys",
+   "Poison darts",
+   "Smoke bombs"
+  ],
+  "articleID": "moonflower-genin",
+  "difficulty": "medium"
+ },
+ {
+  "id": "grunt-guard",
+  "q": "When do village PIDF Guards turn hostile?",
+  "answer": "When you commit a crime in their presence",
+  "wrong": [
+   "At night",
+   "When you carry weapons",
+   "Always"
+  ],
+  "articleID": "pidf-guard",
+  "difficulty": "easy"
+ },
+ {
+  "id": "grunt-infantry-xp",
+  "q": "Why is farming PIDF Infantry for XP a bad idea?",
+  "answer": "They give only about half the XP for their level",
+  "wrong": [
+   "They never die",
+   "They call tower bosses",
+   "They steal your items"
+  ],
+  "articleID": "pidf-infantry",
+  "difficulty": "hard"
+ },
+ {
+  "id": "fpa-devout",
+  "q": "Which weapons do Free Pal Alliance Devouts use?",
+  "answer": "Clubs, electric crossbows and rifles",
+  "wrong": [
+   "Only their fists",
+   "Flamethrowers",
+   "Katanas"
+  ],
+  "articleID": "free-pal-alliance-devout",
+  "difficulty": "hard"
+ },
+ {
+  "id": "desert-legendaries",
+  "q": "Which Legendary duo spawns together in the Dessicated Desert?",
+  "answer": "Necromus and Paladius",
+  "wrong": [
+   "Jetragon and Frostallion",
+   "Paladius and Frostallion",
+   "Bellanoir and Selyne"
+  ],
+  "articleID": "dessicated-desert",
+  "difficulty": "hard"
+ },
+ {
+  "id": "desert-resources",
+  "q": "Which resources is the Dessicated Desert rich in?",
+  "answer": "Ore and Coal",
+  "wrong": [
+   "Sulfur and Quartz",
+   "Wood and Fiber",
+   "Crude Oil"
+  ],
+  "articleID": "dessicated-desert",
+  "difficulty": "hard"
+ },
+ {
+  "id": "settlement-list",
+  "q": "Which of these is a settlement?",
+  "answer": "Duneshelter",
+  "wrong": [
+   "Mount Obsidian",
+   "Oil Rig",
+   "No. 2 Wildlife Sanctuary"
+  ],
+  "articleID": "settlements",
+  "difficulty": "easy"
+ },
+ {
+  "id": "fpa-view",
+  "q": "How does the Free Pal Alliance view Pal Spheres?",
+  "answer": "As exploitation — they oppose capturing Pals",
+  "wrong": [
+   "As sacred relics",
+   "As great business",
+   "They invented them"
+  ],
+  "articleID": "free-pal-alliance",
+  "difficulty": "medium"
+ },
+ {
+  "id": "grunt-jonin",
+  "q": "How do Moonflower Jonins differ from Genins?",
+  "answer": "They're the stronger rank, appearing alongside Genin patrols",
+  "wrong": [
+   "They use rifles",
+   "They only spawn in dungeons",
+   "They can fly"
+  ],
+  "articleID": "moonflower-jonin",
+  "difficulty": "hard"
  }
 ]

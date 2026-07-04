@@ -1,0 +1,1634 @@
+[
+ {
+  "id": "status-conditions",
+  "title": "Status Conditions",
+  "prose": 8745,
+  "status": "covered"
+ },
+ {
+  "id": "zoe-rayne",
+  "title": "Zoe Rayne",
+  "prose": 7069,
+  "status": "covered"
+ },
+ {
+  "id": "base-raids",
+  "title": "Base Raids",
+  "prose": 5739,
+  "status": "covered"
+ },
+ {
+  "id": "lily-everhart",
+  "title": "Lily Everhart",
+  "prose": 5646,
+  "status": "covered"
+ },
+ {
+  "id": "pals",
+  "title": "Pals",
+  "prose": 5445,
+  "status": "covered"
+ },
+ {
+  "id": "marcus-dryden",
+  "title": "Marcus Dryden",
+  "prose": 5421,
+  "status": "covered"
+ },
+ {
+  "id": "treasure-chest",
+  "title": "Treasure Chest",
+  "prose": 5290,
+  "status": "covered"
+ },
+ {
+  "id": "humans",
+  "title": "Humans",
+  "prose": 4904,
+  "status": "covered"
+ },
+ {
+  "id": "crime",
+  "title": "Crime",
+  "prose": 4328,
+  "status": "covered"
+ },
+ {
+  "id": "victor-ashford",
+  "title": "Victor Ashford",
+  "prose": 4234,
+  "status": "covered"
+ },
+ {
+  "id": "work-suitability",
+  "title": "Work Suitability",
+  "prose": 4079,
+  "status": "covered"
+ },
+ {
+  "id": "base-building",
+  "title": "Base Building",
+  "prose": 3904,
+  "status": "covered"
+ },
+ {
+  "id": "elements",
+  "title": "Elements",
+  "prose": 3711,
+  "status": "covered"
+ },
+ {
+  "id": "axel-travers",
+  "title": "Axel Travers",
+  "prose": 3445,
+  "status": "covered"
+ },
+ {
+  "id": "grappling-guns",
+  "title": "Grappling Guns",
+  "prose": 3392,
+  "status": "covered"
+ },
+ {
+  "id": "food",
+  "title": "Food",
+  "prose": 3341,
+  "status": "covered"
+ },
+ {
+  "id": "palworld",
+  "title": "Palworld",
+  "prose": 3324,
+  "status": "covered"
+ },
+ {
+  "id": "pocketpair",
+  "title": "Pocketpair",
+  "prose": 3229,
+  "status": "covered"
+ },
+ {
+  "id": "factions",
+  "title": "Factions",
+  "prose": 3221,
+  "status": "covered"
+ },
+ {
+  "id": "alpha-pals",
+  "title": "Alpha Pals",
+  "prose": 3194,
+  "status": "covered"
+ },
+ {
+  "id": "partner-skills",
+  "title": "Partner Skills",
+  "prose": 3083,
+  "status": "covered"
+ },
+ {
+  "id": "characters",
+  "title": "Characters",
+  "prose": 2980,
+  "status": "covered"
+ },
+ {
+  "id": "mining",
+  "title": "Mining",
+  "prose": 2915,
+  "status": "covered"
+ },
+ {
+  "id": "black-marketeer",
+  "title": "Black Marketeer",
+  "prose": 2914,
+  "status": "covered"
+ },
+ {
+  "id": "rayne-syndicate",
+  "title": "Rayne Syndicate",
+  "prose": 2848,
+  "status": "covered"
+ },
+ {
+  "id": "gliding",
+  "title": "Gliding",
+  "prose": 2823,
+  "status": "covered"
+ },
+ {
+  "id": "guilds",
+  "title": "Guilds",
+  "prose": 2593,
+  "status": "covered"
+ },
+ {
+  "id": "dark",
+  "title": "Dark",
+  "prose": 2566,
+  "status": "covered"
+ },
+ {
+  "id": "passive-skills",
+  "title": "Passive Skills",
+  "prose": 2560,
+  "status": "covered"
+ },
+ {
+  "id": "breeding",
+  "title": "Breeding",
+  "prose": 2473,
+  "status": "covered"
+ },
+ {
+  "id": "cooling",
+  "title": "Cooling",
+  "prose": 2439,
+  "status": "covered"
+ },
+ {
+  "id": "weight",
+  "title": "Weight",
+  "prose": 2316,
+  "status": "covered"
+ },
+ {
+  "id": "dungeons",
+  "title": "Dungeons",
+  "prose": 2227,
+  "status": "covered"
+ },
+ {
+  "id": "incidents",
+  "title": "Incidents",
+  "prose": 2214,
+  "status": "covered"
+ },
+ {
+  "id": "stamina",
+  "title": "Stamina",
+  "prose": 2131,
+  "status": "covered"
+ },
+ {
+  "id": "transporting",
+  "title": "Transporting",
+  "prose": 2108,
+  "status": "covered"
+ },
+ {
+  "id": "crafting",
+  "title": "Crafting",
+  "prose": 1973,
+  "status": "covered"
+ },
+ {
+  "id": "wandering-merchant",
+  "title": "Wandering Merchant",
+  "prose": 1920,
+  "status": "covered"
+ },
+ {
+  "id": "farming",
+  "title": "Farming",
+  "prose": 1914,
+  "status": "covered"
+ },
+ {
+  "id": "environmental-hazards",
+  "title": "Environmental Hazards",
+  "prose": 1794,
+  "status": "covered"
+ },
+ {
+  "id": "fast-travel",
+  "title": "Fast Travel",
+  "prose": 1783,
+  "status": "covered"
+ },
+ {
+  "id": "lucky-pals",
+  "title": "Lucky Pals",
+  "prose": 1774,
+  "status": "covered"
+ },
+ {
+  "id": "oil-rig",
+  "title": "Oil Rig",
+  "prose": 1770,
+  "status": "covered"
+ },
+ {
+  "id": "pal-subspecies",
+  "title": "Pal Subspecies",
+  "prose": 1760,
+  "status": "covered"
+ },
+ {
+  "id": "world-settings",
+  "title": "World Settings",
+  "prose": 1718,
+  "status": "covered"
+ },
+ {
+  "id": "pal-spheres",
+  "title": "Pal Spheres",
+  "prose": 1611,
+  "status": "covered"
+ },
+ {
+  "id": "tower",
+  "title": "Tower",
+  "prose": 1489,
+  "status": "covered"
+ },
+ {
+  "id": "guide-how-to-play-palworld",
+  "title": "Guide:How to Play Palworld",
+  "prose": 1462,
+  "status": "covered"
+ },
+ {
+  "id": "pal-merchant",
+  "title": "Pal Merchant",
+  "prose": 1443,
+  "status": "covered"
+ },
+ {
+  "id": "fire",
+  "title": "Fire",
+  "prose": 1392,
+  "status": "covered"
+ },
+ {
+  "id": "gear",
+  "title": "Gear",
+  "prose": 1268,
+  "status": "covered"
+ },
+ {
+  "id": "pal-stats",
+  "title": "Pal Stats",
+  "prose": 1227,
+  "status": "covered"
+ },
+ {
+  "id": "ice",
+  "title": "Ice",
+  "prose": 1224,
+  "status": "covered"
+ },
+ {
+  "id": "sanity",
+  "title": "Sanity",
+  "prose": 1211,
+  "status": "covered"
+ },
+ {
+  "id": "schematics",
+  "title": "Schematics",
+  "prose": 1195,
+  "status": "covered"
+ },
+ {
+  "id": "pal-eggs",
+  "title": "Pal Eggs",
+  "prose": 1173,
+  "status": "covered"
+ },
+ {
+  "id": "crouching",
+  "title": "Crouching",
+  "prose": 1130,
+  "status": "covered"
+ },
+ {
+  "id": "electric",
+  "title": "Electric",
+  "prose": 1128,
+  "status": "covered"
+ },
+ {
+  "id": "pidf",
+  "title": "PIDF",
+  "prose": 1123,
+  "status": "covered"
+ },
+ {
+  "id": "water",
+  "title": "Water",
+  "prose": 1121,
+  "status": "covered"
+ },
+ {
+  "id": "skills",
+  "title": "Skills",
+  "prose": 1108,
+  "status": "covered"
+ },
+ {
+  "id": "feybreak",
+  "title": "Feybreak",
+  "prose": 1100,
+  "status": "covered"
+ },
+ {
+  "id": "sleeping",
+  "title": "Sleeping",
+  "prose": 1100,
+  "status": "covered"
+ },
+ {
+  "id": "ground",
+  "title": "Ground",
+  "prose": 1092,
+  "status": "covered"
+ },
+ {
+  "id": "falling",
+  "title": "Falling",
+  "prose": 1084,
+  "status": "covered"
+ },
+ {
+  "id": "grass",
+  "title": "Grass",
+  "prose": 1055,
+  "status": "covered"
+ },
+ {
+  "id": "saya-kurosaki",
+  "title": "Saya Kurosaki",
+  "prose": 1055,
+  "status": "covered"
+ },
+ {
+  "id": "weapons",
+  "title": "Weapons",
+  "prose": 1043,
+  "status": "covered"
+ },
+ {
+  "id": "wildlife-sanctuary",
+  "title": "Wildlife Sanctuary",
+  "prose": 1028,
+  "status": "covered"
+ },
+ {
+  "id": "dragon",
+  "title": "Dragon",
+  "prose": 1011,
+  "status": "covered"
+ },
+ {
+  "id": "pal-genetic-research-unit-executioner",
+  "title": "Pal Genetic Research Unit Executioner",
+  "prose": 1005,
+  "status": "covered"
+ },
+ {
+  "id": "neutral",
+  "title": "Neutral",
+  "prose": 993,
+  "status": "covered"
+ },
+ {
+  "id": "pidf-guard",
+  "title": "PIDF Guard",
+  "prose": 966,
+  "status": "covered"
+ },
+ {
+  "id": "technology",
+  "title": "Technology",
+  "prose": 926,
+  "status": "covered"
+ },
+ {
+  "id": "dr-brawn",
+  "title": "Dr. Brawn",
+  "prose": 858,
+  "status": "covered"
+ },
+ {
+  "id": "syndicate-crusher",
+  "title": "Syndicate Crusher",
+  "prose": 840,
+  "status": "covered"
+ },
+ {
+  "id": "achievements",
+  "title": "Achievements",
+  "prose": 832,
+  "status": "covered"
+ },
+ {
+  "id": "pal-bed",
+  "title": "Pal Bed",
+  "prose": 825,
+  "status": "covered"
+ },
+ {
+  "id": "brothers-of-the-eternal-pyre-martyr",
+  "title": "Brothers of the Eternal Pyre Martyr",
+  "prose": 822,
+  "status": "covered"
+ },
+ {
+  "id": "fishing",
+  "title": "Fishing",
+  "prose": 821,
+  "status": "covered"
+ },
+ {
+  "id": "furniture",
+  "title": "Furniture",
+  "prose": 800,
+  "status": "covered"
+ },
+ {
+  "id": "production",
+  "title": "Production",
+  "prose": 794,
+  "status": "covered"
+ },
+ {
+  "id": "windswept-hills",
+  "title": "Windswept Hills",
+  "prose": 793,
+  "status": "covered"
+ },
+ {
+  "id": "moonflower-genin",
+  "title": "Moonflower Genin",
+  "prose": 791,
+  "status": "covered"
+ },
+ {
+  "id": "armor",
+  "title": "Armor",
+  "prose": 789,
+  "status": "covered"
+ },
+ {
+  "id": "syndicate-grenadier",
+  "title": "Syndicate Grenadier",
+  "prose": 780,
+  "status": "covered"
+ },
+ {
+  "id": "raid-bosses",
+  "title": "Raid Bosses",
+  "prose": 778,
+  "status": "covered"
+ },
+ {
+  "id": "climbing",
+  "title": "Climbing",
+  "prose": 758,
+  "status": "covered"
+ },
+ {
+  "id": "settlements",
+  "title": "Settlements",
+  "prose": 747,
+  "status": "covered"
+ },
+ {
+  "id": "syndicate-cleaner",
+  "title": "Syndicate Cleaner",
+  "prose": 732,
+  "status": "covered"
+ },
+ {
+  "id": "syndicate-thug",
+  "title": "Syndicate Thug",
+  "prose": 727,
+  "status": "covered"
+ },
+ {
+  "id": "syndicate-hunter",
+  "title": "Syndicate Hunter",
+  "prose": 722,
+  "status": "covered"
+ },
+ {
+  "id": "storage",
+  "title": "Storage",
+  "prose": 709,
+  "status": "covered"
+ },
+ {
+  "id": "rideable-pals",
+  "title": "Rideable Pals",
+  "prose": 675,
+  "status": "covered"
+ },
+ {
+  "id": "cooking",
+  "title": "Cooking",
+  "prose": 673,
+  "status": "covered"
+ },
+ {
+  "id": "pidf-infantry",
+  "title": "PIDF Infantry",
+  "prose": 673,
+  "status": "covered"
+ },
+ {
+  "id": "dessicated-desert",
+  "title": "Dessicated Desert",
+  "prose": 660,
+  "status": "covered"
+ },
+ {
+  "id": "lockpicking",
+  "title": "Lockpicking",
+  "prose": 655,
+  "status": "covered"
+ },
+ {
+  "id": "lumbering",
+  "title": "Lumbering",
+  "prose": 629,
+  "status": "covered"
+ },
+ {
+  "id": "free-pal-alliance-devout",
+  "title": "Free Pal Alliance Devout",
+  "prose": 620,
+  "status": "covered"
+ },
+ {
+  "id": "sakurajima",
+  "title": "Sakurajima",
+  "prose": 619,
+  "status": "covered"
+ },
+ {
+  "id": "skill-fruits",
+  "title": "Skill Fruits",
+  "prose": 609,
+  "status": "covered"
+ },
+ {
+  "id": "meteorite-event",
+  "title": "Meteorite Event",
+  "prose": 580,
+  "status": "covered"
+ },
+ {
+  "id": "brothers-of-the-eternal-pyre",
+  "title": "Brothers of the Eternal Pyre",
+  "prose": 559,
+  "status": "covered"
+ },
+ {
+  "id": "predator-pals",
+  "title": "Predator Pals",
+  "prose": 519,
+  "status": "covered"
+ },
+ {
+  "id": "pal-genetic-research-unit",
+  "title": "Pal Genetic Research Unit",
+  "prose": 515,
+  "status": "covered"
+ },
+ {
+  "id": "moonflower-clan",
+  "title": "Moonflower Clan",
+  "prose": 500,
+  "status": "covered"
+ },
+ {
+  "id": "journals",
+  "title": "Journals",
+  "prose": 3794,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-5",
+  "title": "Castaway's Journal - Day 5",
+  "prose": 204,
+  "status": "diary-todo"
+ },
+ {
+  "id": "victor-ashford-s-diary-1",
+  "title": "Victor Ashford's Diary - 1",
+  "prose": 166,
+  "status": "diary-todo"
+ },
+ {
+  "id": "victor-ashford-s-diary-2",
+  "title": "Victor Ashford's Diary - 2",
+  "prose": 166,
+  "status": "diary-todo"
+ },
+ {
+  "id": "victor-ashford-s-diary-3",
+  "title": "Victor Ashford's Diary - 3",
+  "prose": 166,
+  "status": "diary-todo"
+ },
+ {
+  "id": "lily-everhart-s-diary-1",
+  "title": "Lily Everhart's Diary - 1",
+  "prose": 156,
+  "status": "diary-todo"
+ },
+ {
+  "id": "lily-everhart-s-diary-2",
+  "title": "Lily Everhart's Diary - 2",
+  "prose": 156,
+  "status": "diary-todo"
+ },
+ {
+  "id": "lily-everhart-s-diary-3",
+  "title": "Lily Everhart's Diary - 3",
+  "prose": 156,
+  "status": "diary-todo"
+ },
+ {
+  "id": "lily-everhart-s-diary-4",
+  "title": "Lily Everhart's Diary - 4",
+  "prose": 156,
+  "status": "diary-todo"
+ },
+ {
+  "id": "zoe-rayne-s-diary-1",
+  "title": "Zoe Rayne's Diary - 1",
+  "prose": 148,
+  "status": "diary-todo"
+ },
+ {
+  "id": "zoe-rayne-s-diary-2",
+  "title": "Zoe Rayne's Diary - 2",
+  "prose": 148,
+  "status": "diary-todo"
+ },
+ {
+  "id": "zoe-rayne-s-diary-3",
+  "title": "Zoe Rayne's Diary - 3",
+  "prose": 148,
+  "status": "diary-todo"
+ },
+ {
+  "id": "zoe-rayne-s-diary-4",
+  "title": "Zoe Rayne's Diary - 4",
+  "prose": 148,
+  "status": "diary-todo"
+ },
+ {
+  "id": "zoe-rayne-s-diary-5",
+  "title": "Zoe Rayne's Diary - 5",
+  "prose": 148,
+  "status": "diary-todo"
+ },
+ {
+  "id": "marcus-dryden-s-diary-1",
+  "title": "Marcus Dryden's Diary - 1",
+  "prose": 143,
+  "status": "diary-todo"
+ },
+ {
+  "id": "marcus-dryden-s-diary-2",
+  "title": "Marcus Dryden's Diary - 2",
+  "prose": 143,
+  "status": "diary-todo"
+ },
+ {
+  "id": "marcus-dryden-s-diary-3",
+  "title": "Marcus Dryden's Diary - 3",
+  "prose": 143,
+  "status": "diary-todo"
+ },
+ {
+  "id": "bjorn-seligsson-s-diary-1",
+  "title": "Bjorn Seligsson's Diary - 1",
+  "prose": 88,
+  "status": "diary-todo"
+ },
+ {
+  "id": "bjorn-seligsson-s-diary-2",
+  "title": "Bjorn Seligsson's Diary - 2",
+  "prose": 88,
+  "status": "diary-todo"
+ },
+ {
+  "id": "bjorn-seligsson-s-diary-3",
+  "title": "Bjorn Seligsson's Diary - 3",
+  "prose": 88,
+  "status": "diary-todo"
+ },
+ {
+  "id": "bjorn-seligsson-s-diary-4",
+  "title": "Bjorn Seligsson's Diary - 4",
+  "prose": 88,
+  "status": "diary-todo"
+ },
+ {
+  "id": "bjorn-seligsson-s-diary-5",
+  "title": "Bjorn Seligsson's Diary - 5",
+  "prose": 88,
+  "status": "diary-todo"
+ },
+ {
+  "id": "saya-kurosaki-s-diary-1",
+  "title": "Saya Kurosaki's Diary - 1",
+  "prose": 82,
+  "status": "diary-todo"
+ },
+ {
+  "id": "saya-kurosaki-s-diary-2",
+  "title": "Saya Kurosaki's Diary - 2",
+  "prose": 82,
+  "status": "diary-todo"
+ },
+ {
+  "id": "saya-kurosaki-s-diary-3",
+  "title": "Saya Kurosaki's Diary - 3",
+  "prose": 82,
+  "status": "diary-todo"
+ },
+ {
+  "id": "saya-kurosaki-s-diary-4",
+  "title": "Saya Kurosaki's Diary - 4",
+  "prose": 82,
+  "status": "diary-todo"
+ },
+ {
+  "id": "saya-kurosaki-s-diary-5",
+  "title": "Saya Kurosaki's Diary - 5",
+  "prose": 82,
+  "status": "diary-todo"
+ },
+ {
+  "id": "axel-travers-s-diary-1",
+  "title": "Axel Travers's Diary - 1",
+  "prose": 80,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-12-1",
+  "title": "Castaway's Journal - Day 12-1",
+  "prose": 55,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-12-2",
+  "title": "Castaway's Journal - Day 12-2",
+  "prose": 55,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-12-3",
+  "title": "Castaway's Journal - Day 12-3",
+  "prose": 55,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-1-1",
+  "title": "Castaway's Journal - Day 1-1",
+  "prose": 54,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-1-2",
+  "title": "Castaway's Journal - Day 1-2",
+  "prose": 54,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-10",
+  "title": "Castaway's Journal - Day 10",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-11",
+  "title": "Castaway's Journal - Day 11",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-13",
+  "title": "Castaway's Journal - Day 13",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-15",
+  "title": "Castaway's Journal - Day 15",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-18",
+  "title": "Castaway's Journal - Day 18",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-22",
+  "title": "Castaway's Journal - Day 22",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-25",
+  "title": "Castaway's Journal - Day 25",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-29",
+  "title": "Castaway's Journal - Day 29",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-30",
+  "title": "Castaway's Journal - Day 30",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-32",
+  "title": "Castaway's Journal - Day 32",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-38",
+  "title": "Castaway's Journal - Day 38",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-xx",
+  "title": "Castaway's Journal - Day XX",
+  "prose": 53,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-0",
+  "title": "Castaway's Journal - Day 0",
+  "prose": 52,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-6",
+  "title": "Castaway's Journal - Day 6",
+  "prose": 52,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-8",
+  "title": "Castaway's Journal - Day 8",
+  "prose": 52,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-3",
+  "title": "Castaway's Journal - Day 3",
+  "prose": 50,
+  "status": "diary-todo"
+ },
+ {
+  "id": "castaway-s-journal-day-2",
+  "title": "Castaway's Journal Day 2",
+  "prose": 50,
+  "status": "diary-todo"
+ },
+ {
+  "id": "palpagos-islands-overview",
+  "title": "Palpagos Islands/Overview",
+  "prose": 3401,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "palpedia-regular-pals",
+  "title": "Palpedia/Regular Pals",
+  "prose": 1301,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "palworld-wiki",
+  "title": "Palworld Wiki",
+  "prose": 836,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "palpedia-pal-subspecies",
+  "title": "Palpedia/Pal Subspecies",
+  "prose": 821,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "name-this-pal",
+  "title": "Name This Pal",
+  "prose": 477,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "wandering-merchant-shop",
+  "title": "Wandering Merchant/Shop",
+  "prose": 228,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "palpedia",
+  "title": "Palpedia",
+  "prose": 213,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "palpedia-terraria-monsters",
+  "title": "Palpedia/Terraria Monsters",
+  "prose": 141,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "palpedia-unreleased-pals",
+  "title": "Palpedia/Unreleased Pals",
+  "prose": 93,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "palanime",
+  "title": "PalAnime",
+  "prose": 89,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "list-of-pals-by-work-suitability",
+  "title": "List of Pals by Work Suitability",
+  "prose": 57,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "list-of-pals-by-stats",
+  "title": "List of Pals by Stats",
+  "prose": 44,
+  "status": "skip-listpage"
+ },
+ {
+  "id": "yakumo",
+  "title": "Yakumo",
+  "prose": 1991,
+  "status": "skip-lowvalue"
+ },
+ {
+  "id": "expedition-survivor",
+  "title": "Expedition Survivor",
+  "prose": 1123,
+  "status": "skip-lowvalue"
+ },
+ {
+  "id": "early-access-0-4-11",
+  "title": "Early Access 0.4.11",
+  "prose": 10523,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-2-0-6",
+  "title": "Early Access 0.2.0.6",
+  "prose": 8043,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-1",
+  "title": "Early Access 0.3.1",
+  "prose": 7395,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-6-0",
+  "title": "Early Access 0.6.0",
+  "prose": 6240,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-5-0",
+  "title": "Early Access 0.1.5.0",
+  "prose": 3852,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-7-0",
+  "title": "Early Access 0.7.0",
+  "prose": 3666,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-4-0",
+  "title": "Early Access 0.1.4.0",
+  "prose": 3537,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-5-0",
+  "title": "Early Access 0.5.0",
+  "prose": 3433,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-4-13",
+  "title": "Early Access 0.4.13",
+  "prose": 3263,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-5-0-xbox",
+  "title": "Early Access 0.1.5.0 (Xbox)",
+  "prose": 3186,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-1-3-xbox",
+  "title": "Early Access 0.1.1.3 (Xbox)",
+  "prose": 2788,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-4-14",
+  "title": "Early Access 0.4.14",
+  "prose": 2261,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-4",
+  "title": "Early Access 0.3.4",
+  "prose": 2066,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-4-15",
+  "title": "Early Access 0.4.15",
+  "prose": 1476,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-4-1",
+  "title": "Early Access 0.1.4.1",
+  "prose": 1173,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-1-4-xbox",
+  "title": "Early Access 0.1.1.4 (Xbox)",
+  "prose": 1145,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-5-1",
+  "title": "Early Access 0.1.5.1",
+  "prose": 1133,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-5-1-xbox",
+  "title": "Early Access 0.1.5.1 (Xbox)",
+  "prose": 975,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-2-4-0",
+  "title": "Early Access 0.2.4.0",
+  "prose": 804,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-10",
+  "title": "Early Access 0.3.10",
+  "prose": 804,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-5",
+  "title": "Early Access 0.3.5",
+  "prose": 789,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-0-0-xbox",
+  "title": "Early Access 0.1.0.0 (Xbox)",
+  "prose": 649,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-4-12",
+  "title": "Early Access 0.4.12",
+  "prose": 629,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-1-0-xbox",
+  "title": "Early Access 0.1.1.0 (Xbox)",
+  "prose": 558,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-2-3-0",
+  "title": "Early Access 0.2.3.0",
+  "prose": 536,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-2-1-0-xbox",
+  "title": "Early Access 0.2.1.0 (Xbox)",
+  "prose": 528,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-2-2-0",
+  "title": "Early Access 0.2.2.0",
+  "prose": 459,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-1-1-xbox",
+  "title": "Early Access 0.1.1.1 (Xbox)",
+  "prose": 376,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-3-0",
+  "title": "Early Access 0.1.3.0",
+  "prose": 375,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-6",
+  "title": "Early Access 0.3.6",
+  "prose": 358,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-2-1-0",
+  "title": "Early Access 0.2.1.0",
+  "prose": 353,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-8",
+  "title": "Early Access 0.3.8",
+  "prose": 348,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-7",
+  "title": "Early Access 0.3.7",
+  "prose": 342,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "version-history",
+  "title": "Version History",
+  "prose": 339,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-5-2-xbox",
+  "title": "Early Access 0.1.5.2 (Xbox)",
+  "prose": 317,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-12",
+  "title": "Early Access 0.3.12",
+  "prose": 273,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-2-4-1-xbox",
+  "title": "Early Access 0.2.4.1 (Xbox)",
+  "prose": 266,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-2",
+  "title": "Early Access 0.3.2",
+  "prose": 237,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-11",
+  "title": "Early Access 0.3.11",
+  "prose": 217,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-9",
+  "title": "Early Access 0.3.9",
+  "prose": 198,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-1-2-xbox",
+  "title": "Early Access 0.1.1.2 (Xbox)",
+  "prose": 181,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-3-3",
+  "title": "Early Access 0.3.3",
+  "prose": 137,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "early-access-0-1-2-0",
+  "title": "Early Access 0.1.2.0",
+  "prose": 135,
+  "status": "skip-patchnotes"
+ },
+ {
+  "id": "sea-breeze-archipelago",
+  "title": "Sea Breeze Archipelago",
+  "prose": 491,
+  "status": "skip-stub"
+ },
+ {
+  "id": "sphere-module",
+  "title": "Sphere module",
+  "prose": 468,
+  "status": "skip-stub"
+ },
+ {
+  "id": "consumables",
+  "title": "Consumables",
+  "prose": 453,
+  "status": "skip-stub"
+ },
+ {
+  "id": "parbobox",
+  "title": "Parbobox",
+  "prose": 446,
+  "status": "skip-stub"
+ },
+ {
+  "id": "syndicate-gunner",
+  "title": "Syndicate Gunner",
+  "prose": 445,
+  "status": "skip-stub"
+ },
+ {
+  "id": "watering",
+  "title": "Watering",
+  "prose": 418,
+  "status": "skip-stub"
+ },
+ {
+  "id": "utility",
+  "title": "Utility",
+  "prose": 415,
+  "status": "skip-stub"
+ },
+ {
+  "id": "fisherman-s-point",
+  "title": "Fisherman's Point",
+  "prose": 402,
+  "status": "skip-stub"
+ },
+ {
+  "id": "mount-obsidian",
+  "title": "Mount Obsidian",
+  "prose": 398,
+  "status": "skip-stub"
+ },
+ {
+  "id": "duneshelter",
+  "title": "Duneshelter",
+  "prose": 396,
+  "status": "skip-stub"
+ },
+ {
+  "id": "generating-electricity",
+  "title": "Generating Electricity",
+  "prose": 386,
+  "status": "skip-stub"
+ },
+ {
+  "id": "legendary-pals",
+  "title": "Legendary Pals",
+  "prose": 383,
+  "status": "skip-stub"
+ },
+ {
+  "id": "workload",
+  "title": "Workload",
+  "prose": 382,
+  "status": "skip-stub"
+ },
+ {
+  "id": "gathering",
+  "title": "Gathering",
+  "prose": 367,
+  "status": "skip-stub"
+ },
+ {
+  "id": "materials",
+  "title": "Materials",
+  "prose": 366,
+  "status": "skip-stub"
+ },
+ {
+  "id": "astral-mountains",
+  "title": "Astral Mountains",
+  "prose": 346,
+  "status": "skip-stub"
+ },
+ {
+  "id": "sealed-realms",
+  "title": "Sealed Realms",
+  "prose": 340,
+  "status": "skip-stub"
+ },
+ {
+  "id": "pal-trust",
+  "title": "Pal Trust",
+  "prose": 332,
+  "status": "skip-stub"
+ },
+ {
+  "id": "rolling",
+  "title": "Rolling",
+  "prose": 322,
+  "status": "skip-stub"
+ },
+ {
+  "id": "arrows",
+  "title": "Arrows",
+  "prose": 289,
+  "status": "skip-stub"
+ },
+ {
+  "id": "kindling",
+  "title": "Kindling",
+  "prose": 289,
+  "status": "skip-stub"
+ },
+ {
+  "id": "planting",
+  "title": "Planting",
+  "prose": 286,
+  "status": "skip-stub"
+ },
+ {
+  "id": "no-1-wildlife-sanctuary",
+  "title": "No. 1 Wildlife Sanctuary",
+  "prose": 282,
+  "status": "skip-stub"
+ },
+ {
+  "id": "handiwork",
+  "title": "Handiwork",
+  "prose": 279,
+  "status": "skip-stub"
+ },
+ {
+  "id": "no-3-wildlife-sanctuary",
+  "title": "No. 3 Wildlife Sanctuary",
+  "prose": 275,
+  "status": "skip-stub"
+ },
+ {
+  "id": "bjorn-seligsson",
+  "title": "Bjorn Seligsson",
+  "prose": 236,
+  "status": "skip-stub"
+ },
+ {
+  "id": "no-2-wildlife-sanctuary",
+  "title": "No. 2 Wildlife Sanctuary",
+  "prose": 232,
+  "status": "skip-stub"
+ },
+ {
+  "id": "small-settlement",
+  "title": "Small Settlement",
+  "prose": 201,
+  "status": "skip-stub"
+ },
+ {
+  "id": "v1-armor",
+  "title": "V1 Armor",
+  "prose": 193,
+  "status": "skip-stub"
+ },
+ {
+  "id": "desiccated-mineshaft",
+  "title": "Desiccated Mineshaft",
+  "prose": 170,
+  "status": "skip-stub"
+ },
+ {
+  "id": "technical-manual",
+  "title": "Technical Manual",
+  "prose": 165,
+  "status": "skip-stub"
+ },
+ {
+  "id": "training-manuals",
+  "title": "Training Manuals",
+  "prose": 160,
+  "status": "skip-stub"
+ },
+ {
+  "id": "bow",
+  "title": "Bow",
+  "prose": 144,
+  "status": "skip-stub"
+ },
+ {
+  "id": "twilight-dunes",
+  "title": "Twilight Dunes",
+  "prose": 142,
+  "status": "skip-stub"
+ },
+ {
+  "id": "supply-drop",
+  "title": "Supply Drop",
+  "prose": 138,
+  "status": "skip-stub"
+ },
+ {
+  "id": "bounty-tokens",
+  "title": "Bounty tokens",
+  "prose": 133,
+  "status": "skip-stub"
+ },
+ {
+  "id": "pal-arena",
+  "title": "Pal Arena",
+  "prose": 131,
+  "status": "skip-stub"
+ },
+ {
+  "id": "accessories",
+  "title": "Accessories",
+  "prose": 129,
+  "status": "skip-stub"
+ },
+ {
+  "id": "medicine-production",
+  "title": "Medicine Production",
+  "prose": 125,
+  "status": "skip-stub"
+ },
+ {
+  "id": "forgotten-island",
+  "title": "Forgotten Island",
+  "prose": 119,
+  "status": "skip-stub"
+ },
+ {
+  "id": "meteorite-ammo",
+  "title": "Meteorite ammo",
+  "prose": 95,
+  "status": "skip-stub"
+ },
+ {
+  "id": "nightmare-ray",
+  "title": "Nightmare Ray",
+  "prose": 88,
+  "status": "skip-stub"
+ },
+ {
+  "id": "spear",
+  "title": "Spear",
+  "prose": 84,
+  "status": "skip-stub"
+ },
+ {
+  "id": "hallowed-bar",
+  "title": "Hallowed Bar",
+  "prose": 79,
+  "status": "skip-stub"
+ },
+ {
+  "id": "metal-detector",
+  "title": "Metal Detector",
+  "prose": 67,
+  "status": "skip-stub"
+ },
+ {
+  "id": "coralum-ore",
+  "title": "Coralum Ore",
+  "prose": 19,
+  "status": "skip-stub"
+ },
+ {
+  "id": "palpagos-islands",
+  "title": "Palpagos Islands",
+  "prose": 14,
+  "status": "skip-stub"
+ },
+ {
+  "id": "sealed-realm-of-terraria",
+  "title": "Sealed realm of terraria",
+  "prose": 14,
+  "status": "skip-stub"
+ },
+ {
+  "id": "celestial-sigil",
+  "title": "Celestial Sigil",
+  "prose": 0,
+  "status": "skip-stub"
+ },
+ {
+  "id": "moonlord",
+  "title": "Moonlord",
+  "prose": 0,
+  "status": "skip-stub"
+ },
+ {
+  "id": "onion-seeds",
+  "title": "Onion seeds",
+  "prose": 0,
+  "status": "skip-stub"
+ },
+ {
+  "id": "pal-gear-workbench-table",
+  "title": "Pal Gear Workbench/table",
+  "prose": 0,
+  "status": "skip-stub"
+ },
+ {
+  "id": "successful-bounty-token",
+  "title": "Successful bounty token",
+  "prose": 0,
+  "status": "skip-stub"
+ },
+ {
+  "id": "xenolord-ultra-slab",
+  "title": "Xenolord (Ultra) Slab",
+  "prose": 0,
+  "status": "skip-stub"
+ },
+ {
+  "id": "xenolord-slab",
+  "title": "Xenolord Slab",
+  "prose": 0,
+  "status": "skip-stub"
+ },
+ {
+  "id": "moonflower-jonin",
+  "title": "Moonflower Jonin",
+  "prose": 693,
+  "status": "covered"
+ },
+ {
+  "id": "free-pal-alliance",
+  "title": "Free Pal Alliance",
+  "prose": 621,
+  "status": "covered"
+ },
+ {
+  "id": "ingredients-food",
+  "title": "Ingredients & Food",
+  "prose": 518,
+  "status": "skip-listpage"
+ }
+]
