@@ -207,30 +207,43 @@ struct AchievementCard: View {
 
 // MARK: - Confetti (perfect scores, unlocks, level-ups)
 
+/// Two confetti cannons in the bottom corners: pieces launch up and inward,
+/// arc over under gravity, and flutter down. Units are height-relative so it
+/// looks the same on any screen.
 struct ConfettiView: View {
     private struct Particle {
-        let x: Double        // 0...1 across the width
+        let fromLeft: Bool
         let delay: Double
-        let speed: Double    // fraction of height per second
+        /// launch angle above horizontal (radians), aimed into the screen
+        let angle: Double
+        /// launch speed, in screen-heights per second
+        let speed: Double
         let wobble: Double
         let phase: Double
         let size: Double
         let color: Color
         let spin: Double
 
-        static func random() -> Particle {
-            Particle(x: .random(in: 0...1), delay: .random(in: 0...0.7),
-                     speed: .random(in: 0.35...0.75), wobble: .random(in: 12...34),
-                     phase: .random(in: 0...(2 * .pi)), size: .random(in: 6...11),
+        static func random(fromLeft: Bool) -> Particle {
+            Particle(fromLeft: fromLeft,
+                     delay: .random(in: 0...0.45),
+                     angle: .random(in: (.pi * 0.28)...(.pi * 0.42)),  // 50°–75°
+                     speed: .random(in: 1.15...1.65),
+                     wobble: .random(in: 8...26),
+                     phase: .random(in: 0...(2 * .pi)),
+                     size: .random(in: 6...11),
                      color: [.red, .orange, .yellow, .green, .teal, .blue, .purple,
                              .pink].randomElement()!,
-                     spin: .random(in: 2...6))
+                     spin: .random(in: 3...9))
         }
     }
 
-    private let particles = (0..<70).map { _ in Particle.random() }
+    private let particles = (0..<45).map { _ in Particle.random(fromLeft: true) }
+        + (0..<45).map { _ in Particle.random(fromLeft: false) }
     private let start = Date()
-    private let duration = 3.2
+    private let duration = 4.0
+    /// gravity, in screen-heights per second²
+    private let gravity = 1.35
 
     var body: some View {
         TimelineView(.animation) { timeline in
@@ -240,10 +253,16 @@ struct ConfettiView: View {
                 for particle in particles {
                     let life = t - particle.delay
                     guard life > 0 else { continue }
-                    let y = life * particle.speed * size.height - 20
-                    guard y < size.height + 20 else { continue }
-                    let x = particle.x * size.width
-                        + sin(life * 3 + particle.phase) * particle.wobble
+                    // projectile motion from a bottom corner, inward + up
+                    let v = particle.speed * size.height
+                    let vx = cos(particle.angle) * v * (particle.fromLeft ? 1 : -1)
+                    let vy = sin(particle.angle) * v
+                    let x0 = particle.fromLeft ? -12.0 : size.width + 12.0
+                    let x = x0 + vx * life
+                        + sin(life * 4 + particle.phase) * particle.wobble
+                    let y = size.height + 12 - vy * life
+                        + 0.5 * gravity * size.height * life * life
+                    guard y < size.height + 24 else { continue }
                     context.opacity = min(1, max(0, (duration - t) / 0.8))
                     context.drawLayer { layer in
                         layer.translateBy(x: x, y: y)
