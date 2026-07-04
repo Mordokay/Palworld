@@ -7,7 +7,7 @@ struct WheelTopic {
     let icon: String
     let color: Color
     let facet: String
-    let template: any QuestionTemplate
+    let templates: [any QuestionTemplate]
 }
 
 /// Spin the Wheel (DESIGN.md §5): zero-decision play. The wheel is honest to
@@ -26,29 +26,38 @@ struct SpinWheelView: View {
 
     private static let topics: [WheelTopic] = [
         WheelTopic(label: "Spot the Pal", icon: "photo.fill", color: .blue,
-                   facet: "identify", template: PictureToNameTemplate()),
+                   facet: "identify", templates: [PictureToNameTemplate()]),
         WheelTopic(label: "Elements", icon: "flame.fill", color: .orange,
-                   facet: "elements", template: PalElementTemplate()),
+                   facet: "elements", templates: [PalElementTemplate()]),
         WheelTopic(label: "Lore", icon: "book.fill", color: .purple,
-                   facet: "lore", template: LoreToPalTemplate()),
+                   facet: "lore", templates: [LoreToPalTemplate()]),
         WheelTopic(label: "Drops", icon: "shippingbox.fill", color: .brown,
-                   facet: "drops", template: PalDropsTemplate()),
+                   facet: "drops", templates: [PalDropsTemplate()]),
         WheelTopic(label: "Stat Duels", icon: "chart.bar.fill", color: .green,
-                   facet: "stats", template: StatDuelTemplate()),
+                   facet: "stats", templates: [StatDuelTemplate()]),
         WheelTopic(label: "Find the Pal", icon: "magnifyingglass", color: .teal,
-                   facet: "identify", template: NameToPictureTemplate()),
+                   facet: "identify", templates: [NameToPictureTemplate()]),
         WheelTopic(label: "Work", icon: "hammer.fill", color: .cyan,
-                   facet: "work", template: WorkSuitabilityTemplate()),
+                   facet: "work", templates: [WorkSuitabilityTemplate()]),
         WheelTopic(label: "Alpha Titles", icon: "crown.fill", color: .red,
-                   facet: "lore", template: AlphaTitleTemplate()),
+                   facet: "lore", templates: [AlphaTitleTemplate()]),
         WheelTopic(label: "Active Skills", icon: "bolt.circle.fill", color: .mint,
-                   facet: "skills", template: ActiveSkillTemplate()),
+                   facet: "skills", templates: [ActiveSkillTemplate()]),
         WheelTopic(label: "Partner Skills", icon: "person.2.fill", color: .pink,
-                   facet: "partnerSkill", template: PartnerSkillTemplate()),
+                   facet: "partnerSkill", templates: [PartnerSkillTemplate()]),
         WheelTopic(label: "Silhouettes", icon: "moon.stars.fill", color: .indigo,
-                   facet: "identify", template: SilhouetteTemplate()),
+                   facet: "identify", templates: [SilhouetteTemplate()]),
         WheelTopic(label: "Appetites", icon: "fork.knife", color: .yellow,
-                   facet: "utility", template: FoodDuelTemplate()),
+                   facet: "utility", templates: [FoodDuelTemplate()]),
+        WheelTopic(label: "Items", icon: "bag.fill",
+                   color: Color(red: 0.85, green: 0.55, blue: 0.2),
+                   facet: "crafting", templates: QuizEngine.itemTemplates),
+        WheelTopic(label: "Skills", icon: "wand.and.stars",
+                   color: Color(red: 0.5, green: 0.3, blue: 0.9),
+                   facet: "element", templates: QuizEngine.skillTemplates),
+        WheelTopic(label: "Matchups", icon: "shield.lefthalf.filled",
+                   color: Color(red: 0.2, green: 0.55, blue: 0.45),
+                   facet: "elements", templates: QuizEngine.worldTemplates),
     ]
 
     /// Each spin deals a surprise hand: somewhere between 10 and 20 questions.
@@ -133,7 +142,7 @@ struct SpinWheelView: View {
                              questions: QuizEngine.makeSession(
                                  data: data, count: dealtCount,
                                  difficulty: preferredDifficulty,
-                                 templates: [topic.template]),
+                                 templates: topic.templates),
                              difficulty: preferredDifficulty,
                              categoryLabel: topic.label,
                              sessionMode: "wheel")

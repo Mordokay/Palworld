@@ -81,7 +81,7 @@ struct AppRoot: View {
         for (i, pal) in water.enumerated() {
             for template in QuizEngine.palTemplates.prefix(3) {
                 guard let q = template.generate(data: data, difficulty: .medium,
-                                                rng: engine, subject: pal) else { continue }
+                                                rng: engine, subjectID: pal.id) else { continue }
                 let correct = (i + signatures.count) % 4 != 0
                 for _ in 0..<(correct ? 3 : 1) {
                     ProgressionStore.recordAnswer(modelContext, data: data, question: q,

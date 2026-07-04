@@ -135,6 +135,23 @@ enum Progression {
         return facets
     }
 
+    /// Item facets follow the item templates (icon/recipe/material/tier/rarity).
+    static func facets(for item: Item) -> [String] {
+        var facets: [String] = []
+        if GameData.imageURL(item.image, kind: .items) != nil { facets.append("identify") }
+        if !item.craftMaterials.isEmpty { facets.append("crafting") }
+        if (item.techTier ?? 0) > 0 { facets.append("tech") }
+        if !item.rarity.isEmpty { facets.append("rarity") }
+        return facets
+    }
+
+    static func facets(for skill: Skill) -> [String] {
+        var facets: [String] = []
+        if skill.description.count > 30 { facets.append("identify") }
+        if !skill.element.isEmpty { facets.append("element") }
+        return facets
+    }
+
     static let dayFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -313,30 +330,51 @@ struct ProgressionSnapshot {
         rawMisses = misses
     }
 
-    func masteredFacetCount(pal: Pal) -> Int {
-        Progression.facets(for: pal).filter {
-            (facets[pal.id]?[$0] ?? 0) >= Progression.masteryThreshold
+    func masteredFacetCount(entityID: String, applicable: [String]) -> Int {
+        applicable.filter {
+            (facets[entityID]?[$0] ?? 0) >= Progression.masteryThreshold
         }.count
     }
 
     /// 0...1 — partial credit per applicable facet (net/threshold, capped),
     /// averaged, so bars move from the first correct answer instead of
     /// staying at 0 until a facet is fully mastered.
-    func completeness(pal: Pal) -> Double {
-        let applicable = Progression.facets(for: pal)
+    func completeness(entityID: String, applicable: [String]) -> Double {
         guard !applicable.isEmpty else { return 0 }
         let perFacet = applicable.map { facet -> Double in
-            let net = facets[pal.id]?[facet] ?? 0
+            let net = facets[entityID]?[facet] ?? 0
             return min(Double(net), Double(Progression.masteryThreshold))
                 / Double(Progression.masteryThreshold)
         }
         return perFacet.reduce(0, +) / Double(applicable.count)
     }
 
+    func masteredFacetCount(pal: Pal) -> Int {
+        masteredFacetCount(entityID: pal.id, applicable: Progression.facets(for: pal))
+    }
+
+    func completeness(pal: Pal) -> Double {
+        completeness(entityID: pal.id, applicable: Progression.facets(for: pal))
+    }
+
     /// 0...1 — mean completeness across pals.
     func completeness(pals: [Pal]) -> Double {
         guard !pals.isEmpty else { return 0 }
         return pals.map { completeness(pal: $0) }.reduce(0, +) / Double(pals.count)
+    }
+
+    func completeness(items: [Item]) -> Double {
+        let rated = items.filter { !Progression.facets(for: $0).isEmpty }
+        guard !rated.isEmpty else { return 0 }
+        return rated.map { completeness(entityID: $0.id, applicable: Progression.facets(for: $0)) }
+            .reduce(0, +) / Double(rated.count)
+    }
+
+    func completeness(skills: [Skill]) -> Double {
+        let rated = skills.filter { !Progression.facets(for: $0).isEmpty }
+        guard !rated.isEmpty else { return 0 }
+        return rated.map { completeness(entityID: $0.id, applicable: Progression.facets(for: $0)) }
+            .reduce(0, +) / Double(rated.count)
     }
 
     func totalCorrect(entityID: String) -> Int {

@@ -38,6 +38,16 @@ struct ProgressionView: View {
                         }
                     }
                 }
+
+                Section("Items by type") {
+                    ForEach(itemGroups, id: \.0) { type, members in
+                        itemTypeRow(type, members: members)
+                    }
+                }
+
+                Section("Skills") {
+                    skillsRow
+                }
             }
             .navigationTitle("Progression")
             .navigationDestination(for: QuizRequest.self) { request in
@@ -107,6 +117,89 @@ struct ProgressionView: View {
             }
             Spacer()
             Text("\(snapshot.masteredFacetCount(pal: pal))/\(applicable.count)")
+                .font(.caption2.weight(.bold))
+                .monospacedDigit()
+                .foregroundStyle(.secondary)
+        }
+    }
+
+    // MARK: - Items & skills (quizzable via the item/skill templates)
+
+    /// Items + weapons grouped by their `type`, largest groups first.
+    private var itemGroups: [(String, [Item])] {
+        let quizzable = (data.items + data.weapons).filter {
+            !Progression.facets(for: $0).isEmpty
+        }
+        return Dictionary(grouping: quizzable) { $0.type.isEmpty ? "Other" : $0.type }
+            .sorted { ($1.value.count, $0.key) < ($0.value.count, $1.key) }
+    }
+
+    private func itemTypeRow(_ type: String, members: [Item]) -> some View {
+        DisclosureGroup {
+            ForEach(members.sorted { $0.name < $1.name }) { item in
+                entityRow(id: item.id, name: item.name, image: item.image,
+                          kind: .items, applicable: Progression.facets(for: item))
+            }
+        } label: {
+            HStack(spacing: 8) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("\(type)  ·  \(members.count)")
+                        .font(.subheadline.weight(.bold))
+                    CompletenessBar(value: snapshot.completeness(items: members),
+                                    color: .orange)
+                }
+                Spacer()
+                Text(snapshot.completeness(items: members),
+                     format: .percent.precision(.fractionLength(0)))
+                    .font(.caption.weight(.heavy))
+                    .monospacedDigit()
+                    .foregroundStyle(.orange)
+            }
+        }
+    }
+
+    private var skillsRow: some View {
+        let quizzable = data.skills.filter { !Progression.facets(for: $0).isEmpty }
+        return DisclosureGroup {
+            ForEach(quizzable.sorted { $0.name < $1.name }) { skill in
+                entityRow(id: skill.id, name: skill.name,
+                          image: skill.image ?? Theme.elementIconFile(skill.element.capitalized),
+                          kind: .ui, applicable: Progression.facets(for: skill))
+            }
+        } label: {
+            HStack(spacing: 8) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Active Skills  ·  \(quizzable.count)")
+                        .font(.subheadline.weight(.bold))
+                    CompletenessBar(value: snapshot.completeness(skills: quizzable),
+                                    color: .indigo)
+                }
+                Spacer()
+                Text(snapshot.completeness(skills: quizzable),
+                     format: .percent.precision(.fractionLength(0)))
+                    .font(.caption.weight(.heavy))
+                    .monospacedDigit()
+                    .foregroundStyle(.indigo)
+            }
+        }
+    }
+
+    /// Shared detail row: icon + name + facet dots + mastered count.
+    private func entityRow(id: String, name: String, image: String,
+                           kind: GameData.ImageKind, applicable: [String]) -> some View {
+        HStack(alignment: .top, spacing: 10) {
+            WikiImage(file: image, kind: kind)
+                .frame(width: 30, height: 30)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(name).font(.caption.weight(.semibold))
+                FlowLayout(spacing: 6) {
+                    ForEach(applicable, id: \.self) { facet in
+                        facetDot(facet, net: snapshot.facets[id]?[facet] ?? 0)
+                    }
+                }
+            }
+            Spacer()
+            Text("\(snapshot.masteredFacetCount(entityID: id, applicable: applicable))/\(applicable.count)")
                 .font(.caption2.weight(.bold))
                 .monospacedDigit()
                 .foregroundStyle(.secondary)

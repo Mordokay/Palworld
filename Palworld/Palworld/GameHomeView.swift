@@ -11,10 +11,6 @@ struct GameHomeView: View {
     @Query private var profiles: [PlayerProfile]
     @Query private var missRecords: [MissRecord]
 
-    private static let comingSoon: [(String, String)] = [
-        ("Higher / Lower", "arrow.up.arrow.down"),
-    ]
-
     private var preferredDifficulty: Difficulty {
         Difficulty(rawValue: profiles.first?.preferredDifficulty ?? "") ?? .medium
     }
@@ -38,7 +34,7 @@ struct GameHomeView: View {
                         QuizSetupView(data: data)
                     } label: {
                         ModeCard(title: "Quick Quiz", symbol: "bolt.fill",
-                                 subtitle: "10 questions about pals", locked: false)
+                                 subtitle: "Pals, items, skills — your pick", locked: false)
                     }
                     .buttonStyle(.plain)
 
@@ -75,13 +71,9 @@ struct GameHomeView: View {
                         modeLink("Teacher", "graduationcap.fill", "Study first, then prove it") {
                             TeacherSetupView(data: data)
                         }
-                    }
-
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
-                              spacing: 12) {
-                        ForEach(Self.comingSoon, id: \.0) { mode in
-                            ModeCard(title: mode.0, symbol: mode.1,
-                                     subtitle: "Coming soon", locked: true)
+                        modeLink("Higher / Lower", "arrow.up.arrow.down",
+                                 "Endless stat chain") {
+                            HigherLowerSetupView(data: data)
                         }
                     }
                 }
@@ -279,9 +271,25 @@ struct QuizSetupView: View {
     @Query private var profiles: [PlayerProfile]
     @State private var difficulty: Difficulty = .medium
     @State private var count = 10
+    @State private var topic = "Everything"
+
+    private static let topics: [String: [any QuestionTemplate]?] = [
+        "Everything": nil,   // makeSession default = the full mixed catalog
+        "Pals": QuizEngine.palTemplates,
+        "Items": QuizEngine.itemTemplates,
+        "Skills": QuizEngine.skillTemplates,
+    ]
 
     var body: some View {
         Form {
+            Section("Topic") {
+                Picker("Topic", selection: $topic) {
+                    ForEach(["Everything", "Pals", "Items", "Skills"], id: \.self) {
+                        Text($0).tag($0)
+                    }
+                }
+                .pickerStyle(.segmented)
+            }
             Section("Difficulty") {
                 Picker("Difficulty", selection: $difficulty) {
                     ForEach(Difficulty.allCases) { Text($0.label).tag($0) }
@@ -298,8 +306,10 @@ struct QuizSetupView: View {
                 NavigationLink("Start Quiz") {
                     QuizView(data: data,
                              questions: QuizEngine.makeSession(
-                                 data: data, count: count, difficulty: difficulty),
-                             difficulty: difficulty)
+                                 data: data, count: count, difficulty: difficulty,
+                                 templates: Self.topics[topic] ?? nil),
+                             difficulty: difficulty,
+                             categoryLabel: topic)
                 }
                 .font(.headline)
             }

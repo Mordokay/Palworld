@@ -111,7 +111,15 @@ struct ProfileView: View {
             ForEach(sessions) { session in
                 NavigationLink(value: session.persistentModelID) {
                     HStack(spacing: 12) {
-                        CompletionRing(session: session)
+                        if session.signatures.isEmpty {
+                            // streak runs (Higher/Lower) have no question sheet
+                            Image(systemName: "arrow.up.arrow.down.circle.fill")
+                                .font(.system(size: 30))
+                                .foregroundStyle(.orange)
+                                .frame(width: 34, height: 34)
+                        } else {
+                            CompletionRing(session: session)
+                        }
                         VStack(alignment: .leading, spacing: 2) {
                             Text(session.categoryLabel)
                                 .font(.subheadline.weight(.semibold))
@@ -120,7 +128,9 @@ struct ProfileView: View {
                                 .foregroundStyle(.secondary)
                         }
                         Spacer()
-                        Text("\(session.bestScore)/\(session.signatures.count)")
+                        Text(session.signatures.isEmpty
+                             ? "×\(session.bestScore)"
+                             : "\(session.bestScore)/\(session.signatures.count)")
                             .font(.caption.weight(.heavy))
                             .monospacedDigit()
                             .foregroundStyle(session.completion == 1 ? .green : .secondary)
@@ -164,6 +174,24 @@ struct SessionDetailView: View {
 
     var body: some View {
         List {
+            if session.signatures.isEmpty {
+                // Higher/Lower run: only the streak is meaningful
+                Section {
+                    HStack {
+                        Image(systemName: "arrow.up.arrow.down.circle.fill")
+                            .font(.system(size: 38))
+                            .foregroundStyle(.orange)
+                        VStack(alignment: .leading) {
+                            Text("Streak of \(session.bestScore)")
+                                .font(.headline)
+                            Text("\(session.xpEarned) XP earned")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                    }
+                }
+            } else {
             Section {
                 HStack {
                     CompletionRing(session: session)
@@ -187,22 +215,27 @@ struct SessionDetailView: View {
             Section("Questions") {
                 ForEach(Array(session.signatures.enumerated()), id: \.offset) { i, signature in
                     let subjectID = signature.split(separator: "|").last.map(String.init) ?? ""
+                    // subjects can be pals, items or skills since M6
+                    let icon = data.palByID[subjectID]?.image
+                        ?? data.itemByID[subjectID]?.image
+                        ?? data.skillByID[subjectID]?.image
                     HStack(spacing: 10) {
                         Image(systemName: session.everCorrect.indices.contains(i) && session.everCorrect[i]
                               ? "checkmark.circle.fill" : "xmark.circle.fill")
                             .foregroundStyle(session.everCorrect.indices.contains(i) && session.everCorrect[i]
                                              ? .green : .red)
-                        WikiImage(file: data.palByID[subjectID]?.image ?? "", kind: .pals)
+                        WikiImage(file: icon ?? "", kind: .pals)
                             .frame(width: 26, height: 26)
                         Text(data.articleByID[subjectID]?.title ?? subjectID)
                             .font(.caption.weight(.semibold))
                         Spacer()
-                        Text(signature.split(separator: "|").first.map(String.init)?
-                            .replacingOccurrences(of: "pal.", with: "") ?? "")
+                        Text(signature.split(separator: "|").first?
+                            .split(separator: ".").last.map(String.init) ?? "")
                             .font(.caption2)
                             .foregroundStyle(.tertiary)
                     }
                 }
+            }
             }
         }
         .navigationTitle(session.categoryLabel)
