@@ -119,29 +119,28 @@ struct GameHomeView: View {
             Text("QUIZ BY TOPIC")
                 .font(.caption2.weight(.bold))
                 .foregroundStyle(.secondary)
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    ForEach(QuizTopic.all.dropFirst()) { topic in
-                        NavigationLink {
-                            QuizView(data: data,
-                                     questions: QuizEngine.makeSession(
-                                         data: data, count: 10,
-                                         difficulty: preferredDifficulty,
-                                         templates: topic.templates),
+                .frame(maxWidth: .infinity, alignment: .leading)
+            FlowLayout(spacing: 8) {
+                ForEach(QuizTopic.all.dropFirst()) { topic in
+                    NavigationLink {
+                        QuizView(data: data,
+                                 questions: QuizEngine.makeSession(
+                                     data: data, count: 10,
                                      difficulty: preferredDifficulty,
-                                     categoryLabel: topic.label,
-                                     sessionMode: "quick")
-                        } label: {
-                            Label(topic.label, systemImage: topic.icon)
-                                .font(.subheadline.weight(.semibold))
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 8)
-                                .background(topic.tint.opacity(0.14), in: Capsule())
-                                .overlay(Capsule().stroke(topic.tint.opacity(0.35), lineWidth: 1))
-                                .foregroundStyle(topic.tint)
-                        }
-                        .buttonStyle(.plain)
+                                     templates: topic.templates),
+                                 difficulty: preferredDifficulty,
+                                 categoryLabel: topic.label,
+                                 sessionMode: "quick")
+                    } label: {
+                        Label(topic.label, systemImage: topic.icon)
+                            .font(.subheadline.weight(.semibold))
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 8)
+                            .background(topic.tint.opacity(0.14), in: Capsule())
+                            .overlay(Capsule().stroke(topic.tint.opacity(0.35), lineWidth: 1))
+                            .foregroundStyle(topic.tint)
                     }
+                    .buttonStyle(.plain)
                 }
             }
         }
