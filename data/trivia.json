@@ -1822,5 +1822,197 @@
   ],
   "articleID": "incidents",
   "difficulty": "hard"
+ },
+ {
+  "id": "hazard-lava-fly",
+  "q": "Who takes no damage from standing on lava?",
+  "answer": "Flying Pals — they hover above it",
+  "wrong": [
+   "Fire Pals",
+   "Ground Pals",
+   "Nobody, lava hurts everyone"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "hard"
+ },
+ {
+  "id": "hazard-drip",
+  "q": "How long does the dripping-wet effect last after swimming?",
+  "answer": "10 seconds",
+  "wrong": [
+   "3 seconds",
+   "30 seconds",
+   "Until you use a campfire"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "hard"
+ },
+ {
+  "id": "hazard-fire-spread",
+  "q": "How does fire spread between base structures?",
+  "answer": "Only to structures directly connected to the burning one",
+  "wrong": [
+   "To everything within 10 meters",
+   "It never spreads",
+   "Only downhill"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "hard"
+ },
+ {
+  "id": "hazard-heat",
+  "q": "What protects you in deserts and on the volcano?",
+  "answer": "Heat-resistant gear",
+  "wrong": [
+   "Drinking water",
+   "Cold-resistant gear",
+   "Traveling at night only"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "easy"
+ },
+ {
+  "id": "hazard-wet",
+  "q": "Besides waiting 15 seconds, how can burning end early?",
+  "answer": "Getting wet",
+  "wrong": [
+   "Rolling on the ground",
+   "Eating berries",
+   "Standing still"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "medium"
+ },
+ {
+  "id": "hazard-stand-water",
+  "q": "Does standing in shallow water cause the dripping effect?",
+  "answer": "No — only swimming does",
+  "wrong": [
+   "Yes, instantly",
+   "Only in cold regions",
+   "Only for Fire Pals"
+  ],
+  "articleID": "environmental-hazards",
+  "difficulty": "hard"
+ },
+ {
+  "id": "alpha-tanky",
+  "q": "Damage dealt to Alpha Pals is multiplied by…",
+  "answer": "0.2 to 0.4 — they take reduced damage",
+  "wrong": [
+   "2.0, they are fragile",
+   "1.0, no change",
+   "0.9"
+  ],
+  "articleID": "alpha-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "alpha-capture",
+  "q": "Compared to regular Pals, Alpha capture rates are…",
+  "answer": "Lower — usually a 0.7–0.77 multiplier",
+  "wrong": [
+   "Higher",
+   "Identical",
+   "Zero, they can't be caught"
+  ],
+  "articleID": "alpha-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "dungeon-pool",
+  "q": "What determines which Alpha Pals can appear in a dungeon?",
+  "answer": "The dungeon's hidden tier and its biome",
+  "wrong": [
+   "Your character level",
+   "The day of the week",
+   "Pure chance from all pals"
+  ],
+  "articleID": "dungeons",
+  "difficulty": "hard"
+ },
+ {
+  "id": "breeding-gender",
+  "q": "What is the gender ratio of most Pal species?",
+  "answer": "1:1 male to female",
+  "wrong": [
+   "2:1 male",
+   "3:1 female",
+   "Random per save file"
+  ],
+  "articleID": "breeding",
+  "difficulty": "medium"
+ },
+ {
+  "id": "lucky-bred",
+  "q": "A Pal that inherits the Lucky passive through breeding…",
+  "answer": "Is normal-sized and gets no Lucky icon",
+  "wrong": [
+   "Glows like a wild Lucky",
+   "Is twice as large",
+   "Loses the passive at level 30"
+  ],
+  "articleID": "lucky-pals",
+  "difficulty": "hard"
+ },
+ {
+  "id": "tower-timeout",
+  "q": "What happens if the tower timer expires mid-fight?",
+  "answer": "You are killed on the spot and booted out",
+  "wrong": [
+   "The boss heals and the fight restarts",
+   "You keep fighting overtime",
+   "The boss surrenders"
+  ],
+  "articleID": "tower",
+  "difficulty": "medium"
+ },
+ {
+  "id": "raid-loot",
+  "q": "What do defeated base raiders drop?",
+  "answer": "Pal Spheres, keys, ammo and other useful items",
+  "wrong": [
+   "Nothing",
+   "Only gold",
+   "Only cake"
+  ],
+  "articleID": "base-raids",
+  "difficulty": "easy"
+ },
+ {
+  "id": "egg-location",
+  "q": "Wild Pal Eggs choose their species based on…",
+  "answer": "The map location where you pick them up",
+  "wrong": [
+   "Your party's elements",
+   "The moon phase",
+   "Your level"
+  ],
+  "articleID": "pal-eggs",
+  "difficulty": "medium"
+ },
+ {
+  "id": "sphere-craft-where",
+  "q": "Crafting different Pal Sphere tiers requires…",
+  "answer": "Different buildings to craft them in",
+  "wrong": [
+   "Only the basic workbench",
+   "A tower boss defeat each",
+   "Fishing them up"
+  ],
+  "articleID": "pal-spheres",
+  "difficulty": "medium"
+ },
+ {
+  "id": "guild-solo-master",
+  "q": "Why can't the last member of a guild leave it?",
+  "answer": "They are the Guild Master by default",
+  "wrong": [
+   "Guilds are permanent",
+   "A fee must be paid first",
+   "The PIDF forbids it"
+  ],
+  "articleID": "guilds",
+  "difficulty": "hard"
  }
 ]

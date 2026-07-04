@@ -55,7 +55,7 @@ struct ProgressionView: View {
                          questions: QuizEngine.makeSession(
                              data: data, count: 10,
                              difficulty: request.difficulty,
-                             subjects: request.subjects(in: data)),
+                             subjectIDs: request.palIDs),
                          difficulty: request.difficulty,
                          categoryLabel: request.label)
             }
@@ -236,9 +236,6 @@ struct QuizRequest: Hashable {
     let palIDs: [String]
     var difficulty: Difficulty = .medium
 
-    func subjects(in data: GameData) -> [Pal] {
-        palIDs.compactMap { data.palByID[$0] }
-    }
 }
 
 struct CompletenessBar: View {

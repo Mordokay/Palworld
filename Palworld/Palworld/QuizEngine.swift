@@ -551,17 +551,19 @@ enum QuizEngine {
     }
 
     /// Build a session: `count` questions, subjects deduped (signatures when a
-    /// small `subjects` pool forces repeats), consecutive templates differ.
-    /// `templates` restricts the draw (Spin the Wheel, Who's that Pal?).
+    /// small `subjectIDs` pool forces repeats), consecutive templates differ.
+    /// `templates` restricts the draw (Spin the Wheel, Who's that Pal?);
+    /// `subjectIDs` scopes to specific entities (any domain — pals, items,
+    /// skills; templates that can't resolve an id simply pass).
     static func makeSession(
         data: GameData, count: Int, difficulty: Difficulty, seed: UInt64? = nil,
-        subjects: [Pal]? = nil, templates: [any QuestionTemplate]? = nil
+        subjectIDs: [String]? = nil, templates: [any QuestionTemplate]? = nil
     ) -> [Question] {
-        // subject-scoped sessions stay pal-only (subjects are pals);
+        // subject-scoped sessions default to pal templates (the usual case);
         // unscoped ones draw from the whole catalog
-        let pool = templates ?? (subjects == nil ? mixedTemplates : palTemplates)
+        let pool = templates ?? (subjectIDs == nil ? mixedTemplates : palTemplates)
         let rng = seed.map(SeededRNG.init(seed:)) ?? SeededRNG()
-        let smallPool = (subjects?.count ?? .max) < count
+        let smallPool = (subjectIDs?.count ?? .max) < count
         var questions: [Question] = []
         var usedSubjects = Set<String>()
         var usedSignatures = Set<String>()
@@ -570,7 +572,7 @@ enum QuizEngine {
         while questions.count < count && attempts < count * 40 {
             attempts += 1
             let template = pool[Int(rng.next() % UInt64(pool.count))]
-            let subjectID = subjects?.randomElement(seeded: rng)?.id
+            let subjectID = subjectIDs?.randomElement(seeded: rng)
             guard template.id != lastTemplate || pool.count == 1,
                   let q = template.generate(data: data, difficulty: difficulty,
                                             rng: rng, subjectID: subjectID),
@@ -589,11 +591,13 @@ enum QuizEngine {
     /// avoids `excluding` signatures while it can, recycles once the pool of
     /// fresh questions runs dry.
     static func makeQuestion(
-        data: GameData, difficulty: Difficulty, excluding: Set<String>
+        data: GameData, difficulty: Difficulty, excluding: Set<String>,
+        templates: [any QuestionTemplate]? = nil
     ) -> Question? {
+        let pool = templates ?? mixedTemplates
         let rng = SeededRNG()
         for attempt in 0..<80 {
-            let template = mixedTemplates[Int(rng.next() % UInt64(mixedTemplates.count))]
+            let template = pool[Int(rng.next() % UInt64(pool.count))]
             guard let q = template.generate(data: data, difficulty: difficulty, rng: rng)
             else { continue }
             if attempt >= 60 || !excluding.contains(q.signature) { return q }

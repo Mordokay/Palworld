@@ -30,7 +30,7 @@ struct ProfileView: View {
                 QuizView(data: data,
                          questions: QuizEngine.makeSession(
                              data: data, count: 10, difficulty: request.difficulty,
-                             subjects: request.subjects(in: data)),
+                             subjectIDs: request.palIDs),
                          difficulty: request.difficulty,
                          categoryLabel: request.label)
             }

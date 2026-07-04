@@ -1,6 +1,32 @@
 import SwiftUI
 import SwiftData
 
+/// A question domain the player can quiz in isolation — used by the Game
+/// tab's topic chips and the Time Attack / Survival setup pickers.
+struct QuizTopic: Identifiable {
+    let id: String
+    let label: String
+    let icon: String
+    let tint: Color
+    /// nil = the full mixed catalog
+    let templates: [any QuestionTemplate]?
+
+    static let all: [QuizTopic] = [
+        QuizTopic(id: "all", label: "Everything", icon: "sparkles", tint: .purple,
+                  templates: nil),
+        QuizTopic(id: "pals", label: "Pals", icon: "pawprint.fill", tint: .green,
+                  templates: QuizEngine.palTemplates),
+        QuizTopic(id: "items", label: "Items", icon: "bag.fill", tint: .orange,
+                  templates: QuizEngine.itemTemplates),
+        QuizTopic(id: "skills", label: "Skills", icon: "bolt.circle.fill", tint: .mint,
+                  templates: QuizEngine.skillTemplates),
+        QuizTopic(id: "buildings", label: "Buildings", icon: "house.fill", tint: .brown,
+                  templates: QuizEngine.buildingTemplates),
+        QuizTopic(id: "world", label: "World & Lore", icon: "globe.europe.africa.fill",
+                  tint: .teal, templates: QuizEngine.worldTemplates),
+    ]
+}
+
 /// Game tab: Daily Challenge up top, then the mode catalog (DESIGN.md §5).
 struct GameHomeView: View {
     let data: GameData
@@ -38,6 +64,8 @@ struct GameHomeView: View {
                     }
                     .buttonStyle(.plain)
 
+                    topicChips
+
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
                               spacing: 12) {
                         modeLink("Time Attack", "timer", "Beat the clock") {
@@ -58,8 +86,9 @@ struct GameHomeView: View {
                                      questions: QuizEngine.makeSession(
                                          data: data, count: 10,
                                          difficulty: preferredDifficulty,
-                                         subjects: ProgressionSnapshot(records: facetRecords)
-                                             .weakestPals(in: data.quizPals, count: 10)),
+                                         subjectIDs: ProgressionSnapshot(records: facetRecords)
+                                             .weakestPals(in: data.quizPals, count: 10)
+                                             .map(\.id)),
                                      difficulty: preferredDifficulty,
                                      categoryLabel: "Weakest Pals",
                                      sessionMode: "weakest")
@@ -80,6 +109,41 @@ struct GameHomeView: View {
                 .padding()
             }
             .navigationTitle("Palworld Trainer")
+        }
+    }
+
+    /// One-tap topic quizzes: "just ask me about buildings" without a setup
+    /// screen — 10 questions at the preferred difficulty.
+    private var topicChips: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("QUIZ BY TOPIC")
+                .font(.caption2.weight(.bold))
+                .foregroundStyle(.secondary)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    ForEach(QuizTopic.all.dropFirst()) { topic in
+                        NavigationLink {
+                            QuizView(data: data,
+                                     questions: QuizEngine.makeSession(
+                                         data: data, count: 10,
+                                         difficulty: preferredDifficulty,
+                                         templates: topic.templates),
+                                     difficulty: preferredDifficulty,
+                                     categoryLabel: topic.label,
+                                     sessionMode: "quick")
+                        } label: {
+                            Label(topic.label, systemImage: topic.icon)
+                                .font(.subheadline.weight(.semibold))
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 8)
+                                .background(topic.tint.opacity(0.14), in: Capsule())
+                                .overlay(Capsule().stroke(topic.tint.opacity(0.35), lineWidth: 1))
+                                .foregroundStyle(topic.tint)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+            }
         }
     }
 

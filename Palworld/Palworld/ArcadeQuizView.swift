@@ -34,6 +34,8 @@ struct ArcadeQuizView: View {
     let mode: ArcadeMode
     /// Chosen difficulty for Time Attack; Survival ignores it and ramps.
     let difficulty: Difficulty
+    /// Restrict the stream to one topic's templates (nil = everything).
+    var templates: [any QuestionTemplate]?
 
     @Environment(\.modelContext) private var modelContext
     @State private var current: Question?
@@ -262,7 +264,8 @@ struct ArcadeQuizView: View {
 
     private func loadNext() {
         guard let next = prefetched ?? QuizEngine.makeQuestion(
-            data: data, difficulty: currentDifficulty, excluding: usedSignatures) else {
+            data: data, difficulty: currentDifficulty, excluding: usedSignatures,
+            templates: templates) else {
             finish()
             return
         }
@@ -271,7 +274,7 @@ struct ArcadeQuizView: View {
         // line up the following question and warm its images off-main so the
         // next advance renders without disk IO
         prefetched = QuizEngine.makeQuestion(data: data, difficulty: currentDifficulty,
-                                             excluding: usedSignatures)
+                                             excluding: usedSignatures, templates: templates)
         if let prefetched {
             WikiImage.warm(prefetched)
         }
@@ -303,9 +306,16 @@ struct TimeAttackSetupView: View {
     let data: GameData
     @State private var seconds = 60
     @State private var difficulty: Difficulty = .medium
+    @State private var topicID = "all"
 
     var body: some View {
         Form {
+            Section("Topic") {
+                Picker("Topic", selection: $topicID) {
+                    ForEach(QuizTopic.all) { Text($0.label).tag($0.id) }
+                }
+                .pickerStyle(.menu)
+            }
             Section("Duration") {
                 Picker("Duration", selection: $seconds) {
                     ForEach([30, 60, 300, 600], id: \.self) {
@@ -323,7 +333,9 @@ struct TimeAttackSetupView: View {
             Section {
                 NavigationLink("Start") {
                     ArcadeQuizView(data: data, mode: .timeAttack(seconds: seconds),
-                                   difficulty: difficulty)
+                                   difficulty: difficulty,
+                                   templates: QuizTopic.all.first { $0.id == topicID }?
+                                       .templates ?? nil)
                 }
                 .font(.headline)
             } footer: {
@@ -336,9 +348,16 @@ struct TimeAttackSetupView: View {
 
 struct SurvivalSetupView: View {
     let data: GameData
+    @State private var topicID = "all"
 
     var body: some View {
         Form {
+            Section("Topic") {
+                Picker("Topic", selection: $topicID) {
+                    ForEach(QuizTopic.all) { Text($0.label).tag($0.id) }
+                }
+                .pickerStyle(.menu)
+            }
             Section {
                 Label("You have 3 lives — a wrong answer breaks a heart", systemImage: "heart.fill")
                     .foregroundStyle(.red)
@@ -349,7 +368,9 @@ struct SurvivalSetupView: View {
             }
             Section {
                 NavigationLink("Start") {
-                    ArcadeQuizView(data: data, mode: .survival, difficulty: .easy)
+                    ArcadeQuizView(data: data, mode: .survival, difficulty: .easy,
+                                   templates: QuizTopic.all.first { $0.id == topicID }?
+                                       .templates ?? nil)
                 }
                 .font(.headline)
             }
