@@ -12,10 +12,23 @@ struct AppRoot: View {
                 // debug hook: `simctl launch ... -screenshot-quiz` jumps straight
                 // into a seeded quiz so the screen can be verified without taps
                 if CommandLine.arguments.contains("-screenshot-quiz") {
+                    // optional `-quiz-topic world|items|skills|pals` narrows the pool
+                    let topicTemplates: [String: [any QuestionTemplate]] = [
+                        "world": QuizEngine.worldTemplates,
+                        "items": QuizEngine.itemTemplates,
+                        "skills": QuizEngine.skillTemplates,
+                        "pals": QuizEngine.palTemplates,
+                    ]
+                    let topic = CommandLine.arguments.firstIndex(of: "-quiz-topic")
+                        .flatMap { i -> [any QuestionTemplate]? in
+                            CommandLine.arguments.indices.contains(i + 1)
+                                ? topicTemplates[CommandLine.arguments[i + 1]] : nil
+                        }
                     NavigationStack {
                         QuizView(data: data,
                                  questions: QuizEngine.makeSession(
-                                     data: data, count: 5, difficulty: .medium, seed: 42),
+                                     data: data, count: 5, difficulty: .medium, seed: 42,
+                                     templates: topic),
                                  difficulty: .medium)
                     }
                 } else if CommandLine.arguments.contains("-screenshot-silhouette") {

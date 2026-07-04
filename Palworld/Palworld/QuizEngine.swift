@@ -528,7 +528,8 @@ enum QuizEngine {
     ]
 
     static let worldTemplates: [any QuestionTemplate] = [
-        ElementEffectivenessTemplate(),
+        ElementEffectivenessTemplate(), LocationInhabitantTemplate(),
+        TechUnlockTemplate(), TriviaTemplate(),
     ]
 
     /// The full "Everything" rotation (unscoped Quick Quiz, Daily, arcade).

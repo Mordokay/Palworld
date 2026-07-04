@@ -280,6 +280,109 @@ struct ElementEffectivenessTemplate: QuestionTemplate {
     }
 }
 
+/// Which pal lives at a location — sanctuaries and strongholds have curated
+/// inhabitant lists on the wiki.
+struct LocationInhabitantTemplate: QuestionTemplate {
+    let id = "world.inhabitant"
+    let facet = "geography"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        // locations whose inhabitants resolve to actual pals
+        func residents(_ location: Location) -> [Pal] {
+            location.inhabitants.compactMap {
+                data.idByName[$0.lowercased()].flatMap { data.palByID[$0] }
+            }
+        }
+        let pool = data.locations.filter { residents($0).count >= 2 }
+        guard let location = subjectID.flatMap({ id in pool.first { $0.id == id } })
+            ?? pool.randomElement(seeded: rng) else { return nil }
+        let locals = residents(location)
+        guard let answer = locals.randomElement(seeded: rng) else { return nil }
+        let localIDs = Set(locals.map(\.id))
+        let wrong = Array(data.quizPalsWithImage.filter { !localIDs.contains($0.id) }
+            .shuffled(seeded: rng).prefix(3))
+        guard wrong.count == 3 else { return nil }
+        let (options, correctIndex) = mcOptions(correct: answer, distractors: wrong,
+                                                rng: rng) {
+            QuizOption(text: $0.name, imageFile: $0.image)
+        }
+        return Question(
+            templateID: id,
+            promptText: "Which of these pals can be found at \(location.name)?",
+            options: options, correctIndex: correctIndex,
+            articleID: data.articleByID[location.id] != nil ? location.id : nil,
+            subjectID: location.id, facet: facet,
+            categoryIDs: ["world"], baseXP: 15
+        )
+    }
+}
+
+/// Buildings & structures from the tech tree: at what level do they unlock?
+struct TechUnlockTemplate: QuestionTemplate {
+    let id = "world.techUnlock"
+    let facet = "tech"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        let pool = data.technology.filter { $0.structure }
+        guard let tech = subjectID.flatMap({ id in pool.first { $0.subjectID == id } })
+            ?? pool.randomElement(seeded: rng) else { return nil }
+        let spread = difficulty == .hard ? [-2, -1, 1, 2, 3] : [-15, -8, -4, 4, 8, 15]
+        var wrong: Set<Int> = []
+        for delta in spread.shuffled(seeded: rng) where wrong.count < 3 {
+            let candidate = tech.level + delta
+            if candidate >= 1, candidate <= 60, candidate != tech.level {
+                wrong.insert(candidate)
+            }
+        }
+        guard wrong.count == 3 else { return nil }
+        let (options, correctIndex) = mcOptions(correct: tech.level,
+                                                distractors: Array(wrong), rng: rng) {
+            QuizOption(text: "Level \($0)")
+        }
+        var question = Question(
+            templateID: id,
+            promptText: "At what technology level can you build the \(tech.name)?",
+            promptImageFile: tech.image,
+            options: options, correctIndex: correctIndex,
+            articleID: data.idByName[tech.name.lowercased()],
+            subjectID: tech.subjectID, facet: facet,
+            categoryIDs: ["technology"], baseXP: 15
+        )
+        question.imageKind = .items
+        return question
+    }
+}
+
+/// Hand-curated Millionaire-style lore & guides trivia (data/trivia.json):
+/// the Guides & World articles are prose, so their questions are pre-written
+/// offline and bundled — no generation at runtime, no AI in the app.
+struct TriviaTemplate: QuestionTemplate {
+    let id = "world.trivia"
+    let facet = "lore"
+
+    func generate(data: GameData, difficulty: Difficulty, rng: SeededRNG,
+                  subjectID: String?) -> Question? {
+        guard !data.trivia.isEmpty else { return nil }
+        let matching = data.trivia.filter { $0.difficulty == difficulty.rawValue }
+        let pool = matching.isEmpty ? data.trivia : matching
+        guard let entry = subjectID.flatMap({ id in data.trivia.first { $0.id == id } })
+            ?? pool.randomElement(seeded: rng) else { return nil }
+        let (options, correctIndex) = mcOptions(correct: entry.answer,
+                                                distractors: entry.wrong, rng: rng) {
+            QuizOption(text: $0)
+        }
+        return Question(
+            templateID: id, promptText: entry.q,
+            options: options, correctIndex: correctIndex,
+            articleID: entry.articleID.flatMap { data.articleByID[$0] != nil ? $0 : nil },
+            subjectID: entry.id, facet: facet,
+            categoryIDs: ["world"], baseXP: 15
+        )
+    }
+}
+
 /// True/False fact flips (catalog #34) — pal facts across facets, two options.
 struct TrueFalsePalTemplate: QuestionTemplate {
     let id = "pal.trueFalse"

@@ -271,20 +271,21 @@ struct QuizSetupView: View {
     @Query private var profiles: [PlayerProfile]
     @State private var difficulty: Difficulty = .medium
     @State private var count = 10
-    @State private var topic = "Everything"
+    @State private var topic = "All"
 
     private static let topics: [String: [any QuestionTemplate]?] = [
-        "Everything": nil,   // makeSession default = the full mixed catalog
+        "All": nil,   // makeSession default = the full mixed catalog
         "Pals": QuizEngine.palTemplates,
         "Items": QuizEngine.itemTemplates,
         "Skills": QuizEngine.skillTemplates,
+        "World": QuizEngine.worldTemplates,
     ]
 
     var body: some View {
         Form {
             Section("Topic") {
                 Picker("Topic", selection: $topic) {
-                    ForEach(["Everything", "Pals", "Items", "Skills"], id: \.self) {
+                    ForEach(["All", "Pals", "Items", "Skills", "World"], id: \.self) {
                         Text($0).tag($0)
                     }
                 }

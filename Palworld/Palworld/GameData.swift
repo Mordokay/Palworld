@@ -154,6 +154,23 @@ struct TechEntry: Codable, Hashable {
     let structure: Bool
     let points: Int
     let ancient: Bool
+
+    /// Stable subject id for quiz signatures ("tech:breeding-farm").
+    var subjectID: String {
+        "tech:" + name.lowercased().replacingOccurrences(of: " ", with: "-")
+    }
+}
+
+/// One hand-curated world/lore trivia question (data/trivia.json) — mined
+/// from the wiki's Guides & World articles, where prose can't be templated.
+/// Millionaire-style: fixed question, fixed curated distractors.
+struct TriviaQuestion: Codable, Identifiable, Hashable {
+    let id: String
+    let q: String
+    let answer: String
+    let wrong: [String]
+    let articleID: String?
+    let difficulty: String
 }
 
 // MARK: - Loader
@@ -168,6 +185,7 @@ struct GameData {
     let locations: [Location]
     let technology: [TechEntry]
     let articles: [Article]
+    let trivia: [TriviaQuestion]
 
     let palByID: [String: Pal]
     let articleByID: [String: Article]
@@ -316,6 +334,7 @@ struct GameData {
             locations: try decode("locations"),
             technology: try decode("technology"),
             articles: articles,
+            trivia: (try? decode("trivia") as [TriviaQuestion]) ?? [],
             palByID: Dictionary(uniqueKeysWithValues: pals.map { ($0.id, $0) }),
             articleByID: Dictionary(uniqueKeysWithValues: articles.map { ($0.id, $0) }),
             itemByID: Dictionary((items + weapons).map { ($0.id, $0) },
