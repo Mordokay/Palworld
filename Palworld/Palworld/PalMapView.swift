@@ -71,6 +71,7 @@ struct PalMapView: View {
     @AppStorage("mapVisited") private var visitedRaw = ""
     @AppStorage("mapHideVisited") private var hideVisited = false
     @State private var spawnPal: Pal?
+    @State private var spawnSide = "day"
     @State private var selection: SelectedMarker?
     @State private var showFilters = false
     @State private var focus: FocusRequest?
@@ -96,7 +97,10 @@ struct PalMapView: View {
                     ZStack(alignment: .bottom) {
                         TiledMapView(mapData: mapData,
                                      enabled: enabledLayers,
-                                     spawns: spawnPal.flatMap { mapData.spawns[$0.name.lowercased()] },
+                                     spawns: spawnPal.flatMap { pal in
+                                         mapData.spawns[pal.name.lowercased()]?
+                                             .filter { $0.key == spawnSide }
+                                     },
                                      visited: visited,
                                      hideVisited: hideVisited,
                                      focus: focus,
@@ -165,6 +169,8 @@ struct PalMapView: View {
     private func focusOnSpawns() {
         guard let spawnPal, let mapData,
               let sides = mapData.spawns[spawnPal.name.lowercased()] else { return }
+        // default to daytime; nocturnal pals fall back to night
+        spawnSide = sides["day"]?.isEmpty == false ? "day" : "night"
         let points = sides.values.flatMap { $0 }.filter { $0.count >= 2 }
         guard let firstX = points.first?[0], let firstY = points.first?[1] else { return }
         var minX = firstX, maxX = firstX, minY = firstY, maxY = firstY
@@ -235,18 +241,25 @@ struct PalMapView: View {
     }
 
     private func spawnLegend(_ pal: Pal) -> some View {
-        HStack(spacing: 10) {
+        let sides = mapData?.spawns[pal.name.lowercased()] ?? [:]
+        let hasDay = sides["day"]?.isEmpty == false
+        let hasNight = sides["night"]?.isEmpty == false
+        return HStack(spacing: 10) {
             WikiImage(file: pal.image, kind: .pals)
                 .frame(width: 30, height: 30)
             Text("\(pal.name) spawns")
                 .font(.subheadline.weight(.semibold))
-            Label("day", systemImage: "circle.fill")
-                .font(.caption2)
-                .foregroundStyle(.orange)
-            Label("night", systemImage: "circle.fill")
-                .font(.caption2)
-                .foregroundStyle(.indigo)
             Spacer()
+            if hasDay && hasNight {
+                // one side at a time keeps the dots unambiguous
+                sideButton("day", symbol: "sun.max.fill", tint: .orange)
+                sideButton("night", symbol: "moon.stars.fill", tint: .indigo)
+            } else {
+                Label(hasNight ? "night only" : "day only",
+                      systemImage: hasNight ? "moon.stars.fill" : "sun.max.fill")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(hasNight ? .indigo : .orange)
+            }
             Button {
                 spawnPal = nil
             } label: {
@@ -259,6 +272,23 @@ struct PalMapView: View {
         .padding(.vertical, 10)
         .background(.regularMaterial, in: Capsule())
         .padding()
+    }
+
+    private func sideButton(_ side: String, symbol: String, tint: Color) -> some View {
+        Button {
+            spawnSide = side
+        } label: {
+            Label(side, systemImage: symbol)
+                .font(.caption.weight(.bold))
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(spawnSide == side ? tint.opacity(0.25) : .clear,
+                            in: Capsule())
+                .overlay(Capsule().stroke(
+                    spawnSide == side ? tint : .secondary.opacity(0.3), lineWidth: 1))
+                .foregroundStyle(spawnSide == side ? tint : .secondary)
+        }
+        .buttonStyle(.borderless)
     }
 }
 
@@ -469,7 +499,10 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
         scrollView.maximumZoomScale = 2
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
-        scrollView.bouncesZoom = true
+        // pinch clamps hard at the limits: the system's zoom-bounce is the
+        // one animation whose mid-flight state we can't read exactly, and it
+        // made markers drift; without it the overlay is glued every frame
+        scrollView.bouncesZoom = false
         scrollView.backgroundColor = UIColor(red: 0.05, green: 0.12, blue: 0.2, alpha: 1)
         addSubview(scrollView)
 
@@ -520,6 +553,8 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
     }
 
     /// Center the camera on a normalized-map-space rect (padded, clamped).
+    /// Animated by our own display link setting MODEL values every frame, so
+    /// the marker overlay tracks with zero drift.
     func focus(onNormalized rect: CGRect, animated: Bool) {
         let world = Self.worldSize
         var target = CGRect(x: rect.minX * world, y: rect.minY * world,
@@ -531,7 +566,54 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
             let grow = max(minSide - target.width, minSide - target.height) / 2
             target = target.insetBy(dx: -max(0, grow), dy: -max(0, grow))
         }
-        scrollView.zoom(to: target, animated: animated)
+        let zoom = min(max(min(bounds.width / target.width,
+                               bounds.height / target.height),
+                           scrollView.minimumZoomScale),
+                       scrollView.maximumZoomScale)
+        let center = CGPoint(x: target.midX, y: target.midY)
+        var offset = CGPoint(x: center.x * zoom - bounds.width / 2,
+                             y: center.y * zoom - bounds.height / 2)
+        offset.x = max(0, min(offset.x, world * zoom - bounds.width))
+        offset.y = max(0, min(offset.y, world * zoom - bounds.height))
+        if animated {
+            animateCamera(toZoom: zoom, offset: offset)
+        } else {
+            scrollView.zoomScale = zoom
+            scrollView.contentOffset = offset
+        }
+    }
+
+    // MARK: self-driven camera animation (model values only)
+
+    private var cameraLink: CADisplayLink?
+    private var cameraStart: (zoom: CGFloat, offset: CGPoint) = (1, .zero)
+    private var cameraEnd: (zoom: CGFloat, offset: CGPoint) = (1, .zero)
+    private var cameraStartTime: CFTimeInterval = 0
+    private let cameraDuration: CFTimeInterval = 0.6
+
+    private func animateCamera(toZoom zoom: CGFloat, offset: CGPoint) {
+        cameraLink?.invalidate()
+        cameraStart = (scrollView.zoomScale, scrollView.contentOffset)
+        cameraEnd = (zoom, offset)
+        cameraStartTime = CACurrentMediaTime()
+        let link = CADisplayLink(target: self, selector: #selector(cameraTick))
+        link.add(to: .main, forMode: .common)
+        cameraLink = link
+    }
+
+    @objc private func cameraTick() {
+        let raw = (CACurrentMediaTime() - cameraStartTime) / cameraDuration
+        let t = min(1, max(0, raw))
+        let eased = t < 0.5 ? 2 * t * t : 1 - pow(-2 * t + 2, 2) / 2   // easeInOut
+        let e = CGFloat(eased)
+        scrollView.zoomScale = cameraStart.zoom + (cameraEnd.zoom - cameraStart.zoom) * e
+        scrollView.contentOffset = CGPoint(
+            x: cameraStart.offset.x + (cameraEnd.offset.x - cameraStart.offset.x) * e,
+            y: cameraStart.offset.y + (cameraEnd.offset.y - cameraStart.offset.y) * e)
+        if t >= 1 {
+            cameraLink?.invalidate()
+            cameraLink = nil
+        }
     }
 
     override func layoutSubviews() {
@@ -655,6 +737,23 @@ final class MarkerOverlayView: UIView {
         return image
     }
 
+    private var tintedCache: [String: UIImage] = [:]
+
+    /// Green-tinted variant for visited POIs (tint clipped to the icon's
+    /// own pixels, so shape and size stay identical).
+    private func tintedIcon(_ name: String) -> UIImage? {
+        if let cached = tintedCache[name] { return cached }
+        guard let base = icon(name) else { return nil }
+        let tinted = UIGraphicsImageRenderer(size: base.size).image { ctx in
+            base.draw(in: CGRect(origin: .zero, size: base.size))
+            ctx.cgContext.setBlendMode(.sourceAtop)
+            UIColor.systemGreen.setFill()
+            ctx.fill(CGRect(origin: .zero, size: base.size))
+        }
+        tintedCache[name] = tinted
+        return tinted
+    }
+
     override func draw(_ rect: CGRect) {
         guard let (offset, zoom, origin) = positionProvider?() else { return }
         let world = MapContainerView.worldSize
@@ -680,63 +779,53 @@ final class MarkerOverlayView: UIView {
                 let seen = visited.contains("\(category.id):\(marker.x):\(marker.y)")
                 if seen && hideVisited { continue }
                 if dense && dotsOnly {
-                    (seen ? UIColor.systemGray : UIColor.systemYellow).setFill()
+                    (seen ? UIColor.systemGreen : UIColor.systemYellow).setFill()
                     UIBezierPath(ovalIn: CGRect(x: p.x - dotSide / 2, y: p.y - dotSide / 2,
                                                 width: dotSide, height: dotSide)).fill()
                 } else if let ring, let palName = marker.pal,
                           let thumb = palThumb(palName) {
                     // pal artwork in a circle: white outer border for
-                    // contrast on the dark map, colored inner ring for
-                    // meaning (gold = alpha, red = predator's aura)
+                    // contrast, inner ring = gold alpha / red predator,
+                    // green when marked visited
                     let box = CGRect(x: p.x - iconSide / 2, y: p.y - iconSide / 2,
                                      width: iconSide, height: iconSide)
                     UIColor.white.setFill()
                     UIBezierPath(ovalIn: box.insetBy(dx: -4, dy: -4)).fill()
-                    ring.setFill()
+                    (seen ? UIColor.systemGreen : ring).setFill()
                     UIBezierPath(ovalIn: box.insetBy(dx: -2.5, dy: -2.5)).fill()
                     UIColor(white: 0.12, alpha: 1).setFill()
                     UIBezierPath(ovalIn: box).fill()
                     if let ctx = UIGraphicsGetCurrentContext() {
                         ctx.saveGState()
                         UIBezierPath(ovalIn: box).addClip()
-                        thumb.draw(in: box.insetBy(dx: 1, dy: 1),
-                                   blendMode: .normal, alpha: seen ? 0.35 : 1)
+                        thumb.draw(in: box.insetBy(dx: 1, dy: 1))
                         ctx.restoreGState()
                     }
-                    if seen { drawSeenBadge(at: box) }
-                } else if let image {
-                    let box = CGRect(x: p.x - iconSide / 2, y: p.y - iconSide / 2,
-                                     width: iconSide, height: iconSide)
-                    image.draw(in: box, blendMode: .normal, alpha: seen ? 0.35 : 1)
-                    if seen { drawSeenBadge(at: box) }
+                } else if let baseImage = seen ? tintedIcon(category.icon) : image {
+                    baseImage.draw(in: CGRect(x: p.x - iconSide / 2,
+                                              y: p.y - iconSide / 2,
+                                              width: iconSide, height: iconSide))
                 }
             }
         }
 
         if let spawns {
+            let spawnSide: CGFloat = 8
             for (side, color) in [("day", UIColor.systemOrange),
                                   ("night", UIColor.systemIndigo)] {
                 guard let points = spawns[side] else { continue }
-                color.withAlphaComponent(0.75).setFill()
                 for point in points where point.count >= 2 {
                     guard let p = screenPoint(point[0], point[1]) else { continue }
-                    UIBezierPath(ovalIn: CGRect(x: p.x - dotSide / 2, y: p.y - dotSide / 2,
-                                                width: dotSide, height: dotSide)).fill()
+                    let dot = CGRect(x: p.x - spawnSide / 2, y: p.y - spawnSide / 2,
+                                     width: spawnSide, height: spawnSide)
+                    color.withAlphaComponent(0.85).setFill()
+                    let path = UIBezierPath(ovalIn: dot)
+                    path.fill()
+                    UIColor.white.withAlphaComponent(0.9).setStroke()
+                    path.lineWidth = 1
+                    path.stroke()
                 }
             }
-        }
-    }
-
-    /// Small green tick on visited markers.
-    private func drawSeenBadge(at box: CGRect) {
-        let badge = CGRect(x: box.maxX - 9, y: box.minY - 2, width: 11, height: 11)
-        UIColor.systemGreen.setFill()
-        UIBezierPath(ovalIn: badge).fill()
-        if let check = UIImage(systemName: "checkmark",
-                               withConfiguration: UIImage.SymbolConfiguration(
-                                   pointSize: 7, weight: .heavy))?
-            .withTintColor(.white, renderingMode: .alwaysOriginal) {
-            check.draw(in: badge.insetBy(dx: 2.2, dy: 2.8))
         }
     }
 
