@@ -465,6 +465,8 @@ struct HabitatView: View {
     let pal: Pal
     let onZoom: (String) -> Void
     @State private var night = false
+    @Environment(\.showOnMap) private var showOnMap
+    @Environment(\.dismiss) private var dismiss
 
     private var file: String? { night ? pal.habitatNight : pal.habitatDay }
 
@@ -486,6 +488,16 @@ struct HabitatView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
+            Button {
+                showOnMap(pal.name)
+                dismiss()
+            } label: {
+                Label("Show spawn points on the Map", systemImage: "map.fill")
+                    .font(.subheadline.weight(.semibold))
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
+            .tint(.teal)
         }
     }
 }

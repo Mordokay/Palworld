@@ -4,12 +4,14 @@
 # already downloaded are skipped, new/changed pages are re-parsed from scratch.
 set -e
 cd "$(dirname "$0")"
-echo "== 1/4 fetching pages =="
+echo "== 1/5 fetching pages =="
 python3 fetch_pages.py
-echo "== 2/4 parsing =="
+echo "== 2/5 parsing =="
 python3 parse.py
-echo "== 3/4 fetching images =="
+echo "== 3/5 fetching images =="
 python3 fetch_images.py
-echo "== 4/4 analyzing images =="
+echo "== 4/5 analyzing images =="
 python3 analyze_images.py
+echo "== 5/5 map (palworld.gg) =="
+python3 fetch_map.py
 echo "Done. Review 'git diff --stat data/' to see what changed, then rebuild the app."

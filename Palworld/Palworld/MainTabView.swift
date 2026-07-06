@@ -126,6 +126,7 @@ struct AppRoot: View {
 struct MainTabView: View {
     let data: GameData
     @State private var selection: String
+    @StateObject private var mapRoute = MapRoute()
 
     init(data: GameData) {
         self.data = data
@@ -143,14 +144,22 @@ struct MainTabView: View {
             Tab("Progression", systemImage: "chart.bar.fill", value: "progression") {
                 ProgressionView(data: data)
             }
+            Tab("Map", systemImage: "map.fill", value: "map") {
+                PalMapView(data: data)
+            }
             Tab("Library", systemImage: "books.vertical.fill", value: "library") {
                 LibraryView(data: data)
             }
-            Tab("Achievements", systemImage: "trophy.fill", value: "awards") {
-                AchievementsView(data: data)
-            }
             Tab("Profile", systemImage: "person.crop.circle", value: "profile") {
                 ProfileView(data: data)
+            }
+        }
+        .environmentObject(mapRoute)
+        .environment(\.showOnMap) { mapRoute.spawnPalName = $0 }
+        .onChange(of: mapRoute.spawnPalName) {
+            // a pal page asked to show spawns — jump to the Map tab
+            if mapRoute.spawnPalName != nil {
+                selection = "map"
             }
         }
     }

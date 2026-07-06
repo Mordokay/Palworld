@@ -117,7 +117,7 @@ enum Achievements {
     }
 }
 
-// MARK: - Tab
+// MARK: - Trophy grid (pushed from Profile since the Map tab took the slot)
 
 struct AchievementsView: View {
     let data: GameData
@@ -133,26 +133,24 @@ struct AchievementsView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                let ctx = context
-                let unlockedAt = Dictionary(states.map { ($0.achievementID, $0.unlockedAt) },
-                                            uniquingKeysWith: { a, _ in a })
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
-                          spacing: 12) {
-                    ForEach(Achievements.all) { def in
-                        AchievementCard(def: def,
-                                        unlockedAt: unlockedAt[def.id],
-                                        progress: def.progress(ctx))
-                    }
+        ScrollView {
+            let ctx = context
+            let unlockedAt = Dictionary(states.map { ($0.achievementID, $0.unlockedAt) },
+                                        uniquingKeysWith: { a, _ in a })
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                      spacing: 12) {
+                ForEach(Achievements.all) { def in
+                    AchievementCard(def: def,
+                                    unlockedAt: unlockedAt[def.id],
+                                    progress: def.progress(ctx))
                 }
-                .padding()
             }
-            .navigationTitle("Achievements")
-            .onAppear {
-                // catch conditions met outside a quiz (e.g. a streak maturing)
-                Achievements.evaluate(context: context, modelContext: modelContext)
-            }
+            .padding()
+        }
+        .navigationTitle("Achievements")
+        .onAppear {
+            // catch conditions met outside a quiz (e.g. a streak maturing)
+            Achievements.evaluate(context: context, modelContext: modelContext)
         }
     }
 }

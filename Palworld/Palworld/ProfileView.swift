@@ -83,6 +83,17 @@ struct ProfileView: View {
             snapshot.masteredFacetCount(pal: $0) == Progression.facets(for: $0).count
         }.count
         return Section("Stats") {
+            NavigationLink {
+                AchievementsView(data: data)
+            } label: {
+                Label {
+                    Text("Achievements")
+                        .font(.subheadline.weight(.semibold))
+                } icon: {
+                    Image(systemName: "trophy.fill")
+                        .foregroundStyle(.yellow)
+                }
+            }
             LabeledContent("Quizzes played", value: "\(sessions.count)")
             LabeledContent("Questions answered", value: "\(totalQuestions)")
             LabeledContent("Best-run correct answers", value: "\(totalCorrect)")
