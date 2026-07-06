@@ -664,7 +664,7 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
         let worldPoint = CGPoint(x: point.x / Self.worldSize * MapContainerView.worldSize,
                                  y: point.y / Self.worldSize * MapContainerView.worldSize)
         if let hit = overlay.marker(nearContent: worldPoint,
-                                    tolerance: 22 / scrollView.zoomScale) {
+                                    tolerance: 32 / scrollView.zoomScale) {
             onSelect?(hit)
         }
     }
@@ -780,7 +780,7 @@ final class MarkerOverlayView: UIView {
     override func draw(_ rect: CGRect) {
         guard let (offset, zoom, origin) = positionProvider?() else { return }
         let world = MapContainerView.worldSize
-        let iconSide: CGFloat = 26
+        let iconSide: CGFloat = 42
         let dotSide: CGFloat = 6
         // zoomed out, dense collectible layers render as dots, not icons
         let dotsOnly = zoom < 0.09
