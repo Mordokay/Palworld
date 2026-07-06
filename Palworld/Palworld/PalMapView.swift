@@ -741,16 +741,20 @@ final class MarkerOverlayView: UIView {
 
     private var tintedCache: [String: UIImage] = [:]
 
-    /// Green-tinted variant for visited POIs (tint clipped to the icon's
-    /// own pixels, so shape and size stay identical).
+    /// Green-washed variant for visited POIs: a partial sourceAtop overlay
+    /// clipped to the icon's own pixels — original colors and linework stay
+    /// visible underneath. (NB: must fill via the CGContext; the renderer's
+    /// fill() convenience resets the blend mode and paints a solid square.)
     private func tintedIcon(_ name: String) -> UIImage? {
         if let cached = tintedCache[name] { return cached }
         guard let base = icon(name) else { return nil }
+        let rect = CGRect(origin: .zero, size: base.size)
         let tinted = UIGraphicsImageRenderer(size: base.size).image { ctx in
-            base.draw(in: CGRect(origin: .zero, size: base.size))
+            base.draw(in: rect)
             ctx.cgContext.setBlendMode(.sourceAtop)
-            UIColor.systemGreen.setFill()
-            ctx.fill(CGRect(origin: .zero, size: base.size))
+            ctx.cgContext.setFillColor(
+                UIColor.systemGreen.withAlphaComponent(0.65).cgColor)
+            ctx.cgContext.fill(rect)
         }
         tintedCache[name] = tinted
         return tinted
