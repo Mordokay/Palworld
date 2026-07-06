@@ -354,6 +354,36 @@ struct MapFilterSheet: View {
                 } footer: {
                     Text("Mark points as visited from their map callout — collected effigies, opened chests…")
                 }
+                Section("Pal spawn areas") {
+                    if let spawnPal {
+                        HStack {
+                            WikiImage(file: spawnPal.image, kind: .pals)
+                                .frame(width: 28, height: 28)
+                            Text(spawnPal.name)
+                                .font(.subheadline.weight(.semibold))
+                            Spacer()
+                            Button("Clear") { self.spawnPal = nil }
+                                .font(.caption.weight(.semibold))
+                        }
+                    }
+                    TextField("Search a pal…", text: $palQuery)
+                    if !palQuery.isEmpty {
+                        ForEach(palMatches.prefix(8)) { pal in
+                            Button {
+                                spawnPal = pal
+                                palQuery = ""
+                                dismiss()
+                            } label: {
+                                HStack(spacing: 10) {
+                                    WikiImage(file: pal.image, kind: .pals)
+                                        .frame(width: 28, height: 28)
+                                    Text(pal.name)
+                                        .foregroundStyle(.primary)
+                                }
+                            }
+                        }
+                    }
+                }
                 Section("Layers") {
                     ForEach(mapData?.categories ?? []) { category in
                         Button {
@@ -381,36 +411,6 @@ struct MapFilterSheet: View {
                                       ? "checkmark.circle.fill" : "circle")
                                     .foregroundStyle(enabled.contains(category.id)
                                                      ? .green : .secondary)
-                            }
-                        }
-                    }
-                }
-                Section("Pal spawn areas") {
-                    if let spawnPal {
-                        HStack {
-                            WikiImage(file: spawnPal.image, kind: .pals)
-                                .frame(width: 28, height: 28)
-                            Text(spawnPal.name)
-                                .font(.subheadline.weight(.semibold))
-                            Spacer()
-                            Button("Clear") { self.spawnPal = nil }
-                                .font(.caption.weight(.semibold))
-                        }
-                    }
-                    TextField("Search a pal…", text: $palQuery)
-                    if !palQuery.isEmpty {
-                        ForEach(palMatches.prefix(8)) { pal in
-                            Button {
-                                spawnPal = pal
-                                palQuery = ""
-                                dismiss()
-                            } label: {
-                                HStack(spacing: 10) {
-                                    WikiImage(file: pal.image, kind: .pals)
-                                        .frame(width: 28, height: 28)
-                                    Text(pal.name)
-                                        .foregroundStyle(.primary)
-                                }
                             }
                         }
                     }
@@ -660,7 +660,7 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
         let worldPoint = CGPoint(x: point.x / Self.worldSize * MapContainerView.worldSize,
                                  y: point.y / Self.worldSize * MapContainerView.worldSize)
         if let hit = overlay.marker(nearContent: worldPoint,
-                                    tolerance: 32 / scrollView.zoomScale) {
+                                    tolerance: 26 / scrollView.zoomScale) {
             onSelect?(hit)
         }
     }
@@ -776,11 +776,14 @@ final class MarkerOverlayView: UIView {
     override func draw(_ rect: CGRect) {
         guard let (offset, zoom, origin) = positionProvider?() else { return }
         let world = MapContainerView.worldSize
-        let iconSide: CGFloat = 42
+        let baseSide: CGFloat = 34          // icons (42 - 20%)
         let dotSide: CGFloat = 6
+        // abundant/low-stakes layers stay 30% smaller so they don't carpet
+        // the map: eggs, chests, effigies, notes
+        let smallLayers: Set<String> = ["egg", "chest", "effigy", "note"]
         // zoomed out, dense collectible layers render as dots, not icons
         let dotsOnly = zoom < 0.09
-        let visible = bounds.insetBy(dx: -iconSide, dy: -iconSide)
+        let visible = bounds.insetBy(dx: -baseSide, dy: -baseSide)
 
         func screenPoint(_ nx: Double, _ ny: Double) -> CGPoint? {
             let p = CGPoint(x: CGFloat(nx) * world * zoom + origin.x - offset.x,
@@ -791,6 +794,8 @@ final class MarkerOverlayView: UIView {
         for category in mapData.categories where enabled.contains(category.id) {
             let dense = category.markers.count > 300
             let image = icon(category.icon)
+            let iconSide = smallLayers.contains(category.id)
+                ? baseSide * 0.7 : baseSide
             let ring: UIColor? = category.id == "alpha" ? .systemYellow
                 : category.id == "predator" ? .systemRed : nil
             for marker in category.markers {
@@ -806,8 +811,9 @@ final class MarkerOverlayView: UIView {
                     // pal artwork in a circle: white outer border for
                     // contrast, inner ring = gold alpha / red predator,
                     // green when marked visited
-                    let box = CGRect(x: p.x - iconSide / 2, y: p.y - iconSide / 2,
-                                     width: iconSide, height: iconSide)
+                    let box = CGRect(x: p.x - baseSide / 2, y: p.y - baseSide / 2,
+                                     width: baseSide, height: baseSide)
+                        .insetBy(dx: 3, dy: 3)   // rings add back what we inset
                     UIColor.white.setFill()
                     UIBezierPath(ovalIn: box.insetBy(dx: -4, dy: -4)).fill()
                     (seen ? UIColor.systemGreen : ring).setFill()
