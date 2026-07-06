@@ -68,9 +68,22 @@ struct PalMapView: View {
     @State private var mapData: MapData?
     @State private var missing = false
     @AppStorage("mapLayers") private var layersRaw = "fastTravel,tower,alpha"
+    @AppStorage("mapVisited") private var visitedRaw = ""
+    @AppStorage("mapHideVisited") private var hideVisited = false
     @State private var spawnPal: Pal?
     @State private var selection: SelectedMarker?
     @State private var showFilters = false
+    @State private var focus: FocusRequest?
+
+    private var visited: Set<String> {
+        Set(visitedRaw.split(separator: "|").map(String.init))
+    }
+
+    private func toggleVisited(_ key: String) {
+        var set = visited
+        if set.contains(key) { set.remove(key) } else { set.insert(key) }
+        visitedRaw = set.joined(separator: "|")
+    }
 
     private var enabledLayers: Set<String> {
         get { Set(layersRaw.split(separator: ",").map(String.init)) }
@@ -84,6 +97,9 @@ struct PalMapView: View {
                         TiledMapView(mapData: mapData,
                                      enabled: enabledLayers,
                                      spawns: spawnPal.flatMap { mapData.spawns[$0.name.lowercased()] },
+                                     visited: visited,
+                                     hideVisited: hideVisited,
+                                     focus: focus,
                                      palImage: { name in
                                          data.quizPals
                                              .first { $0.name.lowercased() == name }
@@ -118,7 +134,8 @@ struct PalMapView: View {
             }
             .sheet(isPresented: $showFilters) {
                 MapFilterSheet(data: data, mapData: mapData,
-                               layersRaw: $layersRaw, spawnPal: $spawnPal)
+                               layersRaw: $layersRaw, spawnPal: $spawnPal,
+                               visited: visited, hideVisited: $hideVisited)
                     .presentationDetents([.medium, .large])
             }
             .task {
@@ -130,6 +147,10 @@ struct PalMapView: View {
                 consumeRoute()
             }
             .onChange(of: route.spawnPalName) { consumeRoute() }
+            .onChange(of: spawnPal?.id) {
+                // picking a pal in the filter sheet also flies the camera there
+                if spawnPal != nil { focusOnSpawns() }
+            }
         }
     }
 
@@ -137,6 +158,22 @@ struct PalMapView: View {
         guard let name = route.spawnPalName else { return }
         route.spawnPalName = nil
         spawnPal = data.quizPals.first { $0.name.caseInsensitiveCompare(name) == .orderedSame }
+        focusOnSpawns()
+    }
+
+    /// Zoom the camera to fit the selected pal's spawn points.
+    private func focusOnSpawns() {
+        guard let spawnPal, let mapData,
+              let sides = mapData.spawns[spawnPal.name.lowercased()] else { return }
+        let points = sides.values.flatMap { $0 }.filter { $0.count >= 2 }
+        guard let firstX = points.first?[0], let firstY = points.first?[1] else { return }
+        var minX = firstX, maxX = firstX, minY = firstY, maxY = firstY
+        for point in points {
+            minX = min(minX, point[0]); maxX = max(maxX, point[0])
+            minY = min(minY, point[1]); maxY = max(maxY, point[1])
+        }
+        focus = FocusRequest(rect: CGRect(x: minX, y: minY,
+                                          width: maxX - minX, height: maxY - minY))
     }
 
     private func calloutCard(_ selected: SelectedMarker) -> some View {
@@ -163,6 +200,27 @@ struct PalMapView: View {
                     }
                 }
             }
+            // jump the camera back to this marker
+            Button {
+                focus = FocusRequest(rect: CGRect(x: selected.marker.x - 0.02,
+                                                  y: selected.marker.y - 0.02,
+                                                  width: 0.04, height: 0.04))
+            } label: {
+                Image(systemName: "location.circle.fill")
+                    .font(.title3)
+                    .foregroundStyle(.teal)
+            }
+            .buttonStyle(.borderless)
+            // 100% completion: mark this POI as seen
+            Button {
+                toggleVisited(selected.key)
+            } label: {
+                Image(systemName: visited.contains(selected.key)
+                      ? "checkmark.circle.fill" : "checkmark.circle")
+                    .font(.title3)
+                    .foregroundStyle(visited.contains(selected.key) ? .green : .secondary)
+            }
+            .buttonStyle(.borderless)
             Button {
                 selection = nil
             } label: {
@@ -233,6 +291,8 @@ struct MapFilterSheet: View {
     let mapData: MapData?
     @Binding var layersRaw: String
     @Binding var spawnPal: Pal?
+    let visited: Set<String>
+    @Binding var hideVisited: Bool
     @Environment(\.dismiss) private var dismiss
     @State private var palQuery = ""
 
@@ -243,6 +303,14 @@ struct MapFilterSheet: View {
     var body: some View {
         NavigationStack {
             List {
+                Section {
+                    Toggle(isOn: $hideVisited) {
+                        Label("Hide visited", systemImage: "eye.slash")
+                            .font(.subheadline.weight(.semibold))
+                    }
+                } footer: {
+                    Text("Mark points as visited from their map callout — collected effigies, opened chests…")
+                }
                 Section("Layers") {
                     ForEach(mapData?.categories ?? []) { category in
                         Button {
@@ -257,10 +325,15 @@ struct MapFilterSheet: View {
                                     .font(.subheadline.weight(.semibold))
                                     .foregroundStyle(.primary)
                                 Spacer()
-                                Text("\(category.markers.count)")
+                                let seen = category.markers.filter {
+                                    visited.contains("\(category.id):\($0.x):\($0.y)")
+                                }.count
+                                Text(seen > 0 ? "\(seen)/\(category.markers.count)"
+                                              : "\(category.markers.count)")
                                     .font(.caption.weight(.bold))
                                     .monospacedDigit()
-                                    .foregroundStyle(.secondary)
+                                    .foregroundStyle(seen == category.markers.count && seen > 0
+                                                     ? .green : .secondary)
                                 Image(systemName: enabled.contains(category.id)
                                       ? "checkmark.circle.fill" : "circle")
                                     .foregroundStyle(enabled.contains(category.id)
@@ -321,18 +394,34 @@ struct MapFilterSheet: View {
 
 // MARK: - The tiled map (UIKit core)
 
+/// One-shot "move the camera" command from SwiftUI to the scroll view.
+struct FocusRequest: Equatable {
+    let rect: CGRect     // normalized 0...1 map space
+    let id = UUID()
+}
+
 struct SelectedMarker {
     let marker: MapMarker
+    let categoryID: String
     let categoryName: String
     let categoryIcon: String
+
+    /// Stable across data refreshes: category + rounded coordinates.
+    var key: String { "\(categoryID):\(marker.x):\(marker.y)" }
 }
 
 struct TiledMapView: UIViewRepresentable {
     let mapData: MapData
     let enabled: Set<String>
     let spawns: [String: [[Double]]]?
+    let visited: Set<String>
+    let hideVisited: Bool
+    let focus: FocusRequest?
     let palImage: (String) -> UIImage?
     @Binding var selection: SelectedMarker?
+
+    final class Coordinator { var lastFocusID: UUID? }
+    func makeCoordinator() -> Coordinator { Coordinator() }
 
     func makeUIView(context: Context) -> MapContainerView {
         let view = MapContainerView(mapData: mapData)
@@ -344,7 +433,13 @@ struct TiledMapView: UIViewRepresentable {
     func updateUIView(_ view: MapContainerView, context: Context) {
         view.overlay.enabled = enabled
         view.overlay.spawns = spawns
+        view.overlay.visited = visited
+        view.overlay.hideVisited = hideVisited
         view.overlay.setNeedsDisplay()
+        if let focus, focus.id != context.coordinator.lastFocusID {
+            context.coordinator.lastFocusID = focus.id
+            view.focus(onNormalized: focus.rect, animated: true)
+        }
     }
 }
 
@@ -380,8 +475,7 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
 
         overlay.isUserInteractionEnabled = false
         overlay.positionProvider = { [weak self] in
-            guard let self else { return (.zero, 1) }
-            return (self.scrollView.contentOffset, self.scrollView.zoomScale)
+            self?.presentedState() ?? (.zero, 1, .zero)
         }
         addSubview(overlay)
 
@@ -390,6 +484,55 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
     }
 
     required init?(coder: NSCoder) { fatalError() }
+
+    // Redraw the overlay from the PRESENTATION layer every frame: during the
+    // animated zoom-bounce the scroll view reports final values immediately,
+    // so drawing from the model layer made markers jump ahead of the map.
+    private var displayLink: CADisplayLink?
+    private var lastState: (CGPoint, CGFloat, CGPoint) = (.zero, 0, .zero)
+
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        displayLink?.invalidate()
+        displayLink = nil
+        if window != nil {
+            let link = CADisplayLink(target: self, selector: #selector(frameTick))
+            link.add(to: .main, forMode: .common)
+            displayLink = link
+        }
+    }
+
+    @objc private func frameTick() {
+        let state = presentedState()
+        if state.0 != lastState.0 || state.1 != lastState.1 || state.2 != lastState.2 {
+            lastState = state
+            overlay.setNeedsDisplay()
+        }
+    }
+
+    /// (contentOffset, zoom, contentOrigin) as currently ON SCREEN.
+    func presentedState() -> (CGPoint, CGFloat, CGPoint) {
+        let offset = scrollView.layer.presentation()?.bounds.origin
+            ?? scrollView.contentOffset
+        let contentFrame = content.layer.presentation()?.frame ?? content.frame
+        let zoom = contentFrame.width / Self.worldSize
+        return (offset, zoom, contentFrame.origin)
+    }
+
+    /// Center the camera on a normalized-map-space rect (padded, clamped).
+    func focus(onNormalized rect: CGRect, animated: Bool) {
+        let world = Self.worldSize
+        var target = CGRect(x: rect.minX * world, y: rect.minY * world,
+                            width: rect.width * world, height: rect.height * world)
+        // pad, and never zoom in tighter than ~900 world units across
+        target = target.insetBy(dx: -target.width * 0.25, dy: -target.height * 0.25)
+        let minSide: CGFloat = 900
+        if target.width < minSide || target.height < minSide {
+            let grow = max(minSide - target.width, minSide - target.height) / 2
+            target = target.insetBy(dx: -max(0, grow), dy: -max(0, grow))
+        }
+        scrollView.zoom(to: target, animated: animated)
+    }
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -472,8 +615,11 @@ final class MarkerOverlayView: UIView {
     private let mapData: MapData
     var enabled: Set<String> = []
     var spawns: [String: [[Double]]]?
-    /// Supplies (contentOffset, zoomScale) at draw time.
-    var positionProvider: (() -> (CGPoint, CGFloat))?
+    var visited: Set<String> = []
+    var hideVisited = false
+    /// Supplies (contentOffset, zoom, contentOrigin) at draw time — read
+    /// from presentation layers so bounce animations track perfectly.
+    var positionProvider: (() -> (CGPoint, CGFloat, CGPoint))?
     /// Alpha/predator markers draw the pal's own artwork.
     var palImageProvider: ((String) -> UIImage?)?
 
@@ -510,7 +656,7 @@ final class MarkerOverlayView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
-        guard let (offset, zoom) = positionProvider?() else { return }
+        guard let (offset, zoom, origin) = positionProvider?() else { return }
         let world = MapContainerView.worldSize
         let iconSide: CGFloat = 26
         let dotSide: CGFloat = 6
@@ -519,8 +665,8 @@ final class MarkerOverlayView: UIView {
         let visible = bounds.insetBy(dx: -iconSide, dy: -iconSide)
 
         func screenPoint(_ nx: Double, _ ny: Double) -> CGPoint? {
-            let p = CGPoint(x: CGFloat(nx) * world * zoom - offset.x,
-                            y: CGFloat(ny) * world * zoom - offset.y)
+            let p = CGPoint(x: CGFloat(nx) * world * zoom + origin.x - offset.x,
+                            y: CGFloat(ny) * world * zoom + origin.y - offset.y)
             return visible.contains(p) ? p : nil
         }
 
@@ -531,8 +677,10 @@ final class MarkerOverlayView: UIView {
                 : category.id == "predator" ? .systemRed : nil
             for marker in category.markers {
                 guard let p = screenPoint(marker.x, marker.y) else { continue }
+                let seen = visited.contains("\(category.id):\(marker.x):\(marker.y)")
+                if seen && hideVisited { continue }
                 if dense && dotsOnly {
-                    UIColor.systemYellow.setFill()
+                    (seen ? UIColor.systemGray : UIColor.systemYellow).setFill()
                     UIBezierPath(ovalIn: CGRect(x: p.x - dotSide / 2, y: p.y - dotSide / 2,
                                                 width: dotSide, height: dotSide)).fill()
                 } else if let ring, let palName = marker.pal,
@@ -551,12 +699,16 @@ final class MarkerOverlayView: UIView {
                     if let ctx = UIGraphicsGetCurrentContext() {
                         ctx.saveGState()
                         UIBezierPath(ovalIn: box).addClip()
-                        thumb.draw(in: box.insetBy(dx: 1, dy: 1))
+                        thumb.draw(in: box.insetBy(dx: 1, dy: 1),
+                                   blendMode: .normal, alpha: seen ? 0.35 : 1)
                         ctx.restoreGState()
                     }
+                    if seen { drawSeenBadge(at: box) }
                 } else if let image {
-                    image.draw(in: CGRect(x: p.x - iconSide / 2, y: p.y - iconSide / 2,
-                                          width: iconSide, height: iconSide))
+                    let box = CGRect(x: p.x - iconSide / 2, y: p.y - iconSide / 2,
+                                     width: iconSide, height: iconSide)
+                    image.draw(in: box, blendMode: .normal, alpha: seen ? 0.35 : 1)
+                    if seen { drawSeenBadge(at: box) }
                 }
             }
         }
@@ -575,17 +727,35 @@ final class MarkerOverlayView: UIView {
         }
     }
 
+    /// Small green tick on visited markers.
+    private func drawSeenBadge(at box: CGRect) {
+        let badge = CGRect(x: box.maxX - 9, y: box.minY - 2, width: 11, height: 11)
+        UIColor.systemGreen.setFill()
+        UIBezierPath(ovalIn: badge).fill()
+        if let check = UIImage(systemName: "checkmark",
+                               withConfiguration: UIImage.SymbolConfiguration(
+                                   pointSize: 7, weight: .heavy))?
+            .withTintColor(.white, renderingMode: .alwaysOriginal) {
+            check.draw(in: badge.insetBy(dx: 2.2, dy: 2.8))
+        }
+    }
+
     /// Hit-test in CONTENT coordinates (the 16,384-unit space).
     func marker(nearContent point: CGPoint, tolerance: CGFloat) -> SelectedMarker? {
         let world = MapContainerView.worldSize
         var best: (SelectedMarker, CGFloat)?
         for category in mapData.categories where enabled.contains(category.id) {
             for marker in category.markers {
+                if hideVisited,
+                   visited.contains("\(category.id):\(marker.x):\(marker.y)") {
+                    continue
+                }
                 let dx = CGFloat(marker.x) * world - point.x
                 let dy = CGFloat(marker.y) * world - point.y
                 let dist = hypot(dx, dy)
                 if dist < tolerance && (best == nil || dist < best!.1) {
-                    best = (SelectedMarker(marker: marker, categoryName: category.name,
+                    best = (SelectedMarker(marker: marker, categoryID: category.id,
+                                           categoryName: category.name,
                                            categoryIcon: category.icon), dist)
                 }
             }
