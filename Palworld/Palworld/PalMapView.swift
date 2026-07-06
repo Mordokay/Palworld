@@ -543,13 +543,14 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
         }
     }
 
-    /// (contentOffset, zoom, contentOrigin) as currently ON SCREEN.
+    /// (contentOffset, zoom, contentOrigin) for the FRAME BEING BUILT.
+    /// Model values, deliberately: every camera change is now either
+    /// gesture-driven or set by our own animation, so the model is committed
+    /// in the same transaction as the map layer. (Presentation-layer reads —
+    /// the previous approach — lag one frame behind during drags, which
+    /// showed as elastic marker movement.)
     func presentedState() -> (CGPoint, CGFloat, CGPoint) {
-        let offset = scrollView.layer.presentation()?.bounds.origin
-            ?? scrollView.contentOffset
-        let contentFrame = content.layer.presentation()?.frame ?? content.frame
-        let zoom = contentFrame.width / Self.worldSize
-        return (offset, zoom, contentFrame.origin)
+        (scrollView.contentOffset, scrollView.zoomScale, content.frame.origin)
     }
 
     /// Center the camera on a normalized-map-space rect (padded, clamped).
