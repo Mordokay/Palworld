@@ -74,6 +74,7 @@ struct PalMapView: View {
     @State private var spawnSide = "day"
     @State private var selection: SelectedMarker?
     @State private var showFilters = false
+    @State private var libraryPalID: String?
     @State private var focus: FocusRequest?
 
     private var visited: Set<String> {
@@ -136,6 +137,9 @@ struct PalMapView: View {
                     }
                 }
             }
+            .sheet(item: $libraryPalID) { id in
+                ArticleSheetView(data: data, articleID: id)
+            }
             .sheet(isPresented: $showFilters) {
                 MapFilterSheet(data: data, mapData: mapData,
                                layersRaw: $layersRaw, spawnPal: $spawnPal,
@@ -195,8 +199,8 @@ struct PalMapView: View {
             Spacer()
             if let palName = selected.marker.pal,
                let pal = data.quizPals.first(where: { $0.name.lowercased() == palName }) {
-                NavigationLink {
-                    ArticleSheetView(data: data, articleID: pal.id)
+                Button {
+                    libraryPalID = pal.id
                 } label: {
                     HStack(spacing: 6) {
                         WikiImage(file: pal.image, kind: .pals)
@@ -205,6 +209,7 @@ struct PalMapView: View {
                             .font(.caption)
                     }
                 }
+                .buttonStyle(.borderless)
             }
             // jump the camera back to this marker
             Button {
@@ -244,22 +249,36 @@ struct PalMapView: View {
         let sides = mapData?.spawns[pal.name.lowercased()] ?? [:]
         let hasDay = sides["day"]?.isEmpty == false
         let hasNight = sides["night"]?.isEmpty == false
-        return HStack(spacing: 10) {
+        var subtitle = pal.elements.joined(separator: " / ")
+        if !pal.number.isEmpty { subtitle += "  ·  #\(pal.number)" }
+        subtitle += hasDay && hasNight ? "  ·  spawns day & night"
+            : hasNight ? "  ·  nocturnal" : "  ·  daytime only"
+        return HStack(spacing: 12) {
             WikiImage(file: pal.image, kind: .pals)
-                .frame(width: 30, height: 30)
-            Text("\(pal.name) spawns")
-                .font(.subheadline.weight(.semibold))
+                .frame(width: 34, height: 34)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(pal.name)
+                    .font(.headline)
+                Text(subtitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+            }
             Spacer()
             if hasDay && hasNight {
                 // one side at a time keeps the dots unambiguous
                 sideButton("day", symbol: "sun.max.fill", tint: .orange)
                 sideButton("night", symbol: "moon.stars.fill", tint: .indigo)
-            } else {
-                Label(hasNight ? "night only" : "day only",
-                      systemImage: hasNight ? "moon.stars.fill" : "sun.max.fill")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(hasNight ? .indigo : .orange)
             }
+            Button {
+                libraryPalID = pal.id
+            } label: {
+                Image(systemName: "book.fill")
+                    .font(.title3)
+                    .foregroundStyle(.tint)
+            }
+            .buttonStyle(.borderless)
             Button {
                 spawnPal = nil
             } label: {
@@ -268,9 +287,8 @@ struct PalMapView: View {
             }
             .buttonStyle(.borderless)
         }
-        .padding(.horizontal)
-        .padding(.vertical, 10)
-        .background(.regularMaterial, in: Capsule())
+        .padding()
+        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
         .padding()
     }
 
@@ -278,13 +296,12 @@ struct PalMapView: View {
         Button {
             spawnSide = side
         } label: {
-            Label(side, systemImage: symbol)
-                .font(.caption.weight(.bold))
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
+            Image(systemName: symbol)
+                .font(.subheadline.weight(.bold))
+                .padding(8)
                 .background(spawnSide == side ? tint.opacity(0.25) : .clear,
-                            in: Capsule())
-                .overlay(Capsule().stroke(
+                            in: Circle())
+                .overlay(Circle().stroke(
                     spawnSide == side ? tint : .secondary.opacity(0.3), lineWidth: 1))
                 .foregroundStyle(spawnSide == side ? tint : .secondary)
         }
