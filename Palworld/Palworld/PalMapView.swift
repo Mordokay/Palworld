@@ -805,8 +805,9 @@ final class MarkerOverlayView: UIView {
         for category in mapData.categories where enabled.contains(category.id) {
             let dense = category.markers.count > 300
             let image = icon(category.icon)
-            let iconSide = smallLayers.contains(category.id)
-                ? baseSide * 0.7 : baseSide
+            let iconSide = smallLayers.contains(category.id) ? baseSide * 0.7
+                : category.id == "dungeon" ? baseSide * 0.75   // its glyph fills
+                : baseSide                                     // the canvas more
             let ring: UIColor? = category.id == "alpha" ? .systemYellow
                 : category.id == "predator" ? .systemRed : nil
             for marker in category.markers {
