@@ -157,7 +157,14 @@ struct PalMapView: View {
             .onChange(of: route.spawnPalName) { consumeRoute() }
             .onChange(of: spawnPal?.id) {
                 // picking a pal in the filter sheet also flies the camera there
-                if spawnPal != nil { focusOnSpawns() }
+                if spawnPal != nil {
+                    selection = nil          // banners are a singleton
+                    focusOnSpawns()
+                }
+            }
+            .onChange(of: selection?.key) {
+                // tapping a marker replaces the spawn banner (and its dots)
+                if selection != nil { spawnPal = nil }
             }
         }
     }
