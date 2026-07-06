@@ -249,21 +249,17 @@ struct PalMapView: View {
         let sides = mapData?.spawns[pal.name.lowercased()] ?? [:]
         let hasDay = sides["day"]?.isEmpty == false
         let hasNight = sides["night"]?.isEmpty == false
-        var subtitle = pal.elements.joined(separator: " / ")
-        if !pal.number.isEmpty { subtitle += "  ·  #\(pal.number)" }
-        subtitle += hasDay && hasNight ? "  ·  spawns day & night"
-            : hasNight ? "  ·  nocturnal" : "  ·  daytime only"
         return HStack(spacing: 12) {
             WikiImage(file: pal.image, kind: .pals)
                 .frame(width: 34, height: 34)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(pal.name)
                     .font(.headline)
-                Text(subtitle)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
+                HStack(spacing: 4) {
+                    ForEach(pal.elements, id: \.self) { element in
+                        ElementChip(element: element)
+                    }
+                }
             }
             Spacer()
             if hasDay && hasNight {
