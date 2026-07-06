@@ -499,10 +499,11 @@ final class MapContainerView: UIView, UIScrollViewDelegate {
         scrollView.maximumZoomScale = 2
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
-        // pinch clamps hard at the limits: the system's zoom-bounce is the
-        // one animation whose mid-flight state we can't read exactly, and it
-        // made markers drift; without it the overlay is glued every frame
+        // no bounce anywhere: rubber-banding past an edge (and the spring
+        // back) is system-animated and desyncs the marker overlay — the map
+        // simply never leaves the screen edges
         scrollView.bouncesZoom = false
+        scrollView.bounces = false
         scrollView.backgroundColor = UIColor(red: 0.05, green: 0.12, blue: 0.2, alpha: 1)
         addSubview(scrollView)
 
