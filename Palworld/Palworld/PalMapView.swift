@@ -537,13 +537,23 @@ final class MarkerOverlayView: UIView {
                                                 width: dotSide, height: dotSide)).fill()
                 } else if let ring, let palName = marker.pal,
                           let thumb = palThumb(palName) {
+                    // pal artwork in a circle: white outer border for
+                    // contrast on the dark map, colored inner ring for
+                    // meaning (gold = alpha, red = predator's aura)
                     let box = CGRect(x: p.x - iconSide / 2, y: p.y - iconSide / 2,
                                      width: iconSide, height: iconSide)
-                    ring.withAlphaComponent(0.9).setFill()
-                    UIBezierPath(ovalIn: box.insetBy(dx: -3, dy: -3)).fill()
-                    UIColor.systemBackground.setFill()
-                    UIBezierPath(ovalIn: box.insetBy(dx: -1, dy: -1)).fill()
-                    thumb.draw(in: box)
+                    UIColor.white.setFill()
+                    UIBezierPath(ovalIn: box.insetBy(dx: -4, dy: -4)).fill()
+                    ring.setFill()
+                    UIBezierPath(ovalIn: box.insetBy(dx: -2.5, dy: -2.5)).fill()
+                    UIColor(white: 0.12, alpha: 1).setFill()
+                    UIBezierPath(ovalIn: box).fill()
+                    if let ctx = UIGraphicsGetCurrentContext() {
+                        ctx.saveGState()
+                        UIBezierPath(ovalIn: box).addClip()
+                        thumb.draw(in: box.insetBy(dx: 1, dy: 1))
+                        ctx.restoreGState()
+                    }
                 } else if let image {
                     image.draw(in: CGRect(x: p.x - iconSide / 2, y: p.y - iconSide / 2,
                                           width: iconSide, height: iconSide))
