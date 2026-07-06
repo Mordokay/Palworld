@@ -241,8 +241,69 @@ def extract(chunks: dict) -> tuple[dict, dict]:
         spawns[name] = {side: [list(norm(x, y)) for x, y in pts]
                         for side, pts in spawn.items() if pts}
 
+    categories.extend(mapgenie_categories())
+
     markers_json = {"categories": categories, "warnings": warnings}
     return markers_json, spawns
+
+
+# ------------------------------------------------------- mapgenie extras
+
+# Bounty targets + fishing spots aren't on palworld.gg; mapgenie.io has them.
+# Affine calibrated by permutation-matching the 7 syndicate towers between
+# both datasets (validated on 152 dungeons, median error ~13 world units):
+#   x = 0.003246*lat + 1.514979*lng + 1.682067
+#   y = -1.514824*lat - 0.001526*lng + 1.458622
+MAPGENIE_API = "https://mapgenie.io/api/v1/maps/580/data"
+MAPGENIE_SPRITES = "https://cdn.mapgenie.io/images/games/palworld/markers@2x"
+MAPGENIE_CATS = {12211: ("bounty", "Bounty Target", "bounty"),
+                 10283: ("fishing", "Fishing Spot", "fishing")}
+
+
+def mapgenie_xy(lat: float, lng: float) -> tuple[float, float]:
+    x = 0.003246 * lat + 1.514979 * lng + 1.682067
+    y = -1.514824 * lat - 0.001526 * lng + 1.458622
+    return round(x, 4), round(y, 4)
+
+
+def mapgenie_categories() -> list[dict]:
+    try:
+        data = json.loads(fetch(MAPGENIE_API))
+    except Exception as exc:
+        print(f"  WARNING: mapgenie fetch failed ({exc}) — bounty/fishing "
+              f"layers kept from previous run", file=sys.stderr)
+        return []
+    out = []
+    for cat_id, (layer_id, layer_name, icon) in MAPGENIE_CATS.items():
+        markers = []
+        for loc in data.get("locations", []):
+            if loc.get("category_id") != cat_id:
+                continue
+            x, y = mapgenie_xy(float(loc["latitude"]), float(loc["longitude"]))
+            title = (loc.get("title") or layer_name).replace(" (Bounty)", "")
+            markers.append({"x": x, "y": y, "name": title})
+        out.append({"id": layer_id, "name": layer_name, "icon": icon,
+                    "markers": markers})
+        print(f"  {layer_id:<12} {len(markers)} markers (mapgenie)")
+    return out
+
+
+def fetch_mapgenie_icons():
+    """Actual in-game icons for the mapgenie layers (via paldb's asset CDN):
+    the purple hooded bounty compass icon + the fishing rod."""
+    icons = MAPDIR / "icons"
+    icons.mkdir(parents=True, exist_ok=True)
+    from io import BytesIO
+    from PIL import Image
+    game_icons = {
+        "bounty": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/"
+                  "T_icon_compass_Bounty.webp",
+        "fishing": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/"
+                   "T_itemicon_Weapon_FishingRod_1.webp",
+    }
+    for name, url in game_icons.items():
+        Image.open(BytesIO(fetch(url))).convert("RGBA").save(icons / f"{name}.png")
+    print(f"  game icons: {len(game_icons)}")
 
 
 # ---------------------------------------------------------------- assets
@@ -313,6 +374,7 @@ def main():
     print(f"spawns: {len(spawns)} pals, "
           f"{sum(len(v) for s in spawns.values() for v in s.values())} points")
     fetch_icons()
+    fetch_mapgenie_icons()
     fetch_tiles()
     print("Done.")
 
