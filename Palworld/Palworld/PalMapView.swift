@@ -69,7 +69,8 @@ struct PalMapView: View {
     @State private var missing = false
     @AppStorage("mapLayers") private var layersRaw = "fastTravel,tower,alpha"
     @AppStorage("mapVisited") private var visitedRaw = ""
-    @AppStorage("mapHideVisited") private var hideVisited = false
+    /// "all" / "unvisited" / "visited"
+    @AppStorage("mapVisitedFilter") private var visitedFilter = "all"
     @State private var spawnPal: Pal?
     @State private var spawnSide = "day"
     @State private var selection: SelectedMarker?
@@ -103,7 +104,7 @@ struct PalMapView: View {
                                              .filter { $0.key == spawnSide }
                                      },
                                      visited: visited,
-                                     hideVisited: hideVisited,
+                                     visitedFilter: visitedFilter,
                                      focus: focus,
                                      palImage: { name in
                                          data.quizPals
@@ -143,7 +144,7 @@ struct PalMapView: View {
             .sheet(isPresented: $showFilters) {
                 MapFilterSheet(data: data, mapData: mapData,
                                layersRaw: $layersRaw, spawnPal: $spawnPal,
-                               visited: visited, hideVisited: $hideVisited)
+                               visited: visited, visitedFilter: $visitedFilter)
                     .presentationDetents([.medium, .large])
             }
             .task {
@@ -342,7 +343,7 @@ struct MapFilterSheet: View {
     @Binding var layersRaw: String
     @Binding var spawnPal: Pal?
     let visited: Set<String>
-    @Binding var hideVisited: Bool
+    @Binding var visitedFilter: String
     @Environment(\.dismiss) private var dismiss
     @State private var palQuery = ""
 
@@ -354,10 +355,12 @@ struct MapFilterSheet: View {
         NavigationStack {
             List {
                 Section {
-                    Toggle(isOn: $hideVisited) {
-                        Label("Hide visited", systemImage: "eye.slash")
-                            .font(.subheadline.weight(.semibold))
+                    Picker("Visited", selection: $visitedFilter) {
+                        Text("All").tag("all")
+                        Text("Unvisited").tag("unvisited")
+                        Text("Visited").tag("visited")
                     }
+                    .pickerStyle(.segmented)
                 } footer: {
                     Text("Mark points as visited from their map callout — collected effigies, opened chests…")
                 }
@@ -465,7 +468,7 @@ struct TiledMapView: UIViewRepresentable {
     let enabled: Set<String>
     let spawns: [String: [[Double]]]?
     let visited: Set<String>
-    let hideVisited: Bool
+    let visitedFilter: String
     let focus: FocusRequest?
     let palImage: (String) -> UIImage?
     @Binding var selection: SelectedMarker?
@@ -484,7 +487,7 @@ struct TiledMapView: UIViewRepresentable {
         view.overlay.enabled = enabled
         view.overlay.spawns = spawns
         view.overlay.visited = visited
-        view.overlay.hideVisited = hideVisited
+        view.overlay.visitedFilter = visitedFilter
         view.overlay.setNeedsDisplay()
         if let focus, focus.id != context.coordinator.lastFocusID {
             context.coordinator.lastFocusID = focus.id
@@ -720,7 +723,8 @@ final class MarkerOverlayView: UIView {
     var enabled: Set<String> = []
     var spawns: [String: [[Double]]]?
     var visited: Set<String> = []
-    var hideVisited = false
+    /// "all" / "unvisited" / "visited"
+    var visitedFilter = "all"
     /// Supplies (contentOffset, zoom, contentOrigin) at draw time — read
     /// from presentation layers so bounce animations track perfectly.
     var positionProvider: (() -> (CGPoint, CGFloat, CGPoint))?
@@ -808,7 +812,8 @@ final class MarkerOverlayView: UIView {
             for marker in category.markers {
                 guard let p = screenPoint(marker.x, marker.y) else { continue }
                 let seen = visited.contains("\(category.id):\(marker.x):\(marker.y)")
-                if seen && hideVisited { continue }
+                if (visitedFilter == "unvisited" && seen)
+                    || (visitedFilter == "visited" && !seen) { continue }
                 if dense && dotsOnly {
                     (seen ? UIColor.systemGreen : UIColor.systemYellow).setFill()
                     UIBezierPath(ovalIn: CGRect(x: p.x - dotSide / 2, y: p.y - dotSide / 2,
@@ -867,10 +872,9 @@ final class MarkerOverlayView: UIView {
         var best: (SelectedMarker, CGFloat)?
         for category in mapData.categories where enabled.contains(category.id) {
             for marker in category.markers {
-                if hideVisited,
-                   visited.contains("\(category.id):\(marker.x):\(marker.y)") {
-                    continue
-                }
+                let seen = visited.contains("\(category.id):\(marker.x):\(marker.y)")
+                if (visitedFilter == "unvisited" && seen)
+                    || (visitedFilter == "visited" && !seen) { continue }
                 let dx = CGFloat(marker.x) * world - point.x
                 let dy = CGFloat(marker.y) * world - point.y
                 let dist = hypot(dx, dy)
