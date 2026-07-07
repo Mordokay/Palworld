@@ -18,11 +18,23 @@ function App() {
     }, (e) => setError(String(e)));
   }, []);
 
+  // narrow screens can't fit the dual pane — fall back to a Map|Library
+  // switcher; both panes stay mounted so Leaflet keeps its state
+  const [mobileTab, setMobileTab] = useState<"map" | "library">("map");
+
   if (error) return <div class="boot-screen">Failed to load game data: {error}</div>;
   if (!data) return <div class="boot-screen">Loading Palpagos Islands…</div>;
 
   return (
-    <div class="app-shell">
+    <div class={`app-shell show-${mobileTab}`}>
+      <nav class="mobile-tabs">
+        <button class={mobileTab === "map" ? "active" : ""} onClick={() => setMobileTab("map")}>
+          🗺️ Map
+        </button>
+        <button class={mobileTab === "library" ? "active" : ""} onClick={() => setMobileTab("library")}>
+          📚 Library
+        </button>
+      </nav>
       <div class="map-pane">
         <MapPane data={data} />
       </div>
