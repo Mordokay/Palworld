@@ -66,10 +66,14 @@ export async function loadGameData(): Promise<GameData> {
 }
 
 // map_spawns.json is 1.7MB — loaded lazily the first time spawns are shown.
+// Its keys are display-cased pal names; lowercase them once at load, exactly
+// like the iOS MapData does, so lookups by pal.name.toLowerCase() hit.
 let spawnsPromise: Promise<SpawnData> | null = null;
 
 export function loadSpawns(): Promise<SpawnData> {
-  spawnsPromise ??= fetchJSON<SpawnData>("map_spawns.json");
+  spawnsPromise ??= fetchJSON<SpawnData>("map_spawns.json").then((raw) =>
+    Object.fromEntries(Object.entries(raw).map(([name, sides]) => [name.toLowerCase(), sides])),
+  );
   return spawnsPromise;
 }
 
