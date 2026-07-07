@@ -54,6 +54,30 @@ enum Theme {
     static let allElements = ["Neutral", "Fire", "Water", "Grass", "Electric",
                               "Ice", "Ground", "Dark", "Dragon"]
 
+    /// Work-suitability keys in the in-game order (match pals.json keys).
+    static let allWorkKeys = ["kindling", "watering", "planting", "generatingElectricity",
+                              "handiwork", "gathering", "lumbering", "mining",
+                              "medicineProduction", "cooling", "transporting", "farming"]
+
+    /// A distinct accent color per work suitability, for the filter bubbles.
+    static func workColor(_ key: String) -> Color {
+        switch key {
+        case "kindling": Color(red: 0.94, green: 0.35, blue: 0.20)
+        case "watering": Color(red: 0.23, green: 0.55, blue: 0.96)
+        case "planting": Color(red: 0.30, green: 0.75, blue: 0.35)
+        case "generatingElectricity": Color(red: 0.97, green: 0.78, blue: 0.10)
+        case "handiwork": Color(red: 0.92, green: 0.56, blue: 0.18)
+        case "gathering": Color(red: 0.16, green: 0.72, blue: 0.55)
+        case "lumbering": Color(red: 0.62, green: 0.42, blue: 0.26)
+        case "mining": Color(red: 0.54, green: 0.56, blue: 0.62)
+        case "medicineProduction": Color(red: 0.90, green: 0.36, blue: 0.62)
+        case "cooling": Color(red: 0.36, green: 0.78, blue: 0.92)
+        case "transporting": Color(red: 0.58, green: 0.40, blue: 0.90)
+        case "farming": Color(red: 0.62, green: 0.78, blue: 0.30)
+        default: .secondary
+        }
+    }
+
     /// How much damage a pal with `elements` takes from an attack of `attacker`.
     static func damageMultiplier(defender elements: [String], attacker: String) -> Double {
         elements.reduce(1.0) { result, element in

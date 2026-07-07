@@ -6,6 +6,35 @@ export const allElements = [
   "Ice", "Ground", "Dark", "Dragon",
 ] as const;
 
+/** Work-suitability keys in the in-game order (match pals.json keys). */
+export const allWorkKeys = [
+  "kindling", "watering", "planting", "generatingElectricity",
+  "handiwork", "gathering", "lumbering", "mining",
+  "medicineProduction", "cooling", "transporting", "farming",
+] as const;
+
+const workRGB: Record<string, [number, number, number]> = {
+  kindling: [0.94, 0.35, 0.2],
+  watering: [0.23, 0.55, 0.96],
+  planting: [0.3, 0.75, 0.35],
+  generatingElectricity: [0.97, 0.78, 0.1],
+  handiwork: [0.92, 0.56, 0.18],
+  gathering: [0.16, 0.72, 0.55],
+  lumbering: [0.62, 0.42, 0.26],
+  mining: [0.54, 0.56, 0.62],
+  medicineProduction: [0.9, 0.36, 0.62],
+  cooling: [0.36, 0.78, 0.92],
+  transporting: [0.58, 0.4, 0.9],
+  farming: [0.62, 0.78, 0.3],
+};
+
+/** A distinct accent color per work suitability, for the filter bubbles. */
+export function workColor(key: string, alpha = 1): string {
+  const rgb = workRGB[key] ?? [0.56, 0.56, 0.58];
+  const [r, g, b] = rgb.map((c) => Math.round(c * 255));
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
 const elementRGB: Record<string, [number, number, number]> = {
   neutral: [0.66, 0.64, 0.62],
   fire: [0.94, 0.27, 0.27],

@@ -1596,3 +1596,123 @@ body {
     visibility: hidden;
   }
 }
+
+/* ---- Paldex controls (name search + work filter) ---- */
+
+.paldex-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* multi-select colored work bubbles */
+.work-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.work-bubble {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.1s ease, border-color 0.1s ease;
+}
+
+.work-bubble img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.work-bubble:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.work-bubble.active {
+  font-weight: 700;
+}
+
+.paldex-sort-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.order-toggle {
+  appearance: none;
+  border: none;
+  background: var(--bg-card);
+  color: var(--text);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: 9px;
+  padding: 7px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.order-toggle:hover {
+  filter: brightness(1.25);
+}
+
+.clear-works {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 7px 4px;
+}
+
+.clear-works:hover {
+  color: var(--text);
+}
+
+.paldex-result-note {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+/* work-level rows on a grid cell when filtering by work — one icon + stars
+   row per selected work, colored to match its bubble */
+.paldex-work-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.paldex-work-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.paldex-work-line img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.paldex-work-line .wstars {
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}

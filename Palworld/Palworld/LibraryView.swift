@@ -208,18 +208,58 @@ enum LibrarySection: String, CaseIterable, Identifiable, Hashable {
 struct PaldexGridView: View {
     let data: GameData
     @State private var query = ""
+    /// empty = default Paldeck-number order; otherwise keep pals that have ALL
+    /// of these works and sort by the SUM of their levels in them.
+    @State private var workFilters: Set<String> = []
+    @State private var workDescending = true
+
+    /// Selected keys in the canonical in-game order (stable display order).
+    private var selectedKeys: [String] {
+        Theme.allWorkKeys.filter { workFilters.contains($0) }
+    }
+
+    private func workTotal(_ pal: Pal) -> Int {
+        workFilters.reduce(0) { $0 + (pal.workSuitability[$1] ?? 0) }
+    }
 
     private var pals: [Pal] {
-        let sorted = data.pals.sorted {
+        let byNumber: (Pal, Pal) -> Bool = {
             ($0.number.isEmpty ? "999" : $0.number, $0.name)
                 < ($1.number.isEmpty ? "999" : $1.number, $1.name)
         }
-        guard !query.isEmpty else { return sorted }
-        return sorted.filter { $0.name.lowercased().contains(query.lowercased()) }
+        var result = data.pals
+        if !query.isEmpty {
+            result = result.filter { $0.name.lowercased().contains(query.lowercased()) }
+        }
+        if !workFilters.isEmpty {
+            // keep only pals that can do EVERY selected work
+            result = result.filter { pal in
+                workFilters.allSatisfy { (pal.workSuitability[$0] ?? 0) > 0 }
+            }
+            result.sort { a, b in
+                let ta = workTotal(a), tb = workTotal(b)
+                if ta != tb { return workDescending ? ta > tb : ta < tb }
+                return byNumber(a, b)
+            }
+        } else {
+            result.sort(by: byNumber)
+        }
+        return result
     }
 
     var body: some View {
         ScrollView {
+            workBubbles
+                .padding(.horizontal)
+                .padding(.top, 8)
+            if !workFilters.isEmpty {
+                Text("\(pals.count) pal\(pals.count == 1 ? "" : "s") with \(selectedKeys.map(Theme.workLabel).joined(separator: " + ")) — tap one to see where it spawns.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal)
+                    .padding(.top, 8)
+            }
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3),
                       spacing: 10) {
                 ForEach(pals) { pal in
@@ -231,9 +271,13 @@ struct PaldexGridView: View {
                                 .font(.caption.weight(.semibold))
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.7)
-                            Text(pal.number.isEmpty ? "—" : "#\(pal.number)")
-                                .font(.caption2)
-                                .foregroundStyle(.secondary)
+                            if workFilters.isEmpty {
+                                Text(pal.number.isEmpty ? "—" : "#\(pal.number)")
+                                    .font(.caption2)
+                                    .foregroundStyle(.secondary)
+                            } else {
+                                workBadges(for: pal)
+                            }
                         }
                         .padding(6)
                         .frame(maxWidth: .infinity)
@@ -245,9 +289,74 @@ struct PaldexGridView: View {
                 }
             }
             .padding(.horizontal)
+            .padding(.top, 4)
         }
         .navigationTitle("Paldex")
         .searchable(text: $query, prompt: "Pal name")
+    }
+
+    /// Multi-select colored work bubbles + a sort-order toggle. Tapping a
+    /// bubble toggles it; several can be active at once.
+    private var workBubbles: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            FlowLayout(spacing: 6) {
+                ForEach(Theme.allWorkKeys, id: \.self) { key in
+                    workBubble(key)
+                }
+            }
+            if !workFilters.isEmpty {
+                HStack {
+                    Button {
+                        workDescending.toggle()
+                    } label: {
+                        Label(workDescending ? "Highest combined" : "Lowest combined",
+                              systemImage: workDescending ? "arrow.down" : "arrow.up")
+                            .font(.caption.weight(.semibold))
+                    }
+                    Spacer()
+                    Button("Clear") { workFilters.removeAll() }
+                        .font(.caption.weight(.semibold))
+                }
+                .padding(.top, 2)
+            }
+        }
+    }
+
+    private func workBubble(_ key: String) -> some View {
+        let active = workFilters.contains(key)
+        let color = Theme.workColor(key)
+        return Button {
+            if active { workFilters.remove(key) } else { workFilters.insert(key) }
+        } label: {
+            HStack(spacing: 5) {
+                WikiImage(file: Theme.workIconFile(key), kind: .ui)
+                    .frame(width: 16, height: 16)
+                Text(Theme.workLabel(key))
+                    .font(.caption.weight(.semibold))
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 6)
+            .background(active ? color.opacity(0.28) : Color.primary.opacity(0.08), in: Capsule())
+            .overlay(Capsule().stroke(active ? color : Color.primary.opacity(0.18), lineWidth: 1.5))
+            .foregroundStyle(active ? color : .primary)
+        }
+        .buttonStyle(.plain)
+    }
+
+    /// Cell footer: one icon + stars row per selected work (colored to match).
+    private func workBadges(for pal: Pal) -> some View {
+        VStack(spacing: 1) {
+            ForEach(selectedKeys, id: \.self) { key in
+                HStack(spacing: 3) {
+                    WikiImage(file: Theme.workIconFile(key), kind: .ui)
+                        .frame(width: 12, height: 12)
+                    Text(String(repeating: "★", count: pal.workSuitability[key] ?? 0))
+                        .font(.system(size: 9))
+                        .foregroundStyle(Theme.workColor(key))
+                        .lineLimit(1)
+                }
+            }
+        }
     }
 }
 
