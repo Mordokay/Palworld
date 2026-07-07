@@ -10,7 +10,12 @@ function App() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    loadGameData().then(setData, (e) => setError(String(e)));
+    loadGameData().then((loaded) => {
+      if (import.meta.env.DEV) {
+        (window as unknown as Record<string, unknown>).__data = loaded;
+      }
+      setData(loaded);
+    }, (e) => setError(String(e)));
   }, []);
 
   if (error) return <div class="boot-screen">Failed to load game data: {error}</div>;

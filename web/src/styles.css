@@ -1048,3 +1048,409 @@ body {
   color: var(--text-secondary);
   margin-top: 4px;
 }
+
+/* ---- Prose links ---- */
+
+.body-text.prose {
+  white-space: pre-line;
+}
+
+.entity-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.entity-link:hover {
+  text-decoration: underline;
+}
+
+/* ---- Pal mini grid (article link-lists / element pages) ---- */
+
+.pal-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.paldex-cell.mini img {
+  width: 64px;
+  height: 64px;
+}
+
+/* ---- Wiki tables ---- */
+
+.wiki-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+@container (max-width: 430px) {
+  .wiki-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wiki-card {
+  border-radius: 13px;
+  border: 1px solid;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  font: inherit;
+  color: var(--text);
+  text-align: left;
+}
+
+.wiki-card.linked {
+  cursor: pointer;
+}
+
+.wiki-card.linked:hover {
+  filter: brightness(1.2);
+}
+
+.wiki-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.wiki-card-title img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.wiki-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.wiki-bubbles:empty {
+  display: none;
+}
+
+.stat-bubble {
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.wiki-detail-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.wiki-detail-text {
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+.entity-chip.small {
+  font-size: 11.5px;
+  padding: 3px 9px 3px 5px;
+}
+
+.entity-chip.small img {
+  width: 16px;
+  height: 16px;
+}
+
+.entity-chip.small.unlinked {
+  padding-left: 9px;
+}
+
+.wiki-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 10.5px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+.wiki-grid-wrap {
+  overflow-x: auto;
+  background: var(--bg-card);
+  border-radius: 12px;
+  margin: 8px 0;
+}
+
+.wiki-grid {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+.wiki-grid th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 9px 12px 6px;
+  border-bottom: 1px solid var(--separator);
+}
+
+.wiki-grid td {
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: top;
+}
+
+.wiki-grid tr:last-child td {
+  border-bottom: none;
+}
+
+.wiki-cell {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.wiki-cell img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.wiki-cell.linked {
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.wiki-cell.linked:hover {
+  text-decoration: underline;
+}
+
+/* ---- Element page ---- */
+
+.element-page {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.element-hero-icon {
+  width: 62px;
+  height: 62px;
+}
+
+.element-hero-name {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.matchup-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.matchup-column {
+  background: var(--bg-raised);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.matchup-title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.matchup-none {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* ---- Tech tree & build catalog ---- */
+
+.tech-tree,
+.build-catalog {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.tech-level {
+  font-size: 14px;
+  font-weight: 700;
+  color: #30b0c7;
+  margin-bottom: 8px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.tech-tile {
+  appearance: none;
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+}
+
+.tech-tile:disabled {
+  cursor: default;
+}
+
+.tech-tile:not(:disabled):hover {
+  filter: brightness(1.25);
+}
+
+.tech-kind {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tech-image {
+  position: relative;
+}
+
+.tech-image img {
+  height: 46px;
+  object-fit: contain;
+}
+
+.tech-points {
+  position: absolute;
+  right: -8px;
+  bottom: -4px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 1px 6px;
+}
+
+.tech-name {
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.build-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.build-tile {
+  appearance: none;
+  border: none;
+  background: var(--bg-raised);
+  border-radius: 12px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+}
+
+.build-tile:hover {
+  background: var(--bg-card);
+}
+
+.build-tile img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.build-tile-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.build-tile-name {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.build-tile-tier {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* ---- Learnset grid ---- */
+
+.learnset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.learnset-cell {
+  appearance: none;
+  border: none;
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+}
+
+.learnset-cell:disabled {
+  cursor: default;
+}
+
+.learnset-cell:not(:disabled):hover {
+  filter: brightness(1.2);
+}
+
+.learnset-cell img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.learnset-level {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}

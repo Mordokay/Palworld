@@ -1,7 +1,12 @@
 import type { GameData } from "../../data/load";
 import { imageURL } from "../../data/images";
+import { allElements } from "../../theme";
 import { ArticleSections } from "../article/Sections";
+import { navigate } from "../router";
 import { PalCard } from "./PalCard";
+import { ElementPage } from "./ElementPage";
+import { TechTree } from "./TechTree";
+import { BuildCatalog } from "./BuildCatalog";
 import { CardSection, ElementChip, EntityChips, TagChip } from "./shared";
 
 // Article headings hidden on entity pages because the card already renders
@@ -11,6 +16,32 @@ const SKILL_HIDDEN = ["learnset", "pals"];
 
 /** Dispatch an entity/article id to its card + article body. */
 export function EntityPage({ data, id }: { data: GameData; id: string }) {
+  // synthetic pages first (EntityPageView's special-cased ids)
+  if (allElements.some((e) => e.toLowerCase() === id)) {
+    return <ElementPage data={data} element={id} />;
+  }
+  if (id === "technology") {
+    return (
+      <div class="entity-page">
+        <h2 class="entity-title">Technology</h2>
+        <TechTree data={data} />
+      </div>
+    );
+  }
+  if (id === "base-building") {
+    const article = data.articleByID.get(id);
+    return (
+      <div class="entity-page">
+        <h2 class="entity-title">{article?.title ?? "Base Building"}</h2>
+        {article && <ArticleSections data={data} article={article} />}
+        <BuildCatalog data={data} />
+      </div>
+    );
+  }
+  return <EntityBody data={data} id={id} />;
+}
+
+function EntityBody({ data, id }: { data: GameData; id: string }) {
   const article = data.articleByID.get(id);
   const pal = data.palByID.get(id);
   const item = pal ? undefined : data.itemByID.get(id);
@@ -89,6 +120,32 @@ function SkillCard({ data, id }: { data: GameData; id: string }) {
           <EntityChips data={data} refs={skill.exclusiveTo} />
         </CardSection>
       )}
+      <CardSection title="Learned by">
+        {skill.learnset.length === 0 ? (
+          <p class="body-text">
+            No pal learns this skill by leveling — it comes from a Skill Fruit
+            or is exclusive.
+          </p>
+        ) : (
+          <div class="learnset-grid">
+            {skill.learnset.map((entry) => {
+              const pal = data.palByLowerName.get(entry.pal.toLowerCase());
+              return (
+                <button
+                  key={entry.pal}
+                  class="learnset-cell"
+                  disabled={!pal}
+                  onClick={() => pal && navigate(["entity", pal.id])}
+                >
+                  {pal && <img src={imageURL(pal.image, "pals")} alt="" loading="lazy" />}
+                  <span class="item-name">{pal?.name ?? entry.pal}</span>
+                  {entry.level != null && <span class="learnset-level">Lv {entry.level}</span>}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </CardSection>
     </div>
   );
 }
